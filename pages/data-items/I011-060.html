@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/060 — Mode-3/A Code in Octal Representation</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimlik</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimlik</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimlik</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — İrtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik İrt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik İrt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Mode-3/A Code</span>
+        <span data-i18n-tr>Mode-3/A Kodu</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/060</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Mode-3/A Code in Octal Representation</span>
+          <span data-i18n-tr>Sekizlik Gösterimde Mode-3/A Kodu</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Fixed Length — 2 Octets</span>
+          <span data-i18n-tr>Sabit Uzunluk — 2 Oktet</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>This data item conveys the Mode-3/A transponder code associated with a track, represented as a four-digit octal number. The Mode-3/A code (commonly called "squawk code") is assigned by air traffic control to identify aircraft on radar displays. In A-SMGCS context, it helps correlate surface tracks with flight plan data.</span>
+          <span data-i18n-tr>Bu veri öğesi, bir izle ilişkilendirilmiş Mode-3/A transponder kodunu dört basamaklı bir sekizlik sayı olarak iletir. Mode-3/A kodu (yaygın olarak "squawk kodu" olarak adlandırılır) hava trafik kontrolü tarafından radar ekranlarında uçakları tanımlamak için atanır. A-SMGCS bağlamında, yüzey izlerini uçuş planı verileriyle ilişkilendirmeye yardımcı olur.</span>
+        </p>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Octet</span>
+                  <span data-i18n-tr>Oktet</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Field</span>
+                  <span data-i18n-tr>Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bits</span>
+                  <span data-i18n-tr>Bitler</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2"><strong>1</strong></td>
+                <td>Spare</td>
+                <td>4 (bits 16–13)</td>
+                <td>
+                  <span data-i18n-en>Spare bits, set to zero</span>
+                  <span data-i18n-tr>Yedek bitler, sıfıra ayarlanır</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Mode-3/A (high)</td>
+                <td>4 (bits 12–9)</td>
+                <td>
+                  <span data-i18n-en>First octal digit (bits 12–10) and MSB of second digit (bit 9)</span>
+                  <span data-i18n-tr>İlk sekizlik basamak (bitler 12–10) ve ikinci basamağın MSB'si (bit 9)</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td>Mode-3/A (low)</td>
+                <td>8 (bits 8–1)</td>
+                <td>
+                  <span data-i18n-en>Remaining bits of second digit and third/fourth octal digits</span>
+                  <span data-i18n-tr>İkinci basamağın kalan bitleri ve üçüncü/dördüncü sekizlik basamaklar</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram</span>
+          <span data-i18n-tr>Bit Diyagramı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 800 130" xmlns="http://www.w3.org/2000/svg" style="max-width: 750px; font-family: var(--font-family-mono);">
+            <!-- Bit numbers -->
+            <text x="40" y="15" text-anchor="middle" font-size="10" fill="#718096">16</text>
+            <text x="87" y="15" text-anchor="middle" font-size="10" fill="#718096">15</text>
+            <text x="134" y="15" text-anchor="middle" font-size="10" fill="#718096">14</text>
+            <text x="181" y="15" text-anchor="middle" font-size="10" fill="#718096">13</text>
+            <text x="228" y="15" text-anchor="middle" font-size="10" fill="#718096">12</text>
+            <text x="275" y="15" text-anchor="middle" font-size="10" fill="#718096">11</text>
+            <text x="322" y="15" text-anchor="middle" font-size="10" fill="#718096">10</text>
+            <text x="369" y="15" text-anchor="middle" font-size="10" fill="#718096">9</text>
+            <text x="416" y="15" text-anchor="middle" font-size="10" fill="#718096">8</text>
+            <text x="463" y="15" text-anchor="middle" font-size="10" fill="#718096">7</text>
+            <text x="510" y="15" text-anchor="middle" font-size="10" fill="#718096">6</text>
+            <text x="557" y="15" text-anchor="middle" font-size="10" fill="#718096">5</text>
+            <text x="604" y="15" text-anchor="middle" font-size="10" fill="#718096">4</text>
+            <text x="651" y="15" text-anchor="middle" font-size="10" fill="#718096">3</text>
+            <text x="698" y="15" text-anchor="middle" font-size="10" fill="#718096">2</text>
+            <text x="745" y="15" text-anchor="middle" font-size="10" fill="#718096">1</text>
+
+            <!-- Spare bits (gray) -->
+            <rect x="17" y="25" width="188" height="40" rx="4" fill="#a0aec0" stroke="#718096" stroke-width="2"/>
+            <text x="111" y="50" text-anchor="middle" fill="white" font-size="13" font-weight="700">Spare</text>
+
+            <!-- Octal digit 1 (blue) -->
+            <rect x="205" y="25" width="141" height="40" rx="4" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="275" y="50" text-anchor="middle" fill="white" font-size="13" font-weight="700">Digit 1</text>
+
+            <!-- Octal digit 2 (blue) -->
+            <rect x="346" y="25" width="141" height="40" rx="4" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="416" y="50" text-anchor="middle" fill="white" font-size="13" font-weight="700">Digit 2</text>
+
+            <!-- Octal digit 3 (green) -->
+            <rect x="487" y="25" width="141" height="40" rx="4" fill="#48bb78" stroke="#2f855a" stroke-width="2"/>
+            <text x="557" y="50" text-anchor="middle" fill="white" font-size="13" font-weight="700">Digit 3</text>
+
+            <!-- Octal digit 4 (green) -->
+            <rect x="628" y="25" width="141" height="40" rx="4" fill="#48bb78" stroke="#2f855a" stroke-width="2"/>
+            <text x="698" y="50" text-anchor="middle" fill="white" font-size="13" font-weight="700">Digit 4</text>
+
+            <!-- Octet boundary -->
+            <line x1="393" y1="20" x2="393" y2="70" stroke="#e53e3e" stroke-width="2" stroke-dasharray="4"/>
+            <text x="393" y="85" text-anchor="middle" font-size="9" fill="#e53e3e">Octet boundary</text>
+
+            <!-- Labels below -->
+            <text x="275" y="105" text-anchor="middle" font-size="10" fill="#4a5568">3 bits (0–7)</text>
+            <text x="416" y="105" text-anchor="middle" font-size="10" fill="#4a5568">3 bits (0–7)</text>
+            <text x="557" y="105" text-anchor="middle" font-size="10" fill="#4a5568">3 bits (0–7)</text>
+            <text x="698" y="105" text-anchor="middle" font-size="10" fill="#4a5568">3 bits (0–7)</text>
+          </svg>
+          <div class="bit-diagram__label">I011/060 — 4 spare bits + 4 octal digits (2 octets)</div>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Property</span>
+                  <span data-i18n-tr>Özellik</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Value</span>
+                  <span data-i18n-tr>Değer</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Format</span>
+                  <span data-i18n-tr>Biçim</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Fixed Length</span>
+                  <span data-i18n-tr>Sabit Uzunluk</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Length</span>
+                  <span data-i18n-tr>Uzunluk</span>
+                </td>
+                <td>2 octets (16 bits)</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Encoding</span>
+                  <span data-i18n-tr>Kodlama</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Octal string — each digit encoded in 3 bits (0–7 per digit)</span>
+                  <span data-i18n-tr>Sekizlik dizi — her basamak 3 bit ile kodlanır (basamak başına 0–7)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Code Range</span>
+                  <span data-i18n-tr>Kod Aralığı</span>
+                </td>
+                <td>0000–7777 (octal)</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Mandatory</span>
+                  <span data-i18n-tr>Zorunlu</span>
+                </td>
+                <td>
+                  <span data-i18n-en>No — optional, included when transponder code is available</span>
+                  <span data-i18n-tr>Hayır — isteğe bağlı, transponder kodu mevcut olduğunda eklenir</span>
+                </td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>9 (FSPEC Byte 2, Bit 7)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note note--info">
+          <p>
+            <span data-i18n-en><strong>Note:</strong> Unlike CAT048 (radar sensor level), CAT011 does not include V (Validated), G (Garbled), or L (Last Measured) flags in this data item. CAT011 is a fused output — by the time the code reaches this level, the fusion process has already resolved validity and garbling.</span>
+            <span data-i18n-tr><strong>Not:</strong> CAT048'den (radar sensör seviyesi) farklı olarak, CAT011 bu veri öğesinde V (Doğrulanmış), G (Bozuk), veya L (Son Ölçülen) bayraklarını içermez. CAT011 bir füzyon çıktısıdır — kod bu seviyeye ulaştığında, füzyon süreci geçerlilik ve bozulmayı zaten çözmüştür.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Octal Encoding Detail -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Octal Digit Mapping</span>
+          <span data-i18n-tr>Sekizlik Basamak Eşleştirmesi</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Octal Digit</span>
+                  <span data-i18n-tr>Sekizlik Basamak</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Binary (3 bits)</span>
+                  <span data-i18n-tr>İkili (3 bit)</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bit Position</span>
+                  <span data-i18n-tr>Bit Konumu</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>1st digit (thousands)</span>
+                  <span data-i18n-tr>1. basamak (binler)</span>
+                </td>
+                <td><code>xxx</code></td>
+                <td>Bits 12–10</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>2nd digit (hundreds)</span>
+                  <span data-i18n-tr>2. basamak (yüzler)</span>
+                </td>
+                <td><code>xxx</code></td>
+                <td>Bits 9–7</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>3rd digit (tens)</span>
+                  <span data-i18n-tr>3. basamak (onlar)</span>
+                </td>
+                <td><code>xxx</code></td>
+                <td>Bits 6–4</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>4th digit (units)</span>
+                  <span data-i18n-tr>4. basamak (birler)</span>
+                </td>
+                <td><code>xxx</code></td>
+                <td>Bits 3–1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          <span data-i18n-en>Each 3-bit group encodes a single octal digit (0–7). The complete squawk code is read left-to-right from MSB to LSB as a four-digit octal number.</span>
+          <span data-i18n-tr>Her 3 bitlik grup tek bir sekizlik basamağı kodlar (0–7). Tam squawk kodu, MSB'den LSB'ye soldan sağa dört basamaklı bir sekizlik sayı olarak okunur.</span>
+        </p>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Onaltılık Örnek</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> Encode squawk code 2617 (a typical discrete code assigned to an aircraft).</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> Squawk kodu 2617'yi kodlayın (bir uçağa atanan tipik bir ayrık kod).</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — Convert each octal digit to 3-bit binary</span>
+              <span data-i18n-tr>Adım 1 — Her sekizlik basamağı 3 bitlik ikiliye dönüştürün</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              2 &rarr; <code>010</code> &ensp; 6 &rarr; <code>110</code> &ensp; 1 &rarr; <code>001</code> &ensp; 7 &rarr; <code>111</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Prepend 4 spare bits (0000)</span>
+              <span data-i18n-tr>Adım 2 — 4 yedek bit ekleyin (0000)</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <code>0000</code> + <code>010 110 001 111</code> = <code>0000 0101 1000 1111</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Convert to hexadecimal</span>
+              <span data-i18n-tr>Adım 3 — Onaltılığa dönüştürün</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              Octet 1: <code>0000 0101</code> = <code>0x05</code> &ensp;
+              Octet 2: <code>1000 1111</code> = <code>0x8F</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 4 — Final Encoded Value</span>
+              <span data-i18n-tr>Adım 4 — Son Kodlanmış Değer</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <strong>Squawk 2617 &rarr; <code>0x058F</code></strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="note note--tip" style="margin-top: 1.5rem;">
+          <p>
+            <span data-i18n-en><strong>Decode verification:</strong> <code>0x058F</code> = <code>0000 0101 1000 1111</code>. Skip 4 spare bits &rarr; <code>010 | 110 | 001 | 111</code> &rarr; 2, 6, 1, 7 &rarr; Squawk <strong>2617</strong> &#10003;</span>
+            <span data-i18n-tr><strong>Çözümleme doğrulaması:</strong> <code>0x058F</code> = <code>0000 0101 1000 1111</code>. 4 yedek bit atla &rarr; <code>010 | 110 | 001 | 111</code> &rarr; 2, 6, 1, 7 &rarr; Squawk <strong>2617</strong> &#10003;</span>
+          </p>
+        </div>
+
+        <div class="note note--warning" style="margin-top: 1rem;">
+          <p>
+            <span data-i18n-en><strong>Well-known codes:</strong> Squawk 7700 (emergency) = <code>0x0FC0</code>, Squawk 7600 (radio failure) = <code>0x0F80</code>, Squawk 7500 (hijack) = <code>0x0F40</code>. These codes trigger immediate alerts in A-SMGCS systems.</span>
+            <span data-i18n-tr><strong>Bilinen kodlar:</strong> Squawk 7700 (acil durum) = <code>0x0FC0</code>, Squawk 7600 (telsiz arızası) = <code>0x0F80</code>, Squawk 7500 (kaçırma) = <code>0x0F40</code>. Bu kodlar A-SMGCS sistemlerinde anında alarm tetikler.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Validation Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Rule</span>
+                  <span data-i18n-tr>Kural</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Spare bits</span>
+                  <span data-i18n-tr>Yedek bitler</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Bits 16–13 must be zero. Non-zero spare bits should be flagged as a format error.</span>
+                  <span data-i18n-tr>Bitler 16–13 sıfır olmalıdır. Sıfır olmayan yedek bitler biçim hatası olarak işaretlenmelidir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Digit range</span>
+                  <span data-i18n-tr>Basamak aralığı</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Each 3-bit group must be in range 0–7. Since 3 bits inherently produce 0–7, this is always valid.</span>
+                  <span data-i18n-tr>Her 3 bitlik grup 0–7 aralığında olmalıdır. 3 bit doğası gereği 0–7 ürettiğinden, bu her zaman geçerlidir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Code 0000</span>
+                  <span data-i18n-tr>Kod 0000</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Squawk 0000 is technically valid but uncommon in practice. Treat with caution — it may indicate missing or default data.</span>
+                  <span data-i18n-tr>Squawk 0000 teknik olarak geçerlidir ancak pratikte nadirdir. Dikkatli davranın — eksik veya varsayılan veriyi gösterebilir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Emergency codes</span>
+                  <span data-i18n-tr>Acil durum kodları</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Codes 7500, 7600, and 7700 are reserved emergency codes. Systems should flag these for immediate attention.</span>
+                  <span data-i18n-tr>Kodlar 7500, 7600 ve 7700 ayrılmış acil durum kodlarıdır. Sistemler bunları acil dikkat için işaretlemelidir.</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlişkili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Data Item</span>
+                  <span data-i18n-tr>Veri Öğesi</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Relationship</span>
+                  <span data-i18n-tr>İlişki</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-245.html">I011/245</a></td>
+                <td>
+                  <span data-i18n-en>Target Identification — provides the callsign, which together with the squawk code uniquely identifies an aircraft</span>
+                  <span data-i18n-tr>Hedef Tanımlama — squawk kodu ile birlikte bir uçağı benzersiz şekilde tanımlayan çağrı işaretini sağlar</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-380.html">I011/380</a></td>
+                <td>
+                  <span data-i18n-en>Mode-S / ADS-B Related Data — contains additional Mode-S data including the 24-bit ICAO address</span>
+                  <span data-i18n-tr>Mode-S / ADS-B İlgili Veri — 24 bit ICAO adresi dahil ek Mode-S verilerini içerir</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-170.html">I011/170</a></td>
+                <td>
+                  <span data-i18n-en>Track Status — indicates whether the track has transponder data available (affects presence of I011/060)</span>
+                  <span data-i18n-tr>İz Durumu — izin transponder verisinin mevcut olup olmadığını gösterir (I011/060'ın varlığını etkiler)</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-390.html">I011/390</a></td>
+                <td>
+                  <span data-i18n-en>Flight Plan Data — the squawk code links the track to its assigned flight plan</span>
+                  <span data-i18n-tr>Uçuş Planı Verisi — squawk kodu izi atanmış uçuş planıyla ilişkilendirir</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Important Notes</span>
+          <span data-i18n-tr>Önemli Notlar</span>
+        </h2>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip:</strong> Mode-3/A codes are only available for targets equipped with a transponder. Surface vehicles without transponders (ground vehicles, equipment) will not have this data item present. The absence of I011/060 in a track record is normal for non-transponder-equipped targets.</span>
+            <span data-i18n-tr><strong>İpucu:</strong> Mode-3/A kodları yalnızca transponder ile donatılmış hedefler için mevcuttur. Transponder olmayan yüzey araçları (yer araçları, ekipman) bu veri öğesine sahip olmayacaktır. Bir iz kaydında I011/060'ın bulunmaması, transponder donanımlı olmayan hedefler için normaldir.</span>
+          </p>
+        </div>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Important:</strong> Do not confuse the Mode-3/A code with the Mode-S address (24-bit ICAO address in I011/380). The squawk code is a 4-digit octal number assigned by ATC and can change during a flight, while the Mode-S address is a permanent, globally unique aircraft identifier.</span>
+            <span data-i18n-tr><strong>Önemli:</strong> Mode-3/A kodunu Mode-S adresiyle (I011/380'deki 24 bit ICAO adresi) karıştırmayın. Squawk kodu, ATC tarafından atanan ve bir uçuş sırasında değişebilen 4 basamaklı bir sekizlik sayıdır, Mode-S adresi ise kalıcı, global olarak benzersiz bir uçak tanımlayıcısıdır.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020) temel alınmıştır. Sadece referans amacıyla.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>
