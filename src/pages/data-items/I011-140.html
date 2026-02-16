@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/140 — Time of Track Information</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimlik</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimlik</span></a>
+      <a href="I011-140.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimlik</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — İrtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik İrt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik İrt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Time of Track Information</span>
+        <span data-i18n-tr>İz Bilgisi Zamanı</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/140</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Time of Track Information</span>
+          <span data-i18n-tr>İz Bilgisi Zamanı</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Fixed Length — 3 Octets</span>
+          <span data-i18n-tr>Sabit Uzunluk — 3 Oktet</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Absolute time stamping of the track information, expressed as the elapsed time since last midnight (UTC). This data item provides a precise UTC-referenced timestamp for each track update, allowing receivers to determine exactly when the surveillance data was generated. The time resets to zero at each UTC midnight (00:00:00).</span>
+          <span data-i18n-tr>İz bilgisinin mutlak zaman damgası, son gece yarısından (UTC) itibaren geçen süre olarak ifade edilir. Bu veri öğesi, her iz güncellemesi için hassas bir UTC referanslı zaman damgası sağlar ve alıcıların gözetim verisinin tam olarak ne zaman üretildiğini belirlemesine olanak tanır. Zaman, her UTC gece yarısı (00:00:00) sıfırlanır.</span>
+        </p>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Key concept:</strong> The time value represents "seconds since midnight UTC" with a resolution of 1/128 second (~7.8125 ms). This is a standard ASTERIX time encoding shared across multiple categories (CAT001, CAT002, CAT010, CAT011, CAT034, CAT048, etc.).</span>
+            <span data-i18n-tr><strong>Temel kavram:</strong> Zaman değeri, 1/128 saniye (~7,8125 ms) çözünürlükle "UTC gece yarısından itibaren geçen saniye"yi temsil eder. Bu, birden fazla kategoride (CAT001, CAT002, CAT010, CAT011, CAT034, CAT048, vb.) paylaşılan standart bir ASTERIX zaman kodlamasıdır.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Octet</span>
+                  <span data-i18n-tr>Oktet</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Field</span>
+                  <span data-i18n-tr>Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bits</span>
+                  <span data-i18n-tr>Bitler</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1–3</strong></td>
+                <td>Time of Day</td>
+                <td>24 (bit 24–1)</td>
+                <td>
+                  <span data-i18n-en>Elapsed time since last midnight UTC, encoded as a 24-bit unsigned integer. LSB = 1/128 s</span>
+                  <span data-i18n-tr>Son UTC gece yarısından itibaren geçen süre, 24-bit işaretsiz tamsayı olarak kodlanır. LSB = 1/128 s</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram</span>
+          <span data-i18n-tr>Bit Diyagramı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 650 230" xmlns="http://www.w3.org/2000/svg" style="max-width: 600px; font-family: var(--font-family-mono);">
+            <!-- Octet 1 -->
+            <text x="30" y="15" font-size="12" fill="#718096" font-weight="600">
+              <tspan>Octet 1</tspan>
+            </text>
+            <text x="80" y="35" text-anchor="middle" font-size="10" fill="#718096">24</text>
+            <text x="145" y="35" text-anchor="middle" font-size="10" fill="#718096">23</text>
+            <text x="210" y="35" text-anchor="middle" font-size="10" fill="#718096">22</text>
+            <text x="275" y="35" text-anchor="middle" font-size="10" fill="#718096">21</text>
+            <text x="340" y="35" text-anchor="middle" font-size="10" fill="#718096">20</text>
+            <text x="405" y="35" text-anchor="middle" font-size="10" fill="#718096">19</text>
+            <text x="470" y="35" text-anchor="middle" font-size="10" fill="#718096">18</text>
+            <text x="535" y="35" text-anchor="middle" font-size="10" fill="#718096">17</text>
+            <rect x="50" y="42" width="520" height="35" rx="4" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="310" y="64" text-anchor="middle" fill="white" font-size="13" font-weight="700">Time of Track Info (MSB)</text>
+            <line x1="115" y1="42" x2="115" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="180" y1="42" x2="180" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="245" y1="42" x2="245" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="310" y1="42" x2="310" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="375" y1="42" x2="375" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="440" y1="42" x2="440" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="505" y1="42" x2="505" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+
+            <!-- Octet 2 -->
+            <text x="30" y="100" font-size="12" fill="#718096" font-weight="600">
+              <tspan>Octet 2</tspan>
+            </text>
+            <text x="80" y="105" text-anchor="middle" font-size="10" fill="#718096">16</text>
+            <text x="145" y="105" text-anchor="middle" font-size="10" fill="#718096">15</text>
+            <text x="210" y="105" text-anchor="middle" font-size="10" fill="#718096">14</text>
+            <text x="275" y="105" text-anchor="middle" font-size="10" fill="#718096">13</text>
+            <text x="340" y="105" text-anchor="middle" font-size="10" fill="#718096">12</text>
+            <text x="405" y="105" text-anchor="middle" font-size="10" fill="#718096">11</text>
+            <text x="470" y="105" text-anchor="middle" font-size="10" fill="#718096">10</text>
+            <text x="535" y="105" text-anchor="middle" font-size="10" fill="#718096">9</text>
+            <rect x="50" y="112" width="520" height="35" rx="4" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="310" y="134" text-anchor="middle" fill="white" font-size="13" font-weight="700">Time of Track Info (cont.)</text>
+            <line x1="115" y1="112" x2="115" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="180" y1="112" x2="180" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="245" y1="112" x2="245" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="310" y1="112" x2="310" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="375" y1="112" x2="375" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="440" y1="112" x2="440" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="505" y1="112" x2="505" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+
+            <!-- Octet 3 -->
+            <text x="30" y="170" font-size="12" fill="#718096" font-weight="600">
+              <tspan>Octet 3</tspan>
+            </text>
+            <text x="80" y="175" text-anchor="middle" font-size="10" fill="#718096">8</text>
+            <text x="145" y="175" text-anchor="middle" font-size="10" fill="#718096">7</text>
+            <text x="210" y="175" text-anchor="middle" font-size="10" fill="#718096">6</text>
+            <text x="275" y="175" text-anchor="middle" font-size="10" fill="#718096">5</text>
+            <text x="340" y="175" text-anchor="middle" font-size="10" fill="#718096">4</text>
+            <text x="405" y="175" text-anchor="middle" font-size="10" fill="#718096">3</text>
+            <text x="470" y="175" text-anchor="middle" font-size="10" fill="#718096">2</text>
+            <text x="535" y="175" text-anchor="middle" font-size="10" fill="#718096">1</text>
+            <rect x="50" y="182" width="520" height="35" rx="4" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="310" y="204" text-anchor="middle" fill="white" font-size="13" font-weight="700">Time of Track Info (LSB)</text>
+            <line x1="115" y1="182" x2="115" y2="217" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="180" y1="182" x2="180" y2="217" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="245" y1="182" x2="245" y2="217" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="310" y1="182" x2="310" y2="217" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="375" y1="182" x2="375" y2="217" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="440" y1="182" x2="440" y2="217" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="505" y1="182" x2="505" y2="217" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+          </svg>
+          <div class="bit-diagram__label">I011/140 — 3 octets, Fixed Length (24-bit Time of Day)</div>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Property</span>
+                  <span data-i18n-tr>Özellik</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Value</span>
+                  <span data-i18n-tr>Değer</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Format</span>
+                  <span data-i18n-tr>Format</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Fixed Length</span>
+                  <span data-i18n-tr>Sabit Uzunluk</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Length</span>
+                  <span data-i18n-tr>Uzunluk</span>
+                </td>
+                <td>3 octets (24 bits)</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>LSB (Resolution)</span>
+                  <span data-i18n-tr>LSB (Çözünürlük)</span>
+                </td>
+                <td>1/128 s &asymp; 7.8125 ms</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Range</span>
+                  <span data-i18n-tr>Aralık</span>
+                </td>
+                <td>0 &ndash; 131071.9921875 s</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Formula</span>
+                  <span data-i18n-tr>Formül</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Time (s) = value &times; (1/128)</span>
+                  <span data-i18n-tr>Zaman (s) = değer &times; (1/128)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Mandatory</span>
+                  <span data-i18n-tr>Zorunluluk</span>
+                </td>
+                <td>
+                  <span data-i18n-en>No — not mandatory, but commonly present in Target Reports</span>
+                  <span data-i18n-tr>Hayır — zorunlu değil, ancak Hedef Raporlarında yaygın olarak bulunur</span>
+                </td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>4 (FSPEC Byte 1, Bit 5)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Example -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Hex Örneği</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> Encode the time 10:30:00 UTC.</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> 10:30:00 UTC zamanını kodlayın.</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — Convert time to seconds</span>
+              <span data-i18n-tr>Adım 1 — Zamanı saniyeye dönüştürün</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              10h 30m 00s = (10 &times; 3600) + (30 &times; 60) + 0 = 37800 s
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Multiply by 128 (divide by LSB)</span>
+              <span data-i18n-tr>Adım 2 — 128 ile çarpın (LSB'ye bölün)</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              37800 &times; 128 = 4838400
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Convert to hexadecimal</span>
+              <span data-i18n-tr>Adım 3 — Onaltılık tabana dönüştürün</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              4838400 = 0x49D800 &rarr; <code>0100 1001 1101 1000 0000 0000</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 4 — Final Encoded Value</span>
+              <span data-i18n-tr>Adım 4 — Son Kodlanmış Değer</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              I011/140 = <code>0x49 0xD8 0x00</code>
+            </div>
+          </div>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Decoding:</strong> To decode <code>0x49D800</code>, read the 3 octets as a single 24-bit unsigned integer: 0x49D800 = 4838400. Then apply the formula: 4838400 &times; (1/128) = 37800.0 seconds = 10:30:00.000 UTC.</span>
+            <span data-i18n-tr><strong>Çözümleme:</strong> <code>0x49D800</code> değerini çözümlemek için 3 okteti tek bir 24-bit işaretsiz tamsayı olarak okuyun: 0x49D800 = 4838400. Ardından formülü uygulayın: 4838400 &times; (1/128) = 37800,0 saniye = 10:30:00.000 UTC.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlişkili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Data Item</span>
+                  <span data-i18n-tr>Veri Öğesi</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Relationship</span>
+                  <span data-i18n-tr>İlişki</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-010.html">I011/010</a></td>
+                <td>
+                  <span data-i18n-en>Data Source Identifier — identifies the system that generated this timestamped track data</span>
+                  <span data-i18n-tr>Veri Kaynağı Tanımlayıcı — bu zaman damgalı iz verisini üreten sistemi tanımlar</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-000.html">I011/000</a></td>
+                <td>
+                  <span data-i18n-en>Message Type — determines the context in which this timestamp applies (e.g., Target Report, Flight Plan update)</span>
+                  <span data-i18n-tr>Mesaj Tipi — bu zaman damgasının hangi bağlamda geçerli olduğunu belirler (örneğin Hedef Raporu, Uçuş Planı güncellemesi)</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Important Notes</span>
+          <span data-i18n-tr>Önemli Notlar</span>
+        </h2>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>UTC Reference:</strong> The time value is always referenced to UTC midnight. All systems exchanging ASTERIX data must be synchronized to UTC. Any drift in the source clock will directly impact the accuracy of this timestamp and may cause problems with track correlation and data fusion.</span>
+            <span data-i18n-tr><strong>UTC Referansı:</strong> Zaman değeri her zaman UTC gece yarısına referanslıdır. ASTERIX verisi paylaşan tüm sistemler UTC ile senkronize olmalıdır. Kaynak saatindeki herhangi bir sapma, bu zaman damgasının doğruluğunu doğrudan etkiler ve iz korelasyonu ile veri füzyonunda sorunlara neden olabilir.</span>
+          </p>
+        </div>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Midnight Rollover:</strong> At UTC midnight (00:00:00), the time value resets to zero. Decoders must handle this transition correctly — a sudden drop from a high value (near 86400 s) to a low value (near 0 s) does not indicate a time reversal but rather the start of a new day.</span>
+            <span data-i18n-tr><strong>Gece Yarısı Geçişi:</strong> UTC gece yarısında (00:00:00) zaman değeri sıfıra döner. Çözücüler bu geçişi doğru şekilde ele almalıdır — yüksek bir değerden (86400 s yakınında) düşük bir değere (0 s yakınında) ani bir düşüş, zamanın geri gittiği anlamına gelmez, yeni bir günün başladığını gösterir.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Precision:</strong> With a resolution of 1/128 second (~7.8125 ms), this timestamp provides sufficient precision for A-SMGCS surface surveillance applications where typical update rates are 1–4 seconds. The 24-bit field can represent times up to approximately 131072 seconds (~36.4 hours), well beyond the 86400 seconds (24 hours) in a day.</span>
+            <span data-i18n-tr><strong>Hassasiyet:</strong> 1/128 saniye (~7,8125 ms) çözünürlükle bu zaman damgası, tipik güncelleme hızlarının 1-4 saniye olduğu A-SMGCS yüzey gözetim uygulamaları için yeterli hassasiyet sağlar. 24-bit alan, yaklaşık 131072 saniyeye (~36,4 saat) kadar zamanları temsil edebilir; bu, bir gündeki 86400 saniyenin (24 saat) oldukça ötesindedir.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020) temel alınmıştır. Sadece referans amacıyla.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

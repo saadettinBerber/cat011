@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is CAT011? — ASTERIX CAT011</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="overview.html" class="sidebar__link sidebar__link--active">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="data-items/I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimlik</span></a>
+      <a href="data-items/I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="data-items/I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimlik</span></a>
+      <a href="data-items/I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="data-items/I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="data-items/I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="data-items/I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="data-items/I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="data-items/I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="data-items/I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimlik</span></a>
+      <a href="data-items/I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="data-items/I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="data-items/I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="data-items/I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — İrtifa</span>
+      </div>
+      <a href="data-items/I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="data-items/I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="data-items/I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik İrt.</span></a>
+      <a href="data-items/I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik İrt.</span></a>
+      <a href="data-items/I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="data-items/I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="data-items/I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="data-items/I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="data-items/I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="data-items/I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="data-items/I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="data-items/I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="data-items/I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="data-items/I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="data-items/I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../index.html">ASTERIX</a> &rsaquo; <a href="../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel Bakış</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">ASTERIX CATEGORY 011</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>What is CAT011?</span>
+          <span data-i18n-tr>CAT011 Nedir?</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Part 8 — Edition 1.3 (2020)</span>
+          <span data-i18n-tr>Part 8 — Edition 1.3 (2020)</span>
+        </span>
+      </div>
+
+      <!-- Section: ASTERIX -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>ASTERIX Standard</span>
+          <span data-i18n-tr>ASTERIX Standardı</span>
+        </h2>
+        <p>
+          <span data-i18n-en><strong>ASTERIX</strong> (All Purpose Structured EUROCONTROL Surveillance Information Exchange) is a standard developed by EUROCONTROL for the exchange of surveillance data between air traffic control systems. It defines how radar, multilateration, ADS-B, and other sensor data is encoded, transmitted, and decoded.</span>
+          <span data-i18n-tr><strong>ASTERIX</strong> (All Purpose Structured EUROCONTROL Surveillance Information Exchange), hava trafik kontrol sistemleri arasında gözetim verisi değişimi için EUROCONTROL tarafından geliştirilen bir standarttır. Radar, multilateration, ADS-B ve diğer sensör verilerinin nasıl kodlanacağını, iletileceğini ve çözümleneceğini tanımlar.</span>
+        </p>
+        <p>
+          <span data-i18n-en>ASTERIX is divided into <strong>Categories</strong>, each handling a specific type of data. Categories 000–127 are for standard civil/military applications, 128–240 for special applications, and 241–255 for non-standard use.</span>
+          <span data-i18n-tr>ASTERIX, her biri belirli bir veri türünü işleyen <strong>Kategoriler</strong>e ayrılmıştır. 000-127 arası standart sivil/askeri uygulamalar, 128-240 arası özel uygulamalar ve 241-255 arası standart dışı kullanımlar içindir.</span>
+        </p>
+      </section>
+
+      <!-- Section: CAT011 Definition -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>What is Category 011?</span>
+          <span data-i18n-tr>Kategori 011 Nedir?</span>
+        </h2>
+        <p>
+          <span data-i18n-en><strong>CAT011</strong> is Part 8 of the ASTERIX specification, titled <em>"Transmission of A-SMGCS Data"</em>. It defines the standardized message format for transmitting fused surveillance and flight plan data from an A-SMGCS (Advanced Surface Movement Guidance and Control System) to downstream consumers.</span>
+          <span data-i18n-tr><strong>CAT011</strong>, ASTERIX spesifikasyonunun Part 8'idir ve başlık olarak <em>"A-SMGCS Verisi İletimi"</em> adıyla bilinir. A-SMGCS (Gelişmiş Yüzey Hareketi Rehberlik ve Kontrol Sistemi) sisteminden alt kullanıcılara füzyon edilmiş gözetim ve uçuş planı verisi iletimi için standartlaştırılmış mesaj formatını tanımlar.</span>
+        </p>
+
+        <div class="card card--info" style="margin-top: var(--spacing-md);">
+          <p>
+            <span data-i18n-en><strong>In simple terms:</strong> CAT011 is the "output format" of the A-SMGCS system. Multiple sensors detect aircraft and vehicles on the airport surface. The A-SMGCS fuses these detections into unified tracks. CAT011 is how those fused tracks are transmitted.</span>
+            <span data-i18n-tr><strong>Basit bir ifadeyle:</strong> CAT011, A-SMGCS sisteminin "çıktı formatı"dır. Birden fazla sensör havalimanındaki hava araçları ve araçları algılar. A-SMGCS bu algılamaları birleştirerek tek bir iz oluşturur. CAT011, bu birleştirilmiş izlerin iletim biçimidir.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Section: A-SMGCS -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>A-SMGCS and Sensor Fusion</span>
+          <span data-i18n-tr>A-SMGCS ve Sensor Fuzyonu</span>
+        </h2>
+        <p>
+          <span data-i18n-en>The A-SMGCS collects data from multiple sensor types installed at the airport:</span>
+          <span data-i18n-tr>A-SMGCS, havalimanına kurulu birden fazla sensör türünden veri toplar:</span>
+        </p>
+
+        <!-- Sensor Fusion Diagram (SVG) -->
+        <div class="bit-diagram" style="margin: var(--spacing-xl) 0;">
+          <svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" style="max-width: 700px; font-family: var(--font-family-base);">
+            <!-- Sensor boxes -->
+            <rect x="10" y="20" width="140" height="50" rx="8" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="80" y="50" text-anchor="middle" fill="white" font-size="13" font-weight="600">SMR (CAT010)</text>
+
+            <rect x="10" y="90" width="140" height="50" rx="8" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="80" y="120" text-anchor="middle" fill="white" font-size="13" font-weight="600">MLAT (CAT010)</text>
+
+            <rect x="10" y="160" width="140" height="50" rx="8" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="80" y="190" text-anchor="middle" fill="white" font-size="13" font-weight="600">ADS-B (CAT021)</text>
+
+            <rect x="10" y="230" width="140" height="50" rx="8" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="80" y="260" text-anchor="middle" fill="white" font-size="13" font-weight="600">SSR/PSR (CAT048)</text>
+
+            <!-- Arrows to fusion -->
+            <line x1="150" y1="45" x2="300" y2="155" stroke="#718096" stroke-width="2" marker-end="url(#arrowhead)"/>
+            <line x1="150" y1="115" x2="300" y2="155" stroke="#718096" stroke-width="2" marker-end="url(#arrowhead)"/>
+            <line x1="150" y1="185" x2="300" y2="165" stroke="#718096" stroke-width="2" marker-end="url(#arrowhead)"/>
+            <line x1="150" y1="255" x2="300" y2="175" stroke="#718096" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+            <!-- Fusion box -->
+            <rect x="300" y="120" width="200" height="80" rx="12" fill="#e67e22" stroke="#c05621" stroke-width="2"/>
+            <text x="400" y="155" text-anchor="middle" fill="white" font-size="14" font-weight="700">A-SMGCS</text>
+            <text x="400" y="175" text-anchor="middle" fill="white" font-size="11">Sensor Fusion &amp; Tracking</text>
+
+            <!-- Arrow to output -->
+            <line x1="500" y1="160" x2="600" y2="160" stroke="#718096" stroke-width="3" marker-end="url(#arrowhead)"/>
+
+            <!-- Output box -->
+            <rect x="600" y="120" width="180" height="80" rx="12" fill="#38a169" stroke="#276749" stroke-width="2"/>
+            <text x="690" y="152" text-anchor="middle" fill="white" font-size="16" font-weight="800">CAT011</text>
+            <text x="690" y="175" text-anchor="middle" fill="white" font-size="11">Fused Output</text>
+
+            <!-- Arrowhead marker -->
+            <defs>
+              <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#718096"/>
+              </marker>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Sensor</span>
+                  <span data-i18n-tr>Sensor</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Full Name</span>
+                  <span data-i18n-tr>Tam Adı</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Output Category</span>
+                  <span data-i18n-tr>Çıktı Kategorisi</span>
+                </th>
+                <th>
+                  <span data-i18n-en>What It Detects</span>
+                  <span data-i18n-tr>Ne Algılar</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>SMR</strong></td>
+                <td>Surface Movement Radar</td>
+                <td>CAT010</td>
+                <td>
+                  <span data-i18n-en>All moving objects on the airport surface (aircraft, vehicles, debris)</span>
+                  <span data-i18n-tr>Havalimanı yüzeyindeki tüm hareketli nesneler (hava araçları, araçlar, enkaz)</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>MLAT</strong></td>
+                <td>Multilateration</td>
+                <td>CAT010 / CAT020</td>
+                <td>
+                  <span data-i18n-en>Position of transponder-equipped targets via time-difference-of-arrival</span>
+                  <span data-i18n-tr>Transponder donanımlı hedeflerin varış zamanı farkı ile konumu</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>ADS-B</strong></td>
+                <td>Automatic Dependent Surveillance - Broadcast</td>
+                <td>CAT021</td>
+                <td>
+                  <span data-i18n-en>Self-reported position, velocity, and identity from aircraft</span>
+                  <span data-i18n-tr>Hava aracından kendi bildirdiği konum, hız ve kimlik</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>SSR</strong></td>
+                <td>Secondary Surveillance Radar</td>
+                <td>CAT001 / CAT048</td>
+                <td>
+                  <span data-i18n-en>Identity (Mode-A) and altitude (Mode-C) via transponder interrogation</span>
+                  <span data-i18n-tr>Transponder sorgulamayla kimlik (Mode-A) ve irtifa (Mode-C)</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>PSR</strong></td>
+                <td>Primary Surveillance Radar</td>
+                <td>CAT001 / CAT048</td>
+                <td>
+                  <span data-i18n-en>Position of any reflective target (no transponder required)</span>
+                  <span data-i18n-tr>Herhangi bir yansıtıcı hedefin konumu (transponder gerektirmez)</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section: What CAT011 Carries -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>What Data Does CAT011 Carry?</span>
+          <span data-i18n-tr>CAT011 Hangi Verileri Taşır?</span>
+        </h2>
+        <p>
+          <span data-i18n-en>CAT011 messages contain the following types of information:</span>
+          <span data-i18n-tr>CAT011 mesajları aşağıdaki bilgi türlerini içerir:</span>
+        </p>
+        <div class="cards-grid" style="margin-top: var(--spacing-md);">
+          <div class="card">
+            <strong>
+              <span data-i18n-en>Surveillance Data</span>
+              <span data-i18n-tr>Gözetim Verileri</span>
+            </strong>
+            <p>
+              <span data-i18n-en>Fused position (WGS-84 and Cartesian), velocity, acceleration, altitude, track identity, and status.</span>
+              <span data-i18n-tr>Birleştirilmiş konum (WGS-84 ve Kartezyen), hız, ivme, irtifa, iz kimliği ve durumu.</span>
+            </p>
+          </div>
+          <div class="card">
+            <strong>
+              <span data-i18n-en>Flight Plan Data</span>
+              <span data-i18n-tr>Uçuş Planı Verileri</span>
+            </strong>
+            <p>
+              <span data-i18n-en>Callsign, aircraft type, departure/destination airports, runway, cleared flight level, wake turbulence category.</span>
+              <span data-i18n-tr>Callsign, hava aracı tipi, kalkış/varış havalimanları, pist, temiz uçuş seviyesi, kuyruk türbülansı kategorisi.</span>
+            </p>
+          </div>
+          <div class="card">
+            <strong>
+              <span data-i18n-en>Alert Messages</span>
+              <span data-i18n-tr>Alarm Mesajları</span>
+            </strong>
+            <p>
+              <span data-i18n-en>Safety alerts with severity levels, affected tracks, and acknowledgment status.</span>
+              <span data-i18n-tr>Şiddet seviyeleri, etkilenen izler ve onay durumu ile güvenlik alarmları.</span>
+            </p>
+          </div>
+          <div class="card">
+            <strong>
+              <span data-i18n-en>Holdbar Status</span>
+              <span data-i18n-tr>Holdbar Durumu</span>
+            </strong>
+            <p>
+              <span data-i18n-en>On/off status of runway hold bar lights, organized in banks of indicators.</span>
+              <span data-i18n-tr>Pist bekleme çubuğu ışık durumu (açık/kapalı), gösterge bankaları halinde organize edilir.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Key Facts -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Key Facts</span>
+          <span data-i18n-tr>Temel Bilgiler</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <tbody>
+              <tr>
+                <td><strong>
+                  <span data-i18n-en>Standard</span>
+                  <span data-i18n-tr>Standart</span>
+                </strong></td>
+                <td>EUROCONTROL ASTERIX</td>
+              </tr>
+              <tr>
+                <td><strong>
+                  <span data-i18n-en>Category</span>
+                  <span data-i18n-tr>Kategori</span>
+                </strong></td>
+                <td>011 (Part 8)</td>
+              </tr>
+              <tr>
+                <td><strong>
+                  <span data-i18n-en>Current Edition</span>
+                  <span data-i18n-tr>Güncel Sürüm</span>
+                </strong></td>
+                <td>1.3 (11 May 2020)</td>
+              </tr>
+              <tr>
+                <td><strong>
+                  <span data-i18n-en>Purpose</span>
+                  <span data-i18n-tr>Amaç</span>
+                </strong></td>
+                <td>
+                  <span data-i18n-en>Transmission of A-SMGCS surveillance and flight plan data</span>
+                  <span data-i18n-tr>A-SMGCS gözetim ve uçuş planı verisi iletimi</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>
+                  <span data-i18n-en>Coordinate System</span>
+                  <span data-i18n-tr>Koordinat Sistemi</span>
+                </strong></td>
+                <td>WGS-84 + Local Cartesian</td>
+              </tr>
+              <tr>
+                <td><strong>
+                  <span data-i18n-en>Time Reference</span>
+                  <span data-i18n-tr>Zaman Referansı</span>
+                </strong></td>
+                <td>
+                  <span data-i18n-en>UTC (daily reset, 1/128s resolution)</span>
+                  <span data-i18n-tr>UTC (günlük sıfırlama, 1/128s çözünürlük)</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>
+                  <span data-i18n-en>Data Items</span>
+                  <span data-i18n-tr>Veri Öğeleri</span>
+                </strong></td>
+                <td>
+                  <span data-i18n-en>28 items + SP (Special Purpose) + RE (Reserved Expansion)</span>
+                  <span data-i18n-tr>28 öğe + SP (Özel Amaç) + RE (Ayrılmış Genişleme)</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>
+                  <span data-i18n-en>Message Types</span>
+                  <span data-i18n-tr>Mesaj Tipleri</span>
+                </strong></td>
+                <td>
+                  <span data-i18n-en>7 types (target reports, flight plan operations, holdbar)</span>
+                  <span data-i18n-tr>7 tip (hedef raporları, uçuş planı işlemleri, holdbar)</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section: Edition History -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Edition History</span>
+          <span data-i18n-tr>Sürüm Geçmişi</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Edition</th>
+                <th>
+                  <span data-i18n-en>Date</span>
+                  <span data-i18n-tr>Tarih</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Key Changes</span>
+                  <span data-i18n-tr>Önemli Değişiklikler</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1.3</strong></td>
+                <td>May 2020</td>
+                <td>
+                  <span data-i18n-en>Current edition — updates and clarifications</span>
+                  <span data-i18n-tr>Güncel sürüm — güncellemeler ve açıklamalar</span>
+                </td>
+              </tr>
+              <tr>
+                <td>1.2</td>
+                <td>May 2008</td>
+                <td>
+                  <span data-i18n-en>Refinements to data item definitions</span>
+                  <span data-i18n-tr>Veri öğesi tanımlarında iyileştirmeler</span>
+                </td>
+              </tr>
+              <tr>
+                <td>1.1</td>
+                <td>Mar 2007</td>
+                <td>
+                  <span data-i18n-en>Additional data items and corrections</span>
+                  <span data-i18n-tr>Ek veri öğeleri ve düzeltmeler</span>
+                </td>
+              </tr>
+              <tr>
+                <td>1.0</td>
+                <td>Apr 2005</td>
+                <td>
+                  <span data-i18n-en>First official release</span>
+                  <span data-i18n-tr>İlk resmi yayın</span>
+                </td>
+              </tr>
+              <tr>
+                <td>0.17</td>
+                <td>Dec 2001</td>
+                <td>
+                  <span data-i18n-en>Draft version</span>
+                  <span data-i18n-tr>Taslak sürüm</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020) temel alınmıştır. Sadece referans amacıyla.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/202 — Calculated Track Velocity in Cartesian Co-ordinates</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimlik</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimlik</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimlik</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — İrtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik İrt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik İrt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Calculated Track Velocity in Cartesian</span>
+        <span data-i18n-tr>Kartezyen Hesaplanan İz Hızı</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/202</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Calculated Track Velocity in Cartesian Co-ordinates</span>
+          <span data-i18n-tr>Kartezyen Hesaplanan İz Hızı</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Fixed Length — 4 Octets</span>
+          <span data-i18n-tr>Sabit Uzunluk — 4 Oktet</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Calculated track velocity expressed in Cartesian co-ordinates, providing the speed and direction of a tracked object as separate X (East/West) and Y (North/South) velocity components. This data item is fundamental for surface movement surveillance — it allows the A-SMGCS system to determine how fast an aircraft or vehicle is moving and in which direction across the airport surface.</span>
+          <span data-i18n-tr>Kartezyen koordinatlarda ifade edilen hesaplanan iz hızı, takip edilen bir nesnenin hızını ve yönünü ayrı X (Doğu/Batı) ve Y (Kuzey/Güney) hız bileşenleri olarak sağlar. Bu veri öğesi yüzey hareketi gözetimi için temeldir — A-SMGCS sisteminin bir uçak veya aracın havalimanı yüzeyinde ne kadar hızlı ve hangi yönde hareket ettiğini belirlemesine olanak tanır.</span>
+        </p>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Key concept:</strong> Vx represents velocity in the East direction (positive = East, negative = West) and Vy represents velocity in the North direction (positive = North, negative = South). Together, they form a 2D velocity vector from which ground speed and heading can be derived.</span>
+            <span data-i18n-tr><strong>Temel kavram:</strong> Vx Doğu yönündeki hızı temsil eder (pozitif = Doğu, negatif = Batı) ve Vy Kuzey yönündeki hızı temsil eder (pozitif = Kuzey, negatif = Güney). Birlikte, yer hızı ve rotanın türetilebildiği bir 2B hız vektörü oluştururlar.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Octet</span>
+                  <span data-i18n-tr>Oktet</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Field</span>
+                  <span data-i18n-tr>Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bits</span>
+                  <span data-i18n-tr>Bitler</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1–2</strong></td>
+                <td>Vx</td>
+                <td>16 (bit 32–17)</td>
+                <td>
+                  <span data-i18n-en>Velocity in X (East) direction — 16-bit signed integer (two's complement), LSB = 0.25 m/s</span>
+                  <span data-i18n-tr>X (Doğu) yönündeki hız — 16-bit işaretli tamsayı (ikiye tümleme), LSB = 0.25 m/s</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>3–4</strong></td>
+                <td>Vy</td>
+                <td>16 (bit 16–1)</td>
+                <td>
+                  <span data-i18n-en>Velocity in Y (North) direction — 16-bit signed integer (two's complement), LSB = 0.25 m/s</span>
+                  <span data-i18n-tr>Y (Kuzey) yönündeki hız — 16-bit işaretli tamsayı (ikiye tümleme), LSB = 0.25 m/s</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram</span>
+          <span data-i18n-tr>Bit Diyagramı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 650 230" xmlns="http://www.w3.org/2000/svg" style="max-width: 600px; font-family: var(--font-family-mono);">
+            <!-- Row 1 - Vx (Octets 1-2) -->
+            <text x="30" y="15" font-size="12" fill="#718096" font-weight="600">
+              <tspan>Octet 1–2</tspan>
+            </text>
+            <text x="80" y="35" text-anchor="middle" font-size="10" fill="#718096">32</text>
+            <text x="115" y="35" text-anchor="middle" font-size="10" fill="#718096">31</text>
+            <text x="150" y="35" text-anchor="middle" font-size="10" fill="#718096">30</text>
+            <text x="185" y="35" text-anchor="middle" font-size="10" fill="#718096">29</text>
+            <text x="220" y="35" text-anchor="middle" font-size="10" fill="#718096">28</text>
+            <text x="255" y="35" text-anchor="middle" font-size="10" fill="#718096">27</text>
+            <text x="290" y="35" text-anchor="middle" font-size="10" fill="#718096">26</text>
+            <text x="325" y="35" text-anchor="middle" font-size="10" fill="#718096">25</text>
+            <text x="360" y="35" text-anchor="middle" font-size="10" fill="#718096">24</text>
+            <text x="395" y="35" text-anchor="middle" font-size="10" fill="#718096">23</text>
+            <text x="430" y="35" text-anchor="middle" font-size="10" fill="#718096">22</text>
+            <text x="465" y="35" text-anchor="middle" font-size="10" fill="#718096">21</text>
+            <text x="500" y="35" text-anchor="middle" font-size="10" fill="#718096">20</text>
+            <text x="535" y="35" text-anchor="middle" font-size="10" fill="#718096">19</text>
+            <text x="570" y="35" text-anchor="middle" font-size="10" fill="#718096">18</text>
+            <text x="605" y="35" text-anchor="middle" font-size="10" fill="#718096">17</text>
+            <rect x="62" y="42" width="560" height="35" rx="4" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="342" y="64" text-anchor="middle" fill="white" font-size="14" font-weight="700">Vx — X Velocity (signed, 16-bit)</text>
+            <line x1="97" y1="42" x2="97" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="132" y1="42" x2="132" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="167" y1="42" x2="167" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="202" y1="42" x2="202" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="237" y1="42" x2="237" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="272" y1="42" x2="272" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="307" y1="42" x2="307" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="342" y1="42" x2="342" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="377" y1="42" x2="377" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="412" y1="42" x2="412" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="447" y1="42" x2="447" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="482" y1="42" x2="482" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="517" y1="42" x2="517" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="552" y1="42" x2="552" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="587" y1="42" x2="587" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+
+            <!-- Row 2 - Vy (Octets 3-4) -->
+            <text x="30" y="110" font-size="12" fill="#718096" font-weight="600">
+              <tspan>Octet 3–4</tspan>
+            </text>
+            <text x="80" y="130" text-anchor="middle" font-size="10" fill="#718096">16</text>
+            <text x="115" y="130" text-anchor="middle" font-size="10" fill="#718096">15</text>
+            <text x="150" y="130" text-anchor="middle" font-size="10" fill="#718096">14</text>
+            <text x="185" y="130" text-anchor="middle" font-size="10" fill="#718096">13</text>
+            <text x="220" y="130" text-anchor="middle" font-size="10" fill="#718096">12</text>
+            <text x="255" y="130" text-anchor="middle" font-size="10" fill="#718096">11</text>
+            <text x="290" y="130" text-anchor="middle" font-size="10" fill="#718096">10</text>
+            <text x="325" y="130" text-anchor="middle" font-size="10" fill="#718096">9</text>
+            <text x="360" y="130" text-anchor="middle" font-size="10" fill="#718096">8</text>
+            <text x="395" y="130" text-anchor="middle" font-size="10" fill="#718096">7</text>
+            <text x="430" y="130" text-anchor="middle" font-size="10" fill="#718096">6</text>
+            <text x="465" y="130" text-anchor="middle" font-size="10" fill="#718096">5</text>
+            <text x="500" y="130" text-anchor="middle" font-size="10" fill="#718096">4</text>
+            <text x="535" y="130" text-anchor="middle" font-size="10" fill="#718096">3</text>
+            <text x="570" y="130" text-anchor="middle" font-size="10" fill="#718096">2</text>
+            <text x="605" y="130" text-anchor="middle" font-size="10" fill="#718096">1</text>
+            <rect x="62" y="137" width="560" height="35" rx="4" fill="#48bb78" stroke="#2f855a" stroke-width="2"/>
+            <text x="342" y="159" text-anchor="middle" fill="white" font-size="14" font-weight="700">Vy — Y Velocity (signed, 16-bit)</text>
+            <line x1="97" y1="137" x2="97" y2="172" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="132" y1="137" x2="132" y2="172" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="167" y1="137" x2="167" y2="172" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="202" y1="137" x2="202" y2="172" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="237" y1="137" x2="237" y2="172" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="272" y1="137" x2="272" y2="172" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="307" y1="137" x2="307" y2="172" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="342" y1="137" x2="342" y2="172" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="377" y1="137" x2="377" y2="172" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="412" y1="137" x2="412" y2="172" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="447" y1="137" x2="447" y2="172" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="482" y1="137" x2="482" y2="172" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="517" y1="137" x2="517" y2="172" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="552" y1="137" x2="552" y2="172" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="587" y1="137" x2="587" y2="172" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+
+            <!-- Legend -->
+            <rect x="62" y="190" width="16" height="12" rx="2" fill="#4a90d9"/>
+            <text x="84" y="200" font-size="11" fill="#718096">Vx (East/West)</text>
+            <rect x="200" y="190" width="16" height="12" rx="2" fill="#48bb78"/>
+            <text x="222" y="200" font-size="11" fill="#718096">Vy (North/South)</text>
+          </svg>
+          <div class="bit-diagram__label">I011/202 — 4 octets, Fixed Length (2 x 16-bit signed)</div>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Property</span>
+                  <span data-i18n-tr>Özellik</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Value</span>
+                  <span data-i18n-tr>Değer</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Format</span>
+                  <span data-i18n-tr>Format</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Fixed Length</span>
+                  <span data-i18n-tr>Sabit Uzunluk</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Length</span>
+                  <span data-i18n-tr>Uzunluk</span>
+                </td>
+                <td>4 octets (32 bits)</td>
+              </tr>
+              <tr>
+                <td>LSB (
+                  <span data-i18n-en>Resolution</span><span data-i18n-tr>Çözünürlük</span>)
+                </td>
+                <td>0.25 m/s (1/4 m/s)</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Encoding</span>
+                  <span data-i18n-tr>Kodlama</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Signed two's complement (16-bit per component)</span>
+                  <span data-i18n-tr>İşaretli ikiye tümleme (bileşen başına 16-bit)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Raw Range</span>
+                  <span data-i18n-tr>Ham Aralık</span>
+                </td>
+                <td>-32768 ... +32767</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Physical Range</span>
+                  <span data-i18n-tr>Fiziksel Aralık</span>
+                </td>
+                <td>-8192 ... +8191.75 m/s</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Formula</span>
+                  <span data-i18n-tr>Formül</span>
+                </td>
+                <td>Vx (m/s) = raw_vx &times; 0.25 &nbsp;|&nbsp; Vy (m/s) = raw_vy &times; 0.25</td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>7 (FSPEC Byte 1, Bit 2)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Hex Örneği</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> An aircraft taxiing due North at approximately 10 m/s (about 19.4 knots). The velocity has no East/West component (Vx = 0 m/s) and a Northward component (Vy = 10 m/s).</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> Yaklaşık 10 m/s (yaklaşık 19.4 knot) hızla tam Kuzeye doğru taksi yapan bir uçak. Doğu/Batı bileşeni yoktur (Vx = 0 m/s) ve Kuzeye doğru bileşeni vardır (Vy = 10 m/s).</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — Encode Vx</span>
+              <span data-i18n-tr>Adım 1 — Vx Kodlama</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              Vx = 0 m/s &rarr; raw = 0 / 0.25 = 0 &rarr; 0x0000 &rarr; <code>0000 0000 0000 0000</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Encode Vy</span>
+              <span data-i18n-tr>Adım 2 — Vy Kodlama</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              Vy = 10 m/s &rarr; raw = 10 / 0.25 = 40 &rarr; 0x0028 &rarr; <code>0000 0000 0010 1000</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Final Encoded Value</span>
+              <span data-i18n-tr>Adım 3 — Son Kodlanmış Değer</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              I011/202 = <code>0x0000 0028</code> &rarr; <code>0000 0000 0000 0000 0000 0000 0010 1000</code>
+            </div>
+          </div>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Deriving ground speed and heading:</strong> From the Vx/Vy components, the ground speed and heading can be calculated as:<br>
+              Ground Speed = &radic;(Vx&sup2; + Vy&sup2;) = &radic;(0&sup2; + 10&sup2;) = 10 m/s<br>
+              Heading = atan2(Vx, Vy) = atan2(0, 10) = 0&deg; (due North)<br>
+              For a general case: Heading is measured clockwise from North, so atan2(Vx, Vy) gives the correct bearing.</span>
+            <span data-i18n-tr><strong>Yer hızı ve rota türetme:</strong> Vx/Vy bileşenlerinden yer hızı ve rota şu şekilde hesaplanabilir:<br>
+              Yer Hızı = &radic;(Vx&sup2; + Vy&sup2;) = &radic;(0&sup2; + 10&sup2;) = 10 m/s<br>
+              Rota = atan2(Vx, Vy) = atan2(0, 10) = 0&deg; (tam Kuzey)<br>
+              Genel durum için: Rota Kuzeyden saat yönünde ölçülür, bu nedenle atan2(Vx, Vy) doğru yönü verir.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlişkili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Data Item</span>
+                  <span data-i18n-tr>Veri Öğesi</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Relationship</span>
+                  <span data-i18n-tr>İlişki</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-042.html">I011/042</a></td>
+                <td>
+                  <span data-i18n-en>Calculated Position in Cartesian Co-ordinates — provides position in the same Cartesian reference frame as velocity</span>
+                  <span data-i18n-tr>Kartezyen Hesaplanan Konum — hız ile aynı Kartezyen referans çerçevesinde konum sağlar</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-210.html">I011/210</a></td>
+                <td>
+                  <span data-i18n-en>Calculated Acceleration — the rate of change of this velocity (LSB = 0.25 m/s&sup2;)</span>
+                  <span data-i18n-tr>Hesaplanan İvme — bu hızın değişim oranı (LSB = 0.25 m/s&sup2;)</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-041.html">I011/041</a></td>
+                <td>
+                  <span data-i18n-en>Position in WGS-84 Co-ordinates — geographic position; velocity direction relates to positional movement</span>
+                  <span data-i18n-tr>WGS-84 Koordinatlarında Konum — coğrafi konum; hız yönü konumsal hareketle ilişkilidir</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Important Notes</span>
+          <span data-i18n-tr>Önemli Notlar</span>
+        </h2>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Note:</strong> The LSB for velocity is <strong>0.25 m/s</strong>, not 1 m/s. Failing to apply the correct scaling factor is a common implementation error. Always multiply the raw 16-bit signed integer by 0.25 to obtain the velocity in m/s.</span>
+            <span data-i18n-tr><strong>Not:</strong> Hız için LSB <strong>0.25 m/s</strong>'dir, 1 m/s değil. Doğru ölçekleme faktörünü uygulamamak yaygın bir uygulama hatasıdır. m/s cinsinden hızı elde etmek için ham 16-bit işaretli tamsayıyı her zaman 0.25 ile çarpın.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip:</strong> The resolution of 0.25 m/s is well suited for surface movement surveillance. Typical taxiing speeds range from 5 to 30 knots (approximately 2.5 to 15 m/s). The maximum representable velocity of &plusmn;8192 m/s far exceeds any realistic surface speed, providing ample headroom for all airport operations.</span>
+            <span data-i18n-tr><strong>İpucu:</strong> 0.25 m/s çözünürlük, yüzey hareketi gözetimi için oldukça uygundur. Tipik taksi hızları 5 ila 30 knot (yaklaşık 2.5 ila 15 m/s) arasındadır. &plusmn;8192 m/s maksimum temsil edilebilir hız, gerçekçi herhangi bir yüzey hızını fazlasıyla aşar ve tüm havalimanı operasyonları için yeterli alan sağlar.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Conversion:</strong> To convert from m/s to knots, multiply by 1.9438. For example, 10 m/s &times; 1.9438 &asymp; 19.4 knots. To convert from knots to m/s, multiply by 0.5144.</span>
+            <span data-i18n-tr><strong>Dönüşüm:</strong> m/s'den knota dönüştürmek için 1.9438 ile çarpın. Örneğin, 10 m/s &times; 1.9438 &asymp; 19.4 knot. Knottan m/s'ye dönüştürmek için 0.5144 ile çarpın.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020) temel alınmıştır. Sadece referans amacıyla.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

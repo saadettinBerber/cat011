@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/041 — Position in WGS-84 Co-ordinates</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimlik</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimlik</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimlik</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — Irtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik Irt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik Irt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Position in WGS-84 Co-ordinates</span>
+        <span data-i18n-tr>WGS-84 Koordinatlarında Konum</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/041</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Position in WGS-84 Co-ordinates</span>
+          <span data-i18n-tr>WGS-84 Koordinatlarında Konum</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Fixed Length — 8 Octets</span>
+          <span data-i18n-tr>Sabit Uzunluk — 8 Oktet</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Position of a target in WGS-84 coordinates, expressed as latitude and longitude. WGS-84 (World Geodetic System 1984) is the global reference coordinate system used by GPS and is the standard for all ASTERIX surveillance data. This data item provides the primary geographic position for every tracked object on the airport surface or in the vicinity.</span>
+          <span data-i18n-tr>Bir hedefin WGS-84 koordinatlarındaki konumu, enlem ve boylam olarak ifade edilir. WGS-84 (Dünya Jeodezik Sistemi 1984), GPS tarafından kullanılan küresel referans koordinat sistemidir ve tüm ASTERIX gözetim verileri için standarttır. Bu veri öğesi, havalimanı yüzeyindeki veya yakınındaki izlenen her nesne için birincil coğrafi konumu sağlar.</span>
+        </p>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Key concept:</strong> WGS-84 is essential for A-SMGCS because it provides a universal, unambiguous reference frame. All sensor inputs (SMR, MLAT, ADS-B) are converted to WGS-84 before fusion. This ensures that positions from different sensors can be accurately correlated and combined into a single track.</span>
+            <span data-i18n-tr><strong>Temel kavram:</strong> WGS-84, A-SMGCS için hayati önem taşır çünkü evrensel ve belirsizlikten uzak bir referans çerçevesi sağlar. Tüm sensör girişleri (SMR, MLAT, ADS-B) füzyon öncesi WGS-84'e dönüştürülür. Bu, farklı sensörlerden gelen konumların doğru şekilde ilişkilendirilip tek bir izde birleştirilebilmesini sağlar.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Octet</span>
+                  <span data-i18n-tr>Oktet</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Field</span>
+                  <span data-i18n-tr>Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bits</span>
+                  <span data-i18n-tr>Bitler</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1–4</strong></td>
+                <td>
+                  <span data-i18n-en>Latitude</span>
+                  <span data-i18n-tr>Enlem</span>
+                </td>
+                <td>32 (bit 64–33)</td>
+                <td>
+                  <span data-i18n-en>Latitude in WGS-84, 32-bit signed integer (two's complement). North positive, South negative. LSB = 180/2<sup>31</sup> degrees.</span>
+                  <span data-i18n-tr>WGS-84'te enlem, 32-bit işaretli tamsayı (ikinin tümleyeni). Kuzey pozitif, Güney negatif. LSB = 180/2<sup>31</sup> derece.</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>5–8</strong></td>
+                <td>
+                  <span data-i18n-en>Longitude</span>
+                  <span data-i18n-tr>Boylam</span>
+                </td>
+                <td>32 (bit 32–1)</td>
+                <td>
+                  <span data-i18n-en>Longitude in WGS-84, 32-bit signed integer (two's complement). East positive, West negative. LSB = 180/2<sup>31</sup> degrees.</span>
+                  <span data-i18n-tr>WGS-84'te boylam, 32-bit işaretli tamsayı (ikinin tümleyeni). Doğu pozitif, Batı negatif. LSB = 180/2<sup>31</sup> derece.</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram</span>
+          <span data-i18n-tr>Bit Diyagramı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 650 160" xmlns="http://www.w3.org/2000/svg" style="max-width: 600px; font-family: var(--font-family-mono);">
+            <!-- Row 1 - Latitude (Octets 1-4, 32 bits) -->
+            <text x="30" y="15" font-size="12" fill="#718096" font-weight="600">
+              <tspan>Octets 1–4</tspan>
+            </text>
+            <text x="80" y="35" text-anchor="middle" font-size="10" fill="#718096">64</text>
+            <text x="145" y="35" text-anchor="middle" font-size="10" fill="#718096">63</text>
+            <text x="210" y="35" text-anchor="middle" font-size="10" fill="#718096">...</text>
+            <text x="275" y="35" text-anchor="middle" font-size="10" fill="#718096">...</text>
+            <text x="340" y="35" text-anchor="middle" font-size="10" fill="#718096">...</text>
+            <text x="405" y="35" text-anchor="middle" font-size="10" fill="#718096">...</text>
+            <text x="470" y="35" text-anchor="middle" font-size="10" fill="#718096">34</text>
+            <text x="535" y="35" text-anchor="middle" font-size="10" fill="#718096">33</text>
+            <rect x="50" y="42" width="520" height="35" rx="4" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="310" y="64" text-anchor="middle" fill="white" font-size="14" font-weight="700">Latitude (32-bit signed)</text>
+            <line x1="115" y1="42" x2="115" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="180" y1="42" x2="180" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="245" y1="42" x2="245" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="310" y1="42" x2="310" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="375" y1="42" x2="375" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="440" y1="42" x2="440" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="505" y1="42" x2="505" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+
+            <!-- Row 2 - Longitude (Octets 5-8, 32 bits) -->
+            <text x="30" y="100" font-size="12" fill="#718096" font-weight="600">
+              <tspan>Octets 5–8</tspan>
+            </text>
+            <text x="80" y="105" text-anchor="middle" font-size="10" fill="#718096">32</text>
+            <text x="145" y="105" text-anchor="middle" font-size="10" fill="#718096">31</text>
+            <text x="210" y="105" text-anchor="middle" font-size="10" fill="#718096">...</text>
+            <text x="275" y="105" text-anchor="middle" font-size="10" fill="#718096">...</text>
+            <text x="340" y="105" text-anchor="middle" font-size="10" fill="#718096">...</text>
+            <text x="405" y="105" text-anchor="middle" font-size="10" fill="#718096">...</text>
+            <text x="470" y="105" text-anchor="middle" font-size="10" fill="#718096">2</text>
+            <text x="535" y="105" text-anchor="middle" font-size="10" fill="#718096">1</text>
+            <rect x="50" y="112" width="520" height="35" rx="4" fill="#48bb78" stroke="#2f855a" stroke-width="2"/>
+            <text x="310" y="134" text-anchor="middle" fill="white" font-size="14" font-weight="700">Longitude (32-bit signed)</text>
+            <line x1="115" y1="112" x2="115" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="180" y1="112" x2="180" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="245" y1="112" x2="245" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="310" y1="112" x2="310" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="375" y1="112" x2="375" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="440" y1="112" x2="440" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="505" y1="112" x2="505" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+          </svg>
+          <div class="bit-diagram__label">I011/041 — 8 octets (64 bits), Fixed Length</div>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Property</span>
+                  <span data-i18n-tr>Özellik</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Value</span>
+                  <span data-i18n-tr>Değer</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Format</span>
+                  <span data-i18n-tr>Format</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Fixed Length</span>
+                  <span data-i18n-tr>Sabit Uzunluk</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Length</span>
+                  <span data-i18n-tr>Uzunluk</span>
+                </td>
+                <td>8 octets (64 bits)</td>
+              </tr>
+              <tr>
+                <td>LSB (
+                  <span data-i18n-en>Resolution</span><span data-i18n-tr>Çözünürlük</span>)
+                </td>
+                <td>180/2<sup>31</sup> &asymp; 0.00000008381903&deg; (&asymp; 8.38 &times; 10<sup>-8</sup>&deg;)</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Latitude Range</span>
+                  <span data-i18n-tr>Enlem Aralığı</span>
+                </td>
+                <td>
+                  <span data-i18n-en>&minus;90&deg; to +90&deg; (North positive)</span>
+                  <span data-i18n-tr>&minus;90&deg; ile +90&deg; arası (Kuzey pozitif)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Longitude Range</span>
+                  <span data-i18n-tr>Boylam Aralığı</span>
+                </td>
+                <td>
+                  <span data-i18n-en>&minus;180&deg; to +180&deg; (East positive)</span>
+                  <span data-i18n-tr>&minus;180&deg; ile +180&deg; arası (Doğu pozitif)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Representation</span>
+                  <span data-i18n-tr>Gösterim</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Signed two's complement (32-bit per field)</span>
+                  <span data-i18n-tr>İşaretli ikinin tümleyeni (alan başına 32-bit)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Formula</span>
+                  <span data-i18n-tr>Formül</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Degrees = raw_value &times; (180 / 2<sup>31</sup>)</span>
+                  <span data-i18n-tr>Derece = ham_deger &times; (180 / 2<sup>31</sup>)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>5 (FSPEC Byte 1, Bit 4)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Hex Örneği</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> A target at Istanbul Airport coordinates — Latitude &asymp; 41.2753&deg; N, Longitude &asymp; 28.7519&deg; E.</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> İstanbul Havalimanında bir hedef — Enlem &asymp; 41.2753&deg; K, Boylam &asymp; 28.7519&deg; D.</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — Encode Latitude</span>
+              <span data-i18n-tr>Adım 1 — Enlem Kodlama</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              41.2753&deg; / (180 / 2<sup>31</sup>) = 41.2753 / 0.00000008381903 &asymp; 492,472,033 &rarr; <code>0x1D5E3AE1</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Encode Longitude</span>
+              <span data-i18n-tr>Adım 2 — Boylam Kodlama</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              28.7519&deg; / (180 / 2<sup>31</sup>) = 28.7519 / 0.00000008381903 &asymp; 342,956,134 &rarr; <code>0x1471F966</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Final Encoded Value</span>
+              <span data-i18n-tr>Adım 3 — Son Kodlanmış Değer</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              I011/041 = <code>0x1D5E3AE1 1471F966</code> &rarr; <code>1D 5E 3A E1 14 71 F9 66</code>
+            </div>
+          </div>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Decoding:</strong> To decode, read the first 4 octets as a signed 32-bit integer for latitude, and the next 4 octets for longitude. Multiply each by 180/2<sup>31</sup> to obtain degrees. For <code>0x1D5E3AE1</code>: 492,472,033 &times; 0.00000008381903 &asymp; 41.2753&deg; N. For <code>0x1471F966</code>: 342,956,134 &times; 0.00000008381903 &asymp; 28.7519&deg; E.</span>
+            <span data-i18n-tr><strong>Çözümleme:</strong> Çözümlemek için ilk 4 okteti enlem için işaretli 32-bit tamsayı olarak, sonraki 4 okteti boylam olarak okuyun. Derece elde etmek için her birini 180/2<sup>31</sup> ile çarpın. <code>0x1D5E3AE1</code> için: 492.472.033 &times; 0,00000008381903 &asymp; 41,2753&deg; K. <code>0x1471F966</code> için: 342.956.134 &times; 0,00000008381903 &asymp; 28,7519&deg; D.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlişkili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Data Item</span>
+                  <span data-i18n-tr>Veri Öğesi</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Relationship</span>
+                  <span data-i18n-tr>İlişki</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-042.html">I011/042</a></td>
+                <td>
+                  <span data-i18n-en>Calculated Position in Cartesian Co-ordinates — alternative coordinate system (X/Y in metres relative to a reference point)</span>
+                  <span data-i18n-tr>Kartezyen Koordinatlarda Hesaplanan Konum — alternatif koordinat sistemi (referans noktasına göre metre cinsinden X/Y)</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-202.html">I011/202</a></td>
+                <td>
+                  <span data-i18n-en>Calculated Track Velocity in Cartesian Co-ordinates — velocity components of the same tracked target</span>
+                  <span data-i18n-tr>Kartezyen Koordinatlarda Hesaplanan İz Hızı — aynı izlenen hedefin hız bileşenleri</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Important Notes</span>
+          <span data-i18n-tr>Önemli Notlar</span>
+        </h2>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Note:</strong> WGS-84 is the same coordinate reference system used by GPS. This ensures direct compatibility between ASTERIX surveillance data and GPS-based systems. All position sensors feeding into A-SMGCS must be calibrated to WGS-84 to avoid systematic position errors.</span>
+            <span data-i18n-tr><strong>Not:</strong> WGS-84, GPS tarafından kullanılan aynı koordinat referans sistemidir. Bu, ASTERIX gözetim verileri ile GPS tabanlı sistemler arasında doğrudan uyumluluk sağlar. A-SMGCS'ye veri sağlayan tüm konum sensörleri, sistematik konum hatalarından kaçınmak için WGS-84'e kalibre edilmelidir.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Precision:</strong> The 32-bit resolution provides a precision of approximately 0.0093 mm at the equator (180/2<sup>31</sup> degrees &asymp; 0.0093 mm). This is far more than sufficient for A-SMGCS surface movement tracking, where typical position accuracy requirements are in the order of 1–7.5 metres.</span>
+            <span data-i18n-tr><strong>Hassasiyet:</strong> 32-bit çözünürlük, ekvatorda yaklaşık 0,0093 mm hassasiyet sağlar (180/2<sup>31</sup> derece &asymp; 0,0093 mm). Bu, tipik konum doğruluğu gereksinimlerinin 1-7,5 metre mertebesinde olduğu A-SMGCS yüzey hareketi izlemesi için fazlasıyla yeterlidir.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Signed representation:</strong> Both latitude and longitude use two's complement encoding. This means the MSB (bit 32 of each field) is the sign bit. Positive values indicate North/East, negative values indicate South/West. Decoders must handle the sign bit correctly when extracting values from the raw bytes.</span>
+            <span data-i18n-tr><strong>İşaretli gösterim:</strong> Hem enlem hem de boylam ikinin tümleyeni kodlaması kullanır. Bu, MSB'nin (her alanın 32. biti) işaret biti olduğu anlamına gelir. Pozitif değerler Kuzey/Doğu'yu, negatif değerler Güney/Batı'yı gösterir. Çözücüler, ham baytlardan değerleri çıkarırken işaret bitini doğru şekilde işlemelidir.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020) temel alınmıştır. Sadece referans amacıyla.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

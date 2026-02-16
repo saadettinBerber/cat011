@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/042 — Calculated Position in Cartesian Co-ordinates</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimlik</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimlik</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimlik</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — Irtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik Irt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik Irt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Calculated Position in Cartesian Co-ordinates</span>
+        <span data-i18n-tr>Hesaplanan Kartezyen Koordinat Konumu</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/042</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Calculated Position in Cartesian Co-ordinates</span>
+          <span data-i18n-tr>Hesaplanan Kartezyen Koordinat Konumu</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Fixed Length — 4 Octets</span>
+          <span data-i18n-tr>Sabit Uzunluk — 4 Oktet</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Calculated position of a target expressed in Cartesian co-ordinates (X/Y), relative to a system reference point. Unlike I011/041 which provides position in WGS-84 geodetic co-ordinates (latitude/longitude), this data item uses a local flat-earth Cartesian co-ordinate system centred on an agreed reference point — typically the <strong>Airport Reference Point (ARP)</strong>. The X axis points East and the Y axis points North.</span>
+          <span data-i18n-tr>Bir hedefin, sistem referans noktasına göre Kartezyen koordinatlarla (X/Y) ifade edilen hesaplanmış konumu. WGS-84 jeodezik koordinatlarında (enlem/boylam) konum sağlayan I011/041'in aksine, bu veri öğesi üzerinde anlaşılmış bir referans noktası merkezli yerel düz-dünya Kartezyen koordinat sistemi kullanır — genellikle <strong>Havalimanı Referans Noktası (ARP)</strong>. X ekseni Doğu'yu, Y ekseni Kuzey'i gösterir.</span>
+        </p>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Key concept:</strong> The Cartesian representation is particularly useful for surface movement displays, where distances in metres are more intuitive than lat/long degrees. The reference point must be pre-agreed between the data sender and receiver — it is not transmitted within the data item itself.</span>
+            <span data-i18n-tr><strong>Temel kavram:</strong> Kartezyen gösterim, metre cinsinden mesafelerin enlem/boylam derecelerine göre daha sezgisel olduğu yüzey hareketi görüntülerinde özellikle kullanışlıdır. Referans noktası veri gönderici ve alıcı arasında önceden kararlaştırılmış olmalıdır — veri öğesinin içinde iletilmez.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Octet</span>
+                  <span data-i18n-tr>Oktet</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Field</span>
+                  <span data-i18n-tr>Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bits</span>
+                  <span data-i18n-tr>Bitler</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1–2</strong></td>
+                <td>X Component</td>
+                <td>16 (bit 32–17)</td>
+                <td>
+                  <span data-i18n-en>X component (East–West), 16-bit signed integer in two's complement. Positive values indicate East of reference point.</span>
+                  <span data-i18n-tr>X bileşeni (Doğu–Batı), 16-bit işaretli tamsayı, ikiye tümleyen. Pozitif değerler referans noktasının Doğu'sunu gösterir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>3–4</strong></td>
+                <td>Y Component</td>
+                <td>16 (bit 16–1)</td>
+                <td>
+                  <span data-i18n-en>Y component (North–South), 16-bit signed integer in two's complement. Positive values indicate North of reference point.</span>
+                  <span data-i18n-tr>Y bileşeni (Kuzey–Güney), 16-bit işaretli tamsayı, ikiye tümleyen. Pozitif değerler referans noktasının Kuzey'ini gösterir.</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram</span>
+          <span data-i18n-tr>Bit Diyagramı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 650 230" xmlns="http://www.w3.org/2000/svg" style="max-width: 600px; font-family: var(--font-family-mono);">
+            <!-- Row 1 - Octets 1-2: X Component -->
+            <text x="30" y="15" font-size="12" fill="#718096" font-weight="600">
+              <tspan>Octets 1–2</tspan>
+            </text>
+            <text x="80" y="35" text-anchor="middle" font-size="10" fill="#718096">32</text>
+            <text x="113" y="35" text-anchor="middle" font-size="10" fill="#718096">31</text>
+            <text x="146" y="35" text-anchor="middle" font-size="10" fill="#718096">30</text>
+            <text x="179" y="35" text-anchor="middle" font-size="10" fill="#718096">29</text>
+            <text x="212" y="35" text-anchor="middle" font-size="10" fill="#718096">28</text>
+            <text x="245" y="35" text-anchor="middle" font-size="10" fill="#718096">27</text>
+            <text x="278" y="35" text-anchor="middle" font-size="10" fill="#718096">26</text>
+            <text x="311" y="35" text-anchor="middle" font-size="10" fill="#718096">25</text>
+            <text x="344" y="35" text-anchor="middle" font-size="10" fill="#718096">24</text>
+            <text x="377" y="35" text-anchor="middle" font-size="10" fill="#718096">23</text>
+            <text x="410" y="35" text-anchor="middle" font-size="10" fill="#718096">22</text>
+            <text x="443" y="35" text-anchor="middle" font-size="10" fill="#718096">21</text>
+            <text x="476" y="35" text-anchor="middle" font-size="10" fill="#718096">20</text>
+            <text x="509" y="35" text-anchor="middle" font-size="10" fill="#718096">19</text>
+            <text x="542" y="35" text-anchor="middle" font-size="10" fill="#718096">18</text>
+            <text x="575" y="35" text-anchor="middle" font-size="10" fill="#718096">17</text>
+            <rect x="64" y="42" width="528" height="35" rx="4" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="328" y="64" text-anchor="middle" fill="white" font-size="13" font-weight="700">X Component (16-bit signed)</text>
+            <line x1="97" y1="42" x2="97" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="130" y1="42" x2="130" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="163" y1="42" x2="163" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="196" y1="42" x2="196" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="229" y1="42" x2="229" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="262" y1="42" x2="262" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="295" y1="42" x2="295" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="328" y1="42" x2="328" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="361" y1="42" x2="361" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="394" y1="42" x2="394" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="427" y1="42" x2="427" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="460" y1="42" x2="460" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="493" y1="42" x2="493" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="526" y1="42" x2="526" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="559" y1="42" x2="559" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+
+            <!-- Row 2 - Octets 3-4: Y Component -->
+            <text x="30" y="105" font-size="12" fill="#718096" font-weight="600">
+              <tspan>Octets 3–4</tspan>
+            </text>
+            <text x="80" y="125" text-anchor="middle" font-size="10" fill="#718096">16</text>
+            <text x="113" y="125" text-anchor="middle" font-size="10" fill="#718096">15</text>
+            <text x="146" y="125" text-anchor="middle" font-size="10" fill="#718096">14</text>
+            <text x="179" y="125" text-anchor="middle" font-size="10" fill="#718096">13</text>
+            <text x="212" y="125" text-anchor="middle" font-size="10" fill="#718096">12</text>
+            <text x="245" y="125" text-anchor="middle" font-size="10" fill="#718096">11</text>
+            <text x="278" y="125" text-anchor="middle" font-size="10" fill="#718096">10</text>
+            <text x="311" y="125" text-anchor="middle" font-size="10" fill="#718096">9</text>
+            <text x="344" y="125" text-anchor="middle" font-size="10" fill="#718096">8</text>
+            <text x="377" y="125" text-anchor="middle" font-size="10" fill="#718096">7</text>
+            <text x="410" y="125" text-anchor="middle" font-size="10" fill="#718096">6</text>
+            <text x="443" y="125" text-anchor="middle" font-size="10" fill="#718096">5</text>
+            <text x="476" y="125" text-anchor="middle" font-size="10" fill="#718096">4</text>
+            <text x="509" y="125" text-anchor="middle" font-size="10" fill="#718096">3</text>
+            <text x="542" y="125" text-anchor="middle" font-size="10" fill="#718096">2</text>
+            <text x="575" y="125" text-anchor="middle" font-size="10" fill="#718096">1</text>
+            <rect x="64" y="132" width="528" height="35" rx="4" fill="#48bb78" stroke="#2f855a" stroke-width="2"/>
+            <text x="328" y="154" text-anchor="middle" fill="white" font-size="13" font-weight="700">Y Component (16-bit signed)</text>
+            <line x1="97" y1="132" x2="97" y2="167" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="130" y1="132" x2="130" y2="167" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="163" y1="132" x2="163" y2="167" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="196" y1="132" x2="196" y2="167" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="229" y1="132" x2="229" y2="167" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="262" y1="132" x2="262" y2="167" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="295" y1="132" x2="295" y2="167" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="328" y1="132" x2="328" y2="167" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="361" y1="132" x2="361" y2="167" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="394" y1="132" x2="394" y2="167" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="427" y1="132" x2="427" y2="167" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="460" y1="132" x2="460" y2="167" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="493" y1="132" x2="493" y2="167" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="526" y1="132" x2="526" y2="167" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="559" y1="132" x2="559" y2="167" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+
+            <!-- Legend -->
+            <rect x="64" y="185" width="16" height="12" rx="2" fill="#4a90d9"/>
+            <text x="86" y="195" font-size="11" fill="#718096">X Component (East +)</text>
+            <rect x="260" y="185" width="16" height="12" rx="2" fill="#48bb78"/>
+            <text x="282" y="195" font-size="11" fill="#718096">Y Component (North +)</text>
+          </svg>
+          <div class="bit-diagram__label">I011/042 — 4 octets, Fixed Length (32 bits)</div>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Property</span>
+                  <span data-i18n-tr>Özellik</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Value</span>
+                  <span data-i18n-tr>Değer</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Format</span>
+                  <span data-i18n-tr>Format</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Fixed Length</span>
+                  <span data-i18n-tr>Sabit Uzunluk</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Length</span>
+                  <span data-i18n-tr>Uzunluk</span>
+                </td>
+                <td>4 octets (32 bits)</td>
+              </tr>
+              <tr>
+                <td>LSB</td>
+                <td>
+                  <span data-i18n-en>1 metre</span>
+                  <span data-i18n-tr>1 metre</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Range</span>
+                  <span data-i18n-tr>Aralık</span>
+                </td>
+                <td>-32768 to +32767 m (&asymp; &plusmn;32.7 km)</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Signed</span>
+                  <span data-i18n-tr>İşaretli</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Yes — two's complement for both X and Y</span>
+                  <span data-i18n-tr>Evet — hem X hem Y için ikiye tümleyen</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Formula</span>
+                  <span data-i18n-tr>Formül</span>
+                </td>
+                <td>
+                  X (m) = raw_value_x &times; 1<br>
+                  Y (m) = raw_value_y &times; 1
+                </td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>6 (FSPEC Byte 1, Bit 3)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Hex Örneği</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> A target located 500 metres East and 1200 metres North of the airport reference point.</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> Havalimanı referans noktasının 500 metre Doğu'sunda ve 1200 metre Kuzey'inde bulunan bir hedef.</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — Encode X Component</span>
+              <span data-i18n-tr>Adım 1 — X Bileşeni Kodlama</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              X = 500 m &rarr; 500 &times; 1 = 500 &rarr; 0x01F4 &rarr; <code>0000 0001 1111 0100</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Encode Y Component</span>
+              <span data-i18n-tr>Adım 2 — Y Bileşeni Kodlama</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              Y = 1200 m &rarr; 1200 &times; 1 = 1200 &rarr; 0x04B0 &rarr; <code>0000 0100 1011 0000</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Final Encoded Value</span>
+              <span data-i18n-tr>Adım 3 — Son Kodlanmış Değer</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              I011/042 = <code>0x01F4 04B0</code> &rarr; <code>0000 0001 1111 0100 0000 0100 1011 0000</code>
+            </div>
+          </div>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Decoding:</strong> To decode, split the 4 octets into two 16-bit signed integers. For <code>0x01F4 04B0</code>: X = 0x01F4 = 500 m (East), Y = 0x04B0 = 1200 m (North). Negative values (e.g., 0xFE0C = -500) indicate West (X) or South (Y) of the reference point.</span>
+            <span data-i18n-tr><strong>Çözümleme:</strong> Çözümlemek için 4 okteti iki adet 16-bit işaretli tamsayıya bölün. <code>0x01F4 04B0</code> için: X = 0x01F4 = 500 m (Doğu), Y = 0x04B0 = 1200 m (Kuzey). Negatif değerler (örn. 0xFE0C = -500) referans noktasının Batı'sını (X) veya Güney'ini (Y) gösterir.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlişkili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Data Item</span>
+                  <span data-i18n-tr>Veri Öğesi</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Relationship</span>
+                  <span data-i18n-tr>İlişki</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-041.html">I011/041</a></td>
+                <td>
+                  <span data-i18n-en>Position in WGS-84 Co-ordinates — provides the same position in geodetic (lat/long) form rather than local Cartesian</span>
+                  <span data-i18n-tr>WGS-84 Koordinatlarında Konum — aynı konumu yerel Kartezyen yerine jeodezik (enlem/boylam) formunda sağlar</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-202.html">I011/202</a></td>
+                <td>
+                  <span data-i18n-en>Calculated Track Velocity in Cartesian Co-ordinates — velocity vector in the same X/Y co-ordinate system</span>
+                  <span data-i18n-tr>Kartezyen Koordinatlarda Hesaplanan İz Hızı — aynı X/Y koordinat sistemindeki hız vektörü</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-210.html">I011/210</a></td>
+                <td>
+                  <span data-i18n-en>Calculated Acceleration — acceleration vector complementing position and velocity</span>
+                  <span data-i18n-tr>Hesaplanan İvme — konum ve hızı tamamlayan ivme vektörü</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Important Notes</span>
+          <span data-i18n-tr>Önemli Notlar</span>
+        </h2>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Reference point agreement:</strong> The origin (0, 0) of the Cartesian co-ordinate system is not transmitted in this data item. Both the sender and receiver must agree on the reference point (typically the ARP) beforehand. If the reference points differ, all position data will be systematically offset.</span>
+            <span data-i18n-tr><strong>Referans noktası anlaşması:</strong> Kartezyen koordinat sisteminin orijini (0, 0) bu veri öğesinde iletilmez. Hem gönderici hem alıcı referans noktası (genellikle ARP) üzerinde önceden anlaşmış olmalıdır. Referans noktaları farklı olursa, tüm konum verileri sistematik olarak kaymış olacaktır.</span>
+          </p>
+        </div>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Range limitation:</strong> With a 16-bit signed integer and LSB of 1 metre, the maximum representable distance is approximately &plusmn;32.7 km from the reference point. Targets beyond this range cannot be encoded in this data item. For large airports with distant approach paths, verify that this range is sufficient.</span>
+            <span data-i18n-tr><strong>Aralık sınırlaması:</strong> 16-bit işaretli tamsayı ve 1 metre LSB ile temsil edilebilir maksimum mesafe referans noktasından yaklaşık &plusmn;32,7 km'dir. Bu aralığın ötesindeki hedefler bu veri öğesinde kodlanamaz. Uzak yaklaşma yollarına sahip büyük havalimanları için bu aralığın yeterli olduğundan emin olun.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip:</strong> This data item is especially useful for surface movement displays (A-SMGCS HMI), where targets on runways, taxiways and aprons need to be plotted in a local co-ordinate system. The 1-metre resolution provides sufficient accuracy for surface surveillance applications.</span>
+            <span data-i18n-tr><strong>İpucu:</strong> Bu veri öğesi, pistler, taksi yolları ve apronlardaki hedeflerin yerel bir koordinat sisteminde çizilmesi gereken yüzey hareketi görüntülerinde (A-SMGCS HMI) özellikle kullanışlıdır. 1 metre çözünürlük, yüzey gözetim uygulamaları için yeterli doğruluk sağlar.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020) temel alınmıştır. Sadece referans amacıyla.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

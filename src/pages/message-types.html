@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Types — ASTERIX CAT011</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="message-types.html" class="sidebar__link sidebar__link--active">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="data-items/I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimlik</span></a>
+      <a href="data-items/I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="data-items/I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimlik</span></a>
+      <a href="data-items/I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="data-items/I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="data-items/I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="data-items/I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="data-items/I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="data-items/I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="data-items/I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimlik</span></a>
+      <a href="data-items/I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="data-items/I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="data-items/I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="data-items/I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — İrtifa</span>
+      </div>
+      <a href="data-items/I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="data-items/I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="data-items/I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik İrt.</span></a>
+      <a href="data-items/I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik İrt.</span></a>
+      <a href="data-items/I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="data-items/I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="data-items/I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="data-items/I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="data-items/I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="data-items/I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="data-items/I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="data-items/I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="data-items/I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="data-items/I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="data-items/I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../index.html">ASTERIX</a> &rsaquo; <a href="../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <div class="page-header">
+        <div class="page-header__id">I011/000</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Message Types</span>
+          <span data-i18n-tr>Mesaj Tipleri</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>7 Transaction Types</span>
+          <span data-i18n-tr>7 İşlem Tipi</span>
+        </span>
+      </div>
+
+      <!-- Introduction -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Overview</span>
+          <span data-i18n-tr>Genel Bakış</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Every CAT011 message contains a <strong>Message Type</strong> field (Data Item I011/000) that identifies the kind of transaction being transmitted. This field is mandatory — it must be present in every record. There are <strong>7 defined message types</strong>, grouped into three functional categories.</span>
+          <span data-i18n-tr>Her CAT011 mesajı, iletilen işlemin türünü tanımlayan bir <strong>Mesaj Tipi</strong> alanı (Veri Öğesi I011/000) içerir. Bu alan zorunludur — her kayıtta bulunmalıdır. Üç fonksiyonel kategoriye ayrılmış <strong>7 tanımlı mesaj tipi</strong> vardır.</span>
+        </p>
+      </section>
+
+      <!-- All Message Types -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Complete Message Types Table</span>
+          <span data-i18n-tr>Tam Mesaj Tipleri Tablosu</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Type</span>
+                  <span data-i18n-tr>Tip</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Value (Binary)</span>
+                  <span data-i18n-tr>Değer (İkili)</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Name</span>
+                  <span data-i18n-tr>Ad</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Category</span>
+                  <span data-i18n-tr>Kategori</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Aciklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td><code>0000 0001</code></td>
+                <td>
+                  <span data-i18n-en>Target Report</span>
+                  <span data-i18n-tr>Hedef Raporu</span>
+                </td>
+                <td style="color: var(--color-accent-primary); font-weight: 600;">
+                  <span data-i18n-en>Surveillance</span>
+                  <span data-i18n-tr>Gozetim</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Contains fused track data: position, velocity, identity, flight plan data, and basic alerts. This is the primary and most frequently sent message type.</span>
+                  <span data-i18n-tr>Birleştirilmiş iz verisini içerir: konum, hız, kimlik, uçuş planı verisi ve temel alarmlar. En sık gönderilen birincil mesaj tipidir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td><code>0000 0010</code></td>
+                <td>
+                  <span data-i18n-en>Manual Attachment of Flight Plan</span>
+                  <span data-i18n-tr>Uçuş Planının Manuel Bağlanması</span>
+                </td>
+                <td style="color: var(--color-accent-warning); font-weight: 600;">
+                  <span data-i18n-en>Flight Plan</span>
+                  <span data-i18n-tr>Ucus Plani</span>
+                </td>
+                <td>
+                  <span data-i18n-en>An operator manually associates a flight plan with a surveillance track. Triggered by controller action.</span>
+                  <span data-i18n-tr>Bir operatör, uçuş planını gözetim izine manuel olarak bağlar. Kontrolör işlemi ile tetiklenir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>3</strong></td>
+                <td><code>0000 0011</code></td>
+                <td>
+                  <span data-i18n-en>Manual Detachment of Flight Plan</span>
+                  <span data-i18n-tr>Uçuş Planının Manuel Çözülmesi</span>
+                </td>
+                <td style="color: var(--color-accent-warning); font-weight: 600;">
+                  <span data-i18n-en>Flight Plan</span>
+                  <span data-i18n-tr>Ucus Plani</span>
+                </td>
+                <td>
+                  <span data-i18n-en>An operator manually removes a flight plan from a surveillance track. The track continues without flight plan data.</span>
+                  <span data-i18n-tr>Bir operatör, uçuş planını gözetim izinden manuel olarak kaldırır. İz, uçuş planı verisi olmadan devam eder.</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>4</strong></td>
+                <td><code>0000 0100</code></td>
+                <td>
+                  <span data-i18n-en>Insertion of Flight Plan Data</span>
+                  <span data-i18n-tr>Ucus Plani Verisi Ekleme</span>
+                </td>
+                <td style="color: var(--color-accent-warning); font-weight: 600;">
+                  <span data-i18n-en>Flight Plan</span>
+                  <span data-i18n-tr>Ucus Plani</span>
+                </td>
+                <td>
+                  <span data-i18n-en>New flight plan data is added to the system. This can happen when a new flight plan is filed or received from an external source.</span>
+                  <span data-i18n-tr>Sisteme yeni uçuş planı verisi eklenir. Yeni bir uçuş planı dosyalandığında veya harici bir kaynaktan alındığında gerçekleşebilir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>5</strong></td>
+                <td><code>0000 0101</code></td>
+                <td>
+                  <span data-i18n-en>Suppression of Flight Plan Data</span>
+                  <span data-i18n-tr>Ucus Plani Verisi Silme</span>
+                </td>
+                <td style="color: var(--color-accent-warning); font-weight: 600;">
+                  <span data-i18n-en>Flight Plan</span>
+                  <span data-i18n-tr>Ucus Plani</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Existing flight plan data is removed from the system. Occurs when a flight plan is cancelled or no longer valid.</span>
+                  <span data-i18n-tr>Mevcut uçuş planı verisi sistemden kaldırılır. Uçuş planı iptal edildiğinde veya artık geçerli olmadığında gerçekleşir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>6</strong></td>
+                <td><code>0000 0110</code></td>
+                <td>
+                  <span data-i18n-en>Modification of Flight Plan Data</span>
+                  <span data-i18n-tr>Uçuş Planı Verisi Değişikliği</span>
+                </td>
+                <td style="color: var(--color-accent-warning); font-weight: 600;">
+                  <span data-i18n-en>Flight Plan</span>
+                  <span data-i18n-tr>Ucus Plani</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Existing flight plan data is updated. This includes changes to callsign, route, cleared flight level, runway assignment, etc.</span>
+                  <span data-i18n-tr>Mevcut uçuş planı verisi güncellenir. Callsign, rota, temiz uçuş seviyesi, pist ataması vb. değişikliklerini içerir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>7</strong></td>
+                <td><code>0000 0111</code></td>
+                <td>
+                  <span data-i18n-en>Holdbar Status</span>
+                  <span data-i18n-tr>Holdbar Durumu</span>
+                </td>
+                <td style="color: var(--color-accent-success); font-weight: 600;">
+                  <span data-i18n-en>Infrastructure</span>
+                  <span data-i18n-tr>Altyapı</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Reports the on/off status of runway hold bar lights. These are illuminated stop bars at runway entry points that prevent unauthorized runway entry.</span>
+                  <span data-i18n-tr>Pist bekleme çubuğu ışık durumunu (açık/kapalı) raporlar. Bunlar, pist giriş noktalarında yetkisiz pist girişini engelleyen aydınlatılmış durdurma çubuklarıdır.</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Category Breakdown -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Functional Categories</span>
+          <span data-i18n-tr>Fonksiyonel Kategoriler</span>
+        </h2>
+
+        <div class="cards-grid">
+          <div class="card card--info">
+            <strong>
+              <span data-i18n-en>Surveillance (Type 1)</span>
+              <span data-i18n-tr>Gozetim (Tip 1)</span>
+            </strong>
+            <p>
+              <span data-i18n-en>The workhorse of CAT011. Target reports carry the fused track data — everything from position and velocity to identity and alerts. Sent continuously at the track update rate.</span>
+              <span data-i18n-tr>CAT011'in temel mesajıdır. Hedef raporları, konumdan hız ve kimliğe kadar birleştirilmiş iz verisini taşır. İz güncelleme hızında sürekli gönderilir.</span>
+            </p>
+          </div>
+          <div class="card card--warning">
+            <strong>
+              <span data-i18n-en>Flight Plan (Types 2–6)</span>
+              <span data-i18n-tr>Uçuş Planı (Tip 2-6)</span>
+            </strong>
+            <p>
+              <span data-i18n-en>Five message types for flight plan lifecycle management: attach, detach, insert, suppress, and modify. These are event-driven — sent only when an operator or system takes action.</span>
+              <span data-i18n-tr>Uçuş planı yaşam döngüsü yönetimi için beş mesaj tipi: bağlama, çözme, ekleme, silme ve değiştirme. Bunlar olay odaklıdır — yalnızca operatör veya sistem işlem yaptığında gönderilir.</span>
+            </p>
+          </div>
+          <div class="card card--success">
+            <strong>
+              <span data-i18n-en>Infrastructure (Type 7)</span>
+              <span data-i18n-tr>Altyapı (Tip 7)</span>
+            </strong>
+            <p>
+              <span data-i18n-en>Holdbar status reports. Unlike other types, this has no track association — it reports the physical state of airport infrastructure (stop bar lights).</span>
+              <span data-i18n-tr>Holdbar durum raporları. Diğer tiplerden farklı olarak iz ilişkisi yoktur — havalimanının fiziksel altyapısının (durdurma çubuğu ışıkları) durumunu raporlar.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Encoding -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Details</span>
+          <span data-i18n-tr>Kodlama Detayları</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en>The Message Type is encoded in Data Item <strong>I011/000</strong> as a single unsigned byte (8 bits). It is a <strong>Fixed Length</strong> data item — always exactly 1 byte. The value directly represents the message type number (1–7). Values 0 and 8–255 are currently not defined and should be treated as reserved.</span>
+            <span data-i18n-tr>Mesaj Tipi, <strong>I011/000</strong> Veri Öğesi içinde tek bir işaretsiz bayt (8 bit) olarak kodlanır. <strong>Sabit Uzunluklu</strong> bir veri öğesidir — her zaman tam olarak 1 bayttır. Değer doğrudan mesaj tipi numarasını (1-7) temsil eder. 0 ve 8-255 arası değerler şu anda tanımlanmamıştır ve ayrılmış olarak değerlendirilmelidir.</span>
+          </p>
+        </div>
+
+        <!-- Bit Diagram -->
+        <div class="bit-diagram" style="margin-top: var(--spacing-lg);">
+          <svg viewBox="0 0 600 80" xmlns="http://www.w3.org/2000/svg" style="max-width: 500px; font-family: var(--font-family-mono);">
+            <!-- Bit numbers -->
+            <text x="50" y="15" text-anchor="middle" font-size="11" fill="#718096">8</text>
+            <text x="115" y="15" text-anchor="middle" font-size="11" fill="#718096">7</text>
+            <text x="180" y="15" text-anchor="middle" font-size="11" fill="#718096">6</text>
+            <text x="245" y="15" text-anchor="middle" font-size="11" fill="#718096">5</text>
+            <text x="310" y="15" text-anchor="middle" font-size="11" fill="#718096">4</text>
+            <text x="375" y="15" text-anchor="middle" font-size="11" fill="#718096">3</text>
+            <text x="440" y="15" text-anchor="middle" font-size="11" fill="#718096">2</text>
+            <text x="505" y="15" text-anchor="middle" font-size="11" fill="#718096">1</text>
+            <!-- Cells -->
+            <rect x="20" y="25" width="520" height="40" rx="4" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="280" y="50" text-anchor="middle" fill="white" font-size="14" font-weight="700">Message Type (1–7)</text>
+            <!-- Vertical dividers -->
+            <line x1="85" y1="25" x2="85" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="150" y1="25" x2="150" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="215" y1="25" x2="215" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="280" y1="25" x2="280" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="345" y1="25" x2="345" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="410" y1="25" x2="410" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="475" y1="25" x2="475" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+          </svg>
+          <div class="bit-diagram__label">
+            <span data-i18n-en>I011/000 — 8-bit unsigned integer (1 octet)</span>
+            <span data-i18n-tr>I011/000 — 8-bit işaretsiz tamsayı (1 oktet)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Usage Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Important Notes</span>
+          <span data-i18n-tr>Onemli Notlar</span>
+        </h2>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip:</strong> Message Type 1 (Target Report) typically includes most data items — position, velocity, identity, and even embedded flight plan data. Types 2–6 are lightweight and mainly carry the flight plan data items (I011/390) along with track identification (I011/161).</span>
+            <span data-i18n-tr><strong>İpucu:</strong> Mesaj Tipi 1 (Hedef Raporu) genellikle çoğu veri öğesini içerir — konum, hız, kimlik ve hatta gömülü uçuş planı verisi. 2-6 tipleri hafiftir ve esas olarak uçuş planı veri öğelerini (I011/390) ve iz tanımlayıcıyı (I011/161) taşır.</span>
+          </p>
+        </div>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Note:</strong> Message Type 7 (Holdbar Status) is structurally different from all others — it has no track number, no position, no velocity. It only contains the data source (I011/010), message type (I011/000), and holdbar status indicators (I011/610).</span>
+            <span data-i18n-tr><strong>Not:</strong> Mesaj Tipi 7 (Holdbar Durumu) yapısal olarak diğer tümünden farklıdır — iz numarası, konum ve hız içermez. Yalnızca veri kaynağı (I011/010), mesaj tipi (I011/000) ve holdbar durum göstergeleri (I011/610) içerir.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020) temel alınmıştır. Sadece referans amacıyla.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

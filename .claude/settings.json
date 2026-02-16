@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "Grep",
+      "Bash(npx *)",
+      "Bash(node *)",
+      "Bash(mkdir *)",
+      "Bash(ls *)",
+      "Bash(git *)",
+      "WebFetch(domain:*.eurocontrol.int)",
+      "WebFetch(domain:zoranbosnjak.github.io)",
+      "WebSearch"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Read(.env*)"
+    ]
+  },
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "PROJECT_NAME": "CAT011-Documentation",
+    "PROTOCOL_STANDARD": "ASTERIX_CAT011",
+    "SPEC_EDITION": "1.3"
+  }
+}

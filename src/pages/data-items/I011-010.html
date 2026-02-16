@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/010 — Data Source Identifier</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimlik</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimlik</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimlik</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — Irtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik Irt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik Irt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Data Source Identifier</span>
+        <span data-i18n-tr>Veri Kaynağı Tanımlayıcı</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/010</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Data Source Identifier</span>
+          <span data-i18n-tr>Veri Kaynağı Tanımlayıcı</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Fixed Length — 2 Octets</span>
+          <span data-i18n-tr>Sabit Uzunluk — 2 Oktet</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Identification of the system sending the data. Every CAT011 message <strong>must</strong> include this data item. It uses the standard ASTERIX SAC/SIC pair to uniquely identify the data source — typically the A-SMGCS server at a specific airport.</span>
+          <span data-i18n-tr>Veriyi gönderen sistemin tanımlanması. Her CAT011 mesajı bu veri öğesini <strong>içermelidir</strong>. Veri kaynağını benzersiz şekilde tanımlamak için standart ASTERIX SAC/SIC çiftini kullanır — genellikle belirli bir havalimanındaki A-SMGCS sunucusu.</span>
+        </p>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Key concept:</strong> SAC (System Area Code) identifies the geographical area or country, while SIC (System Identification Code) identifies the specific system within that area. Together they form a unique address.</span>
+            <span data-i18n-tr><strong>Temel kavram:</strong> SAC (Sistem Alan Kodu) coğrafi bölgeyi veya ülkeyi tanımlarken, SIC (Sistem Tanımlama Kodu) o bölgedeki belirli sistemi tanımlar. Birlikte benzersiz bir adres oluştururlar.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Octet</span>
+                  <span data-i18n-tr>Oktet</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Field</span>
+                  <span data-i18n-tr>Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bits</span>
+                  <span data-i18n-tr>Bitler</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td>SAC</td>
+                <td>8 (bit 16–9)</td>
+                <td>
+                  <span data-i18n-en>System Area Code — identifies the geographical region or country of the data source</span>
+                  <span data-i18n-tr>Sistem Alan Kodu — veri kaynağının coğrafi bölgesini veya ülkesini tanımlar</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td>SIC</td>
+                <td>8 (bit 8–1)</td>
+                <td>
+                  <span data-i18n-en>System Identification Code — identifies the specific system within that area</span>
+                  <span data-i18n-tr>Sistem Tanımlama Kodu — o bölgedeki belirli sistemi tanımlar</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram</span>
+          <span data-i18n-tr>Bit Diyagramı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 650 160" xmlns="http://www.w3.org/2000/svg" style="max-width: 600px; font-family: var(--font-family-mono);">
+            <!-- Octet 1 - SAC -->
+            <text x="30" y="15" font-size="12" fill="#718096" font-weight="600">
+              <tspan>Octet 1</tspan>
+            </text>
+            <text x="80" y="35" text-anchor="middle" font-size="10" fill="#718096">16</text>
+            <text x="145" y="35" text-anchor="middle" font-size="10" fill="#718096">15</text>
+            <text x="210" y="35" text-anchor="middle" font-size="10" fill="#718096">14</text>
+            <text x="275" y="35" text-anchor="middle" font-size="10" fill="#718096">13</text>
+            <text x="340" y="35" text-anchor="middle" font-size="10" fill="#718096">12</text>
+            <text x="405" y="35" text-anchor="middle" font-size="10" fill="#718096">11</text>
+            <text x="470" y="35" text-anchor="middle" font-size="10" fill="#718096">10</text>
+            <text x="535" y="35" text-anchor="middle" font-size="10" fill="#718096">9</text>
+            <rect x="50" y="42" width="520" height="35" rx="4" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="310" y="64" text-anchor="middle" fill="white" font-size="14" font-weight="700">SAC (System Area Code)</text>
+            <line x1="115" y1="42" x2="115" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="180" y1="42" x2="180" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="245" y1="42" x2="245" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="310" y1="42" x2="310" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="375" y1="42" x2="375" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="440" y1="42" x2="440" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="505" y1="42" x2="505" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+
+            <!-- Octet 2 - SIC -->
+            <text x="30" y="100" font-size="12" fill="#718096" font-weight="600">
+              <tspan>Octet 2</tspan>
+            </text>
+            <text x="80" y="105" text-anchor="middle" font-size="10" fill="#718096">8</text>
+            <text x="145" y="105" text-anchor="middle" font-size="10" fill="#718096">7</text>
+            <text x="210" y="105" text-anchor="middle" font-size="10" fill="#718096">6</text>
+            <text x="275" y="105" text-anchor="middle" font-size="10" fill="#718096">5</text>
+            <text x="340" y="105" text-anchor="middle" font-size="10" fill="#718096">4</text>
+            <text x="405" y="105" text-anchor="middle" font-size="10" fill="#718096">3</text>
+            <text x="470" y="105" text-anchor="middle" font-size="10" fill="#718096">2</text>
+            <text x="535" y="105" text-anchor="middle" font-size="10" fill="#718096">1</text>
+            <rect x="50" y="112" width="520" height="35" rx="4" fill="#48bb78" stroke="#2f855a" stroke-width="2"/>
+            <text x="310" y="134" text-anchor="middle" fill="white" font-size="14" font-weight="700">SIC (System Identification Code)</text>
+            <line x1="115" y1="112" x2="115" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="180" y1="112" x2="180" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="245" y1="112" x2="245" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="310" y1="112" x2="310" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="375" y1="112" x2="375" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="440" y1="112" x2="440" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="505" y1="112" x2="505" y2="147" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+          </svg>
+          <div class="bit-diagram__label">I011/010 — 2 octets, Fixed Length</div>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Property</span>
+                  <span data-i18n-tr>Özellik</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Value</span>
+                  <span data-i18n-tr>Değer</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Format</span>
+                  <span data-i18n-tr>Format</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Fixed Length</span>
+                  <span data-i18n-tr>Sabit Uzunluk</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Length</span>
+                  <span data-i18n-tr>Uzunluk</span>
+                </td>
+                <td>2 octets (16 bits)</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>SAC Range</span>
+                  <span data-i18n-tr>SAC Aralığı</span>
+                </td>
+                <td>0–255 (8-bit unsigned)</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>SIC Range</span>
+                  <span data-i18n-tr>SIC Aralığı</span>
+                </td>
+                <td>0–255 (8-bit unsigned)</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Mandatory</span>
+                  <span data-i18n-tr>Zorunluluk</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Yes — required in every CAT011 record</span>
+                  <span data-i18n-tr>Evet — her CAT011 kaydında zorunludur</span>
+                </td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>1 (FSPEC Byte 1, Bit 8)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Hex Örneği</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> An A-SMGCS server at Istanbul Airport, with SAC = 40 (Turkey region) and SIC = 1 (system #1).</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> İstanbul Havalimanındaki bir A-SMGCS sunucusu, SAC = 40 (Türkiye bölgesi) ve SIC = 1 (sistem #1).</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — Encode SAC</span>
+              <span data-i18n-tr>Adım 1 — SAC Kodlama</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              SAC = 40 &rarr; 0x28 &rarr; <code>0010 1000</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Encode SIC</span>
+              <span data-i18n-tr>Adım 2 — SIC Kodlama</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              SIC = 1 &rarr; 0x01 &rarr; <code>0000 0001</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Final Encoded Value</span>
+              <span data-i18n-tr>Adım 3 — Son Kodlanmış Değer</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              I011/010 = <code>0x28 0x01</code> &rarr; <code>0010 1000 0000 0001</code>
+            </div>
+          </div>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Decoding:</strong> To decode, read the first octet as SAC and the second as SIC. For <code>0x28 0x01</code>: SAC = 0x28 = 40, SIC = 0x01 = 1. Look up SAC 40 in the ASTERIX SAC table to determine the country/region.</span>
+            <span data-i18n-tr><strong>Çözümleme:</strong> Çözümlemek için ilk okteti SAC, ikinci okteti SIC olarak okuyun. <code>0x28 0x01</code> için: SAC = 0x28 = 40, SIC = 0x01 = 1. Ülkeyi/bölgeyi belirlemek için ASTERIX SAC tablosunda SAC 40'a bakın.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlişkili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Data Item</span>
+                  <span data-i18n-tr>Veri Öğesi</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Relationship</span>
+                  <span data-i18n-tr>İlişki</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-000.html">I011/000</a></td>
+                <td>
+                  <span data-i18n-en>Message Type — always present together with Data Source ID</span>
+                  <span data-i18n-tr>Mesaj Tipi — Veri Kaynağı Kimlik ile birlikte her zaman mevcuttur</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-015.html">I011/015</a></td>
+                <td>
+                  <span data-i18n-en>Service Identification — identifies the specific service from the same source</span>
+                  <span data-i18n-tr>Servis Tanımlama — aynı kaynaktan belirli servisi tanımlar</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Important Notes</span>
+          <span data-i18n-tr>Önemli Notlar</span>
+        </h2>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Note:</strong> The SAC/SIC combination must be unique within the ASTERIX network. If two A-SMGCS systems share the same SAC/SIC, message routing and data correlation will fail. Coordinate with EUROCONTROL for official SAC/SIC assignments.</span>
+            <span data-i18n-tr><strong>Not:</strong> SAC/SIC kombinasyonu ASTERIX ağı içerisinde benzersiz olmalıdır. İki A-SMGCS sistemi aynı SAC/SIC'i paylaşırsa, mesaj yönlendirme ve veri korelasyonu başarısız olur. Resmi SAC/SIC atamaları için EUROCONTROL ile koordine edin.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip:</strong> In a typical airport setup, the A-SMGCS server uses a single SAC/SIC for all its CAT011 output. Different services from the same server are distinguished by I011/015 (Service Identification), not by different SIC values.</span>
+            <span data-i18n-tr><strong>İpucu:</strong> Tipik bir havalimanı kurulumunda, A-SMGCS sunucusu tüm CAT011 çıktısı için tek bir SAC/SIC kullanır. Aynı sunucudan farklı servisler, farklı SIC değerleri ile değil, I011/015 (Servis Tanımlama) ile ayırt edilir.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020) temel alınmıştır. Sadece referans amacıyla.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/015 — Service Identification</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimlik</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimlik</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimlik</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — Irtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik Irt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik Irt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Service Identification</span>
+        <span data-i18n-tr>Servis Tanımlama</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/015</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Service Identification</span>
+          <span data-i18n-tr>Servis Tanımlama</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Fixed Length — 1 Octet</span>
+          <span data-i18n-tr>Sabit Uzunluk — 1 Oktet</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Identification of the service provided to one or more users. This data item allows the distinction between different services provided by the same A-SMGCS data source (same SAC/SIC). For example, one service could provide full surveillance tracks while another provides only alert messages.</span>
+          <span data-i18n-tr>Bir veya daha fazla kullanıcıya sağlanan servisin tanımlanması. Bu veri öğesi, aynı A-SMGCS veri kaynağından (aynı SAC/SIC) sağlanan farklı servislerin ayırt edilmesine olanak tanır. Örneğin, bir servis tam gözetim izleri sağlarken, başka bir servis yalnızca alarm mesajları sağlayabilir.</span>
+        </p>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Key concept:</strong> While I011/010 (SAC/SIC) identifies <em>which system</em> is sending, I011/015 identifies <em>which service</em> from that system. A single A-SMGCS server can provide multiple parallel data streams — each with a different Service ID.</span>
+            <span data-i18n-tr><strong>Temel kavram:</strong> I011/010 (SAC/SIC) <em>hangi sistemin</em> gönderdiğini tanımlarken, I011/015 o sistemden <em>hangi servisin</em> olduğunu tanımlar. Tek bir A-SMGCS sunucusu, her biri farklı bir Servis Kimliğine sahip birden fazla paralel veri akışı sağlayabilir.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Octet</span>
+                  <span data-i18n-tr>Oktet</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Field</span>
+                  <span data-i18n-tr>Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bits</span>
+                  <span data-i18n-tr>Bitler</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td>Service Identification</td>
+                <td>8 (bit 8–1)</td>
+                <td>
+                  <span data-i18n-en>Identifier of the service being provided, encoded as unsigned integer</span>
+                  <span data-i18n-tr>Sağlanan servisin tanımlayıcısı, işaretsiz tamsayı olarak kodlanır</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram</span>
+          <span data-i18n-tr>Bit Diyagramı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 600 80" xmlns="http://www.w3.org/2000/svg" style="max-width: 500px; font-family: var(--font-family-mono);">
+            <text x="50" y="15" text-anchor="middle" font-size="11" fill="#718096">8</text>
+            <text x="115" y="15" text-anchor="middle" font-size="11" fill="#718096">7</text>
+            <text x="180" y="15" text-anchor="middle" font-size="11" fill="#718096">6</text>
+            <text x="245" y="15" text-anchor="middle" font-size="11" fill="#718096">5</text>
+            <text x="310" y="15" text-anchor="middle" font-size="11" fill="#718096">4</text>
+            <text x="375" y="15" text-anchor="middle" font-size="11" fill="#718096">3</text>
+            <text x="440" y="15" text-anchor="middle" font-size="11" fill="#718096">2</text>
+            <text x="505" y="15" text-anchor="middle" font-size="11" fill="#718096">1</text>
+            <rect x="20" y="25" width="520" height="40" rx="4" fill="#48bb78" stroke="#2f855a" stroke-width="2"/>
+            <text x="280" y="50" text-anchor="middle" fill="white" font-size="14" font-weight="700">Service Identification (0–255)</text>
+            <line x1="85" y1="25" x2="85" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="150" y1="25" x2="150" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="215" y1="25" x2="215" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="280" y1="25" x2="280" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="345" y1="25" x2="345" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="410" y1="25" x2="410" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="475" y1="25" x2="475" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+          </svg>
+          <div class="bit-diagram__label">I011/015 — 8-bit unsigned integer (1 octet)</div>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Property</span>
+                  <span data-i18n-tr>Özellik</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Value</span>
+                  <span data-i18n-tr>Değer</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Format</span>
+                  <span data-i18n-tr>Format</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Fixed Length</span>
+                  <span data-i18n-tr>Sabit Uzunluk</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Length</span>
+                  <span data-i18n-tr>Uzunluk</span>
+                </td>
+                <td>1 octet (8 bits)</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Value Range</span>
+                  <span data-i18n-tr>Değer Aralığı</span>
+                </td>
+                <td>0–255 (8-bit unsigned)</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Mandatory</span>
+                  <span data-i18n-tr>Zorunluluk</span>
+                </td>
+                <td>
+                  <span data-i18n-en>No — optional data item</span>
+                  <span data-i18n-tr>Hayır — isteğe bağlı veri öğesi</span>
+                </td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>3 (FSPEC Byte 1, Bit 6)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Hex Örneği</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> An A-SMGCS system provides a tracking service identified as Service 3.</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> Bir A-SMGCS sistemi, Servis 3 olarak tanımlanan bir izleme servisi sağlar.</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — Service ID = 3</span>
+              <span data-i18n-tr>Adım 1 — Servis Kimliği = 3</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              3 &rarr; 0x03 &rarr; <code>0000 0011</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Final Encoded Value</span>
+              <span data-i18n-tr>Adım 2 — Son Kodlanmış Değer</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              I011/015 = <code>0x03</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlişkili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Data Item</span>
+                  <span data-i18n-tr>Veri Öğesi</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Relationship</span>
+                  <span data-i18n-tr>İlişki</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-010.html">I011/010</a></td>
+                <td>
+                  <span data-i18n-en>Data Source Identifier — identifies the system; I011/015 identifies which service from that system</span>
+                  <span data-i18n-tr>Veri Kaynağı Tanımlayıcı — sistemi tanımlar; I011/015 o sistemden hangi servisi olduğunu tanımlar</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-000.html">I011/000</a></td>
+                <td>
+                  <span data-i18n-en>Message Type — determines the type of data carried by the service</span>
+                  <span data-i18n-tr>Mesaj Tipi — servis tarafından taşınan verinin türünü belirler</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Important Notes</span>
+          <span data-i18n-tr>Önemli Notlar</span>
+        </h2>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip:</strong> The Service Identification value is locally defined between the data provider and data consumer. There is no standardized assignment — each A-SMGCS deployment defines its own service numbering scheme. Documentation of the service assignments should be part of the system's Interface Control Document (ICD).</span>
+            <span data-i18n-tr><strong>İpucu:</strong> Servis Tanımlama değeri, veri sağlayıcı ve veri tüketici arasında yerel olarak tanımlanır. Standartlaştırılmış bir atama yoktur — her A-SMGCS kurulumu kendi servis numaralandırma şemasını tanımlar. Servis atamalarının dokümantasyonu, sistemin Arayüz Kontrol Dokümanı (ICD) kapsamında yer almalıdır.</span>
+          </p>
+        </div>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Note:</strong> When this data item is absent from a CAT011 message, the receiver should treat all messages from the same SAC/SIC as belonging to a single default service. Multi-service setups require this field to be present for proper data routing.</span>
+            <span data-i18n-tr><strong>Not:</strong> Bu veri öğesi bir CAT011 mesajında bulunmadığında, alıcı aynı SAC/SIC'den gelen tüm mesajları tek bir varsayılan servise ait olarak değerlendirmelidir. Çoklu servis kurulumları, doğru veri yönlendirmesi için bu alanın mevcut olmasını gerektirir.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020) temel alınmıştır. Sadece referans amacıyla.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

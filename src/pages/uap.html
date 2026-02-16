@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UAP Structure — ASTERIX CAT011</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="uap.html" class="sidebar__link sidebar__link--active">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="data-items/I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimlik</span></a>
+      <a href="data-items/I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="data-items/I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimlik</span></a>
+      <a href="data-items/I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="data-items/I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="data-items/I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="data-items/I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="data-items/I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="data-items/I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="data-items/I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimlik</span></a>
+      <a href="data-items/I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="data-items/I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="data-items/I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="data-items/I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — İrtifa</span>
+      </div>
+      <a href="data-items/I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="data-items/I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="data-items/I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik İrt.</span></a>
+      <a href="data-items/I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik İrt.</span></a>
+      <a href="data-items/I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="data-items/I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="data-items/I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="data-items/I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="data-items/I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="data-items/I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="data-items/I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="data-items/I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="data-items/I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="data-items/I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="data-items/I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../index.html">ASTERIX</a> &rsaquo; <a href="../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <div class="page-header">
+        <div class="page-header__id">FSPEC &amp; UAP</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>User Application Profile (UAP)</span>
+          <span data-i18n-tr>Kullanıcı Uygulama Profili (UAP)</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>29 Positions — 5 Blocks</span>
+          <span data-i18n-tr>29 Pozisyon — 5 Blok</span>
+        </span>
+      </div>
+
+      <!-- What is UAP -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>What is the UAP?</span>
+          <span data-i18n-tr>UAP Nedir?</span>
+        </h2>
+        <p>
+          <span data-i18n-en>The <strong>User Application Profile (UAP)</strong> defines the order in which data items appear in a CAT011 record. Each CAT011 message starts with an <strong>FSPEC</strong> (Field Specification) — a variable-length bitmask that indicates which data items are present in the record.</span>
+          <span data-i18n-tr><strong>Kullanıcı Uygulama Profili (UAP)</strong>, veri öğelerinin bir CAT011 kaydında görülme sırasını tanımlar. Her CAT011 mesajı, kayıtta hangi veri öğelerinin bulunduğunu gösteren değişken uzunluklu bir bit maskesi olan <strong>FSPEC</strong> (Alan Belirtimi) ile başlar.</span>
+        </p>
+        <div class="card card--info" style="margin-top: var(--spacing-md);">
+          <p>
+            <span data-i18n-en><strong>How FSPEC works:</strong> Each bit in the FSPEC corresponds to a data item position in the UAP. If the bit is <code>1</code>, the corresponding data item is present. If <code>0</code>, it is absent. The last bit (bit 1) of each FSPEC byte is the <strong>FX (Field Extension)</strong> bit — if set to <code>1</code>, another FSPEC byte follows.</span>
+            <span data-i18n-tr><strong>FSPEC nasıl çalışır:</strong> FSPEC'teki her bit, UAP'taki bir veri öğesi pozisyonuna karşılık gelir. Bit <code>1</code> ise ilgili veri öğesi mevcuttur. <code>0</code> ise yoktur. Her FSPEC baytının son biti (bit 1), <strong>FX (Alan Genişletme)</strong> bitidir — <code>1</code> olarak ayarlanmışsa, başka bir FSPEC baytı gelir.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- FSPEC Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>FSPEC Byte Structure</span>
+          <span data-i18n-tr>FSPEC Bayt Yapısı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 700 100" xmlns="http://www.w3.org/2000/svg" style="max-width: 650px; font-family: var(--font-family-mono);">
+            <!-- Bit numbers -->
+            <text x="55" y="15" text-anchor="middle" font-size="10" fill="#718096">8</text>
+            <text x="130" y="15" text-anchor="middle" font-size="10" fill="#718096">7</text>
+            <text x="205" y="15" text-anchor="middle" font-size="10" fill="#718096">6</text>
+            <text x="280" y="15" text-anchor="middle" font-size="10" fill="#718096">5</text>
+            <text x="355" y="15" text-anchor="middle" font-size="10" fill="#718096">4</text>
+            <text x="430" y="15" text-anchor="middle" font-size="10" fill="#718096">3</text>
+            <text x="505" y="15" text-anchor="middle" font-size="10" fill="#718096">2</text>
+            <text x="580" y="15" text-anchor="middle" font-size="10" fill="#718096">1</text>
+
+            <!-- Data item cells -->
+            <rect x="20" y="25" width="75" height="40" rx="3" fill="#4a90d9" stroke="#2b6cb0" stroke-width="1.5"/>
+            <text x="57" y="50" text-anchor="middle" fill="white" font-size="11" font-weight="600">Item 1</text>
+
+            <rect x="95" y="25" width="75" height="40" rx="3" fill="#4a90d9" stroke="#2b6cb0" stroke-width="1.5"/>
+            <text x="132" y="50" text-anchor="middle" fill="white" font-size="11" font-weight="600">Item 2</text>
+
+            <rect x="170" y="25" width="75" height="40" rx="3" fill="#4a90d9" stroke="#2b6cb0" stroke-width="1.5"/>
+            <text x="207" y="50" text-anchor="middle" fill="white" font-size="11" font-weight="600">Item 3</text>
+
+            <rect x="245" y="25" width="75" height="40" rx="3" fill="#4a90d9" stroke="#2b6cb0" stroke-width="1.5"/>
+            <text x="282" y="50" text-anchor="middle" fill="white" font-size="11" font-weight="600">Item 4</text>
+
+            <rect x="320" y="25" width="75" height="40" rx="3" fill="#4a90d9" stroke="#2b6cb0" stroke-width="1.5"/>
+            <text x="357" y="50" text-anchor="middle" fill="white" font-size="11" font-weight="600">Item 5</text>
+
+            <rect x="395" y="25" width="75" height="40" rx="3" fill="#4a90d9" stroke="#2b6cb0" stroke-width="1.5"/>
+            <text x="432" y="50" text-anchor="middle" fill="white" font-size="11" font-weight="600">Item 6</text>
+
+            <rect x="470" y="25" width="75" height="40" rx="3" fill="#4a90d9" stroke="#2b6cb0" stroke-width="1.5"/>
+            <text x="507" y="50" text-anchor="middle" fill="white" font-size="11" font-weight="600">Item 7</text>
+
+            <!-- FX bit -->
+            <rect x="545" y="25" width="75" height="40" rx="3" fill="#e67e22" stroke="#c05621" stroke-width="1.5"/>
+            <text x="582" y="50" text-anchor="middle" fill="white" font-size="11" font-weight="700">FX</text>
+
+            <!-- Label -->
+            <text x="350" y="88" text-anchor="middle" font-size="12" fill="#718096" font-family="sans-serif">
+              1 = present, 0 = absent | FX = 1 means more bytes follow
+            </text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- UAP Table -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Complete UAP Table</span>
+          <span data-i18n-tr>Tam UAP Tablosu</span>
+        </h2>
+
+        <!-- Block 1 -->
+        <h3 class="section__subtitle">
+          <span data-i18n-en>Block 1 — Core Surveillance (FSPEC Byte 1)</span>
+          <span data-i18n-tr>Blok 1 — Temel Gözetim (FSPEC Bayt 1)</span>
+        </h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Bit</span>
+                  <span data-i18n-tr>Bit</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Position</span>
+                  <span data-i18n-tr>Pozisyon</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Data Item</span>
+                  <span data-i18n-tr>Veri Öğesi</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Name</span>
+                  <span data-i18n-tr>Ad</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Format</span>
+                  <span data-i18n-tr>Format</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>8</td><td>1</td><td><code>I011/010</code></td><td><span data-i18n-en>Data Source Identifier</span><span data-i18n-tr>Veri Kaynağı Tanımlayıcı</span></td><td>Fixed (2)</td></tr>
+              <tr><td>7</td><td>2</td><td><code>I011/000</code></td><td><span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></td><td>Fixed (1)</td></tr>
+              <tr><td>6</td><td>3</td><td><code>I011/015</code></td><td><span data-i18n-en>Service Identification</span><span data-i18n-tr>Servis Tanımlama</span></td><td>Fixed (1)</td></tr>
+              <tr><td>5</td><td>4</td><td><code>I011/140</code></td><td><span data-i18n-en>Time of Track Information</span><span data-i18n-tr>İz Bilgisi Zamanı</span></td><td>Fixed (3)</td></tr>
+              <tr><td>4</td><td>5</td><td><code>I011/041</code></td><td><span data-i18n-en>Position in WGS-84</span><span data-i18n-tr>WGS-84 Konumu</span></td><td>Fixed (8)</td></tr>
+              <tr><td>3</td><td>6</td><td><code>I011/042</code></td><td><span data-i18n-en>Calculated Position (Cartesian)</span><span data-i18n-tr>Hesaplanan Konum (Kartezyen)</span></td><td>Fixed (4)</td></tr>
+              <tr><td>2</td><td>7</td><td><code>I011/202</code></td><td><span data-i18n-en>Calculated Track Velocity</span><span data-i18n-tr>Hesaplanan İz Hızı</span></td><td>Fixed (4)</td></tr>
+              <tr style="background: rgba(230,126,34,0.1);"><td>1</td><td>—</td><td colspan="3" style="color: var(--color-accent-warning); font-weight: 600;">FX — Field Extension Indicator</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Block 2 -->
+        <h3 class="section__subtitle">
+          <span data-i18n-en>Block 2 — Identity & Status (FSPEC Byte 2)</span>
+          <span data-i18n-tr>Blok 2 — Kimlik ve Durum (FSPEC Bayt 2)</span>
+        </h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Bit</th><th><span data-i18n-en>Pos</span><span data-i18n-tr>Poz</span></th><th><span data-i18n-en>Data Item</span><span data-i18n-tr>Veri Öğesi</span></th><th><span data-i18n-en>Name</span><span data-i18n-tr>Ad</span></th><th>Format</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>8</td><td>8</td><td><code>I011/210</code></td><td><span data-i18n-en>Calculated Acceleration</span><span data-i18n-tr>Hesaplanan İvme</span></td><td>Fixed (2)</td></tr>
+              <tr><td>7</td><td>9</td><td><code>I011/060</code></td><td><span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></td><td>Fixed (2)</td></tr>
+              <tr><td>6</td><td>10</td><td><code>I011/245</code></td><td><span data-i18n-en>Target Identification</span><span data-i18n-tr>Hedef Tanımlama</span></td><td>Fixed (7)</td></tr>
+              <tr><td>5</td><td>11</td><td><code>I011/380</code></td><td><span data-i18n-en>Mode-S / ADS-B Related Data</span><span data-i18n-tr>Mode-S / ADS-B İlişkili Veriler</span></td><td>Compound</td></tr>
+              <tr><td>4</td><td>12</td><td><code>I011/161</code></td><td><span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></td><td>Fixed (2)</td></tr>
+              <tr><td>3</td><td>13</td><td><code>I011/170</code></td><td><span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></td><td>Variable (1+)</td></tr>
+              <tr><td>2</td><td>14</td><td><code>I011/290</code></td><td><span data-i18n-en>System Track Update Ages</span><span data-i18n-tr>Sistem İz Güncelleme Yaşları</span></td><td>Compound</td></tr>
+              <tr style="background: rgba(230,126,34,0.1);"><td>1</td><td>—</td><td colspan="3" style="color: var(--color-accent-warning); font-weight: 600;">FX — Field Extension Indicator</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Block 3 -->
+        <h3 class="section__subtitle">
+          <span data-i18n-en>Block 3 — Altitude & Flight Plan (FSPEC Byte 3)</span>
+          <span data-i18n-tr>Blok 3 — İrtifa ve Uçuş Planı (FSPEC Bayt 3)</span>
+        </h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Bit</th><th><span data-i18n-en>Pos</span><span data-i18n-tr>Poz</span></th><th><span data-i18n-en>Data Item</span><span data-i18n-tr>Veri Öğesi</span></th><th><span data-i18n-en>Name</span><span data-i18n-tr>Ad</span></th><th>Format</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>8</td><td>15</td><td><code>I011/430</code></td><td><span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></td><td>Fixed (1)</td></tr>
+              <tr><td>7</td><td>16</td><td><code>I011/090</code></td><td><span data-i18n-en>Measured Flight Level</span><span data-i18n-tr>Ölçülen Uçuş Seviyesi</span></td><td>Fixed (2)</td></tr>
+              <tr><td>6</td><td>17</td><td><code>I011/093</code></td><td><span data-i18n-en>Calc. Barometric Altitude</span><span data-i18n-tr>Hes. Barometrik İrtifa</span></td><td>Fixed (2)</td></tr>
+              <tr><td>5</td><td>18</td><td><code>I011/092</code></td><td><span data-i18n-en>Calc. Geometric Altitude</span><span data-i18n-tr>Hes. Geometrik İrtifa</span></td><td>Fixed (2)</td></tr>
+              <tr><td>4</td><td>19</td><td><code>I011/215</code></td><td><span data-i18n-en>Calc. Rate of Climb/Descent</span><span data-i18n-tr>Hes. Tırmanma/Alçalma Oranı</span></td><td>Fixed (2)</td></tr>
+              <tr><td>3</td><td>20</td><td><code>I011/270</code></td><td><span data-i18n-en>Target Size & Orientation</span><span data-i18n-tr>Hedef Boyutu ve Yönelimi</span></td><td>Variable (1+)</td></tr>
+              <tr><td>2</td><td>21</td><td><code>I011/390</code></td><td><span data-i18n-en>Flight Plan Related Data</span><span data-i18n-tr>Uçuş Planı İlişkili Veriler</span></td><td>Compound</td></tr>
+              <tr style="background: rgba(230,126,34,0.1);"><td>1</td><td>—</td><td colspan="3" style="color: var(--color-accent-warning); font-weight: 600;">FX — Field Extension Indicator</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Block 4 -->
+        <h3 class="section__subtitle">
+          <span data-i18n-en>Block 4 — Alerts & Special (FSPEC Byte 4)</span>
+          <span data-i18n-tr>Blok 4 — Alarmlar ve Özel (FSPEC Bayt 4)</span>
+        </h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Bit</th><th><span data-i18n-en>Pos</span><span data-i18n-tr>Poz</span></th><th><span data-i18n-en>Data Item</span><span data-i18n-tr>Veri Öğesi</span></th><th><span data-i18n-en>Name</span><span data-i18n-tr>Ad</span></th><th>Format</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>8</td><td>22</td><td><code>I011/300</code></td><td><span data-i18n-en>Vehicle Fleet Identification</span><span data-i18n-tr>Araç Filosu Tanımlama</span></td><td>Fixed (1)</td></tr>
+              <tr><td>7</td><td>23</td><td><code>I011/310</code></td><td><span data-i18n-en>Pre-programmed Message</span><span data-i18n-tr>Ön-Programlı Mesaj</span></td><td>Fixed (1)</td></tr>
+              <tr><td>6</td><td>24</td><td><code>I011/500</code></td><td><span data-i18n-en>Estimated Accuracies</span><span data-i18n-tr>Tahmini Doğruluklar</span></td><td>Compound</td></tr>
+              <tr><td>5</td><td>25</td><td><code>I011/600</code></td><td><span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></td><td>Fixed (3)</td></tr>
+              <tr><td>4</td><td>26</td><td><code>I011/605</code></td><td><span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></td><td>Repetitive</td></tr>
+              <tr><td>3</td><td>27</td><td><code>I011/610</code></td><td><span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></td><td>Repetitive</td></tr>
+              <tr><td>2</td><td>28</td><td><code>I011/SP</code></td><td><span data-i18n-en>Special Purpose Field</span><span data-i18n-tr>Özel Amaçlı Alan</span></td><td>Explicit</td></tr>
+              <tr style="background: rgba(230,126,34,0.1);"><td>1</td><td>—</td><td colspan="3" style="color: var(--color-accent-warning); font-weight: 600;">FX — Field Extension Indicator</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Block 5 -->
+        <h3 class="section__subtitle">
+          <span data-i18n-en>Block 5 — Reserved (FSPEC Byte 5)</span>
+          <span data-i18n-tr>Blok 5 — Ayrılmış (FSPEC Bayt 5)</span>
+        </h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Bit</th><th><span data-i18n-en>Pos</span><span data-i18n-tr>Poz</span></th><th><span data-i18n-en>Data Item</span><span data-i18n-tr>Veri Öğesi</span></th><th><span data-i18n-en>Name</span><span data-i18n-tr>Ad</span></th><th>Format</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>8</td><td>29</td><td><code>I011/RE</code></td><td><span data-i18n-en>Reserved Expansion Field</span><span data-i18n-tr>Ayrılmış Genişleme Alanı</span></td><td>Explicit</td></tr>
+              <tr><td>7</td><td>—</td><td colspan="3" style="color: var(--color-text-muted);">Spare</td></tr>
+              <tr><td>6</td><td>—</td><td colspan="3" style="color: var(--color-text-muted);">Spare</td></tr>
+              <tr><td>5</td><td>—</td><td colspan="3" style="color: var(--color-text-muted);">Spare</td></tr>
+              <tr><td>4</td><td>—</td><td colspan="3" style="color: var(--color-text-muted);">Spare</td></tr>
+              <tr><td>3</td><td>—</td><td colspan="3" style="color: var(--color-text-muted);">Spare</td></tr>
+              <tr><td>2</td><td>—</td><td colspan="3" style="color: var(--color-text-muted);">Spare</td></tr>
+              <tr style="background: rgba(230,126,34,0.1);"><td>1</td><td>—</td><td colspan="3" style="color: var(--color-accent-warning); font-weight: 600;">FX — Field Extension Indicator</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Data Item Format Types -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Data Item Format Types</span>
+          <span data-i18n-tr>Veri Öğesi Format Tipleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Format</span>
+                  <span data-i18n-tr>Format</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Example</span>
+                  <span data-i18n-tr>Örnek</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Fixed</strong></td>
+                <td>
+                  <span data-i18n-en>Always the same number of bytes. The number in parentheses is the byte count.</span>
+                  <span data-i18n-tr>Her zaman aynı sayıda bayt. Parantez içindeki sayı bayt sayısıdır.</span>
+                </td>
+                <td>I011/000 — Fixed (1)</td>
+              </tr>
+              <tr>
+                <td><strong>Variable</strong></td>
+                <td>
+                  <span data-i18n-en>Starts with a minimum number of bytes; extends via FX bits. Each byte's bit-1 is FX: if 1, another byte follows.</span>
+                  <span data-i18n-tr>Minimum sayıda baytla başlar; FX bitleri ile genişler. Her baytın bit-1'i FX'tir: 1 ise başka bir bayt gelir.</span>
+                </td>
+                <td>I011/170 — Variable (1+)</td>
+              </tr>
+              <tr>
+                <td><strong>Compound</strong></td>
+                <td>
+                  <span data-i18n-en>Has its own internal FSPEC-like primary subfield indicating which sub-items are present, followed by the sub-item data.</span>
+                  <span data-i18n-tr>Hangi alt öğelerin mevcut olduğunu gösteren FSPEC benzeri kendi dahili birincil alt alanına sahiptir, ardından alt öğe verileri gelir.</span>
+                </td>
+                <td>I011/380, I011/390</td>
+              </tr>
+              <tr>
+                <td><strong>Repetitive</strong></td>
+                <td>
+                  <span data-i18n-en>Starts with a 1-byte repetition factor (REP), followed by that many fixed-size records.</span>
+                  <span data-i18n-tr>1 baytlık tekrar faktörü (REP) ile başlar, ardından o kadar sabit boyutlu kayıt gelir.</span>
+                </td>
+                <td>I011/605, I011/610</td>
+              </tr>
+              <tr>
+                <td><strong>Explicit</strong></td>
+                <td>
+                  <span data-i18n-en>Starts with a 1-byte length indicator, followed by that many bytes of data. Content is implementation-defined.</span>
+                  <span data-i18n-tr>1 baytlık uzunluk göstergesi ile başlar, ardından o kadar bayt veri gelir. İçerik uygulamaya özel tanımlanır.</span>
+                </td>
+                <td>I011/SP, I011/RE</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Important Notes</span>
+          <span data-i18n-tr>Önemli Notlar</span>
+        </h2>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip:</strong> Not all 5 FSPEC bytes are always present. If a message only uses data items from Block 1, only 1 FSPEC byte is needed (with FX=0). The FX chain extends only as far as necessary.</span>
+            <span data-i18n-tr><strong>İpucu:</strong> 5 FSPEC baytının tamamı her zaman mevcut değildir. Bir mesaj yalnızca Blok 1'deki veri öğelerini kullanıyorsa, yalnızca 1 FSPEC baytı gerekir (FX=0). FX zinciri yalnızca gerekli olduğu kadar uzar.</span>
+          </p>
+        </div>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Note:</strong> The order of data items in the binary message <strong>strictly follows</strong> the UAP position order. You cannot reorder items — the decoder relies on the FSPEC bits mapping exactly to these positions.</span>
+            <span data-i18n-tr><strong>Not:</strong> İkili mesajdaki veri öğelerinin sırası, UAP pozisyon sırasını <strong>kesinlikle takip eder</strong>. Öğeleri yeniden sıralayamazsınız — çözücü, FSPEC bitlerinin tam olarak bu pozisyonlarla eşleştiğine dayanır.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020) temel alınmıştır. Sadece referans amacıyla.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

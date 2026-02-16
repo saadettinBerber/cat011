@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASTERIX CAT011 — A-SMGCS Data Reference</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+
+      <!-- Overview -->
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="index.html" class="sidebar__link sidebar__link--active">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="pages/overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="pages/message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="pages/uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapisi</span>
+      </a>
+
+      <!-- Data Items: Block 1 -->
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="pages/data-items/I011-010.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/010</span>
+        <span data-i18n-en>Data Source ID</span>
+        <span data-i18n-tr>Veri Kaynagi Kimlik</span>
+      </a>
+      <a href="pages/data-items/I011-000.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/000</span>
+        <span data-i18n-en>Message Type</span>
+        <span data-i18n-tr>Mesaj Tipi</span>
+      </a>
+      <a href="pages/data-items/I011-015.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/015</span>
+        <span data-i18n-en>Service ID</span>
+        <span data-i18n-tr>Servis Kimlik</span>
+      </a>
+      <a href="pages/data-items/I011-140.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/140</span>
+        <span data-i18n-en>Time of Track</span>
+        <span data-i18n-tr>Iz Zamani</span>
+      </a>
+      <a href="pages/data-items/I011-041.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/041</span>
+        <span data-i18n-en>Position WGS-84</span>
+        <span data-i18n-tr>Konum WGS-84</span>
+      </a>
+      <a href="pages/data-items/I011-042.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/042</span>
+        <span data-i18n-en>Cartesian Position</span>
+        <span data-i18n-tr>Kartezyen Konum</span>
+      </a>
+      <a href="pages/data-items/I011-202.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/202</span>
+        <span data-i18n-en>Cartesian Velocity</span>
+        <span data-i18n-tr>Kartezyen Hiz</span>
+      </a>
+
+      <!-- Data Items: Block 2 -->
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="pages/data-items/I011-210.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/210</span>
+        <span data-i18n-en>Acceleration</span>
+        <span data-i18n-tr>Ivme</span>
+      </a>
+      <a href="pages/data-items/I011-060.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/060</span>
+        <span data-i18n-en>Mode-3/A Code</span>
+        <span data-i18n-tr>Mode-3/A Kodu</span>
+      </a>
+      <a href="pages/data-items/I011-245.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/245</span>
+        <span data-i18n-en>Target ID</span>
+        <span data-i18n-tr>Hedef Kimlik</span>
+      </a>
+      <a href="pages/data-items/I011-380.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/380</span>
+        <span data-i18n-en>Mode-S / ADS-B</span>
+        <span data-i18n-tr>Mode-S / ADS-B</span>
+      </a>
+      <a href="pages/data-items/I011-161.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/161</span>
+        <span data-i18n-en>Track Number</span>
+        <span data-i18n-tr>Iz Numarasi</span>
+      </a>
+      <a href="pages/data-items/I011-170.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/170</span>
+        <span data-i18n-en>Track Status</span>
+        <span data-i18n-tr>Iz Durumu</span>
+      </a>
+      <a href="pages/data-items/I011-290.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/290</span>
+        <span data-i18n-en>Update Ages</span>
+        <span data-i18n-tr>Guncelleme Yaslari</span>
+      </a>
+
+      <!-- Data Items: Block 3 -->
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — Irtifa</span>
+      </div>
+      <a href="pages/data-items/I011-430.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/430</span>
+        <span data-i18n-en>Phase of Flight</span>
+        <span data-i18n-tr>Ucus Fazi</span>
+      </a>
+      <a href="pages/data-items/I011-090.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/090</span>
+        <span data-i18n-en>Measured FL</span>
+        <span data-i18n-tr>Olculen FL</span>
+      </a>
+      <a href="pages/data-items/I011-093.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/093</span>
+        <span data-i18n-en>Barometric Alt</span>
+        <span data-i18n-tr>Barometrik Irt.</span>
+      </a>
+      <a href="pages/data-items/I011-092.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/092</span>
+        <span data-i18n-en>Geometric Alt</span>
+        <span data-i18n-tr>Geometrik Irt.</span>
+      </a>
+      <a href="pages/data-items/I011-215.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/215</span>
+        <span data-i18n-en>Climb/Descent Rate</span>
+        <span data-i18n-tr>Tirmanma/Alcalma</span>
+      </a>
+      <a href="pages/data-items/I011-270.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/270</span>
+        <span data-i18n-en>Target Size</span>
+        <span data-i18n-tr>Hedef Boyutu</span>
+      </a>
+      <a href="pages/data-items/I011-390.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/390</span>
+        <span data-i18n-en>Flight Plan Data</span>
+        <span data-i18n-tr>Ucus Plani Verisi</span>
+      </a>
+
+      <!-- Data Items: Block 4 -->
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="pages/data-items/I011-300.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/300</span>
+        <span data-i18n-en>Vehicle Fleet ID</span>
+        <span data-i18n-tr>Arac Filo Kimlik</span>
+      </a>
+      <a href="pages/data-items/I011-310.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/310</span>
+        <span data-i18n-en>Pre-programmed Msg</span>
+        <span data-i18n-tr>On-Programli Mesaj</span>
+      </a>
+      <a href="pages/data-items/I011-500.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/500</span>
+        <span data-i18n-en>Est. Accuracies</span>
+        <span data-i18n-tr>Tah. Dogruluklar</span>
+      </a>
+      <a href="pages/data-items/I011-600.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/600</span>
+        <span data-i18n-en>Alert Messages</span>
+        <span data-i18n-tr>Alarm Mesajlari</span>
+      </a>
+      <a href="pages/data-items/I011-605.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/605</span>
+        <span data-i18n-en>Tracks in Alert</span>
+        <span data-i18n-tr>Alarmli Izler</span>
+      </a>
+      <a href="pages/data-items/I011-610.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/610</span>
+        <span data-i18n-en>Holdbar Status</span>
+        <span data-i18n-tr>Holdbar Durumu</span>
+      </a>
+      <a href="pages/data-items/I011-SP.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/SP</span>
+        <span data-i18n-en>Special Purpose</span>
+        <span data-i18n-tr>Ozel Amac</span>
+      </a>
+      <a href="pages/data-items/I011-RE.html" class="sidebar__link">
+        <span class="sidebar__link-id">I011/RE</span>
+        <span data-i18n-en>Reserved Expansion</span>
+        <span data-i18n-tr>Ayrilmis Genisleme</span>
+      </a>
+
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+
+    <!-- Top Bar -->
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        ASTERIX &rsaquo; CAT011 &rsaquo;
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-content">
+
+      <!-- Hero -->
+      <section class="hero">
+        <h1 class="hero__title">
+          <span class="hero__title-accent">ASTERIX</span> CAT011
+        </h1>
+        <p class="hero__subtitle">
+          <span data-i18n-en>Comprehensive interactive reference for EUROCONTROL's ASTERIX Category 011 — Transmission of A-SMGCS Data</span>
+          <span data-i18n-tr>EUROCONTROL ASTERIX Kategori 011 icin kapsamli interaktif referans — A-SMGCS Verisi Iletimi</span>
+        </p>
+        <span class="hero__badge">Edition 1.3 — May 2020</span>
+      </section>
+
+      <!-- Quick Info Cards -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>At a Glance</span>
+          <span data-i18n-tr>Bir Bakista</span>
+        </h2>
+        <div class="cards-grid">
+          <div class="card card--info">
+            <strong>
+              <span data-i18n-en>Standard</span>
+              <span data-i18n-tr>Standart</span>
+            </strong>
+            <p>EUROCONTROL ASTERIX Part 8</p>
+          </div>
+          <div class="card card--info">
+            <strong>
+              <span data-i18n-en>Purpose</span>
+              <span data-i18n-tr>Amac</span>
+            </strong>
+            <p>
+              <span data-i18n-en>A-SMGCS fused track data transmission</span>
+              <span data-i18n-tr>A-SMGCS fuzyon iz verisi iletimi</span>
+            </p>
+          </div>
+          <div class="card card--info">
+            <strong>
+              <span data-i18n-en>Data Items</span>
+              <span data-i18n-tr>Veri Ogeleri</span>
+            </strong>
+            <p>
+              <span data-i18n-en>28 items + SP + RE</span>
+              <span data-i18n-tr>28 oge + SP + RE</span>
+            </p>
+          </div>
+          <div class="card card--info">
+            <strong>
+              <span data-i18n-en>Message Types</span>
+              <span data-i18n-tr>Mesaj Tipleri</span>
+            </strong>
+            <p>
+              <span data-i18n-en>7 types (target, flight plan, holdbar)</span>
+              <span data-i18n-tr>7 tip (hedef, ucus plani, holdbar)</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Items Catalog -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Data Items Catalog</span>
+          <span data-i18n-tr>Veri Ogeleri Katalogu</span>
+        </h2>
+        <div class="cards-grid">
+
+          <a href="pages/data-items/I011-000.html" class="item-card">
+            <span class="item-card__id">I011/000</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Message Type</span>
+              <span data-i18n-tr>Mesaj Tipi</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Identifies the type of transaction (target report, flight plan, holdbar)</span>
+              <span data-i18n-tr>Islem turunu tanimlar (hedef raporu, ucus plani, holdbar)</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-010.html" class="item-card">
+            <span class="item-card__id">I011/010</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Data Source Identifier</span>
+              <span data-i18n-tr>Veri Kaynagi Tanimlayici</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>SAC/SIC pair identifying the radar station or system</span>
+              <span data-i18n-tr>Radar istasyonunu veya sistemi tanimlayan SAC/SIC cifti</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-015.html" class="item-card">
+            <span class="item-card__id">I011/015</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Service Identification</span>
+              <span data-i18n-tr>Servis Tanimlama</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Identifies the A-SMGCS service providing the data</span>
+              <span data-i18n-tr>Veriyi saglayan A-SMGCS servisini tanimlar</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-041.html" class="item-card">
+            <span class="item-card__id">I011/041</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Position in WGS-84</span>
+              <span data-i18n-tr>WGS-84 Konumu</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Latitude and longitude in WGS-84 geodetic coordinates</span>
+              <span data-i18n-tr>WGS-84 jeodezik koordinatlarinda enlem ve boylam</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-042.html" class="item-card">
+            <span class="item-card__id">I011/042</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Calculated Position (Cartesian)</span>
+              <span data-i18n-tr>Hesaplanan Konum (Kartezyen)</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>X/Y position in local Cartesian coordinates (1m resolution)</span>
+              <span data-i18n-tr>Yerel kartezyen koordinatlarda X/Y konumu (1m cozunurluk)</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-060.html" class="item-card">
+            <span class="item-card__id">I011/060</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Mode-3/A Code in Octal</span>
+              <span data-i18n-tr>Mode-3/A Kodu (Sekizlik)</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Transponder reply code in octal representation</span>
+              <span data-i18n-tr>Transponder yanit kodu sekizlik gosterimde</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-090.html" class="item-card">
+            <span class="item-card__id">I011/090</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Measured Flight Level</span>
+              <span data-i18n-tr>Olculen Ucus Seviyesi</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Last valid measured flight level (1/4 FL resolution)</span>
+              <span data-i18n-tr>Son gecerli olculen ucus seviyesi (1/4 FL cozunurluk)</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-092.html" class="item-card">
+            <span class="item-card__id">I011/092</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Calculated Track Geometric Altitude</span>
+              <span data-i18n-tr>Hesaplanan Iz Geometrik Irtifasi</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Vertical distance above MSL in feet</span>
+              <span data-i18n-tr>MSL uzerindeki dikey mesafe (fit cinsinden)</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-093.html" class="item-card">
+            <span class="item-card__id">I011/093</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Calculated Track Barometric Altitude</span>
+              <span data-i18n-tr>Hesaplanan Iz Barometrik Irtifasi</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Barometric altitude with QNH correction flag</span>
+              <span data-i18n-tr>QNH duzeltme bayragi ile barometrik irtifa</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-140.html" class="item-card">
+            <span class="item-card__id">I011/140</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Time of Track Information</span>
+              <span data-i18n-tr>Iz Bilgisi Zamani</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Absolute UTC timestamp with 1/128s resolution</span>
+              <span data-i18n-tr>1/128s cozunurluklu mutlak UTC zaman damgasi</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-161.html" class="item-card">
+            <span class="item-card__id">I011/161</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Track Number</span>
+              <span data-i18n-tr>Iz Numarasi</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Unique fusion track identifier (15-bit)</span>
+              <span data-i18n-tr>Benzersiz fuzyon iz tanimlayici (15-bit)</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-170.html" class="item-card">
+            <span class="item-card__id">I011/170</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Track Status</span>
+              <span data-i18n-tr>Iz Durumu</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Extended status flags (MON, GBS, CNF, SIM, etc.)</span>
+              <span data-i18n-tr>Genisletilmis durum bayraklari (MON, GBS, CNF, SIM, vb.)</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-202.html" class="item-card">
+            <span class="item-card__id">I011/202</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Calculated Track Velocity (Cartesian)</span>
+              <span data-i18n-tr>Hesaplanan Iz Hizi (Kartezyen)</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>VX/VY velocity components in m/s</span>
+              <span data-i18n-tr>m/s cinsinden VX/VY hiz bilesenleri</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-210.html" class="item-card">
+            <span class="item-card__id">I011/210</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Calculated Acceleration (Cartesian)</span>
+              <span data-i18n-tr>Hesaplanan Ivme (Kartezyen)</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>AX/AY acceleration components in m/s²</span>
+              <span data-i18n-tr>m/s² cinsinden AX/AY ivme bilesenleri</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-215.html" class="item-card">
+            <span class="item-card__id">I011/215</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Calculated Rate of Climb/Descent</span>
+              <span data-i18n-tr>Hesaplanan Tirmanma/Alcalma Orani</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Vertical rate in feet per minute</span>
+              <span data-i18n-tr>Fit/dakika cinsinden dikey oran</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-245.html" class="item-card">
+            <span class="item-card__id">I011/245</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Target Identification</span>
+              <span data-i18n-tr>Hedef Tanimlama</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>8-character callsign with source indicator</span>
+              <span data-i18n-tr>Kaynak gostergeli 8 karakterlik callsign</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-270.html" class="item-card">
+            <span class="item-card__id">I011/270</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Target Size & Orientation</span>
+              <span data-i18n-tr>Hedef Boyutu ve Yonelimi</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Length, width, and orientation of the target</span>
+              <span data-i18n-tr>Hedefin uzunlugu, genisligi ve yonelimi</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-290.html" class="item-card">
+            <span class="item-card__id">I011/290</span>
+            <span class="item-card__name">
+              <span data-i18n-en>System Track Update Ages</span>
+              <span data-i18n-tr>Sistem Iz Guncelleme Yaslari</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Age of last valid detection per sensor type</span>
+              <span data-i18n-tr>Sensor turune gore son gecerli algilama yasi</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-300.html" class="item-card">
+            <span class="item-card__id">I011/300</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Vehicle Fleet Identification</span>
+              <span data-i18n-tr>Arac Filosu Tanimlama</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Category of the vehicle (follow-me, emergency, etc.)</span>
+              <span data-i18n-tr>Aracin kategorisi (follow-me, acil durum, vb.)</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-310.html" class="item-card">
+            <span class="item-card__id">I011/310</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Pre-programmed Message</span>
+              <span data-i18n-tr>On-Programli Mesaj</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Predefined messages (towing, follow-me, emergency)</span>
+              <span data-i18n-tr>On-tanimli mesajlar (cekme, follow-me, acil durum)</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-380.html" class="item-card">
+            <span class="item-card__id">I011/380</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Mode-S / ADS-B Related Data</span>
+              <span data-i18n-tr>Mode-S / ADS-B Iliskili Veriler</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Aircraft address, capabilities, emitter category</span>
+              <span data-i18n-tr>Hava araci adresi, yetenekler, verici kategorisi</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-390.html" class="item-card">
+            <span class="item-card__id">I011/390</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Flight Plan Related Data</span>
+              <span data-i18n-tr>Ucus Plani Iliskili Veriler</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Callsign, aircraft type, airports, runway, FL</span>
+              <span data-i18n-tr>Callsign, hava araci tipi, havalimanlari, pist, FL</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-430.html" class="item-card">
+            <span class="item-card__id">I011/430</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Phase of Flight</span>
+              <span data-i18n-tr>Ucus Fazi</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Current phase (on stand, taxiing, runway, airborne)</span>
+              <span data-i18n-tr>Mevcut faz (park pozisyonunda, takside, pistte, havada)</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-500.html" class="item-card">
+            <span class="item-card__id">I011/500</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Estimated Accuracies</span>
+              <span data-i18n-tr>Tahmini Dogruluklar</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Accuracy estimates for position, velocity, acceleration</span>
+              <span data-i18n-tr>Konum, hiz ve ivme icin dogruluk tahminleri</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-600.html" class="item-card">
+            <span class="item-card__id">I011/600</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Alert Messages</span>
+              <span data-i18n-tr>Alarm Mesajlari</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Alert acknowledgment, severity, type, and number</span>
+              <span data-i18n-tr>Alarm onay, siddet, tip ve numarasi</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-605.html" class="item-card">
+            <span class="item-card__id">I011/605</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Tracks in Alert</span>
+              <span data-i18n-tr>Alarmli Izler</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>List of fusion track numbers affected by an alert</span>
+              <span data-i18n-tr>Bir alarmdan etkilenen fuzyon iz numaralari listesi</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-610.html" class="item-card">
+            <span class="item-card__id">I011/610</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Holdbar Status</span>
+              <span data-i18n-tr>Holdbar Durumu</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Status of holdbar indicators (up to 16 banks)</span>
+              <span data-i18n-tr>Holdbar gostergelerinin durumu (16 bankaya kadar)</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-SP.html" class="item-card">
+            <span class="item-card__id">I011/SP</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Special Purpose Field</span>
+              <span data-i18n-tr>Ozel Amacli Alan</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Reserved for special application-specific data</span>
+              <span data-i18n-tr>Ozel uygulamaya ozgu veriler icin ayrilmis</span>
+            </span>
+          </a>
+
+          <a href="pages/data-items/I011-RE.html" class="item-card">
+            <span class="item-card__id">I011/RE</span>
+            <span class="item-card__name">
+              <span data-i18n-en>Reserved Expansion Field</span>
+              <span data-i18n-tr>Ayrilmis Genisleme Alani</span>
+            </span>
+            <span class="item-card__desc">
+              <span data-i18n-en>Designated for future protocol expansion</span>
+              <span data-i18n-tr>Gelecekteki protokol genislemesi icin belirlenmis</span>
+            </span>
+          </a>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020) temel alinmistir. Sadece referans amaciyla.</span>
+      </p>
+    </footer>
+
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
