@@ -42,9 +42,10 @@ When creating a data item page:
 ### Step 1: Research & Specification Validation
 
 **ONLY use official sources:**
-- Primary: EUROCONTROL CAT011 Edition 1.3 specification
+- **Primary: Local PDF** — `docs/eurocontrol-cat011-pt8-ed1-3.pdf` (use Read tool with `pages` parameter, e.g., pages="10-20")
+- **A-SMGCS reference:** `docs/eurocontrol-specification-a-smgcs-v-2-0.pdf`
 - Secondary: Official ASTERIX Part 1 (encoding rules)
-- Fallback: zoranbosnjak.github.io/asterix (if official PDF unavailable)
+- Fallback: zoranbosnjak.github.io/asterix (only if PDF is unclear)
 
 **NEVER:**
 - Guess bit positions or field sizes

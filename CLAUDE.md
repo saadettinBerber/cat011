@@ -90,10 +90,10 @@ CAT011/                               # Project root
 ## Progress Status
 
 - **Block 1 — Core**: 7/7 complete (I011-010, 000, 015, 140, 041, 042, 202)
-- **Block 2 — Identity**: 0/7 pending (I011-210, 060, 245, 380, 161, 170, 290)
+- **Block 2 — Identity**: 2/7 complete (I011-060, 210) — pending: 245, 380, 161, 170, 290
 - **Block 3 — Altitude**: 0/7 pending (I011-430, 090, 093, 092, 215, 270, 390)
 - **Block 4 — Alerts**: 0/8 pending (I011-300, 310, 500, 600, 605, 610, SP, RE)
-- **Overall**: 7/29 data items (24%)
+- **Overall**: 9/29 data items (31%)
 
 ## Reference Specification
 
@@ -101,6 +101,9 @@ CAT011/                               # Project root
 - **Category**: 011 (Part 8)
 - **Edition**: 1.3 (11 May 2020)
 - **Purpose**: Transmission of A-SMGCS surveillance and flight plan data
+- **Local Specs (PREFERRED)**: `docs/` folder (gitignored, not pushed to remote)
+  - `docs/eurocontrol-cat011-pt8-ed1-3.pdf` — CAT011 Ed. 1.3
+  - `docs/eurocontrol-specification-a-smgcs-v-2-0.pdf` — A-SMGCS v2.0
 - **Official PDF**: https://www.eurocontrol.int/sites/default/files/2020-05/eurocontrol-cat011-pt8-ed1-3.pdf
 - **Fallback Reference**: https://zoranbosnjak.github.io/asterix/
 

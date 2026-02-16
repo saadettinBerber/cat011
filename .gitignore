@@ -1,6 +1,9 @@
 # Plans - local only
 plans/
 
+# Reference specifications (local only, not for distribution)
+docs/
+
 # Claude local settings
 .claude/settings.local.json
 

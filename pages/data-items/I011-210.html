@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/210 — Calculated Acceleration</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimlik</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimlik</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimlik</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — İrtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik İrt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik İrt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Calculated Acceleration</span>
+        <span data-i18n-tr>Hesaplanan İvme</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/210</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Calculated Acceleration</span>
+          <span data-i18n-tr>Hesaplanan İvme</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Fixed Length — 2 Octets</span>
+          <span data-i18n-tr>Sabit Uzunluk — 2 Oktet</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Calculated acceleration of a target expressed in Cartesian co-ordinates, providing separate X (East/West) and Y (North/South) acceleration components. This data item represents the rate of change of velocity and is used by A-SMGCS systems to predict future positions, detect abnormal movements such as sudden braking or unexpected turns, and improve track smoothing.</span>
+          <span data-i18n-tr>Kartezyen koordinatlarda ifade edilen bir hedefin hesaplanan ivmesi, ayrı X (Doğu/Batı) ve Y (Kuzey/Güney) ivme bileşenleri sağlar. Bu veri öğesi hızın değişim oranını temsil eder ve A-SMGCS sistemleri tarafından gelecekteki konumları tahmin etmek, ani fren veya beklenmeyen dönüşler gibi anormal hareketleri tespit etmek ve iz yumuşatmayı iyileştirmek için kullanılır.</span>
+        </p>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Key concept:</strong> Ax represents acceleration in the East direction (positive = accelerating East, negative = accelerating West) and Ay represents acceleration in the North direction (positive = accelerating North, negative = accelerating South). This is the derivative of the velocity reported in I011/202.</span>
+            <span data-i18n-tr><strong>Temel kavram:</strong> Ax Doğu yönündeki ivmeyi temsil eder (pozitif = Doğuya ivmelenme, negatif = Batıya ivmelenme) ve Ay Kuzey yönündeki ivmeyi temsil eder (pozitif = Kuzeye ivmelenme, negatif = Güneye ivmelenme). Bu, I011/202'de bildirilen hızın türevidir.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Octet</span>
+                  <span data-i18n-tr>Oktet</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Field</span>
+                  <span data-i18n-tr>Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bits</span>
+                  <span data-i18n-tr>Bitler</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td>Ax</td>
+                <td>8 (bits 16–9)</td>
+                <td>
+                  <span data-i18n-en>Acceleration in X (East) direction — 8-bit signed integer (two's complement), LSB = 0.25 m/s&sup2;</span>
+                  <span data-i18n-tr>X (Doğu) yönündeki ivme — 8-bit işaretli tamsayı (ikiye tümleme), LSB = 0.25 m/s&sup2;</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td>Ay</td>
+                <td>8 (bits 8–1)</td>
+                <td>
+                  <span data-i18n-en>Acceleration in Y (North) direction — 8-bit signed integer (two's complement), LSB = 0.25 m/s&sup2;</span>
+                  <span data-i18n-tr>Y (Kuzey) yönündeki ivme — 8-bit işaretli tamsayı (ikiye tümleme), LSB = 0.25 m/s&sup2;</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram</span>
+          <span data-i18n-tr>Bit Diyagramı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 650 160" xmlns="http://www.w3.org/2000/svg" style="max-width: 600px; font-family: var(--font-family-mono);">
+            <!-- Row 1 - Ax (Octet 1) -->
+            <text x="30" y="15" font-size="12" fill="#718096" font-weight="600">
+              <tspan>Octet 1</tspan>
+            </text>
+            <text x="80" y="35" text-anchor="middle" font-size="10" fill="#718096">16</text>
+            <text x="150" y="35" text-anchor="middle" font-size="10" fill="#718096">15</text>
+            <text x="220" y="35" text-anchor="middle" font-size="10" fill="#718096">14</text>
+            <text x="290" y="35" text-anchor="middle" font-size="10" fill="#718096">13</text>
+            <text x="360" y="35" text-anchor="middle" font-size="10" fill="#718096">12</text>
+            <text x="430" y="35" text-anchor="middle" font-size="10" fill="#718096">11</text>
+            <text x="500" y="35" text-anchor="middle" font-size="10" fill="#718096">10</text>
+            <text x="570" y="35" text-anchor="middle" font-size="10" fill="#718096">9</text>
+            <rect x="62" y="42" width="525" height="35" rx="4" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="324" y="64" text-anchor="middle" fill="white" font-size="14" font-weight="700">Ax — X Acceleration (signed, 8-bit)</text>
+            <line x1="132" y1="42" x2="132" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="202" y1="42" x2="202" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="272" y1="42" x2="272" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="342" y1="42" x2="342" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="412" y1="42" x2="412" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="482" y1="42" x2="482" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="552" y1="42" x2="552" y2="77" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+
+            <!-- Row 2 - Ay (Octet 2) -->
+            <text x="30" y="100" font-size="12" fill="#718096" font-weight="600">
+              <tspan>Octet 2</tspan>
+            </text>
+            <text x="80" y="115" text-anchor="middle" font-size="10" fill="#718096">8</text>
+            <text x="150" y="115" text-anchor="middle" font-size="10" fill="#718096">7</text>
+            <text x="220" y="115" text-anchor="middle" font-size="10" fill="#718096">6</text>
+            <text x="290" y="115" text-anchor="middle" font-size="10" fill="#718096">5</text>
+            <text x="360" y="115" text-anchor="middle" font-size="10" fill="#718096">4</text>
+            <text x="430" y="115" text-anchor="middle" font-size="10" fill="#718096">3</text>
+            <text x="500" y="115" text-anchor="middle" font-size="10" fill="#718096">2</text>
+            <text x="570" y="115" text-anchor="middle" font-size="10" fill="#718096">1</text>
+            <rect x="62" y="122" width="525" height="35" rx="4" fill="#48bb78" stroke="#2f855a" stroke-width="2"/>
+            <text x="324" y="144" text-anchor="middle" fill="white" font-size="14" font-weight="700">Ay — Y Acceleration (signed, 8-bit)</text>
+            <line x1="132" y1="122" x2="132" y2="157" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="202" y1="122" x2="202" y2="157" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="272" y1="122" x2="272" y2="157" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="342" y1="122" x2="342" y2="157" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="412" y1="122" x2="412" y2="157" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="482" y1="122" x2="482" y2="157" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="552" y1="122" x2="552" y2="157" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+          </svg>
+          <div class="bit-diagram__label">I011/210 — 2 octets, Fixed Length (2 &times; 8-bit signed)</div>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Property</span>
+                  <span data-i18n-tr>Özellik</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Value</span>
+                  <span data-i18n-tr>Değer</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Format</span>
+                  <span data-i18n-tr>Format</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Fixed Length</span>
+                  <span data-i18n-tr>Sabit Uzunluk</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Length</span>
+                  <span data-i18n-tr>Uzunluk</span>
+                </td>
+                <td>2 octets (16 bits)</td>
+              </tr>
+              <tr>
+                <td>LSB (
+                  <span data-i18n-en>Resolution</span><span data-i18n-tr>Çözünürlük</span>)
+                </td>
+                <td>0.25 m/s&sup2; (1/4 m/s&sup2;)</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Encoding</span>
+                  <span data-i18n-tr>Kodlama</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Signed two's complement (8-bit per component)</span>
+                  <span data-i18n-tr>İşaretli ikiye tümleme (bileşen başına 8-bit)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Raw Range</span>
+                  <span data-i18n-tr>Ham Aralık</span>
+                </td>
+                <td>-128 ... +127</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Physical Range</span>
+                  <span data-i18n-tr>Fiziksel Aralık</span>
+                </td>
+                <td>&ge; &minus;31 ... &le; +31 m/s&sup2;</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Formula</span>
+                  <span data-i18n-tr>Formül</span>
+                </td>
+                <td>Ax (m/s&sup2;) = raw_ax &times; 0.25 &nbsp;|&nbsp; Ay (m/s&sup2;) = raw_ay &times; 0.25</td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>8 (FSPEC Byte 2, Bit 8)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Hex Örneği</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> An aircraft landing on a North-aligned runway, decelerating at 2 m/s&sup2;. No lateral acceleration (Ax = 0 m/s&sup2;), braking in the direction of travel (Ay = &minus;2 m/s&sup2;).</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> Kuzeye hizalı bir piste inen ve 2 m/s&sup2; ile yavaşlayan bir uçak. Yanal ivme yok (Ax = 0 m/s&sup2;), hareket yönünde fren yapıyor (Ay = &minus;2 m/s&sup2;).</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — Encode Ax</span>
+              <span data-i18n-tr>Adım 1 — Ax Kodlama</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              Ax = 0 m/s&sup2; &rarr; raw = 0 / 0.25 = 0 &rarr; 0x00 &rarr; <code>0000 0000</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Encode Ay</span>
+              <span data-i18n-tr>Adım 2 — Ay Kodlama</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              Ay = &minus;2 m/s&sup2; &rarr; raw = &minus;2 / 0.25 = &minus;8 &rarr; two's complement: <code>1111 1000</code> = 0xF8
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Final Encoded Value</span>
+              <span data-i18n-tr>Adım 3 — Son Kodlanmış Değer</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              I011/210 = <code>0x00F8</code> &rarr; <code>0000 0000 1111 1000</code>
+            </div>
+          </div>
+        </div>
+        <div class="note note--tip" style="margin-top: 1.5rem;">
+          <p>
+            <span data-i18n-en><strong>Decode verification:</strong> <code>0x00F8</code> &rarr; Octet 1: <code>0x00</code> = 0, Ax = 0 &times; 0.25 = <strong>0 m/s&sup2;</strong>. Octet 2: <code>0xF8</code> = <code>1111 1000</code> (signed) = &minus;8, Ay = &minus;8 &times; 0.25 = <strong>&minus;2 m/s&sup2;</strong> &#10003;</span>
+            <span data-i18n-tr><strong>Kod çözme doğrulaması:</strong> <code>0x00F8</code> &rarr; Oktet 1: <code>0x00</code> = 0, Ax = 0 &times; 0.25 = <strong>0 m/s&sup2;</strong>. Oktet 2: <code>0xF8</code> = <code>1111 1000</code> (işaretli) = &minus;8, Ay = &minus;8 &times; 0.25 = <strong>&minus;2 m/s&sup2;</strong> &#10003;</span>
+          </p>
+        </div>
+        <div class="note note--info" style="margin-top: 1rem;">
+          <p>
+            <span data-i18n-en><strong>Additional examples:</strong> Gentle taxi acceleration (0.5 m/s&sup2; East): Ax = 0.5/0.25 = 2 &rarr; <code>0x0200</code>. Hard braking (&minus;3 m/s&sup2; North): Ay = &minus;3/0.25 = &minus;12 &rarr; <code>0xF4</code>, giving <code>0x00F4</code>.</span>
+            <span data-i18n-tr><strong>Ek örnekler:</strong> Yumuşak taksi ivmesi (0.5 m/s&sup2; Doğu): Ax = 0.5/0.25 = 2 &rarr; <code>0x0200</code>. Sert fren (&minus;3 m/s&sup2; Kuzey): Ay = &minus;3/0.25 = &minus;12 &rarr; <code>0xF4</code>, sonuç <code>0x00F4</code>.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Validation Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Rule</span>
+                  <span data-i18n-tr>Kural</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Realistic range</span>
+                  <span data-i18n-tr>Gerçekçi aralık</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Surface vehicles rarely exceed &plusmn;5 m/s&sup2; acceleration. Values outside this range may indicate sensor noise or track initialization artifacts.</span>
+                  <span data-i18n-tr>Yüzey araçları nadiren &plusmn;5 m/s&sup2; ivmeyi aşar. Bu aralığın dışındaki değerler sensör gürültüsünü veya iz başlatma artefaktlarını gösterebilir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Consistency</span>
+                  <span data-i18n-tr>Tutarlılık</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Acceleration should be consistent with the velocity changes reported in successive I011/202 updates. Large discrepancies suggest a track update issue.</span>
+                  <span data-i18n-tr>İvme, ardışık I011/202 güncellemelerinde bildirilen hız değişiklikleriyle tutarlı olmalıdır. Büyük tutarsızlıklar bir iz güncelleme sorununa işaret eder.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Stationary targets</span>
+                  <span data-i18n-tr>Sabit hedefler</span>
+                </td>
+                <td>
+                  <span data-i18n-en>For stationary targets, both Ax and Ay should be zero or near-zero. Non-zero acceleration on a stationary track may indicate tracking error.</span>
+                  <span data-i18n-tr>Sabit hedefler için hem Ax hem de Ay sıfır veya sıfıra yakın olmalıdır. Sabit bir iz üzerinde sıfır olmayan ivme takip hatasını gösterebilir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Sign convention</span>
+                  <span data-i18n-tr>İşaret kuralı</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Positive Ax = acceleration towards East, negative Ax = acceleration towards West. Positive Ay = acceleration towards North, negative Ay = acceleration towards South.</span>
+                  <span data-i18n-tr>Pozitif Ax = Doğuya doğru ivme, negatif Ax = Batıya doğru ivme. Pozitif Ay = Kuzeye doğru ivme, negatif Ay = Güneye doğru ivme.</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlişkili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Data Item</span>
+                  <span data-i18n-tr>Veri Öğesi</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Relationship</span>
+                  <span data-i18n-tr>İlişki</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-202.html">I011/202</a></td>
+                <td>
+                  <span data-i18n-en>Calculated Track Velocity in Cartesian Co-ordinates — I011/210 is the rate of change (derivative) of this velocity</span>
+                  <span data-i18n-tr>Kartezyen Hesaplanan İz Hızı — I011/210 bu hızın değişim oranıdır (türevi)</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-042.html">I011/042</a></td>
+                <td>
+                  <span data-i18n-en>Calculated Position in Cartesian Co-ordinates — position in the same Cartesian reference frame as acceleration</span>
+                  <span data-i18n-tr>Kartezyen Hesaplanan Konum — ivme ile aynı Kartezyen referans çerçevesinde konum</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-041.html">I011/041</a></td>
+                <td>
+                  <span data-i18n-en>Position in WGS-84 Co-ordinates — geographic position; acceleration vector relates to positional change rate</span>
+                  <span data-i18n-tr>WGS-84 Koordinatlarında Konum — coğrafi konum; ivme vektörü konumsal değişim oranıyla ilişkilidir</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-170.html">I011/170</a></td>
+                <td>
+                  <span data-i18n-en>Track Status — track state information that provides context for interpreting acceleration values</span>
+                  <span data-i18n-tr>İz Durumu — ivme değerlerini yorumlamak için bağlam sağlayan iz durum bilgisi</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Important Notes</span>
+          <span data-i18n-tr>Önemli Notlar</span>
+        </h2>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Note:</strong> I011/210 uses <strong>8-bit</strong> signed integers per component (not 16-bit like I011/202 velocity). This means only 2 octets total, with a coarser value range of &minus;128 to +127 raw (&minus;32 to +31.75 m/s&sup2;). Do not confuse the encoding sizes between velocity and acceleration.</span>
+            <span data-i18n-tr><strong>Not:</strong> I011/210 bileşen başına <strong>8-bit</strong> işaretli tamsayı kullanır (I011/202 hızı gibi 16-bit değil). Bu, toplamda yalnızca 2 oktet ve ham &minus;128 ila +127 aralığında (&minus;32 ila +31.75 m/s&sup2;) daha kaba bir değer aralığı anlamına gelir. Hız ve ivme arasındaki kodlama boyutlarını karıştırmayın.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip:</strong> The maximum representable acceleration of &plusmn;32 m/s&sup2; (approximately &plusmn;3.3 g) far exceeds any realistic surface acceleration. Typical taxiing acceleration is 0.5–1.5 m/s&sup2;, and emergency braking rarely exceeds 3–4 m/s&sup2;. Values near the encoding limits almost certainly indicate errors.</span>
+            <span data-i18n-tr><strong>İpucu:</strong> Maksimum temsil edilebilir ivme olan &plusmn;32 m/s&sup2; (yaklaşık &plusmn;3.3 g), gerçekçi herhangi bir yüzey ivmesini fazlasıyla aşar. Tipik taksi ivmesi 0.5–1.5 m/s&sup2;'dir ve acil fren nadiren 3–4 m/s&sup2;'yi aşar. Kodlama sınırlarına yakın değerler neredeyse kesinlikle hataları gösterir.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Derived quantities:</strong> Total acceleration magnitude = &radic;(Ax&sup2; + Ay&sup2;). For the example above: &radic;(0&sup2; + 2&sup2;) = 2 m/s&sup2;. The acceleration direction can be calculated as atan2(Ax, Ay), measured clockwise from North.</span>
+            <span data-i18n-tr><strong>Türetilmiş nicelikler:</strong> Toplam ivme büyüklüğü = &radic;(Ax&sup2; + Ay&sup2;). Yukarıdaki örnek için: &radic;(0&sup2; + 2&sup2;) = 2 m/s&sup2;. İvme yönü atan2(Ax, Ay) olarak hesaplanabilir, Kuzeyden saat yönünde ölçülür.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020) temel alınmıştır. Sadece referans amacıyla.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>
