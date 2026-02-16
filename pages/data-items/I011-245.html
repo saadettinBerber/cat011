@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/245 — Target Identification</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimlik</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimlik</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimlik</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — İrtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik İrt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik İrt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Target Identification</span>
+        <span data-i18n-tr>Hedef Tanımlama</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/245</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Target Identification</span>
+          <span data-i18n-tr>Hedef Tanımlama</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Fixed Length — 7 Octets</span>
+          <span data-i18n-tr>Sabit Uzunluk — 7 Oktet</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Target (aircraft or vehicle) identification in 8 characters. This data item carries the callsign or registration of an aircraft as received from the transponder (Mode-S downlink) or as correlated from a flight plan. In A-SMGCS context, it is the primary human-readable label displayed on controller screens to identify aircraft on the airport surface.</span>
+          <span data-i18n-tr>Hedefin (uçak veya araç) 8 karakter ile tanımlanması. Bu veri öğesi, transponder'dan (Mode-S downlink) alınan veya bir uçuş planından ilişkilendirilen bir uçağın callsign veya kayıt bilgisini taşır. A-SMGCS bağlamında, havalimanı yüzeyindeki uçakları tanımlamak için kontrolör ekranlarında görüntülenen birincil okunabilir etikettir.</span>
+        </p>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Key concept:</strong> Characters are encoded using the ICAO 6-bit character set (IA-5 lower 6 bits). Each character occupies exactly 6 bits, allowing 8 characters to fit in 48 bits (6 octets). The first octet contains the source type indicator (STI) and spare bits.</span>
+            <span data-i18n-tr><strong>Temel kavram:</strong> Karakterler ICAO 6 bit karakter seti (IA-5 alt 6 bit) kullanılarak kodlanır. Her karakter tam olarak 6 bit kaplar ve 8 karakterin 48 bit'e (6 oktet) sığmasını sağlar. İlk oktet, kaynak tipi göstergesini (STI) ve yedek bitleri içerir.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Octet</span>
+                  <span data-i18n-tr>Oktet</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Field</span>
+                  <span data-i18n-tr>Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bits</span>
+                  <span data-i18n-tr>Bitler</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2"><strong>1</strong></td>
+                <td>STI</td>
+                <td>2 (bits 56–55)</td>
+                <td>
+                  <span data-i18n-en>Source Type Indicator — identifies the origin of the identification data</span>
+                  <span data-i18n-tr>Kaynak Tipi Göstergesi — tanımlama verisinin kaynağını belirtir</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Spare</td>
+                <td>6 (bits 54–49)</td>
+                <td>
+                  <span data-i18n-en>Spare bits, set to zero</span>
+                  <span data-i18n-tr>Yedek bitler, sıfıra ayarlanır</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>2–7</strong></td>
+                <td>Characters 1–8</td>
+                <td>48 (bits 48–1)</td>
+                <td>
+                  <span data-i18n-en>8 characters encoded in 6 bits each using the ICAO 6-bit character set (IA-5 lower 6 bits)</span>
+                  <span data-i18n-tr>ICAO 6 bit karakter seti (IA-5 alt 6 bit) kullanılarak her biri 6 bit ile kodlanmış 8 karakter</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>STI</th>
+                <th>
+                  <span data-i18n-en>Meaning</span>
+                  <span data-i18n-tr>Anlamı</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>00</code></td>
+                <td>
+                  <span data-i18n-en>Callsign or registration downlinked from transponder</span>
+                  <span data-i18n-tr>Transponder'dan downlink edilen callsign veya kayıt</span>
+                </td>
+              </tr>
+              <tr>
+                <td><code>01</code></td>
+                <td>
+                  <span data-i18n-en>Callsign not downlinked from transponder</span>
+                  <span data-i18n-tr>Transponder'dan downlink edilmeyen callsign</span>
+                </td>
+              </tr>
+              <tr>
+                <td><code>10</code></td>
+                <td>
+                  <span data-i18n-en>Registration not downlinked from transponder</span>
+                  <span data-i18n-tr>Transponder'dan downlink edilmeyen kayıt</span>
+                </td>
+              </tr>
+              <tr>
+                <td><code>11</code></td>
+                <td>
+                  <span data-i18n-en>Reserved</span>
+                  <span data-i18n-tr>Ayrılmış</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram</span>
+          <span data-i18n-tr>Bit Diyagramı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 750 250" xmlns="http://www.w3.org/2000/svg" style="max-width: 700px; font-family: var(--font-family-mono);">
+            <!-- Row 1 - Octet 1 (STI + Spare) -->
+            <text x="30" y="15" font-size="12" fill="#718096" font-weight="600">Octet 1</text>
+            <text x="80" y="35" text-anchor="middle" font-size="10" fill="#718096">56</text>
+            <text x="160" y="35" text-anchor="middle" font-size="10" fill="#718096">55</text>
+            <text x="240" y="35" text-anchor="middle" font-size="10" fill="#718096">54</text>
+            <text x="320" y="35" text-anchor="middle" font-size="10" fill="#718096">53</text>
+            <text x="400" y="35" text-anchor="middle" font-size="10" fill="#718096">52</text>
+            <text x="480" y="35" text-anchor="middle" font-size="10" fill="#718096">51</text>
+            <text x="560" y="35" text-anchor="middle" font-size="10" fill="#718096">50</text>
+            <text x="640" y="35" text-anchor="middle" font-size="10" fill="#718096">49</text>
+            <!-- STI (2 bits) -->
+            <rect x="42" y="42" width="156" height="35" rx="4" fill="#e53e3e" stroke="#c53030" stroke-width="2"/>
+            <text x="120" y="64" text-anchor="middle" fill="white" font-size="13" font-weight="700">STI</text>
+            <!-- Spare (6 bits) -->
+            <rect x="198" y="42" width="480" height="35" rx="4" fill="#a0aec0" stroke="#718096" stroke-width="2"/>
+            <text x="438" y="64" text-anchor="middle" fill="white" font-size="13" font-weight="700">Spare (set to zero)</text>
+
+            <!-- Row 2 - Octets 2-4 (Chars 1-4) -->
+            <text x="30" y="105" font-size="12" fill="#718096" font-weight="600">Octets 2–4</text>
+            <rect x="42" y="112" width="162" height="35" rx="4" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="123" y="134" text-anchor="middle" fill="white" font-size="12" font-weight="700">Char 1</text>
+            <rect x="204" y="112" width="162" height="35" rx="4" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="285" y="134" text-anchor="middle" fill="white" font-size="12" font-weight="700">Char 2</text>
+            <rect x="366" y="112" width="162" height="35" rx="4" fill="#48bb78" stroke="#2f855a" stroke-width="2"/>
+            <text x="447" y="134" text-anchor="middle" fill="white" font-size="12" font-weight="700">Char 3</text>
+            <rect x="528" y="112" width="162" height="35" rx="4" fill="#48bb78" stroke="#2f855a" stroke-width="2"/>
+            <text x="609" y="134" text-anchor="middle" fill="white" font-size="12" font-weight="700">Char 4</text>
+
+            <!-- Row 3 - Octets 5-7 (Chars 5-8) -->
+            <text x="30" y="175" font-size="12" fill="#718096" font-weight="600">Octets 5–7</text>
+            <rect x="42" y="182" width="162" height="35" rx="4" fill="#ed8936" stroke="#c05621" stroke-width="2"/>
+            <text x="123" y="204" text-anchor="middle" fill="white" font-size="12" font-weight="700">Char 5</text>
+            <rect x="204" y="182" width="162" height="35" rx="4" fill="#ed8936" stroke="#c05621" stroke-width="2"/>
+            <text x="285" y="204" text-anchor="middle" fill="white" font-size="12" font-weight="700">Char 6</text>
+            <rect x="366" y="182" width="162" height="35" rx="4" fill="#9f7aea" stroke="#6b46c1" stroke-width="2"/>
+            <text x="447" y="204" text-anchor="middle" fill="white" font-size="12" font-weight="700">Char 7</text>
+            <rect x="528" y="182" width="162" height="35" rx="4" fill="#9f7aea" stroke="#6b46c1" stroke-width="2"/>
+            <text x="609" y="204" text-anchor="middle" fill="white" font-size="12" font-weight="700">Char 8</text>
+
+            <!-- Legend -->
+            <text x="120" y="240" text-anchor="middle" font-size="10" fill="#4a5568">6 bits each</text>
+          </svg>
+          <div class="bit-diagram__label">I011/245 — 7 octets: STI (2 bits) + Spare (6 bits) + 8 characters (6 bits each)</div>
+        </div>
+      </section>
+
+      <!-- ICAO 6-bit Character Encoding -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>ICAO 6-Bit Character Encoding</span>
+          <span data-i18n-tr>ICAO 6 Bit Karakter Kodlaması</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Each character is encoded using the lower 6 bits of its IA-5 (ASCII) code. The valid character set includes uppercase letters, digits, and space:</span>
+          <span data-i18n-tr>Her karakter, IA-5 (ASCII) kodunun alt 6 biti kullanılarak kodlanır. Geçerli karakter seti büyük harfleri, rakamları ve boşluğu içerir:</span>
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Character</span>
+                  <span data-i18n-tr>Karakter</span>
+                </th>
+                <th>
+                  <span data-i18n-en>6-Bit Value</span>
+                  <span data-i18n-tr>6 Bit Değer</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Binary</span>
+                  <span data-i18n-tr>İkili</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>A–Z</td><td>1–26</td><td><code>000001</code>–<code>011010</code></td></tr>
+              <tr><td>0–9</td><td>48–57</td><td><code>110000</code>–<code>111001</code></td></tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Space (SP)</span>
+                  <span data-i18n-tr>Boşluk (SP)</span>
+                </td>
+                <td>32</td>
+                <td><code>100000</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note note--info">
+          <p>
+            <span data-i18n-en><strong>Note:</strong> If the identification has fewer than 8 characters, it is left-justified and padded with spaces (6-bit value 32) on the right.</span>
+            <span data-i18n-tr><strong>Not:</strong> Tanımlama 8 karakterden azsa, sola hizalanır ve sağda boşluklarla (6 bit değer 32) doldurulur.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Property</span>
+                  <span data-i18n-tr>Özellik</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Value</span>
+                  <span data-i18n-tr>Değer</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Format</span>
+                  <span data-i18n-tr>Biçim</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Fixed Length</span>
+                  <span data-i18n-tr>Sabit Uzunluk</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Length</span>
+                  <span data-i18n-tr>Uzunluk</span>
+                </td>
+                <td>7 octets (56 bits)</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Character Encoding</span>
+                  <span data-i18n-tr>Karakter Kodlaması</span>
+                </td>
+                <td>
+                  <span data-i18n-en>ICAO 6-bit (lower 6 bits of IA-5/ASCII)</span>
+                  <span data-i18n-tr>ICAO 6 bit (IA-5/ASCII'nin alt 6 biti)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Characters per field</span>
+                  <span data-i18n-tr>Alan başına karakter</span>
+                </td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Valid characters</span>
+                  <span data-i18n-tr>Geçerli karakterler</span>
+                </td>
+                <td>A–Z, 0–9, SP</td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>10 (FSPEC Byte 2, Bit 6)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Onaltılık Örnek</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> Encode the callsign "THY1234 " (Turkish Airlines flight THY1234, padded with one trailing space). The callsign is downlinked from the transponder (STI = 00).</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> "THY1234 " callsign'ını kodlayın (Türk Hava Yolları uçuşu THY1234, bir sondaki boşlukla doldurulmuş). Callsign transponder'dan downlink edilmiştir (STI = 00).</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — Encode STI and spare bits</span>
+              <span data-i18n-tr>Adım 1 — STI ve yedek bitleri kodlayın</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              STI = 00 (downlinked from transponder), Spare = 000000 &rarr; Octet 1: <code>00000000</code> = <code>0x00</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Convert each character to 6-bit</span>
+              <span data-i18n-tr>Adım 2 — Her karakteri 6 bit'e dönüştürün</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              T=<code>010100</code> H=<code>001000</code> Y=<code>011001</code> 1=<code>110001</code> 2=<code>110010</code> 3=<code>110011</code> 4=<code>110100</code> SP=<code>100000</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Pack into octets (48 character bits)</span>
+              <span data-i18n-tr>Adım 3 — Oktetlere paketleyin (48 karakter biti)</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <code>010100 001000 011001 110001 110010 110011 110100 100000</code><br>
+              &rarr; Octet 2: <code>01010000</code> = <code>0x50</code> &ensp;
+              Octet 3: <code>10000110</code> = <code>0x86</code> &ensp;
+              Octet 4: <code>01110001</code> = <code>0x71</code><br>
+              &rarr; Octet 5: <code>11001011</code> = <code>0xCB</code> &ensp;
+              Octet 6: <code>00111101</code> = <code>0x3D</code> &ensp;
+              Octet 7: <code>00100000</code> = <code>0x20</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 4 — Final Encoded Value</span>
+              <span data-i18n-tr>Adım 4 — Son Kodlanmış Değer</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <strong>"THY1234 " &rarr; <code>0x00 50 86 71 CB 3D 20</code></strong>
+            </div>
+          </div>
+        </div>
+        <div class="note note--tip" style="margin-top: 1.5rem;">
+          <p>
+            <span data-i18n-en><strong>Decode verification:</strong> <code>0x00 50 86 71 CB 3D 20</code> &rarr; STI=00, Spare=000000. Characters: <code>010100</code>=T, <code>001000</code>=H, <code>011001</code>=Y, <code>110001</code>=1, <code>110010</code>=2, <code>110011</code>=3, <code>110100</code>=4, <code>100000</code>=SP &rarr; <strong>"THY1234 "</strong> &#10003;</span>
+            <span data-i18n-tr><strong>Çözümleme doğrulaması:</strong> <code>0x00 50 86 71 CB 3D 20</code> &rarr; STI=00, Spare=000000. Karakterler: <code>010100</code>=T, <code>001000</code>=H, <code>011001</code>=Y, <code>110001</code>=1, <code>110010</code>=2, <code>110011</code>=3, <code>110100</code>=4, <code>100000</code>=SP &rarr; <strong>"THY1234 "</strong> &#10003;</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Validation Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Rule</span>
+                  <span data-i18n-tr>Kural</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Spare bits</span>
+                  <span data-i18n-tr>Yedek bitler</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Bits 54–49 must be zero. Non-zero spare bits indicate a format error.</span>
+                  <span data-i18n-tr>Bitler 54–49 sıfır olmalıdır. Sıfır olmayan yedek bitler biçim hatası gösterir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>STI range</span>
+                  <span data-i18n-tr>STI aralığı</span>
+                </td>
+                <td>
+                  <span data-i18n-en>STI value 11 (binary) is reserved and should not appear in normal operations.</span>
+                  <span data-i18n-tr>STI değeri 11 (ikili) ayrılmıştır ve normal işlemlerde görünmemelidir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Character validity</span>
+                  <span data-i18n-tr>Karakter geçerliliği</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Only uppercase A–Z, digits 0–9, and space are valid. 6-bit values outside these sets (e.g., 27–31, 58–63) should be flagged.</span>
+                  <span data-i18n-tr>Yalnızca büyük harf A–Z, rakam 0–9 ve boşluk geçerlidir. Bu kümelerin dışındaki 6 bit değerler (örneğin, 27–31, 58–63) işaretlenmelidir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Callsign format</span>
+                  <span data-i18n-tr>Callsign biçimi</span>
+                </td>
+                <td>
+                  <span data-i18n-en>ICAO callsigns typically follow the pattern: 3-letter airline designator + flight number (e.g., "THY1234 "). All-space identification should be treated as missing data.</span>
+                  <span data-i18n-tr>ICAO callsign'ları tipik olarak şu deseni izler: 3 harfli havayolu göstergesi + uçuş numarası (örneğin, "THY1234 "). Tümü boşluk olan tanımlama eksik veri olarak değerlendirilmelidir.</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlişkili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Data Item</span>
+                  <span data-i18n-tr>Veri Öğesi</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Relationship</span>
+                  <span data-i18n-tr>İlişki</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-060.html">I011/060</a></td>
+                <td>
+                  <span data-i18n-en>Mode-3/A Code — the squawk code complements the callsign for aircraft identification</span>
+                  <span data-i18n-tr>Mode-3/A Kodu — squawk kodu, uçak tanımlaması için callsign'ı tamamlar</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-380.html">I011/380</a></td>
+                <td>
+                  <span data-i18n-en>Mode-S / ADS-B Related Data — contains the 24-bit ICAO address, another permanent aircraft identifier</span>
+                  <span data-i18n-tr>Mode-S / ADS-B İlgili Veri — başka bir kalıcı uçak tanımlayıcısı olan 24 bit ICAO adresini içerir</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-390.html">I011/390</a></td>
+                <td>
+                  <span data-i18n-en>Flight Plan Related Data — the callsign in I011/245 links the track to its flight plan</span>
+                  <span data-i18n-tr>Uçuş Planı İlgili Veri — I011/245'teki callsign izi uçuş planına bağlar</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-170.html">I011/170</a></td>
+                <td>
+                  <span data-i18n-en>Track Status — indicates whether identification data is available for the track</span>
+                  <span data-i18n-tr>İz Durumu — iz için tanımlama verisinin mevcut olup olmadığını gösterir</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Important Notes</span>
+          <span data-i18n-tr>Önemli Notlar</span>
+        </h2>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Note:</strong> The 6-bit character boundary does not align with octet boundaries. When decoding, extract the full 48-bit character stream from octets 2–7 and then split it into 6-bit groups. Do not attempt to decode character-by-character within individual octets.</span>
+            <span data-i18n-tr><strong>Not:</strong> 6 bit karakter sınırı oktet sınırlarıyla hizalanmaz. Çözümlerken, oktet 2–7'den tam 48 bitlik karakter akışını çıkarın ve ardından 6 bitlik gruplara bölün. Tek tek oktetler içinde karakter karakter çözümlemeye çalışmayın.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip:</strong> The STI field distinguishes between transponder-downlinked data (STI=00) and flight-plan-correlated data (STI=01, 10). When STI=00, the identification comes directly from the aircraft's Mode-S transponder and is the most reliable. When STI=01 or 10, it was inserted by the A-SMGCS from flight plan correlation and may be less certain.</span>
+            <span data-i18n-tr><strong>İpucu:</strong> STI alanı transponder-downlink verisi (STI=00) ile uçuş planı ilişkilendirilmiş veri (STI=01, 10) arasında ayrım yapar. STI=00 olduğunda, tanımlama doğrudan uçağın Mode-S transponder'ından gelir ve en güvenilir olanıdır. STI=01 veya 10 olduğunda, uçuş planı ilişkilendirmesinden A-SMGCS tarafından eklenmiştir ve daha az kesin olabilir.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Ground vehicles:</strong> For ground vehicles tracked by SMR, this field may contain a vehicle registration or operator-assigned identifier. Since ground vehicles typically lack transponders, the STI field will be 01 or 10, indicating the identification was manually associated.</span>
+            <span data-i18n-tr><strong>Yer araçları:</strong> SMR tarafından izlenen yer araçları için bu alan bir araç kaydı veya operatör tarafından atanan tanımlayıcı içerebilir. Yer araçları genellikle transponder'dan yoksun olduğundan, STI alanı 01 veya 10 olacaktır ve tanımlamanın manuel olarak ilişkilendirildiğini gösterir.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020) temel alınmıştır. Sadece referans amacıyla.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>
