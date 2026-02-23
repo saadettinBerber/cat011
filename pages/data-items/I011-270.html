@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/270 — Target Size &amp; Orientation</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimliği</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimliği</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimliği</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — İrtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik İrt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik İrt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Data Items</span>
+        <span data-i18n-tr>Veri Öğeleri</span> &rsaquo;
+        <span>I011/270</span>
+      </div>
+      <div class="topbar__lang-toggle">
+        <button class="topbar__lang-btn topbar__lang-btn--active" data-lang-switch="en">EN</button>
+        <button class="topbar__lang-btn" data-lang-switch="tr">TR</button>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- ======== SECTION 1: HEADER ======== -->
+      <section class="content__header">
+        <h1>
+          <span class="content__item-id">I011/270</span>
+          <span data-i18n-en>Target Size &amp; Orientation</span>
+          <span data-i18n-tr>Hedef Boyutu &amp; Yönelimi</span>
+        </h1>
+        <div class="content__meta">
+          <span class="meta-tag meta-tag--variable">
+            <span data-i18n-en>Variable Length</span>
+            <span data-i18n-tr>Değişken Uzunluk</span>
+          </span>
+          <span class="meta-tag">1–3
+            <span data-i18n-en>Octets</span>
+            <span data-i18n-tr>Oktet</span>
+          </span>
+          <span class="meta-tag">FX
+            <span data-i18n-en>Extended</span>
+            <span data-i18n-tr>Genişletilmiş</span>
+          </span>
+          <span class="meta-tag">
+            <span data-i18n-en>UAP Block 3 — Altitude</span>
+            <span data-i18n-tr>UAP Blok 3 — İrtifa</span>
+          </span>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 2: PURPOSE ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Data Item I011/270 describes the physical dimensions and heading of a detected target on the airport surface. It provides the target's length, orientation (nose heading relative to geographical North), and width. This information is primarily derived from SMR (Surface Movement Radar) plot extraction and is used for target classification and display rendering on A-SMGCS controller screens.</span>
+          <span data-i18n-tr>I011/270 veri öğesi, havalimanı yüzeyinde tespit edilen bir hedefin fiziksel boyutlarını ve yönünü tanımlar. Hedefin uzunluğunu, yönelimini (coğrafi Kuzey'e göre burun yönü) ve genişliğini sağlar. Bu bilgi öncelikle SMR (Yüzey Hareketi Radarı) plot çıkarımından elde edilir ve A-SMGCS (Gelişmiş Yüzey Hareketi Rehberlik ve Kontrol Sistemi) kontrolör ekranlarında hedef sınıflandırması ile görüntü oluşturma amacıyla kullanılır.</span>
+        </p>
+      </section>
+
+      <!-- ======== SECTION 3: BIT STRUCTURE DIAGRAM ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Bit Structure</span>
+          <span data-i18n-tr>Bit Yapısı</span>
+        </h2>
+
+        <svg viewBox="0 0 520 310" class="bit-diagram" role="img" aria-label="I011/270 bit structure diagram">
+          <text x="260" y="18" text-anchor="middle" class="bit-diagram__title">I011/270 — Variable Length (FX Extended)</text>
+
+          <!-- === First Part: LENGTH === -->
+          <text x="260" y="45" text-anchor="middle" class="bit-diagram__subtitle">First Part (mandatory)</text>
+
+          <!-- Bit numbers -->
+          <text x="40" y="62" text-anchor="middle" class="bit-diagram__bit-num">8</text>
+          <text x="105" y="62" text-anchor="middle" class="bit-diagram__bit-num">7</text>
+          <text x="170" y="62" text-anchor="middle" class="bit-diagram__bit-num">6</text>
+          <text x="235" y="62" text-anchor="middle" class="bit-diagram__bit-num">5</text>
+          <text x="300" y="62" text-anchor="middle" class="bit-diagram__bit-num">4</text>
+          <text x="365" y="62" text-anchor="middle" class="bit-diagram__bit-num">3</text>
+          <text x="430" y="62" text-anchor="middle" class="bit-diagram__bit-num">2</text>
+          <text x="488" y="62" text-anchor="middle" class="bit-diagram__bit-num">1</text>
+
+          <!-- LENGTH field (bits 8-2) -->
+          <rect x="5" y="70" width="455" height="35" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="232" y="92" text-anchor="middle" class="bit-diagram__label">LENGTH</text>
+
+          <!-- FX bit (bit 1) -->
+          <rect x="460" y="70" width="55" height="35" class="bit-diagram__cell bit-diagram__cell--fx" />
+          <text x="488" y="92" text-anchor="middle" class="bit-diagram__label">FX</text>
+
+          <text x="260" y="125" text-anchor="middle" class="bit-diagram__note">LSB = 1 metre | Range: 0–127 m</text>
+
+          <!-- === First Extent: ORIENTATION === -->
+          <text x="260" y="150" text-anchor="middle" class="bit-diagram__subtitle">First Extent (if FX=1)</text>
+
+          <text x="40" y="167" text-anchor="middle" class="bit-diagram__bit-num">8</text>
+          <text x="105" y="167" text-anchor="middle" class="bit-diagram__bit-num">7</text>
+          <text x="170" y="167" text-anchor="middle" class="bit-diagram__bit-num">6</text>
+          <text x="235" y="167" text-anchor="middle" class="bit-diagram__bit-num">5</text>
+          <text x="300" y="167" text-anchor="middle" class="bit-diagram__bit-num">4</text>
+          <text x="365" y="167" text-anchor="middle" class="bit-diagram__bit-num">3</text>
+          <text x="430" y="167" text-anchor="middle" class="bit-diagram__bit-num">2</text>
+          <text x="488" y="167" text-anchor="middle" class="bit-diagram__bit-num">1</text>
+
+          <rect x="5" y="175" width="455" height="35" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="232" y="197" text-anchor="middle" class="bit-diagram__label">ORIENTATION</text>
+
+          <rect x="460" y="175" width="55" height="35" class="bit-diagram__cell bit-diagram__cell--fx" />
+          <text x="488" y="197" text-anchor="middle" class="bit-diagram__label">FX</text>
+
+          <text x="260" y="230" text-anchor="middle" class="bit-diagram__note">LSB = 360&deg;/128 &approx; 2.8125&deg; | Range: 0&deg;–357.19&deg;</text>
+
+          <!-- === Second Extent: WIDTH === -->
+          <text x="260" y="255" text-anchor="middle" class="bit-diagram__subtitle">Second Extent (if FX=1)</text>
+
+          <text x="40" y="272" text-anchor="middle" class="bit-diagram__bit-num">8</text>
+          <text x="105" y="272" text-anchor="middle" class="bit-diagram__bit-num">7</text>
+          <text x="170" y="272" text-anchor="middle" class="bit-diagram__bit-num">6</text>
+          <text x="235" y="272" text-anchor="middle" class="bit-diagram__bit-num">5</text>
+          <text x="300" y="272" text-anchor="middle" class="bit-diagram__bit-num">4</text>
+          <text x="365" y="272" text-anchor="middle" class="bit-diagram__bit-num">3</text>
+          <text x="430" y="272" text-anchor="middle" class="bit-diagram__bit-num">2</text>
+          <text x="488" y="272" text-anchor="middle" class="bit-diagram__bit-num">1</text>
+
+          <rect x="5" y="280" width="455" height="35" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="232" y="302" text-anchor="middle" class="bit-diagram__label">WIDTH</text>
+
+          <rect x="460" y="280" width="55" height="35" class="bit-diagram__cell bit-diagram__cell--fx" />
+          <text x="488" y="302" text-anchor="middle" class="bit-diagram__label">FX</text>
+        </svg>
+
+        <p class="bit-diagram__footer">
+          <span data-i18n-en>LSB (Width) = 1 metre | Range: 0–127 m</span>
+          <span data-i18n-tr>LSB (Genişlik) = 1 metre | Aralık: 0–127 m</span>
+        </p>
+      </section>
+
+      <!-- ======== SECTION 4: FIELD DESCRIPTIONS ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Field Descriptions</span>
+          <span data-i18n-tr>Alan Açıklamaları</span>
+        </h2>
+        <div class="table-responsive">
+          <table class="fields-table">
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Field</span><span data-i18n-tr>Alan</span></th>
+                <th><span data-i18n-en>Octet</span><span data-i18n-tr>Oktet</span></th>
+                <th><span data-i18n-en>Bits</span><span data-i18n-tr>Bitler</span></th>
+                <th><span data-i18n-en>Size</span><span data-i18n-tr>Boyut</span></th>
+                <th><span data-i18n-en>Description</span><span data-i18n-tr>Açıklama</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>LENGTH</td>
+                <td>1</td>
+                <td>8–2</td>
+                <td>7</td>
+                <td><span data-i18n-en>Target length in metres. LSB = 1 m. Unsigned, range 0–127 m.</span><span data-i18n-tr>Metre cinsinden hedef uzunluğu. LSB = 1 m. İşaretsiz, aralık 0–127 m.</span></td>
+              </tr>
+              <tr>
+                <td>FX</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td><span data-i18n-en>Field Extension Indicator. 0 = end of item, 1 = orientation follows.</span><span data-i18n-tr>Alan Uzatma Göstergesi. 0 = öğe sonu, 1 = yönelim alanı devam eder.</span></td>
+              </tr>
+              <tr>
+                <td>ORIENTATION</td>
+                <td>2</td>
+                <td>8–2</td>
+                <td>7</td>
+                <td><span data-i18n-en>Target orientation (nose heading) relative to geographical North. LSB = 360&deg;/128 &approx; 2.8125&deg;. Unsigned, range 0&deg;–357.19&deg;.</span><span data-i18n-tr>Coğrafi Kuzey'e göre hedef yönelimi (burun yönü). LSB = 360&deg;/128 &approx; 2.8125&deg;. İşaretsiz, aralık 0&deg;–357.19&deg;.</span></td>
+              </tr>
+              <tr>
+                <td>FX</td>
+                <td>2</td>
+                <td>1</td>
+                <td>1</td>
+                <td><span data-i18n-en>Field Extension Indicator. 0 = end of item, 1 = width follows.</span><span data-i18n-tr>Alan Uzatma Göstergesi. 0 = öğe sonu, 1 = genişlik alanı devam eder.</span></td>
+              </tr>
+              <tr>
+                <td>WIDTH</td>
+                <td>3</td>
+                <td>8–2</td>
+                <td>7</td>
+                <td><span data-i18n-en>Target width in metres. LSB = 1 m. Unsigned, range 0–127 m.</span><span data-i18n-tr>Metre cinsinden hedef genişliği. LSB = 1 m. İşaretsiz, aralık 0–127 m.</span></td>
+              </tr>
+              <tr>
+                <td>FX</td>
+                <td>3</td>
+                <td>1</td>
+                <td>1</td>
+                <td><span data-i18n-en>Field Extension Indicator. Should be 0 (no further extents defined).</span><span data-i18n-tr>Alan Uzatma Göstergesi. 0 olmalıdır (başka uzantı tanımlanmamıştır).</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 5: VALUE ENCODING ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Value Encoding</span>
+          <span data-i18n-tr>Değer Kodlaması</span>
+        </h2>
+        <div class="encoding-box">
+          <div class="encoding-box__details">
+            <table class="encoding-table">
+              <tr>
+                <td><strong>LENGTH</strong></td>
+                <td>
+                  <span data-i18n-en>raw_value &times; <strong>1 metre</strong> — 7-bit unsigned, range 0–127 m</span>
+                  <span data-i18n-tr>ham_değer &times; <strong>1 metre</strong> — 7-bitlik işaretsiz, aralık 0–127 m</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>ORIENTATION</strong></td>
+                <td>
+                  <span data-i18n-en>raw_value &times; <strong>360&deg;/128</strong> (&approx; 2.8125&deg;) — 7-bit unsigned, range 0&deg;–357.19&deg;</span>
+                  <span data-i18n-tr>ham_değer &times; <strong>360&deg;/128</strong> (&approx; 2.8125&deg;) — 7-bitlik işaretsiz, aralık 0&deg;–357.19&deg;</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>WIDTH</strong></td>
+                <td>
+                  <span data-i18n-en>raw_value &times; <strong>1 metre</strong> — 7-bit unsigned, range 0–127 m</span>
+                  <span data-i18n-tr>ham_değer &times; <strong>1 metre</strong> — 7-bitlik işaretsiz, aralık 0–127 m</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>FX</strong></td>
+                <td>
+                  <span data-i18n-en>0 = no further data, 1 = next octet follows</span>
+                  <span data-i18n-tr>0 = başka veri yok, 1 = sonraki oktet devam eder</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <p>
+          <span data-i18n-en>Each octet uses bits 8–2 for the data value and bit 1 as the FX extension indicator. To extract the value: shift the octet right by 1 bit (or integer-divide by 2). To extract FX: mask with 0x01.</span>
+          <span data-i18n-tr>Her oktet, 8–2. bitleri veri değeri için, 1. biti ise FX uzatma göstergesi olarak kullanır. Değeri çıkarmak için: oktet 1 bit sağa kaydırın (ya da 2'ye tam bölün). FX'i çıkarmak için: 0x01 maskesi uygulayın.</span>
+        </p>
+      </section>
+
+      <!-- ======== SECTION 6: HEX EXAMPLE ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Step-by-Step Hex Example</span>
+          <span data-i18n-tr>Adım Adım Hex Örneği</span>
+        </h2>
+
+        <div class="hex-example">
+          <div class="hex-example__raw">
+            <span data-i18n-en>Raw data (3 octets):</span>
+            <span data-i18n-tr>Ham veri (3 oktet):</span>
+            <code>81 41 78</code>
+          </div>
+
+          <div class="hex-example__steps">
+            <h3>
+              <span data-i18n-en>Decode Walkthrough</span>
+              <span data-i18n-tr>Çözümleme Adımları</span>
+            </h3>
+            <ol>
+              <li>
+                <span data-i18n-en><strong>Octet 1:</strong> 0x81 = <code>1000 0001</code></span>
+                <span data-i18n-tr><strong>Oktet 1:</strong> 0x81 = <code>1000 0001</code></span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Extract LENGTH:</strong> Bits 8–2 = <code>100 0000</code> = 64 &rarr; Length = 64 &times; 1 m = <strong>64 metres</strong></span>
+                <span data-i18n-tr><strong>LENGTH çıkarımı:</strong> 8–2. bitler = <code>100 0000</code> = 64 &rarr; Uzunluk = 64 &times; 1 m = <strong>64 metre</strong></span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Check FX:</strong> Bit 1 = 1 &rarr; first extent (orientation) follows</span>
+                <span data-i18n-tr><strong>FX kontrolü:</strong> 1. bit = 1 &rarr; birinci uzantı (yönelim) devam eder</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Octet 2:</strong> 0x41 = <code>0100 0001</code></span>
+                <span data-i18n-tr><strong>Oktet 2:</strong> 0x41 = <code>0100 0001</code></span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Extract ORIENTATION:</strong> Bits 8–2 = <code>010 0000</code> = 32 &rarr; Orientation = 32 &times; 2.8125&deg; = <strong>90&deg;</strong> (East)</span>
+                <span data-i18n-tr><strong>ORIENTATION çıkarımı:</strong> 8–2. bitler = <code>010 0000</code> = 32 &rarr; Yönelim = 32 &times; 2.8125&deg; = <strong>90&deg;</strong> (Doğu)</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Check FX:</strong> Bit 1 = 1 &rarr; second extent (width) follows</span>
+                <span data-i18n-tr><strong>FX kontrolü:</strong> 1. bit = 1 &rarr; ikinci uzantı (genişlik) devam eder</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Octet 3:</strong> 0x78 = <code>0111 1000</code></span>
+                <span data-i18n-tr><strong>Oktet 3:</strong> 0x78 = <code>0111 1000</code></span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Extract WIDTH:</strong> Bits 8–2 = <code>011 1100</code> = 60 &rarr; Width = 60 &times; 1 m = <strong>60 metres</strong></span>
+                <span data-i18n-tr><strong>WIDTH çıkarımı:</strong> 8–2. bitler = <code>011 1100</code> = 60 &rarr; Genişlik = 60 &times; 1 m = <strong>60 metre</strong></span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Check FX:</strong> Bit 1 = 0 &rarr; end of data item</span>
+                <span data-i18n-tr><strong>FX kontrolü:</strong> 1. bit = 0 &rarr; veri öğesi sonu</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Interpretation:</strong> A 64 m long, 60 m wide target pointing East (90&deg;) — consistent with a wide-body aircraft such as a Boeing 777.</span>
+                <span data-i18n-tr><strong>Yorum:</strong> Doğu yönüne (90&deg;) bakan, 64 m uzunluğunda ve 60 m genişliğinde bir hedef — Boeing 777 gibi geniş gövdeli bir uçakla tutarlıdır.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="hex-example">
+          <div class="hex-example__raw">
+            <span data-i18n-en>Minimal example (1 octet, length only):</span>
+            <span data-i18n-tr>Minimum örnek (1 oktet, yalnızca uzunluk):</span>
+            <code>4A</code>
+          </div>
+          <div class="hex-example__steps">
+            <ol>
+              <li>
+                <span data-i18n-en><strong>Octet 1:</strong> 0x4A = <code>0100 1010</code></span>
+                <span data-i18n-tr><strong>Oktet 1:</strong> 0x4A = <code>0100 1010</code></span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Extract LENGTH:</strong> Bits 8–2 = <code>010 0101</code> = 37 &rarr; Length = <strong>37 metres</strong></span>
+                <span data-i18n-tr><strong>LENGTH çıkarımı:</strong> 8–2. bitler = <code>010 0101</code> = 37 &rarr; Uzunluk = <strong>37 metre</strong></span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Check FX:</strong> Bit 1 = 0 &rarr; end of data item (no orientation or width)</span>
+                <span data-i18n-tr><strong>FX kontrolü:</strong> 1. bit = 0 &rarr; veri öğesi sonu (yönelim veya genişlik yok)</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Interpretation:</strong> A 37-metre target with no orientation or width data — consistent with a narrow-body aircraft like an Airbus A320 (length 37.6 m).</span>
+                <span data-i18n-tr><strong>Yorum:</strong> Yönelim veya genişlik verisi bulunmayan 37 metrelik bir hedef — Airbus A320 (uzunluk 37,6 m) gibi dar gövdeli bir uçakla tutarlıdır.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 7: VALIDATION RULES ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <ul class="validation-list">
+          <li>
+            <span data-i18n-en><strong>Variable length:</strong> Minimum 1 octet (length only), maximum 3 octets (length + orientation + width). The FX bit in each octet determines whether the next octet is present.</span>
+            <span data-i18n-tr><strong>Değişken uzunluk:</strong> En az 1 oktet (yalnızca uzunluk), en fazla 3 oktet (uzunluk + yönelim + genişlik). Her oktetin FX biti, bir sonraki oktetin bulunup bulunmadığını belirler.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>FX chain order:</strong> Extents must appear in order — orientation first, then width. You cannot have width without orientation.</span>
+            <span data-i18n-tr><strong>FX zincir sırası:</strong> Uzantılar belirli sırada yer almalıdır — önce yönelim, ardından genişlik. Yönelim olmadan genişlik bulundurulamaz.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Length range:</strong> 0–127 metres. A value of 0 may indicate that the target size is unknown or below the sensor resolution.</span>
+            <span data-i18n-tr><strong>Uzunluk aralığı:</strong> 0–127 metre. 0 değeri, hedef boyutunun bilinmediğini veya sensör çözünürlüğünün altında kaldığını gösterebilir.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Orientation range:</strong> 0&deg; to 357.19&deg;. The value 0 means the target nose is pointing North. Values increase clockwise.</span>
+            <span data-i18n-tr><strong>Yönelim aralığı:</strong> 0&deg; ile 357.19&deg; arasında. 0 değeri, hedef burnunun Kuzey'e baktığı anlamına gelir. Değerler saat yönünde artar.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Width range:</strong> 0–127 metres. Width should generally be less than or equal to length for aircraft; exceptions may occur for unconventional target shapes.</span>
+            <span data-i18n-tr><strong>Genişlik aralığı:</strong> 0–127 metre. Uçaklarda genişlik genellikle uzunluktan küçük ya da ona eşit olmalıdır; alışılmadık hedef şekillerinde istisnalar görülebilir.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Presence:</strong> This item is optional. Its presence is indicated by the FSPEC bit at UAP Block 3, position 6.</span>
+            <span data-i18n-tr><strong>Varlık:</strong> Bu öğe isteğe bağlıdır. Varlığı, UAP Blok 3'ün 6. konumundaki FSPEC biti ile belirtilir.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ======== SECTION 8: RELATED ITEMS ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Related Items</span>
+          <span data-i18n-tr>İlgili Öğeler</span>
+        </h2>
+        <ul class="related-list">
+          <li>
+            <a href="I011-042.html"><strong>I011/042</strong></a> —
+            <span data-i18n-en>Calculated Position in Cartesian Coordinates: Provides the target location on the airport surface to which this size/orientation applies.</span>
+            <span data-i18n-tr>Kartezyen Koordinatlarda Hesaplanan Konum: Bu boyut/yönelim bilgisinin geçerli olduğu, havalimanı yüzeyindeki hedef konumunu sağlar.</span>
+          </li>
+          <li>
+            <a href="I011-170.html"><strong>I011/170</strong></a> —
+            <span data-i18n-en>Track Status: Contains target classification flags (aircraft vs. vehicle) that help interpret the size values.</span>
+            <span data-i18n-tr>İz Durumu: Boyut değerlerinin yorumlanmasına yardımcı olan hedef sınıflandırma bayraklarını (uçak mı araç mı) içerir.</span>
+          </li>
+          <li>
+            <a href="I011-245.html"><strong>I011/245</strong></a> —
+            <span data-i18n-en>Target Identification: The callsign can be cross-referenced with aircraft type databases to validate the reported dimensions.</span>
+            <span data-i18n-tr>Hedef Kimliği: Callsign, bildirilen boyutları doğrulamak amacıyla uçak tipi veri tabanlarıyla çapraz referans olarak kullanılabilir.</span>
+          </li>
+          <li>
+            <a href="I011-202.html"><strong>I011/202</strong></a> —
+            <span data-i18n-en>Calculated Track Velocity: The velocity heading should correlate with the target orientation for moving targets.</span>
+            <span data-i18n-tr>Hesaplanan İz Hızı: Hareket eden hedefler için hız yönü, hedef yönelimiyle örtüşmelidir.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ======== SECTION 9: IMPLEMENTATION NOTES ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Implementation Notes</span>
+          <span data-i18n-tr>Uygulama Notları</span>
+        </h2>
+        <ul class="notes-list">
+          <li>
+            <span data-i18n-en><strong>Bit extraction pattern:</strong> For each octet, the data value is in bits 8–2 and the FX flag is bit 1. In code: <code>value = octet &gt;&gt; 1</code> and <code>fx = octet &amp; 0x01</code>.</span>
+            <span data-i18n-tr><strong>Bit çıkarım kalıbı:</strong> Her oktet için veri değeri 8–2. bitlerdedir; FX bayrağı ise 1. bittir. Kodda: <code>value = octet &gt;&gt; 1</code> ve <code>fx = octet &amp; 0x01</code>.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Orientation reference:</strong> Orientation is measured clockwise from geographical North (0&deg; = North, 90&deg; = East, 180&deg; = South, 270&deg; = West). This represents the direction the aircraft nose is pointing, not the direction of travel.</span>
+            <span data-i18n-tr><strong>Yönelim referansı:</strong> Yönelim, coğrafi Kuzey'den saat yönünde ölçülür (0&deg; = Kuzey, 90&deg; = Doğu, 180&deg; = Güney, 270&deg; = Batı). Bu değer, uçağın hareket yönünü değil, burunun baktığı yönü temsil eder.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Orientation resolution:</strong> The 2.8125&deg; step size means that heading values are approximate. For precise heading information, refer to Mode-S derived data in I011/380 if available.</span>
+            <span data-i18n-tr><strong>Yönelim çözünürlüğü:</strong> 2.8125&deg;'lik adım boyutu, yön değerlerinin yaklaşık olduğu anlamına gelir. Kesin yön bilgisi için, mevcut olması durumunda I011/380'deki Mode-S kaynaklı verilere başvurun.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Surface radar origin:</strong> This data item is primarily populated from SMR (Surface Movement Radar) target extraction. It may not be present for targets tracked solely via MLAT or ADS-B.</span>
+            <span data-i18n-tr><strong>Yüzey radarı kaynağı:</strong> Bu veri öğesi öncelikle SMR (Yüzey Hareketi Radarı) hedef çıkarımından doldurulur. Yalnızca MLAT veya ADS-B aracılığıyla izlenen hedefler için mevcut olmayabilir.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Display usage:</strong> The length, width, and orientation values are typically used to render a correctly sized and oriented target symbol on the A-SMGCS display. A simple rotated rectangle is the most common representation.</span>
+            <span data-i18n-tr><strong>Ekran kullanımı:</strong> Uzunluk, genişlik ve yönelim değerleri, A-SMGCS ekranında doğru boyut ve yönelimde bir hedef simgesi oluşturmak amacıyla kullanılır. En yaygın gösterim yöntemi döndürülmüş basit bir dikdörtgendir.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Vehicle vs. aircraft:</strong> Ground vehicles typically have smaller dimensions (length &lt; 20 m). Unusually large dimensions for a vehicle-classified target may indicate misclassification.</span>
+            <span data-i18n-tr><strong>Araç - uçak ayrımı:</strong> Yer araçları genellikle daha küçük boyutlara sahiptir (uzunluk &lt; 20 m). Araç olarak sınıflandırılmış bir hedefte alışılmadık derecede büyük boyutlar, yanlış sınıflandırmaya işaret edebilir.</span>
+          </li>
+        </ul>
+      </section>
+
+    </div><!-- /.content -->
+  </main>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

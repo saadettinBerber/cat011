@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/430 — Phase of Flight</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimliği</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimliği</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimliği</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — İrtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik İrt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik İrt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Data Items</span>
+        <span data-i18n-tr>Veri Öğeleri</span> &rsaquo;
+        <span>I011/430</span>
+      </div>
+      <div class="topbar__lang-toggle">
+        <button class="topbar__lang-btn topbar__lang-btn--active" data-lang-switch="en">EN</button>
+        <button class="topbar__lang-btn" data-lang-switch="tr">TR</button>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- ======== SECTION 1: HEADER ======== -->
+      <section class="content__header">
+        <h1>
+          <span class="content__item-id">I011/430</span>
+          <span data-i18n-en>Phase of Flight</span>
+          <span data-i18n-tr>Uçuş Fazı</span>
+        </h1>
+        <p class="content__format-badge">
+          <span data-i18n-en>Fixed Length — 1 Octet</span>
+          <span data-i18n-tr>Sabit Uzunluk — 1 Oktet</span>
+        </p>
+      </section>
+
+      <!-- ======== SECTION 2: PURPOSE ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Data Item I011/430 indicates the current phase of a flight as determined by the A-SMGCS system. This information is essential for surface movement management, allowing controllers and automation systems to understand whether an aircraft is parked, taxiing, on the runway, or in its final approach. The phase of flight is derived from the fusion of surveillance data and flight plan correlation.</span>
+          <span data-i18n-tr>I011/430 Veri Öğesi, A-SMGCS (Gelişmiş Yüzey Hareketi Rehberlik ve Kontrol Sistemi) tarafından belirlenen anlık uçuş fazını gösterir. Bu bilgi, yüzey hareketi yönetimi açısından kritik öneme sahip olup kontrolörlerin ve otomasyon sistemlerinin bir hava aracının park pozisyonunda mı, takside mi, pistte mi yoksa final yaklaşmasında mı olduğunu anlamasını sağlar. Uçuş fazı, gözetim verilerinin füzyonu ve uçuş planı ilişkilendirmesinden elde edilir.</span>
+        </p>
+      </section>
+
+      <!-- ======== SECTION 3: STRUCTURE ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+        <p>
+          <span data-i18n-en>One-octet fixed length data item. All 8 bits encode the flight phase status (FLS) as an unsigned integer lookup value.</span>
+          <span data-i18n-tr>Tek oktetlik sabit uzunluklu veri öğesidir. 8 bitin tamamı, uçuş fazı durumunu (FLS) işaretsiz tam sayı olarak bir arama tablosu değeri biçiminde kodlar.</span>
+        </p>
+
+        <!-- SVG Bit Structure Diagram -->
+        <div class="content__diagram">
+          <svg viewBox="0 0 700 100" xmlns="http://www.w3.org/2000/svg" class="bit-diagram" role="img" aria-label="I011/430 bit structure diagram">
+            <title>I011/430 Bit Structure — Phase of Flight</title>
+
+            <!-- Header row -->
+            <text x="50" y="20" class="bit-diagram__label" text-anchor="middle">8</text>
+            <text x="130" y="20" class="bit-diagram__label" text-anchor="middle">7</text>
+            <text x="210" y="20" class="bit-diagram__label" text-anchor="middle">6</text>
+            <text x="290" y="20" class="bit-diagram__label" text-anchor="middle">5</text>
+            <text x="370" y="20" class="bit-diagram__label" text-anchor="middle">4</text>
+            <text x="450" y="20" class="bit-diagram__label" text-anchor="middle">3</text>
+            <text x="530" y="20" class="bit-diagram__label" text-anchor="middle">2</text>
+            <text x="610" y="20" class="bit-diagram__label" text-anchor="middle">1</text>
+
+            <!-- Octet label -->
+            <text x="680" y="55" class="bit-diagram__label" text-anchor="start" font-size="11">Octet 1</text>
+
+            <!-- Bit cells -->
+            <rect x="10" y="30" width="640" height="40" class="bit-diagram__cell bit-diagram__cell--field1" rx="3"/>
+
+            <!-- Field name -->
+            <text x="330" y="55" class="bit-diagram__field-name" text-anchor="middle">FLS</text>
+
+            <!-- Encoding note -->
+            <text x="330" y="90" class="bit-diagram__note" text-anchor="middle" font-size="11">
+              Phase of Flight Status (8 bits, unsigned integer, lookup table)
+            </text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 4: FIELD DESCRIPTIONS ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Field Descriptions</span>
+          <span data-i18n-tr>Alan Açıklamaları</span>
+        </h2>
+        <div class="table-responsive">
+          <table class="content__table">
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Field</span><span data-i18n-tr>Alan</span></th>
+                <th><span data-i18n-en>Bits</span><span data-i18n-tr>Bitler</span></th>
+                <th><span data-i18n-en>Size</span><span data-i18n-tr>Boyut</span></th>
+                <th><span data-i18n-en>Type</span><span data-i18n-tr>Tür</span></th>
+                <th><span data-i18n-en>Description</span><span data-i18n-tr>Açıklama</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>FLS</strong></td>
+                <td>8–1</td>
+                <td>8</td>
+                <td><span data-i18n-en>Unsigned Integer</span><span data-i18n-tr>İşaretsiz Tam Sayı</span></td>
+                <td><span data-i18n-en>Phase of Flight Status — lookup table identifying the current operational phase of the tracked target</span><span data-i18n-tr>Uçuş Fazı Durumu — izlenen hedefin anlık operasyonel fazını tanımlayan arama tablosu</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 5: VALUE ENCODING ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Value Encoding</span>
+          <span data-i18n-tr>Değer Kodlaması</span>
+        </h2>
+        <p>
+          <span data-i18n-en>The FLS field uses a direct lookup table — no formula or LSB scaling is needed. The 8-bit unsigned integer maps directly to a flight phase:</span>
+          <span data-i18n-tr>FLS alanı doğrudan bir arama tablosu kullanır; herhangi bir formül veya LSB ölçekleme işlemine gerek yoktur. 8 bitlik işaretsiz tam sayı, doğrudan bir uçuş fazına karşılık gelir:</span>
+        </p>
+        <div class="table-responsive">
+          <table class="content__table">
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Value</span><span data-i18n-tr>Değer</span></th>
+                <th><span data-i18n-en>Binary</span><span data-i18n-tr>İkili</span></th>
+                <th><span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></th>
+                <th><span data-i18n-en>Description</span><span data-i18n-tr>Açıklama</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td><code>0000 0000</code></td>
+                <td><span data-i18n-en>Unknown</span><span data-i18n-tr>Bilinmiyor</span></td>
+                <td><span data-i18n-en>Phase of flight cannot be determined</span><span data-i18n-tr>Uçuş fazı belirlenemiyor</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><code>0000 0001</code></td>
+                <td><span data-i18n-en>On Stand</span><span data-i18n-tr>Park Pozisyonunda</span></td>
+                <td><span data-i18n-en>Aircraft is parked at a gate or stand position</span><span data-i18n-tr>Hava aracı bir kapı veya park pozisyonunda bekliyor</span></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><code>0000 0010</code></td>
+                <td><span data-i18n-en>Taxiing for Departure</span><span data-i18n-tr>Kalkış İçin Taksi</span></td>
+                <td><span data-i18n-en>Aircraft is taxiing from the stand towards the departure runway</span><span data-i18n-tr>Hava aracı park pozisyonundan kalkış pistine doğru taksi yapıyor</span></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><code>0000 0011</code></td>
+                <td><span data-i18n-en>Taxiing for Arrival</span><span data-i18n-tr>Varış İçin Taksi</span></td>
+                <td><span data-i18n-en>Aircraft is taxiing from the arrival runway towards the stand</span><span data-i18n-tr>Hava aracı varış pistinden park pozisyonuna doğru taksi yapıyor</span></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><code>0000 0100</code></td>
+                <td><span data-i18n-en>Runway for Departure</span><span data-i18n-tr>Kalkış İçin Pistte</span></td>
+                <td><span data-i18n-en>Aircraft is on the runway, lined up for take-off</span><span data-i18n-tr>Hava aracı pistte, kalkış için sıralanmış durumda</span></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td><code>0000 0101</code></td>
+                <td><span data-i18n-en>Runway for Arrival</span><span data-i18n-tr>Varış İçin Pistte</span></td>
+                <td><span data-i18n-en>Aircraft is on the runway after landing, decelerating</span><span data-i18n-tr>Hava aracı inişin ardından pistte yavaşlıyor</span></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td><code>0000 0110</code></td>
+                <td><span data-i18n-en>Hold for Departure</span><span data-i18n-tr>Kalkış İçin Beklemede</span></td>
+                <td><span data-i18n-en>Aircraft is holding at a designated point before entering the runway for departure</span><span data-i18n-tr>Hava aracı kalkış için piste girmeden önce belirlenen bir noktada bekliyor</span></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td><code>0000 0111</code></td>
+                <td><span data-i18n-en>Hold for Arrival</span><span data-i18n-tr>Varış İçin Beklemede</span></td>
+                <td><span data-i18n-en>Aircraft is holding at a designated point after vacating the runway on arrival</span><span data-i18n-tr>Hava aracı varışta pisti terk ettikten sonra belirlenen bir noktada bekliyor</span></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td><code>0000 1000</code></td>
+                <td><span data-i18n-en>Push Back</span><span data-i18n-tr>Geri İtme (Push Back)</span></td>
+                <td><span data-i18n-en>Aircraft is being pushed back from the stand by a tow vehicle</span><span data-i18n-tr>Hava aracı bir çekme aracı tarafından park pozisyonundan geri itiliyor</span></td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td><code>0000 1001</code></td>
+                <td><span data-i18n-en>On Finals</span><span data-i18n-tr>Final Yaklaşmasında</span></td>
+                <td><span data-i18n-en>Aircraft is on final approach to the runway</span><span data-i18n-tr>Hava aracı piste final yaklaşmasında</span></td>
+              </tr>
+              <tr>
+                <td>10–255</td>
+                <td>—</td>
+                <td><span data-i18n-en>Reserved</span><span data-i18n-tr>Ayrılmış</span></td>
+                <td><span data-i18n-en>Not defined in Edition 1.3 — reserved for future use</span><span data-i18n-tr>Sürüm 1.3'te tanımlanmamıştır — ileride kullanım için ayrılmıştır</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 6: HEX EXAMPLE ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Worked Hex Example</span>
+          <span data-i18n-tr>Adım Adım Hex Örneği</span>
+        </h2>
+        <div class="content__hex-example">
+          <div class="content__hex-raw">
+            <code>0x02</code>
+          </div>
+
+          <h3>
+            <span data-i18n-en>Step-by-Step Decode</span>
+            <span data-i18n-tr>Adım Adım Çözümleme</span>
+          </h3>
+
+          <div class="content__hex-step">
+            <h4>
+              <span data-i18n-en>Step 1: Convert to binary</span>
+              <span data-i18n-tr>Adım 1: İkili sayıya dönüştür</span>
+            </h4>
+            <p>
+              <span data-i18n-en><code>0x02</code> = <code>0000 0010</code></span>
+              <span data-i18n-tr><code>0x02</code> = <code>0000 0010</code></span>
+            </p>
+          </div>
+
+          <div class="content__hex-step">
+            <h4>
+              <span data-i18n-en>Step 2: Read the FLS value</span>
+              <span data-i18n-tr>Adım 2: FLS değerini oku</span>
+            </h4>
+            <p>
+              <span data-i18n-en>Bits 8–1 = <code>0000 0010</code> = decimal <strong>2</strong></span>
+              <span data-i18n-tr>8–1. bitler = <code>0000 0010</code> = ondalık <strong>2</strong></span>
+            </p>
+          </div>
+
+          <div class="content__hex-step">
+            <h4>
+              <span data-i18n-en>Step 3: Look up the phase</span>
+              <span data-i18n-tr>Adım 3: Fazı tabloda ara</span>
+            </h4>
+            <p>
+              <span data-i18n-en>FLS = 2 → <strong>Taxiing for Departure</strong></span>
+              <span data-i18n-tr>FLS = 2 → <strong>Kalkış İçin Taksi</strong></span>
+            </p>
+          </div>
+
+          <div class="content__hex-result">
+            <p>
+              <span data-i18n-en><strong>Result:</strong> The aircraft is currently taxiing from its stand towards the departure runway.</span>
+              <span data-i18n-tr><strong>Sonuç:</strong> Hava aracı şu anda park pozisyonundan kalkış pistine doğru taksi yapıyor.</span>
+            </p>
+          </div>
+
+          <h3>
+            <span data-i18n-en>Additional Examples</span>
+            <span data-i18n-tr>Ek Örnekler</span>
+          </h3>
+          <div class="table-responsive">
+            <table class="content__table">
+              <thead>
+                <tr>
+                  <th><span data-i18n-en>Hex</span><span data-i18n-tr>Onaltılık</span></th>
+                  <th><span data-i18n-en>Decimal</span><span data-i18n-tr>Ondalık</span></th>
+                  <th><span data-i18n-en>Phase</span><span data-i18n-tr>Faz</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>0x00</code></td>
+                  <td>0</td>
+                  <td><span data-i18n-en>Unknown</span><span data-i18n-tr>Bilinmiyor</span></td>
+                </tr>
+                <tr>
+                  <td><code>0x01</code></td>
+                  <td>1</td>
+                  <td><span data-i18n-en>On Stand</span><span data-i18n-tr>Park Pozisyonunda</span></td>
+                </tr>
+                <tr>
+                  <td><code>0x04</code></td>
+                  <td>4</td>
+                  <td><span data-i18n-en>Runway for Departure</span><span data-i18n-tr>Kalkış İçin Pistte</span></td>
+                </tr>
+                <tr>
+                  <td><code>0x08</code></td>
+                  <td>8</td>
+                  <td><span data-i18n-en>Push Back</span><span data-i18n-tr>Geri İtme (Push Back)</span></td>
+                </tr>
+                <tr>
+                  <td><code>0x09</code></td>
+                  <td>9</td>
+                  <td><span data-i18n-en>On Finals</span><span data-i18n-tr>Final Yaklaşmasında</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 7: VALIDATION RULES ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <div class="table-responsive">
+          <table class="content__table">
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Rule</span><span data-i18n-tr>Kural</span></th>
+                <th><span data-i18n-en>Condition</span><span data-i18n-tr>Koşul</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>Valid range</span><span data-i18n-tr>Geçerli aralık</span></td>
+                <td><span data-i18n-en>FLS must be in the range 0–9. Values 10–255 are reserved and should not be transmitted in Edition 1.3.</span><span data-i18n-tr>FLS, 0–9 aralığında olmalıdır. 10–255 arası değerler ayrılmış olup Sürüm 1.3'te iletilmemelidir.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Data item length</span><span data-i18n-tr>Veri öğesi uzunluğu</span></td>
+                <td><span data-i18n-en>Exactly 1 octet (8 bits). No more, no less.</span><span data-i18n-tr>Tam olarak 1 oktet (8 bit). Ne fazla ne eksik.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Applicable targets</span><span data-i18n-tr>Geçerli hedefler</span></td>
+                <td><span data-i18n-en>Primarily applicable to aircraft tracks. Ground vehicle tracks (reported via I011/300) typically do not use this data item.</span><span data-i18n-tr>Öncelikli olarak hava aracı izlerine uygulanır. I011/300 üzerinden raporlanan yer araçlarının izleri bu veri öğesini genellikle kullanmaz.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Consistency with I011/170</span><span data-i18n-tr>I011/170 ile tutarlılık</span></td>
+                <td><span data-i18n-en>If I011/170 Track Status indicates GBS = 1 (ground bit set), the phase should be consistent with ground operations (values 1–8). Value 9 (on finals) implies the aircraft is airborne.</span><span data-i18n-tr>I011/170 İz Durumu'nda GBS = 1 (yer biti aktif) ise faz, yer operasyonlarıyla tutarlı olmalıdır (değerler 1–8). Değer 9 (final yaklaşmasında) hava aracının havada olduğunu gösterir.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Flight plan correlation</span><span data-i18n-tr>Uçuş planı ilişkilendirmesi</span></td>
+                <td><span data-i18n-en>Phase of flight is typically available only when the track is correlated with a flight plan (I011/170 FPC = 1). Without flight plan data, value 0 (unknown) is expected.</span><span data-i18n-tr>Uçuş fazı genellikle yalnızca iz bir uçuş planıyla ilişkilendirildiğinde (I011/170 FPC = 1) kullanılabilir. Uçuş planı verisi olmadığında değer 0 (bilinmiyor) beklenir.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 8: RELATED ITEMS ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Related Items</span>
+          <span data-i18n-tr>İlgili Öğeler</span>
+        </h2>
+        <div class="table-responsive">
+          <table class="content__table">
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Item</span><span data-i18n-tr>Öğe</span></th>
+                <th><span data-i18n-en>Relationship</span><span data-i18n-tr>İlişki</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-170.html">I011/170</a></td>
+                <td><span data-i18n-en>Track Status — contains GBS (ground bit) and FPC (flight plan correlated) flags that affect phase interpretation</span><span data-i18n-tr>İz Durumu — faz yorumunu etkileyen GBS (yer biti) ve FPC (uçuş planı ilişkili) bayraklarını içerir</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-390.html">I011/390</a></td>
+                <td><span data-i18n-en>Flight Plan Related Data — provides detailed flight plan information used by the system to determine the flight phase</span><span data-i18n-tr>Uçuş Planı İlgili Verisi — sistemin uçuş fazını belirlemek için kullandığı ayrıntılı uçuş planı bilgilerini sağlar</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-042.html">I011/042</a></td>
+                <td><span data-i18n-en>Calculated Position in Cartesian Co-ordinates — position data used to determine if an aircraft is on stand, taxiway, or runway</span><span data-i18n-tr>Kartezyen Koordinatlarda Hesaplanan Konum — hava aracının park pozisyonunda, taksi yolunda veya pistte olup olmadığını belirlemek için kullanılan konum verisi</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-202.html">I011/202</a></td>
+                <td><span data-i18n-en>Calculated Track Velocity — speed helps distinguish between stationary (on stand) and moving (taxiing) phases</span><span data-i18n-tr>Hesaplanan İz Hızı — hız, durağan (park pozisyonunda) ve hareket halindeki (taksi) fazları birbirinden ayırt etmeye yardımcı olur</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-300.html">I011/300</a></td>
+                <td><span data-i18n-en>Vehicle Fleet Identification — identifies ground vehicles; I011/430 is generally not used for vehicle targets</span><span data-i18n-tr>Araç Filosu Tanımlama — yer araçlarını tanımlar; I011/430 araç hedefleri için genellikle kullanılmaz</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-000.html">I011/000</a></td>
+                <td><span data-i18n-en>Message Type — I011/430 appears in Type 1 messages (Target Reports)</span><span data-i18n-tr>Mesaj Tipi — I011/430, Tip 1 mesajlarında (Hedef Raporları) yer alır</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 9: IMPLEMENTATION NOTES ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Implementation Notes</span>
+          <span data-i18n-tr>Uygulama Notları</span>
+        </h2>
+        <ul class="content__notes-list">
+          <li>
+            <span data-i18n-en><strong>Surface movement context:</strong> This data item is specific to A-SMGCS operations. The defined phases (on stand, taxiing, runway, push back, on finals) all relate to airport surface movements and final approach. It does not cover en-route flight phases like cruise or climb.</span>
+            <span data-i18n-tr><strong>Yüzey hareketi bağlamı:</strong> Bu veri öğesi A-SMGCS operasyonlarına özgüdür. Tanımlanan fazların tamamı (park pozisyonunda, taksi, pist, geri itme, final yaklaşması) havaalanı yüzey hareketleri ve final yaklaşmasıyla ilgilidir. Seyir veya tırmanma gibi rota uçuş fazlarını kapsamaz.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Phase transitions:</strong> The phase value may change within a single track's lifetime. For example, a departing aircraft will typically transition through: 1 (on stand) → 8 (push back) → 2 (taxiing for departure) → 6 (hold for departure) → 4 (runway for departure). Receivers should handle these transitions gracefully.</span>
+            <span data-i18n-tr><strong>Faz geçişleri:</strong> Faz değeri, tek bir izin ömrü boyunca değişebilir. Örneğin kalkış yapan bir hava aracı tipik olarak şu geçişlerden geçer: 1 (park pozisyonunda) → 8 (geri itme) → 2 (kalkış için taksi) → 6 (kalkış için beklemede) → 4 (kalkış için pistte). Alıcılar bu geçişleri sorunsuz biçimde işleyebilmelidir.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Unknown phase:</strong> Value 0 (unknown) is common for tracks that are not yet correlated with a flight plan, or when the system cannot determine the phase from the available surveillance data alone.</span>
+            <span data-i18n-tr><strong>Bilinmeyen faz:</strong> Değer 0 (bilinmiyor), henüz bir uçuş planıyla ilişkilendirilmemiş izler için ya da sistemin yalnızca mevcut gözetim verilerinden fazı belirleyemediği durumlarda yaygın olarak görülür.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>On finals (value 9):</strong> This is the only airborne phase in the lookup table. It represents an aircraft on final approach that is about to land. All other defined values (1–8) represent ground operations.</span>
+            <span data-i18n-tr><strong>Final yaklaşmasında (değer 9):</strong> Arama tablosundaki tek havada geçirilen fazdır. İnişe geçmek üzere olan bir hava aracının final yaklaşmasını temsil eder. Diğer tüm tanımlı değerler (1–8) yer operasyonlarını ifade eder.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Reserved values:</strong> Decoders should treat values 10–255 as unknown or log them as warnings. Future editions of the specification may define additional phases.</span>
+            <span data-i18n-tr><strong>Ayrılmış değerler:</strong> Çözümleyiciler, 10–255 aralığındaki değerleri bilinmiyor olarak ele almalı veya uyarı olarak kaydetmelidir. Spesifikasyonun gelecekteki sürümleri ek fazlar tanımlayabilir.</span>
+          </li>
+        </ul>
+      </section>
+
+    </div><!-- /.content -->
+  </main>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

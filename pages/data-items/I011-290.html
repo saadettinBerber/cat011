@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/290 — System Track Update Ages</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimliği</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimliği</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimliği</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — İrtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik İrt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik İrt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>System Track Update Ages</span>
+        <span data-i18n-tr>Sistem İzi Güncelleme Yaşları</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/290</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>System Track Update Ages</span>
+          <span data-i18n-tr>Sistem İzi Güncelleme Yaşları</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Compound — 2-Octet Primary Subfield + Up to 12 Subfields</span>
+          <span data-i18n-tr>Bileşik — 2-Oktetli Birincil Alt Alan + En Fazla 12 Alt Alan</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Ages of the last plot/local track, or the last valid mode-A/mode-C data, used to update the system track. Each subfield reports how long ago a specific sensor type last contributed data to the fusion track. This enables consumers to assess the freshness and reliability of each data source independently.</span>
+          <span data-i18n-tr>Sistem izini güncellemek için kullanılan son plot/yerel iz veya son geçerli Mode-A/Mode-C verilerinin yaşlarını içerir. Her alt alan, belirli bir sensör türünün füzyon izine en son katkıda bulunmasından bu yana geçen süreyi raporlar. Bu sayede tüketiciler, her veri kaynağının tazeliğini ve güvenilirliğini bağımsız olarak değerlendirebilir.</span>
+        </p>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Key concept:</strong> Ages are calculated as: Age = Time of Track Information (I011/140) &minus; Time of last valid update. If the computed age exceeds the maximum value for a subfield, or if data from that sensor was never received, the corresponding subfield is not sent.</span>
+            <span data-i18n-tr><strong>Temel kavram:</strong> Yaşlar şu şekilde hesaplanır: Yaş = İz Bilgisi Zamanı (I011/140) &minus; Son geçerli güncelleme zamanı. Hesaplanan yaş bir alt alan için maksimum değeri aşarsa veya o sensörden hiç veri alınmamışsa, ilgili alt alan gönderilmez.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure — Primary Subfield -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure — Primary Subfield</span>
+          <span data-i18n-tr>Yapı — Birincil Alt Alan</span>
+        </h2>
+        <p>
+          <span data-i18n-en>The primary subfield is a 2-octet presence map (FX-extendable). Each bit indicates whether the corresponding age subfield is present.</span>
+          <span data-i18n-tr>Birincil alt alan, 2-oktetlik bir varlık haritasıdır (FX ile genişletilebilir). Her bit, ilgili yaş alt alanının mevcut olup olmadığını gösterir.</span>
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Bit</span><span data-i18n-tr>Bit</span></th>
+                <th><span data-i18n-en>Field</span><span data-i18n-tr>Alan</span></th>
+                <th><span data-i18n-en>Subfield #</span><span data-i18n-tr>Alt Alan #</span></th>
+                <th><span data-i18n-en>Description</span><span data-i18n-tr>Açıklama</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>16</td><td>PSR</td><td>#1</td><td><span data-i18n-en>PSR Age — age of last primary radar report</span><span data-i18n-tr>PSR Yaşı — son birincil radar raporunun yaşı</span></td></tr>
+              <tr><td>15</td><td>SSR</td><td>#2</td><td><span data-i18n-en>SSR Age — age of last secondary radar report</span><span data-i18n-tr>SSR Yaşı — son ikincil radar raporunun yaşı</span></td></tr>
+              <tr><td>14</td><td>MDA</td><td>#3</td><td><span data-i18n-en>Mode A Age — age of last valid Mode A report</span><span data-i18n-tr>MDA Yaşı — son geçerli Mode A raporunun yaşı</span></td></tr>
+              <tr><td>13</td><td>MFL</td><td>#4</td><td><span data-i18n-en>Measured Flight Level Age — age of last valid Mode C</span><span data-i18n-tr>MFL Yaşı — son geçerli Mode C verisinin yaşı</span></td></tr>
+              <tr><td>12</td><td>MDS</td><td>#5</td><td><span data-i18n-en>Mode S Age — age of last Mode S report</span><span data-i18n-tr>MDS Yaşı — son Mode S raporunun yaşı</span></td></tr>
+              <tr><td>11</td><td>ADS</td><td>#6</td><td><span data-i18n-en>ADS Age — age of last ADS report</span><span data-i18n-tr>ADS Yaşı — son ADS raporunun yaşı</span></td></tr>
+              <tr><td>10</td><td>ADB</td><td>#7</td><td><span data-i18n-en>ADS-B Age — age of last ADS-B report</span><span data-i18n-tr>ADB Yaşı — son ADS-B raporunun yaşı</span></td></tr>
+              <tr><td>9</td><td>FX</td><td>—</td><td><span data-i18n-en>Extension indicator (0 = end, 1 = octet 2 follows)</span><span data-i18n-tr>Uzatma göstergesi (0 = son, 1 = oktet 2 takip eder)</span></td></tr>
+              <tr><td>8</td><td>MD1</td><td>#8</td><td><span data-i18n-en>Mode 1 Age — age of last valid Mode 1</span><span data-i18n-tr>MD1 Yaşı — son geçerli Mode 1 verisinin yaşı</span></td></tr>
+              <tr><td>7</td><td>MD2</td><td>#9</td><td><span data-i18n-en>Mode 2 Age — age of last valid Mode 2</span><span data-i18n-tr>MD2 Yaşı — son geçerli Mode 2 verisinin yaşı</span></td></tr>
+              <tr><td>6</td><td>LOP</td><td>#10</td><td><span data-i18n-en>Loop Age — age of last magnetic loop detection</span><span data-i18n-tr>LOP Yaşı — son manyetik döngü tespitinin yaşı</span></td></tr>
+              <tr><td>5</td><td>TRK</td><td>#11</td><td><span data-i18n-en>Track Age — actual track age since first occurrence</span><span data-i18n-tr>TRK Yaşı — izin ilk oluşumundan bu yana geçen gerçek yaş</span></td></tr>
+              <tr><td>4</td><td>MUL</td><td>#12</td><td><span data-i18n-en>Multilateration Age — age of last MLAT detection</span><span data-i18n-tr>MUL Yaşı — son MLAT tespitinin yaşı</span></td></tr>
+              <tr><td>3/2</td><td>Spare</td><td>—</td><td><span data-i18n-en>Spare bits, set to zero</span><span data-i18n-tr>Yedek bitler, sıfıra ayarlanır</span></td></tr>
+              <tr><td>1</td><td>FX</td><td>—</td><td><span data-i18n-en>Extension indicator (0 = end, 1 = next octet follows)</span><span data-i18n-tr>Uzatma göstergesi (0 = son, 1 = sonraki oktet takip eder)</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Subfield Details -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Subfield Details</span>
+          <span data-i18n-tr>Alt Alan Ayrıntıları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th><span data-i18n-en>Name</span><span data-i18n-tr>Ad</span></th>
+                <th><span data-i18n-en>Size</span><span data-i18n-tr>Boyut</span></th>
+                <th>LSB</th>
+                <th><span data-i18n-en>Max Value</span><span data-i18n-tr>Maks. Değer</span></th>
+                <th><span data-i18n-en>Description</span><span data-i18n-tr>Açıklama</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td><td>PSR</td><td>1 octet</td><td>1/4 s</td><td>63.75 s</td>
+                <td><span data-i18n-en>Age of the last primary report used to update the track</span><span data-i18n-tr>İzi güncellemek için kullanılan son birincil raporun yaşı</span></td>
+              </tr>
+              <tr>
+                <td>2</td><td>SSR</td><td>1 octet</td><td>1/4 s</td><td>63.75 s</td>
+                <td><span data-i18n-en>Age of the last secondary report used to update the track</span><span data-i18n-tr>İzi güncellemek için kullanılan son ikincil raporun yaşı</span></td>
+              </tr>
+              <tr>
+                <td>3</td><td>MDA</td><td>1 octet</td><td>1/4 s</td><td>63.75 s</td>
+                <td><span data-i18n-en>Age of the last valid Mode A report used to update the track</span><span data-i18n-tr>İzi güncellemek için kullanılan son geçerli Mode A raporunun yaşı</span></td>
+              </tr>
+              <tr>
+                <td>4</td><td>MFL</td><td>1 octet</td><td>1/4 s</td><td>63.75 s</td>
+                <td><span data-i18n-en>Age of the last valid and credible Mode C used to update the track</span><span data-i18n-tr>İzi güncellemek için kullanılan son geçerli ve güvenilir Mode C verisinin yaşı</span></td>
+              </tr>
+              <tr>
+                <td>5</td><td>MDS</td><td>1 octet</td><td>1/4 s</td><td>63.75 s</td>
+                <td><span data-i18n-en>Age of the last Mode S report used to update the track</span><span data-i18n-tr>İzi güncellemek için kullanılan son Mode S raporunun yaşı</span></td>
+              </tr>
+              <tr>
+                <td>6</td><td>ADS</td><td><strong>2 octets</strong></td><td>1/4 s</td><td>16383.75 s</td>
+                <td><span data-i18n-en>Age of the last ADS report used to update the track (extended range &gt; 4 hours)</span><span data-i18n-tr>İzi güncellemek için kullanılan son ADS raporunun yaşı (genişletilmiş aralık &gt; 4 saat)</span></td>
+              </tr>
+              <tr>
+                <td>7</td><td>ADB</td><td>1 octet</td><td>1/4 s</td><td>63.75 s</td>
+                <td><span data-i18n-en>Age of the last ADS-B report used to update the track</span><span data-i18n-tr>İzi güncellemek için kullanılan son ADS-B raporunun yaşı</span></td>
+              </tr>
+              <tr>
+                <td>8</td><td>MD1</td><td>1 octet</td><td>1/4 s</td><td>63.75 s</td>
+                <td><span data-i18n-en>Age of the last valid Mode 1 used to update the track</span><span data-i18n-tr>İzi güncellemek için kullanılan son geçerli Mode 1 verisinin yaşı</span></td>
+              </tr>
+              <tr>
+                <td>9</td><td>MD2</td><td>1 octet</td><td>1/4 s</td><td>63.75 s</td>
+                <td><span data-i18n-en>Age of the last valid Mode 2 used to update the track</span><span data-i18n-tr>İzi güncellemek için kullanılan son geçerli Mode 2 verisinin yaşı</span></td>
+              </tr>
+              <tr>
+                <td>10</td><td>LOP</td><td>1 octet</td><td>1/4 s</td><td>63.75 s</td>
+                <td><span data-i18n-en>Age of the last magnetic loop detection</span><span data-i18n-tr>Son manyetik döngü tespitinin yaşı</span></td>
+              </tr>
+              <tr>
+                <td>11</td><td>TRK</td><td>1 octet</td><td>1/4 s</td><td>63.75 s</td>
+                <td><span data-i18n-en>Actual track age since first occurrence</span><span data-i18n-tr>İzin ilk oluşumundan bu yana geçen gerçek yaş</span></td>
+              </tr>
+              <tr>
+                <td>12</td><td>MUL</td><td>1 octet</td><td>1/4 s</td><td>63.75 s</td>
+                <td><span data-i18n-en>Age of the last multilateration detection</span><span data-i18n-tr>Son çok yönlü konum belirleme (MLAT) tespitinin yaşı</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note note--info">
+          <p>
+            <span data-i18n-en><strong>Important:</strong> Subfield #6 (ADS) is 2 octets — all other subfields are 1 octet. The ADS subfield has an extended range of over 4 hours (16383.75s) to accommodate long ADS update intervals.</span>
+            <span data-i18n-tr><strong>Önemli:</strong> Alt alan #6 (ADS) 2 oktet uzunluğundadır; diğer tüm alt alanlar 1 oktet uzunluğundadır. ADS alt alanı, uzun ADS güncelleme aralıklarını karşılamak amacıyla 4 saati aşan genişletilmiş bir aralığa (16383,75 s) sahiptir.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram — Primary Subfield</span>
+          <span data-i18n-tr>Bit Diyagramı — Birincil Alt Alan</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 750 170" xmlns="http://www.w3.org/2000/svg" style="max-width: 700px; font-family: var(--font-family-mono);">
+            <!-- Octet 1 -->
+            <text x="30" y="15" font-size="12" fill="#718096" font-weight="600">Octet 1 (bits 16–9)</text>
+            <text x="56" y="35" text-anchor="middle" font-size="10" fill="#718096">16</text>
+            <text x="138" y="35" text-anchor="middle" font-size="10" fill="#718096">15</text>
+            <text x="220" y="35" text-anchor="middle" font-size="10" fill="#718096">14</text>
+            <text x="302" y="35" text-anchor="middle" font-size="10" fill="#718096">13</text>
+            <text x="384" y="35" text-anchor="middle" font-size="10" fill="#718096">12</text>
+            <text x="466" y="35" text-anchor="middle" font-size="10" fill="#718096">11</text>
+            <text x="548" y="35" text-anchor="middle" font-size="10" fill="#718096">10</text>
+            <text x="630" y="35" text-anchor="middle" font-size="10" fill="#718096">9</text>
+
+            <rect x="15" y="42" width="82" height="30" rx="3" fill="#4a90d9" stroke="#2b6cb0" stroke-width="1.5"/>
+            <text x="56" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">PSR</text>
+
+            <rect x="97" y="42" width="82" height="30" rx="3" fill="#48bb78" stroke="#2f855a" stroke-width="1.5"/>
+            <text x="138" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">SSR</text>
+
+            <rect x="179" y="42" width="82" height="30" rx="3" fill="#ed8936" stroke="#c05621" stroke-width="1.5"/>
+            <text x="220" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">MDA</text>
+
+            <rect x="261" y="42" width="82" height="30" rx="3" fill="#9f7aea" stroke="#6b46c1" stroke-width="1.5"/>
+            <text x="302" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">MFL</text>
+
+            <rect x="343" y="42" width="82" height="30" rx="3" fill="#e53e3e" stroke="#c53030" stroke-width="1.5"/>
+            <text x="384" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">MDS</text>
+
+            <rect x="425" y="42" width="82" height="30" rx="3" fill="#dd6b20" stroke="#c05621" stroke-width="1.5"/>
+            <text x="466" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">ADS</text>
+
+            <rect x="507" y="42" width="82" height="30" rx="3" fill="#38b2ac" stroke="#2c7a7b" stroke-width="1.5"/>
+            <text x="548" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">ADB</text>
+
+            <rect x="589" y="42" width="82" height="30" rx="3" fill="#a0aec0" stroke="#718096" stroke-width="1.5"/>
+            <text x="630" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">FX</text>
+
+            <!-- Octet 2 -->
+            <text x="30" y="100" font-size="12" fill="#718096" font-weight="600">Octet 2 (bits 8–1) — if FX=1</text>
+            <text x="56" y="118" text-anchor="middle" font-size="10" fill="#718096">8</text>
+            <text x="138" y="118" text-anchor="middle" font-size="10" fill="#718096">7</text>
+            <text x="220" y="118" text-anchor="middle" font-size="10" fill="#718096">6</text>
+            <text x="302" y="118" text-anchor="middle" font-size="10" fill="#718096">5</text>
+            <text x="384" y="118" text-anchor="middle" font-size="10" fill="#718096">4</text>
+            <text x="466" y="118" text-anchor="middle" font-size="10" fill="#718096">3/2</text>
+            <text x="610" y="118" text-anchor="middle" font-size="10" fill="#718096">1</text>
+
+            <rect x="15" y="125" width="82" height="30" rx="3" fill="#4a90d9" stroke="#2b6cb0" stroke-width="1.5"/>
+            <text x="56" y="145" text-anchor="middle" fill="white" font-size="10" font-weight="700">MD1</text>
+
+            <rect x="97" y="125" width="82" height="30" rx="3" fill="#48bb78" stroke="#2f855a" stroke-width="1.5"/>
+            <text x="138" y="145" text-anchor="middle" fill="white" font-size="10" font-weight="700">MD2</text>
+
+            <rect x="179" y="125" width="82" height="30" rx="3" fill="#ed8936" stroke="#c05621" stroke-width="1.5"/>
+            <text x="220" y="145" text-anchor="middle" fill="white" font-size="10" font-weight="700">LOP</text>
+
+            <rect x="261" y="125" width="82" height="30" rx="3" fill="#9f7aea" stroke="#6b46c1" stroke-width="1.5"/>
+            <text x="302" y="145" text-anchor="middle" fill="white" font-size="10" font-weight="700">TRK</text>
+
+            <rect x="343" y="125" width="82" height="30" rx="3" fill="#e53e3e" stroke="#c53030" stroke-width="1.5"/>
+            <text x="384" y="145" text-anchor="middle" fill="white" font-size="10" font-weight="700">MUL</text>
+
+            <rect x="425" y="125" width="123" height="30" rx="3" fill="#718096" stroke="#4a5568" stroke-width="1.5"/>
+            <text x="486" y="145" text-anchor="middle" fill="white" font-size="10" font-weight="700">Spare</text>
+
+            <rect x="548" y="125" width="123" height="30" rx="3" fill="#a0aec0" stroke="#718096" stroke-width="1.5"/>
+            <text x="610" y="145" text-anchor="middle" fill="white" font-size="10" font-weight="700">FX</text>
+          </svg>
+          <div class="bit-diagram__label">I011/290 — Primary subfield: 1–2 octets (presence map for 12 subfields)</div>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Property</span><span data-i18n-tr>Özellik</span></th>
+                <th><span data-i18n-en>Value</span><span data-i18n-tr>Değer</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>Format</span><span data-i18n-tr>Format</span></td>
+                <td><span data-i18n-en>Compound (primary subfield + variable subfields)</span><span data-i18n-tr>Bileşik (birincil alt alan + değişken alt alanlar)</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Primary Subfield</span><span data-i18n-tr>Birincil Alt Alan</span></td>
+                <td><span data-i18n-en>2 octets (FX-extendable presence map)</span><span data-i18n-tr>2 oktet (FX ile genişletilebilir varlık haritası)</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Total Subfields</span><span data-i18n-tr>Toplam Alt Alan</span></td>
+                <td><span data-i18n-en>12 (7 in octet 1, 5 in octet 2)</span><span data-i18n-tr>12 (oktet 1'de 7, oktet 2'de 5)</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Age Resolution (LSB)</span><span data-i18n-tr>Yaş Çözünürlüğü (LSB)</span></td>
+                <td><span data-i18n-en>1/4 second (0.25 s) for all subfields</span><span data-i18n-tr>Tüm alt alanlar için 1/4 saniye (0,25 s)</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Age Formula</span><span data-i18n-tr>Yaş Formülü</span></td>
+                <td><span data-i18n-en>Age = Time of Track Info (I011/140) &minus; Time of last valid update</span><span data-i18n-tr>Yaş = İz Bilgisi Zamanı (I011/140) &minus; Son geçerli güncelleme zamanı</span></td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>14 (FSPEC Byte 2, Bit 2)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Onaltılık Örnek</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> A track at Istanbul Airport last updated by SSR (2.0s ago), Mode S (1.5s ago), and ADS-B (3.25s ago). No other sensor types have contributed data.</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> İstanbul Havalimanı'nda son olarak SSR (2,0 s önce), Mode S (1,5 s önce) ve ADS-B (3,25 s önce) tarafından güncellenen bir iz. Başka hiçbir sensör türü veri katkısında bulunmamıştır.</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — Build primary subfield octet 1</span>
+              <span data-i18n-tr>Adım 1 — Birincil alt alan oktet 1'i oluştur</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>PSR=0, SSR=1, MDA=0, MFL=0, MDS=1, ADS=0, ADB=1, FX=0 (no octet 2 needed)</span>
+              <span data-i18n-tr>PSR=0, SSR=1, MDA=0, MFL=0, MDS=1, ADS=0, ADB=1, FX=0 (oktet 2 gerekli değil)</span>
+              <br><code>0 1 0 0 1 0 1 0</code> = <code>0100 1010</code> = <code>0x4A</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Encode SSR Age (subfield #2)</span>
+              <span data-i18n-tr>Adım 2 — SSR Yaşını kodla (alt alan #2)</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>Age = 2.0s &divide; 0.25 = 8</span>
+              <span data-i18n-tr>Yaş = 2,0 s &divide; 0,25 = 8</span>
+              <br>8 = <code>0000 1000</code> = <code>0x08</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Encode MDS Age (subfield #5)</span>
+              <span data-i18n-tr>Adım 3 — MDS Yaşını kodla (alt alan #5)</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>Age = 1.5s &divide; 0.25 = 6</span>
+              <span data-i18n-tr>Yaş = 1,5 s &divide; 0,25 = 6</span>
+              <br>6 = <code>0000 0110</code> = <code>0x06</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 4 — Encode ADB Age (subfield #7)</span>
+              <span data-i18n-tr>Adım 4 — ADB Yaşını kodla (alt alan #7)</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>Age = 3.25s &divide; 0.25 = 13</span>
+              <span data-i18n-tr>Yaş = 3,25 s &divide; 0,25 = 13</span>
+              <br>13 = <code>0000 1101</code> = <code>0x0D</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 5 — Final Encoded Value</span>
+              <span data-i18n-tr>Adım 5 — Son Kodlanmış Değer</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <strong><span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span> &rarr; <code>0x4A 08 06 0D</code></strong> (4 octets: 1 primary + 3 subfields)
+            </div>
+          </div>
+        </div>
+        <div class="note note--tip" style="margin-top: 1.5rem;">
+          <p>
+            <span data-i18n-en><strong>Decode verification:</strong> Primary <code>0x4A</code> = <code>01001010</code> &rarr; SSR=1, MDS=1, ADB=1, FX=0. Subfields in order: SSR=<code>0x08</code> (8&times;0.25=2.0s), MDS=<code>0x06</code> (6&times;0.25=1.5s), ADB=<code>0x0D</code> (13&times;0.25=3.25s). &#10003;</span>
+            <span data-i18n-tr><strong>Çözümleme doğrulaması:</strong> Birincil <code>0x4A</code> = <code>01001010</code> &rarr; SSR=1, MDS=1, ADB=1, FX=0. Sırasıyla alt alanlar: SSR=<code>0x08</code> (8&times;0,25=2,0 s), MDS=<code>0x06</code> (6&times;0,25=1,5 s), ADB=<code>0x0D</code> (13&times;0,25=3,25 s). &#10003;</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Validation Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Rule</span><span data-i18n-tr>Kural</span></th>
+                <th><span data-i18n-en>Description</span><span data-i18n-tr>Açıklama</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>Subfield order</span><span data-i18n-tr>Alt alan sırası</span></td>
+                <td><span data-i18n-en>Subfield data must appear in the order indicated by the primary subfield bits (highest bit first). Only subfields with their presence bit set to 1 are included.</span><span data-i18n-tr>Alt alan verileri, birincil alt alan bitlerinin belirttiği sırayla (en yüksek bit önce) yer almalıdır. Yalnızca varlık biti 1 olan alt alanlar dahil edilir.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>ADS size</span><span data-i18n-tr>ADS boyutu</span></td>
+                <td><span data-i18n-en>Subfield #6 (ADS) is 2 octets — all other subfields are 1 octet. A decoder must account for this when parsing.</span><span data-i18n-tr>Alt alan #6 (ADS) 2 oktet uzunluğundadır; diğer tüm alt alanlar 1 oktet uzunluğundadır. Çözümleyicinin ayrıştırma sırasında bunu göz önünde bulundurması gerekir.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Age overflow</span><span data-i18n-tr>Yaş taşması</span></td>
+                <td><span data-i18n-en>If the computed age exceeds the maximum value (63.75s for 1-octet subfields, 16383.75s for ADS), the subfield is not sent. The absence of a subfield may indicate either overflow or that the sensor never contributed data.</span><span data-i18n-tr>Hesaplanan yaş maksimum değeri aşarsa (1-oktetli alt alanlar için 63,75 s, ADS için 16383,75 s), alt alan gönderilmez. Bir alt alanın yokluğu, taşmayı veya sensörün hiç veri katkısında bulunmadığını gösterebilir.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Time reference</span><span data-i18n-tr>Zaman referansı</span></td>
+                <td><span data-i18n-en>I011/140 (Time of Track Information) must be present in the same record when I011/290 is included, as ages are relative to this timestamp.</span><span data-i18n-tr>I011/290 dahil edildiğinde, I011/140 (İz Bilgisi Zamanı) aynı kayıtta mevcut olmalıdır; zira yaşlar bu zaman damgasına göredir.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Spare bits</span><span data-i18n-tr>Yedek bitler</span></td>
+                <td><span data-i18n-en>Bits 3/2 of octet 2 are spare and must be set to zero.</span><span data-i18n-tr>Oktet 2'nin 3/2 bitleri yedektir ve sıfıra ayarlanmalıdır.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>FX chain</span><span data-i18n-tr>FX zinciri</span></td>
+                <td><span data-i18n-en>If only subfields #1–#7 are needed, FX (bit 9) = 0 and octet 2 is omitted. If any of subfields #8–#12 are needed, FX (bit 9) = 1 and octet 2 must be present.</span><span data-i18n-tr>Yalnızca #1–#7 alt alanları gerekiyorsa FX (bit 9) = 0 ve oktet 2 atlanır. #8–#12 alt alanlarından herhangi biri gerekiyorsa FX (bit 9) = 1 ve oktet 2 mevcut olmalıdır.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlgili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Data Item</span><span data-i18n-tr>Veri Öğesi</span></th>
+                <th><span data-i18n-en>Relationship</span><span data-i18n-tr>İlişki</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-140.html">I011/140</a></td>
+                <td><span data-i18n-en>Time of Track Information — the time reference from which all ages are measured; must be present when I011/290 is included</span><span data-i18n-tr>İz Bilgisi Zamanı — tüm yaşların ölçüldüğü zaman referansı; I011/290 dahil edildiğinde mevcut olmalıdır</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-170.html">I011/170</a></td>
+                <td><span data-i18n-en>Track Status — the CST (coasting) flag can be derived from these ages; per-sensor flags (PSR, SSR, MDS, ADS) in octet 4 correlate with I011/290 subfields</span><span data-i18n-tr>İz Durumu — CST (kayma) bayrağı bu yaşlardan türetilebilir; oktet 4'teki sensöre özgü bayraklar (PSR, SSR, MDS, ADS) I011/290 alt alanlarıyla ilişkilendirilir</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-060.html">I011/060</a></td>
+                <td><span data-i18n-en>Mode-3/A Code — the MDA subfield age indicates freshness of Mode A data</span><span data-i18n-tr>Mode-3/A Kodu — MDA alt alan yaşı, Mode A verisinin tazeliğini gösterir</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-090.html">I011/090</a></td>
+                <td><span data-i18n-en>Measured Flight Level — the MFL subfield age indicates freshness of Mode C altitude data</span><span data-i18n-tr>Ölçülen Uçuş Seviyesi — MFL alt alan yaşı, Mode C irtifa verisinin tazeliğini gösterir</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-380.html">I011/380</a></td>
+                <td><span data-i18n-en>Mode-S / ADS-B Related Data — the MDS and ADB ages reflect freshness of Mode S and ADS-B data reported in I011/380</span><span data-i18n-tr>Mode-S / ADS-B İlgili Verileri — MDS ve ADB yaşları, I011/380'de raporlanan Mode S ve ADS-B verisinin tazeliğini yansıtır</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Important Notes</span>
+          <span data-i18n-tr>Önemli Notlar</span>
+        </h2>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Absent subfields:</strong> A missing subfield does not necessarily mean the sensor is unavailable — it may indicate the computed age exceeded the maximum encodable value, or data from that sensor was never received for this track. Decoders should treat absent subfields as "age unknown" rather than "age = 0".</span>
+            <span data-i18n-tr><strong>Eksik alt alanlar:</strong> Bir alt alanın bulunmaması, sensörün kullanılamaz olduğu anlamına gelmez; hesaplanan yaşın kodlanabilir maksimum değeri aştığını ya da bu iz için o sensörden hiç veri alınmadığını gösterebilir. Çözümleyiciler, eksik alt alanları "yaş = 0" yerine "yaş bilinmiyor" olarak değerlendirmelidir.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Coasting detection:</strong> I011/290 provides a more precise mechanism for coasting detection than the global CST flag in I011/170. By examining individual sensor ages, a consumer can determine exactly which sensor contributions have gone stale, enabling selective degradation of track quality rather than a binary coasting/non-coasting decision.</span>
+            <span data-i18n-tr><strong>Kayma tespiti:</strong> I011/290, I011/170'deki genel CST bayrağına kıyasla kayma tespiti için daha hassas bir mekanizma sunar. Bireysel sensör yaşlarını inceleyerek tüketici, hangi sensör katkılarının eskidiğini tam olarak belirleyebilir; böylece ikili kayıyor/kaymıyor kararı yerine iz kalitesinin seçici biçimde düşürülmesi mümkün olur.</span>
+          </p>
+        </div>
+        <div class="note note--info">
+          <p>
+            <span data-i18n-en><strong>Track Age (TRK):</strong> Unlike other subfields which measure "time since last update," the TRK subfield (#11) measures the total age of the track since it was first established. This is useful for identifying newly created tracks (low TRK age) versus long-lived tracks.</span>
+            <span data-i18n-tr><strong>İz Yaşı (TRK):</strong> "Son güncellemeden bu yana geçen süre"yi ölçen diğer alt alanların aksine, TRK alt alanı (#11) izin ilk oluşturulduğundan bu yana geçen toplam yaşı ölçer. Bu, yeni oluşturulmuş izlerin (düşük TRK yaşı) uzun ömürlü izlerden ayırt edilmesinde yararlıdır.</span>
+          </p>
+        </div>
+        <div class="note note--info">
+          <p>
+            <span data-i18n-en><strong>ADS vs ADB:</strong> Subfield #6 (ADS) refers to classical ADS (Automatic Dependent Surveillance — typically via satellite or data link), while subfield #7 (ADB) refers to ADS-B (ADS — Broadcast). Note that ADS has a 2-octet range to accommodate potentially longer update intervals associated with satellite-based reporting.</span>
+            <span data-i18n-tr><strong>ADS ile ADB karşılaştırması:</strong> Alt alan #6 (ADS), klasik ADS'yi (Otomatik Bağımlı Gözetim — genellikle uydu veya veri bağlantısı üzerinden) ifade ederken, alt alan #7 (ADB) ADS-B'yi (ADS — Yayın) ifade eder. ADS'nin, uydu tabanlı raporlamayla ilişkili potansiyel olarak daha uzun güncelleme aralıklarını karşılamak için 2-oktet aralığına sahip olduğuna dikkat edilmelidir.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Sürüm 1.3 (2020) esas alınmıştır. Yalnızca referans amaçlıdır.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

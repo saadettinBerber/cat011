@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/380 — Mode-S / ADS-B Related Data</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimliği</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimliği</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimliği</span></a>
+      <a href="I011-380.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — İrtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik İrt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik İrt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Mode-S / ADS-B Related Data</span>
+        <span data-i18n-tr>Mode-S / ADS-B İlgili Veri</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/380</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Mode-S / ADS-B Related Data</span>
+          <span data-i18n-tr>Mode-S / ADS-B İlgili Veri</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Compound — Variable Length (2+ Octets)</span>
+          <span data-i18n-tr>Bileşik — Değişken Uzunluk (2+ Oktet)</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Data specific to Mode-S and ADS-B transponder systems. This compound data item carries detailed information received from an aircraft's Mode-S transponder, including the 24-bit ICAO aircraft address, communications capability, flight status, aircraft type, emitter category, and available surveillance technologies. In an A-SMGCS context, it provides critical identification and capability data for aircraft on the airport surface.</span>
+          <span data-i18n-tr>Mode-S ve ADS-B transponder sistemlerine özgü veriler. Bu bileşik veri öğesi, bir uçağın Mode-S transponder'ından alınan ayrıntılı bilgileri taşır: 24 bit ICAO uçak adresi, iletişim kapasitesi, uçuş durumu, uçak tipi, yayıcı kategorisi ve mevcut gözetim teknolojileri. A-SMGCS (Gelişmiş Yüzey Hareketi Rehberlik ve Kontrol Sistemi) bağlamında, havalimanı yüzeyindeki uçaklara ilişkin kritik tanımlama ve kapasite verilerini sağlar.</span>
+        </p>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Key concept:</strong> This is a compound data item with a 2-octet primary subfield (extendable via FX bits) that acts as a presence map for up to 11 subfields. Each bit in the primary subfield indicates whether the corresponding subfield is present. Subfields #3, #5, #6, #7, and #10 are defined as "Never Sent" in the specification.</span>
+            <span data-i18n-tr><strong>Temel kavram:</strong> Bu, 11 alt alana kadar varlık haritası işlevi gören 2 oktetlik birincil alt alana (FX bitleri aracılığıyla genişletilebilir) sahip bir bileşik veri öğesidir. Birincil alt alandaki her bit, ilgili alt alanın mevcut olup olmadığını gösterir. #3, #5, #6, #7 ve #10 numaralı alt alanlar spesifikasyonda "Hiçbir Zaman Gönderilmez" olarak tanımlanmıştır.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Primary Subfield Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Primary Subfield Structure</span>
+          <span data-i18n-tr>Birincil Alt Alan Yapısı</span>
+        </h2>
+        <p>
+          <span data-i18n-en>The primary subfield consists of two octets connected by an FX (Field Extension) bit. Each bit acts as a presence indicator for a specific subfield:</span>
+          <span data-i18n-tr>Birincil alt alan, FX (Alan Uzatma) biti ile birbirine bağlanan iki oktetten oluşur. Her bit, belirli bir alt alanın varlık göstergesi olarak işlev görür:</span>
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Bit</span>
+                  <span data-i18n-tr>Bit</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Name</span>
+                  <span data-i18n-tr>Ad</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Subfield</span>
+                  <span data-i18n-tr>Alt Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>16</td>
+                <td>MB</td>
+                <td>#1</td>
+                <td>
+                  <span data-i18n-en>Mode S MB Data</span>
+                  <span data-i18n-tr>Mode S MB Verisi</span>
+                </td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>ADR</td>
+                <td>#2</td>
+                <td>
+                  <span data-i18n-en>Aircraft Address (24-bit ICAO)</span>
+                  <span data-i18n-tr>Uçak Adresi (24 bit ICAO)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>—</td>
+                <td>#3</td>
+                <td>
+                  <span data-i18n-en>Set to zero (subfield #3 never sent)</span>
+                  <span data-i18n-tr>Sıfıra ayarlanır (#3 numaralı alt alan hiçbir zaman gönderilmez)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>COM</td>
+                <td>#4</td>
+                <td>
+                  <span data-i18n-en>Communications/ACAS Capability and Flight Status</span>
+                  <span data-i18n-tr>İletişim/ACAS Kapasitesi ve Uçuş Durumu</span>
+                </td>
+              </tr>
+              <tr>
+                <td>12–10</td>
+                <td>—</td>
+                <td>#5–#7</td>
+                <td>
+                  <span data-i18n-en>Set to zero (subfields #5–#7 never sent)</span>
+                  <span data-i18n-tr>Sıfıra ayarlanır (#5–#7 numaralı alt alanlar hiçbir zaman gönderilmez)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>FX</td>
+                <td>—</td>
+                <td>
+                  <span data-i18n-en>Extension indicator: 0 = no extension, 1 = octet 2 follows</span>
+                  <span data-i18n-tr>Uzatma göstergesi: 0 = uzatma yok, 1 = 2. oktet devam eder</span>
+                </td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>ACT</td>
+                <td>#8</td>
+                <td>
+                  <span data-i18n-en>Aircraft Derived Aircraft Type</span>
+                  <span data-i18n-tr>Uçaktan Türetilmiş Uçak Tipi</span>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>EMC</td>
+                <td>#9</td>
+                <td>
+                  <span data-i18n-en>Emitter Category</span>
+                  <span data-i18n-tr>Yayıcı Kategorisi</span>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>—</td>
+                <td>#10</td>
+                <td>
+                  <span data-i18n-en>Set to zero (subfield #10 never sent)</span>
+                  <span data-i18n-tr>Sıfıra ayarlanır (#10 numaralı alt alan hiçbir zaman gönderilmez)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>ATC</td>
+                <td>#11</td>
+                <td>
+                  <span data-i18n-en>Available Technologies</span>
+                  <span data-i18n-tr>Mevcut Teknolojiler</span>
+                </td>
+              </tr>
+              <tr>
+                <td>4–2</td>
+                <td>—</td>
+                <td>—</td>
+                <td>
+                  <span data-i18n-en>Spare bits, set to zero</span>
+                  <span data-i18n-tr>Yedek bitler, sıfıra ayarlanır</span>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>FX</td>
+                <td>—</td>
+                <td>
+                  <span data-i18n-en>Extension indicator: 0 = end</span>
+                  <span data-i18n-tr>Uzatma göstergesi: 0 = son</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram — Primary Subfield</span>
+          <span data-i18n-tr>Bit Diyagramı — Birincil Alt Alan</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 750 180" xmlns="http://www.w3.org/2000/svg" style="max-width: 700px; font-family: var(--font-family-mono);">
+            <!-- Row 1 - Octet 1 -->
+            <text x="30" y="15" font-size="12" fill="#718096" font-weight="600">Octet 1</text>
+            <text x="80" y="35" text-anchor="middle" font-size="10" fill="#718096">16</text>
+            <text x="160" y="35" text-anchor="middle" font-size="10" fill="#718096">15</text>
+            <text x="240" y="35" text-anchor="middle" font-size="10" fill="#718096">14</text>
+            <text x="320" y="35" text-anchor="middle" font-size="10" fill="#718096">13</text>
+            <text x="400" y="35" text-anchor="middle" font-size="10" fill="#718096">12</text>
+            <text x="453" y="35" text-anchor="middle" font-size="10" fill="#718096">11</text>
+            <text x="506" y="35" text-anchor="middle" font-size="10" fill="#718096">10</text>
+            <text x="560" y="35" text-anchor="middle" font-size="10" fill="#718096">9</text>
+            <!-- MB -->
+            <rect x="42" y="42" width="78" height="35" rx="4" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="81" y="64" text-anchor="middle" fill="white" font-size="11" font-weight="700">MB</text>
+            <!-- ADR -->
+            <rect x="120" y="42" width="78" height="35" rx="4" fill="#48bb78" stroke="#2f855a" stroke-width="2"/>
+            <text x="159" y="64" text-anchor="middle" fill="white" font-size="11" font-weight="700">ADR</text>
+            <!-- 0 (bit 14) -->
+            <rect x="198" y="42" width="78" height="35" rx="4" fill="#a0aec0" stroke="#718096" stroke-width="2"/>
+            <text x="237" y="64" text-anchor="middle" fill="white" font-size="11" font-weight="700">0</text>
+            <!-- COM -->
+            <rect x="276" y="42" width="78" height="35" rx="4" fill="#e53e3e" stroke="#c53030" stroke-width="2"/>
+            <text x="315" y="64" text-anchor="middle" fill="white" font-size="11" font-weight="700">COM</text>
+            <!-- 0 0 0 (bits 12-10) -->
+            <rect x="354" y="42" width="186" height="35" rx="4" fill="#a0aec0" stroke="#718096" stroke-width="2"/>
+            <text x="447" y="64" text-anchor="middle" fill="white" font-size="11" font-weight="700">0 &ensp; 0 &ensp; 0</text>
+            <!-- FX -->
+            <rect x="540" y="42" width="50" height="35" rx="4" fill="#ed8936" stroke="#c05621" stroke-width="2"/>
+            <text x="565" y="64" text-anchor="middle" fill="white" font-size="11" font-weight="700">FX</text>
+
+            <!-- Row 2 - Octet 2 -->
+            <text x="30" y="105" font-size="12" fill="#718096" font-weight="600">Octet 2</text>
+            <text x="80" y="95" text-anchor="middle" font-size="10" fill="#718096">8</text>
+            <text x="160" y="95" text-anchor="middle" font-size="10" fill="#718096">7</text>
+            <text x="240" y="95" text-anchor="middle" font-size="10" fill="#718096">6</text>
+            <text x="320" y="95" text-anchor="middle" font-size="10" fill="#718096">5</text>
+            <text x="426" y="95" text-anchor="middle" font-size="10" fill="#718096">4-2</text>
+            <text x="560" y="95" text-anchor="middle" font-size="10" fill="#718096">1</text>
+            <!-- ACT -->
+            <rect x="42" y="102" width="78" height="35" rx="4" fill="#9f7aea" stroke="#6b46c1" stroke-width="2"/>
+            <text x="81" y="124" text-anchor="middle" fill="white" font-size="11" font-weight="700">ACT</text>
+            <!-- EMC -->
+            <rect x="120" y="102" width="78" height="35" rx="4" fill="#38b2ac" stroke="#2c7a7b" stroke-width="2"/>
+            <text x="159" y="124" text-anchor="middle" fill="white" font-size="11" font-weight="700">EMC</text>
+            <!-- 0 (bit 6) -->
+            <rect x="198" y="102" width="78" height="35" rx="4" fill="#a0aec0" stroke="#718096" stroke-width="2"/>
+            <text x="237" y="124" text-anchor="middle" fill="white" font-size="11" font-weight="700">0</text>
+            <!-- ATC -->
+            <rect x="276" y="102" width="78" height="35" rx="4" fill="#d69e2e" stroke="#b7791f" stroke-width="2"/>
+            <text x="315" y="124" text-anchor="middle" fill="white" font-size="11" font-weight="700">ATC</text>
+            <!-- spare (bits 4-2) -->
+            <rect x="354" y="102" width="186" height="35" rx="4" fill="#a0aec0" stroke="#718096" stroke-width="2"/>
+            <text x="447" y="124" text-anchor="middle" fill="white" font-size="11" font-weight="700">spare</text>
+            <!-- FX -->
+            <rect x="540" y="102" width="50" height="35" rx="4" fill="#ed8936" stroke="#c05621" stroke-width="2"/>
+            <text x="565" y="124" text-anchor="middle" fill="white" font-size="11" font-weight="700">FX</text>
+
+            <!-- Legend -->
+            <text x="300" y="165" text-anchor="middle" font-size="10" fill="#4a5568">Grey = unused/spare bits | Coloured = active subfield presence indicators</text>
+          </svg>
+          <div class="bit-diagram__label">I011/380 — Primary Subfield: 2 octets (extendable via FX)</div>
+        </div>
+      </section>
+
+      <!-- Subfield #1: Mode S MB Data -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Subfield #1 — Mode S MB Data</span>
+          <span data-i18n-tr>Alt Alan #1 — Mode S MB Verisi</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Repetitive format: starts with a 1-octet Repetition Indicator (REP) followed by REP occurrences of an 8-octet BDS report (7-octet BDS register + 1-octet BDS code).</span>
+          <span data-i18n-tr>Tekrarlı biçim: 1 oktetlik Tekrar Göstergesi (REP) ile başlar, ardından her biri 8 oktet olan REP adet BDS raporu gelir (7 oktet BDS yazmacı + 1 oktet BDS kodu).</span>
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Field</span>
+                  <span data-i18n-tr>Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bits</span>
+                  <span data-i18n-tr>Bitler</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Size</span>
+                  <span data-i18n-tr>Boyut</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>REP</td>
+                <td>72–65</td>
+                <td>1 octet</td>
+                <td>
+                  <span data-i18n-en>Repetition factor — number of BDS reports that follow</span>
+                  <span data-i18n-tr>Tekrar çarpanı — ardından gelen BDS raporu sayısı</span>
+                </td>
+              </tr>
+              <tr>
+                <td>MB Data</td>
+                <td>64–9</td>
+                <td>7 octets</td>
+                <td>
+                  <span data-i18n-en>56-bit Mode S Comm B message data</span>
+                  <span data-i18n-tr>56 bit Mode S Comm B mesaj verisi</span>
+                </td>
+              </tr>
+              <tr>
+                <td>BDS1</td>
+                <td>8–5</td>
+                <td>4 bits</td>
+                <td>
+                  <span data-i18n-en>Comm B Data Buffer Store 1 Address</span>
+                  <span data-i18n-tr>Comm B Veri Tamponu Deposu 1 Adresi</span>
+                </td>
+              </tr>
+              <tr>
+                <td>BDS2</td>
+                <td>4–1</td>
+                <td>4 bits</td>
+                <td>
+                  <span data-i18n-en>Comm B Data Buffer Store 2 Address</span>
+                  <span data-i18n-tr>Comm B Veri Tamponu Deposu 2 Adresi</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note note--info">
+          <p>
+            <span data-i18n-en><strong>Total size:</strong> 1 + (REP &times; 8) octets. Each BDS report is identified by BDS1 and BDS2 forming a BDS address (e.g., BDS1=6, BDS2=0 &rarr; BDS 6,0 = Heading and Speed Report).</span>
+            <span data-i18n-tr><strong>Toplam boyut:</strong> 1 + (REP &times; 8) oktet. Her BDS raporu, BDS1 ve BDS2'nin oluşturduğu BDS adresiyle tanımlanır (örn. BDS1=6, BDS2=0 &rarr; BDS 6,0 = Baş Açısı ve Hız Raporu).</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Subfield #2: Aircraft Address -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Subfield #2 — Aircraft Address</span>
+          <span data-i18n-tr>Alt Alan #2 — Uçak Adresi</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Field</span>
+                  <span data-i18n-tr>Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bits</span>
+                  <span data-i18n-tr>Bitler</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Aircraft Address</td>
+                <td>24–1</td>
+                <td>
+                  <span data-i18n-en>24-bit ICAO aircraft address (A23 to A0). This is a globally unique identifier assigned to each aircraft by its national aviation authority.</span>
+                  <span data-i18n-tr>24 bit ICAO uçak adresi (A23'ten A0'a). Bu, her uçağa ulusal havacılık otoritesi tarafından atanan küresel olarak benzersiz bir tanımlayıcıdır.</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          <span data-i18n-en>Size: 3 octets (24 bits). The address is transmitted as an unsigned integer.</span>
+          <span data-i18n-tr>Boyut: 3 oktet (24 bit). Adres, işaretsiz tam sayı olarak iletilir.</span>
+        </p>
+      </section>
+
+      <!-- Subfield #4: Communications/ACAS Capability and Flight Status -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Subfield #4 — Communications/ACAS Capability and Flight Status</span>
+          <span data-i18n-tr>Alt Alan #4 — İletişim/ACAS Kapasitesi ve Uçuş Durumu</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Size: 3 octets (24 bits). Contains detailed transponder capability and current flight status information.</span>
+          <span data-i18n-tr>Boyut: 3 oktet (24 bit). Ayrıntılı transponder kapasitesi ve güncel uçuş durumu bilgilerini içerir.</span>
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Field</span>
+                  <span data-i18n-tr>Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bits</span>
+                  <span data-i18n-tr>Bitler</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>COM</td>
+                <td>24–22</td>
+                <td>
+                  <span data-i18n-en>Communications capability of the transponder</span>
+                  <span data-i18n-tr>Transponder'ın iletişim kapasitesi</span>
+                </td>
+              </tr>
+              <tr>
+                <td>STAT</td>
+                <td>21–18</td>
+                <td>
+                  <span data-i18n-en>Flight Status</span>
+                  <span data-i18n-tr>Uçuş Durumu</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Spare</td>
+                <td>17</td>
+                <td>
+                  <span data-i18n-en>Spare bit, set to zero</span>
+                  <span data-i18n-tr>Yedek bit, sıfıra ayarlanır</span>
+                </td>
+              </tr>
+              <tr>
+                <td>SSC</td>
+                <td>16</td>
+                <td>
+                  <span data-i18n-en>Specific Service Capability</span>
+                  <span data-i18n-tr>Özel Servis Kapasitesi</span>
+                </td>
+              </tr>
+              <tr>
+                <td>ARC</td>
+                <td>15</td>
+                <td>
+                  <span data-i18n-en>Altitude Reporting Capability</span>
+                  <span data-i18n-tr>İrtifa Raporlama Kapasitesi</span>
+                </td>
+              </tr>
+              <tr>
+                <td>AIC</td>
+                <td>14</td>
+                <td>
+                  <span data-i18n-en>Aircraft Identification Capability</span>
+                  <span data-i18n-tr>Uçak Tanımlama Kapasitesi</span>
+                </td>
+              </tr>
+              <tr>
+                <td>B1A</td>
+                <td>13</td>
+                <td>
+                  <span data-i18n-en>BDS 1,0 bit 16</span>
+                  <span data-i18n-tr>BDS 1,0 bit 16</span>
+                </td>
+              </tr>
+              <tr>
+                <td>B1B</td>
+                <td>12–9</td>
+                <td>
+                  <span data-i18n-en>BDS 1,0 bits 37/40</span>
+                  <span data-i18n-tr>BDS 1,0 bitler 37/40</span>
+                </td>
+              </tr>
+              <tr>
+                <td>AC</td>
+                <td>8</td>
+                <td>
+                  <span data-i18n-en>ACAS operational (0 = No, 1 = Yes)</span>
+                  <span data-i18n-tr>ACAS aktif (0 = Hayır, 1 = Evet)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>MN</td>
+                <td>7</td>
+                <td>
+                  <span data-i18n-en>Multiple navigational aids operating (0 = No, 1 = Yes)</span>
+                  <span data-i18n-tr>Birden fazla navigasyon yardımcısı çalışıyor (0 = Hayır, 1 = Evet)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>DC</td>
+                <td>6</td>
+                <td>
+                  <span data-i18n-en>Differential correction (0 = Yes, 1 = No)</span>
+                  <span data-i18n-tr>Diferansiyel düzeltme (0 = Evet, 1 = Hayır)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Spare</td>
+                <td>5–1</td>
+                <td>
+                  <span data-i18n-en>Spare bits, set to zero</span>
+                  <span data-i18n-tr>Yedek bitler, sıfıra ayarlanır</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- COM Values -->
+        <h3>
+          <span data-i18n-en>COM — Communications Capability Values</span>
+          <span data-i18n-tr>COM — İletişim Kapasitesi Değerleri</span>
+        </h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Value</span>
+                  <span data-i18n-tr>Değer</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Meaning</span>
+                  <span data-i18n-tr>Anlamı</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>0</code></td><td><span data-i18n-en>No communications capability (surveillance only)</span><span data-i18n-tr>İletişim kapasitesi yok (yalnızca gözetim)</span></td></tr>
+              <tr><td><code>1</code></td><td><span data-i18n-en>Comm. A and Comm. B capability</span><span data-i18n-tr>Comm. A ve Comm. B kapasitesi</span></td></tr>
+              <tr><td><code>2</code></td><td><span data-i18n-en>Comm. A, Comm. B, and Uplink ELM</span><span data-i18n-tr>Comm. A, Comm. B ve Uplink ELM</span></td></tr>
+              <tr><td><code>3</code></td><td><span data-i18n-en>Comm. A, Comm. B, Uplink ELM, and Downlink ELM</span><span data-i18n-tr>Comm. A, Comm. B, Uplink ELM ve Downlink ELM</span></td></tr>
+              <tr><td><code>4</code></td><td><span data-i18n-en>Level 5 Transponder capability</span><span data-i18n-tr>Seviye 5 Transponder kapasitesi</span></td></tr>
+              <tr><td><code>5–7</code></td><td><span data-i18n-en>Not assigned</span><span data-i18n-tr>Atanmamış</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- STAT Values -->
+        <h3>
+          <span data-i18n-en>STAT — Flight Status Values</span>
+          <span data-i18n-tr>STAT — Uçuş Durumu Değerleri</span>
+        </h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Value</span>
+                  <span data-i18n-tr>Değer</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Meaning</span>
+                  <span data-i18n-tr>Anlamı</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>0</code></td><td><span data-i18n-en>No alert, no SPI, aircraft airborne</span><span data-i18n-tr>Alarm yok, SPI yok, uçak havada</span></td></tr>
+              <tr><td><code>1</code></td><td><span data-i18n-en>No alert, no SPI, aircraft on ground</span><span data-i18n-tr>Alarm yok, SPI yok, uçak yerde</span></td></tr>
+              <tr><td><code>2</code></td><td><span data-i18n-en>Alert, no SPI, aircraft airborne</span><span data-i18n-tr>Alarm var, SPI yok, uçak havada</span></td></tr>
+              <tr><td><code>3</code></td><td><span data-i18n-en>Alert, no SPI, aircraft on ground</span><span data-i18n-tr>Alarm var, SPI yok, uçak yerde</span></td></tr>
+              <tr><td><code>4</code></td><td><span data-i18n-en>Alert, SPI, aircraft airborne or on ground</span><span data-i18n-tr>Alarm var, SPI var, uçak havada veya yerde</span></td></tr>
+              <tr><td><code>5</code></td><td><span data-i18n-en>No alert, SPI, aircraft airborne or on ground</span><span data-i18n-tr>Alarm yok, SPI var, uçak havada veya yerde</span></td></tr>
+              <tr><td><code>6</code></td><td><span data-i18n-en>General Emergency</span><span data-i18n-tr>Genel Acil Durum</span></td></tr>
+              <tr><td><code>7</code></td><td><span data-i18n-en>Lifeguard / medical</span><span data-i18n-tr>Cankurtaran / tıbbi</span></td></tr>
+              <tr><td><code>8</code></td><td><span data-i18n-en>Minimum fuel</span><span data-i18n-tr>Asgari yakıt</span></td></tr>
+              <tr><td><code>9</code></td><td><span data-i18n-en>No communications</span><span data-i18n-tr>İletişim yok</span></td></tr>
+              <tr><td><code>10</code></td><td><span data-i18n-en>Unlawful interference</span><span data-i18n-tr>Yasadışı müdahale</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ARC Values -->
+        <h3>
+          <span data-i18n-en>ARC — Altitude Reporting Capability</span>
+          <span data-i18n-tr>ARC — İrtifa Raporlama Kapasitesi</span>
+        </h3>
+        <div class="table-wrapper">
+          <table>
+            <tbody>
+              <tr><td><code>0</code></td><td><span data-i18n-en>100 ft resolution</span><span data-i18n-tr>100 ft çözünürlük</span></td></tr>
+              <tr><td><code>1</code></td><td><span data-i18n-en>25 ft resolution</span><span data-i18n-tr>25 ft çözünürlük</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Subfield #8: Aircraft Derived Aircraft Type -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Subfield #8 — Aircraft Derived Aircraft Type</span>
+          <span data-i18n-tr>Alt Alan #8 — Uçaktan Türetilmiş Uçak Tipi</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Size: 4 octets (32 bits). Four ASCII characters representing the ICAO aircraft type designator (e.g., "A320", "B738", "E190"). Upper-case alphanumeric characters with trailing spaces if shorter than 4 characters.</span>
+          <span data-i18n-tr>Boyut: 4 oktet (32 bit). ICAO uçak tipi göstergesini temsil eden dört ASCII karakteri (örn. "A320", "B738", "E190"). Büyük harf alfanümerik karakterler; 4 karakterden kısa olduğunda sona boşluk eklenir.</span>
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Field</span>
+                  <span data-i18n-tr>Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bits</span>
+                  <span data-i18n-tr>Bitler</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Character 1</td>
+                <td>32–25</td>
+                <td>
+                  <span data-i18n-en>First character (8-bit ASCII)</span>
+                  <span data-i18n-tr>Birinci karakter (8 bit ASCII)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Character 2</td>
+                <td>24–17</td>
+                <td>
+                  <span data-i18n-en>Second character (8-bit ASCII)</span>
+                  <span data-i18n-tr>İkinci karakter (8 bit ASCII)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Character 3</td>
+                <td>16–9</td>
+                <td>
+                  <span data-i18n-en>Third character (8-bit ASCII)</span>
+                  <span data-i18n-tr>Üçüncü karakter (8 bit ASCII)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Character 4</td>
+                <td>8–1</td>
+                <td>
+                  <span data-i18n-en>Fourth character (8-bit ASCII)</span>
+                  <span data-i18n-tr>Dördüncü karakter (8 bit ASCII)</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Subfield #9: Emitter Category -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Subfield #9 — Emitter Category</span>
+          <span data-i18n-tr>Alt Alan #9 — Yayıcı Kategorisi</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Size: 1 octet (8 bits). Classifies the type of emitter based on aircraft weight, performance, or vehicle category.</span>
+          <span data-i18n-tr>Boyut: 1 oktet (8 bit). Uçak ağırlığına, performansına veya araç kategorisine göre yayıcı türünü sınıflandırır.</span>
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>ECAT</th>
+                <th>
+                  <span data-i18n-en>Meaning</span>
+                  <span data-i18n-tr>Anlamı</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>0</code></td><td><span data-i18n-en>No ADS-B emitter category information</span><span data-i18n-tr>ADS-B yayıcı kategorisi bilgisi yok</span></td></tr>
+              <tr><td><code>1</code></td><td><span data-i18n-en>Light aircraft (&le; 7000 kg)</span><span data-i18n-tr>Hafif uçak (&le; 7000 kg)</span></td></tr>
+              <tr><td><code>2</code></td><td><span data-i18n-en>Reserved</span><span data-i18n-tr>Ayrılmış</span></td></tr>
+              <tr><td><code>3</code></td><td><span data-i18n-en>Medium aircraft (7000 kg &lt; MTOW &lt; 136000 kg)</span><span data-i18n-tr>Orta uçak (7000 kg &lt; MTOM &lt; 136000 kg)</span></td></tr>
+              <tr><td><code>4</code></td><td><span data-i18n-en>Reserved</span><span data-i18n-tr>Ayrılmış</span></td></tr>
+              <tr><td><code>5</code></td><td><span data-i18n-en>Heavy aircraft (&ge; 136000 kg)</span><span data-i18n-tr>Ağır uçak (&ge; 136000 kg)</span></td></tr>
+              <tr><td><code>6</code></td><td><span data-i18n-en>Highly manoeuvrable (5g acceleration) and high speed (&gt; 400 knots cruise)</span><span data-i18n-tr>Yüksek manevra kabiliyeti (5g ivme) ve yüksek hız (&gt; 400 knot seyir)</span></td></tr>
+              <tr><td><code>7–9</code></td><td><span data-i18n-en>Reserved</span><span data-i18n-tr>Ayrılmış</span></td></tr>
+              <tr><td><code>10</code></td><td><span data-i18n-en>Rotocraft</span><span data-i18n-tr>Döner kanatlı</span></td></tr>
+              <tr><td><code>11</code></td><td><span data-i18n-en>Glider / sailplane</span><span data-i18n-tr>Planör / yelken uçağı</span></td></tr>
+              <tr><td><code>12</code></td><td><span data-i18n-en>Lighter-than-air</span><span data-i18n-tr>Havadan hafif araç</span></td></tr>
+              <tr><td><code>13</code></td><td><span data-i18n-en>Unmanned aerial vehicle</span><span data-i18n-tr>İnsansız hava aracı</span></td></tr>
+              <tr><td><code>14</code></td><td><span data-i18n-en>Space / transatmospheric vehicle</span><span data-i18n-tr>Uzay / transatmosferik araç</span></td></tr>
+              <tr><td><code>15</code></td><td><span data-i18n-en>Ultralight / handglider / paraglider</span><span data-i18n-tr>Ultralight / yamaç paraşütü / yamaç paraşütü</span></td></tr>
+              <tr><td><code>16</code></td><td><span data-i18n-en>Parachutist / skydiver</span><span data-i18n-tr>Paraşütçü / serbest atlayışçı</span></td></tr>
+              <tr><td><code>17–19</code></td><td><span data-i18n-en>Reserved</span><span data-i18n-tr>Ayrılmış</span></td></tr>
+              <tr><td><code>20</code></td><td><span data-i18n-en>Surface emergency vehicle</span><span data-i18n-tr>Yüzey acil durum aracı</span></td></tr>
+              <tr><td><code>21</code></td><td><span data-i18n-en>Surface service vehicle</span><span data-i18n-tr>Yüzey hizmet aracı</span></td></tr>
+              <tr><td><code>22</code></td><td><span data-i18n-en>Fixed ground or tethered obstruction</span><span data-i18n-tr>Sabit yer veya bağlı engel</span></td></tr>
+              <tr><td><code>23–24</code></td><td><span data-i18n-en>Reserved</span><span data-i18n-tr>Ayrılmış</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Subfield #11: Available Technologies -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Subfield #11 — Available Technologies</span>
+          <span data-i18n-tr>Alt Alan #11 — Mevcut Teknolojiler</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Size: 1 octet (8 bits). Indicates which surveillance data link technologies are available on the aircraft.</span>
+          <span data-i18n-tr>Boyut: 1 oktet (8 bit). Uçakta hangi gözetim veri bağlantısı teknolojilerinin mevcut olduğunu gösterir.</span>
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Bit</span>
+                  <span data-i18n-tr>Bit</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Name</span>
+                  <span data-i18n-tr>Ad</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Meaning</span>
+                  <span data-i18n-tr>Anlamı</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>8</td>
+                <td>VDL</td>
+                <td><span data-i18n-en>0 = VDL Mode 4 available, 1 = VDL Mode 4 not available</span><span data-i18n-tr>0 = VDL Mode 4 mevcut, 1 = VDL Mode 4 mevcut değil</span></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>MDS</td>
+                <td><span data-i18n-en>0 = Mode S available, 1 = Mode S not available</span><span data-i18n-tr>0 = Mode S mevcut, 1 = Mode S mevcut değil</span></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>UAT</td>
+                <td><span data-i18n-en>0 = UAT available, 1 = UAT not available</span><span data-i18n-tr>0 = UAT mevcut, 1 = UAT mevcut değil</span></td>
+              </tr>
+              <tr>
+                <td>5–1</td>
+                <td>—</td>
+                <td><span data-i18n-en>Spare bits, set to zero</span><span data-i18n-tr>Yedek bitler, sıfıra ayarlanır</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Note:</strong> The sense of VDL, MDS, and UAT bits is inverted — a value of 0 means the technology IS available, while 1 means it is NOT available.</span>
+            <span data-i18n-tr><strong>Not:</strong> VDL, MDS ve UAT bitlerinin mantığı tersine çevrilmiştir — 0 değeri teknolojinin mevcut olduğunu, 1 değeri ise mevcut olmadığını gösterir.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Property</span>
+                  <span data-i18n-tr>Özellik</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Value</span>
+                  <span data-i18n-tr>Değer</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Format</span>
+                  <span data-i18n-tr>Biçim</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Compound</span>
+                  <span data-i18n-tr>Bileşik</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Primary Subfield</span>
+                  <span data-i18n-tr>Birincil Alt Alan</span>
+                </td>
+                <td>
+                  <span data-i18n-en>2 octets (extendable via FX)</span>
+                  <span data-i18n-tr>2 oktet (FX ile genişletilebilir)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Maximum Subfields</span>
+                  <span data-i18n-tr>Azami Alt Alan Sayısı</span>
+                </td>
+                <td>
+                  <span data-i18n-en>11 (6 active + 5 never sent)</span>
+                  <span data-i18n-tr>11 (6 aktif + 5 hiçbir zaman gönderilmez)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Never-Sent Subfields</span>
+                  <span data-i18n-tr>Hiçbir Zaman Gönderilmeyen Alt Alanlar</span>
+                </td>
+                <td>#3, #5, #6, #7, #10</td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>11 (FSPEC Byte 2, Bit 5)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Onaltılık Örnek</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> An aircraft with ICAO address 0x4BB1C2, Comm. A+B capability, on the ground with no alert, 25 ft altitude resolution, ACAS operational, and classified as a medium-weight aircraft (emitter category 3).</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> ICAO adresi 0x4BB1C2 olan, Comm. A+B kapasiteli, alarmsız yerde bekleyen, 25 ft irtifa çözünürlüklü, ACAS aktif ve orta ağırlık sınıfında (yayıcı kategorisi 3) sınıflandırılmış bir uçak.</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — Build the primary subfield</span>
+              <span data-i18n-tr>Adım 1 — Birincil alt alanı oluşturun</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>Present subfields: ADR (#2), COM (#4), EMC (#9). Since EMC is in octet 2, FX in octet 1 must be 1.</span>
+              <span data-i18n-tr>Mevcut alt alanlar: ADR (#2), COM (#4), EMC (#9). EMC 2. oktette olduğundan, 1. oktetteki FX 1 olmalıdır.</span>
+              <br><br>
+              Octet 1: MB=0, ADR=<strong>1</strong>, 0=0, COM=<strong>1</strong>, 0=0, 0=0, 0=0, FX=<strong>1</strong> &rarr; <code>01010001</code> = <code>0x51</code><br>
+              Octet 2: ACT=0, EMC=<strong>1</strong>, 0=0, ATC=0, spare=000, FX=0 &rarr; <code>01000000</code> = <code>0x40</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Encode Subfield #2 (Aircraft Address)</span>
+              <span data-i18n-tr>Adım 2 — Alt Alan #2'yi kodlayın (Uçak Adresi)</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              ICAO Address = 0x4BB1C2 &rarr; <code>0x4B 0xB1 0xC2</code> (3 octets)
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Encode Subfield #4 (COM/Flight Status)</span>
+              <span data-i18n-tr>Adım 3 — Alt Alan #4'ü kodlayın (COM/Uçuş Durumu)</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>COM=1 (Comm A+B), STAT=1 (on ground, no alert), spare=0, SSC=1, ARC=1 (25 ft), AIC=1, B1A=1, B1B=0110, AC=1 (ACAS), MN=0, DC=0, spare=00000</span>
+              <span data-i18n-tr>COM=1 (Comm A+B), STAT=1 (yerde, alarm yok), yedek=0, SSC=1, ARC=1 (25 ft), AIC=1, B1A=1, B1B=0110, AC=1 (ACAS), MN=0, DC=0, yedek=00000</span>
+              <br><br>
+              Octet 1 (bits 24–17): <code>001</code> <code>0001</code> <code>0</code> = <code>0x22</code><br>
+              Octet 2 (bits 16–9): <code>1</code> <code>1</code> <code>1</code> <code>1</code> <code>0110</code> = <code>0xF6</code><br>
+              Octet 3 (bits 8–1): <code>1</code> <code>0</code> <code>0</code> <code>00000</code> = <code>0x80</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 4 — Encode Subfield #9 (Emitter Category)</span>
+              <span data-i18n-tr>Adım 4 — Alt Alan #9'u kodlayın (Yayıcı Kategorisi)</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              ECAT = 3 (medium aircraft, 7000–136000 kg) &rarr; <code>0x03</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 5 — Final Encoded Value</span>
+              <span data-i18n-tr>Adım 5 — Son Kodlanmış Değer</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <strong><code>0x51 40 4B B1 C2 22 F6 80 03</code></strong> (9 octets)
+              <br><br>
+              <span data-i18n-en>Breakdown: [Primary: 51 40] [ADR: 4B B1 C2] [COM: 22 F6 80] [EMC: 03]</span>
+              <span data-i18n-tr>Ayrıştırma: [Birincil: 51 40] [ADR: 4B B1 C2] [COM: 22 F6 80] [EMC: 03]</span>
+            </div>
+          </div>
+        </div>
+        <div class="note note--tip" style="margin-top: 1.5rem;">
+          <p>
+            <span data-i18n-en><strong>Decode verification:</strong> Primary = <code>0x51 0x40</code> &rarr; ADR=1, COM=1, FX=1, EMC=1. ADR = <code>0x4BB1C2</code> = ICAO address 4BB1C2. COM octet 1 = <code>0x22</code> &rarr; COM=001 (Comm A+B), STAT=0001 (on ground). COM octet 2 = <code>0xF6</code> &rarr; SSC=1, ARC=1 (25ft), AIC=1, B1A=1, B1B=0110. COM octet 3 = <code>0x80</code> &rarr; AC=1 (ACAS on), MN=0, DC=0. EMC = <code>0x03</code> = medium aircraft. &#10003;</span>
+            <span data-i18n-tr><strong>Çözümleme doğrulaması:</strong> Birincil = <code>0x51 0x40</code> &rarr; ADR=1, COM=1, FX=1, EMC=1. ADR = <code>0x4BB1C2</code> = ICAO adresi 4BB1C2. COM oktet 1 = <code>0x22</code> &rarr; COM=001 (Comm A+B), STAT=0001 (yerde). COM oktet 2 = <code>0xF6</code> &rarr; SSC=1, ARC=1 (25 ft), AIC=1, B1A=1, B1B=0110. COM oktet 3 = <code>0x80</code> &rarr; AC=1 (ACAS açık), MN=0, DC=0. EMC = <code>0x03</code> = orta uçak. &#10003;</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Validation Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Rule</span>
+                  <span data-i18n-tr>Kural</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Never-sent subfields</span>
+                  <span data-i18n-tr>Hiçbir zaman gönderilmeyen alt alanlar</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Bits 14, 12–10, 6 of the primary subfield must be zero. If set to 1, the message is malformed.</span>
+                  <span data-i18n-tr>Birincil alt alanın 14., 12–10. ve 6. bitleri sıfır olmalıdır. 1 olarak ayarlanmışsa mesaj hatalı biçimlidir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Aircraft Address range</span>
+                  <span data-i18n-tr>Uçak Adresi aralığı</span>
+                </td>
+                <td>
+                  <span data-i18n-en>An ICAO address of 0x000000 typically indicates no valid address. Values are allocated in national blocks (e.g., 0x4B0000–0x4BFFFF for Turkey).</span>
+                  <span data-i18n-tr>0x000000 ICAO adresi genellikle geçerli bir adresin olmadığını gösterir. Değerler ulusal bloklara göre tahsis edilir (örn. Türkiye için 0x4B0000–0x4BFFFF).</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>COM field range</span>
+                  <span data-i18n-tr>COM alanı aralığı</span>
+                </td>
+                <td>
+                  <span data-i18n-en>COM values 5–7 are not assigned and should be flagged if encountered.</span>
+                  <span data-i18n-tr>COM değerleri 5–7 atanmamıştır ve karşılaşıldığında işaretlenmelidir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>STAT field range</span>
+                  <span data-i18n-tr>STAT alanı aralığı</span>
+                </td>
+                <td>
+                  <span data-i18n-en>STAT values above 10 are undefined and indicate a format error.</span>
+                  <span data-i18n-tr>10'un üzerindeki STAT değerleri tanımsızdır ve biçim hatası gösterir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>ECAT range</span>
+                  <span data-i18n-tr>ECAT aralığı</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Valid ECAT values: 0–6, 10–16, 20–22. Values 2, 4, 7–9, 17–19, 23–24 are reserved. Values above 24 should be treated as errors.</span>
+                  <span data-i18n-tr>Geçerli ECAT değerleri: 0–6, 10–16, 20–22. 2, 4, 7–9, 17–19, 23–24 değerleri ayrılmıştır. 24'ün üzerindeki değerler hata olarak değerlendirilmelidir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>MB Data REP</span>
+                  <span data-i18n-tr>MB Verisi REP</span>
+                </td>
+                <td>
+                  <span data-i18n-en>REP must be at least 1 when subfield #1 is present. Total subfield #1 size = 1 + (REP &times; 8) octets.</span>
+                  <span data-i18n-tr>#1 numaralı alt alan mevcut olduğunda REP en az 1 olmalıdır. Alt alan #1 toplam boyutu = 1 + (REP &times; 8) oktet.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Spare bits</span>
+                  <span data-i18n-tr>Yedek bitler</span>
+                </td>
+                <td>
+                  <span data-i18n-en>All spare bits in primary subfield, COM subfield (bit 17, bits 5–1), and ATC subfield (bits 5–1) must be zero.</span>
+                  <span data-i18n-tr>Birincil alt alandaki, COM alt alanındaki (bit 17, bitler 5–1) ve ATC alt alanındaki (bitler 5–1) tüm yedek bitler sıfır olmalıdır.</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlişkili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Data Item</span>
+                  <span data-i18n-tr>Veri Öğesi</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Relationship</span>
+                  <span data-i18n-tr>İlişki</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-245.html">I011/245</a></td>
+                <td>
+                  <span data-i18n-en>Target Identification — the callsign complements the ICAO address in subfield #2 for aircraft identification</span>
+                  <span data-i18n-tr>Hedef Tanımlama — callsign, uçak tanımlaması için #2 numaralı alt alandaki ICAO adresini tamamlar</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-060.html">I011/060</a></td>
+                <td>
+                  <span data-i18n-en>Mode-3/A Code — the squawk code is another transponder-derived identifier used alongside Mode-S data</span>
+                  <span data-i18n-tr>Mode-3/A Kodu — squawk kodu, Mode-S verisiyle birlikte kullanılan transponder kökenli başka bir tanımlayıcıdır</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-170.html">I011/170</a></td>
+                <td>
+                  <span data-i18n-en>Track Status — indicates whether Mode-S data is available and the source type for the track</span>
+                  <span data-i18n-tr>İz Durumu — iz için Mode-S verisinin mevcut olup olmadığını ve kaynak türünü gösterir</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-290.html">I011/290</a></td>
+                <td>
+                  <span data-i18n-en>System Track Update Ages — subfield #5 (MDS) provides the age of the last Mode S report used to update the track</span>
+                  <span data-i18n-tr>Sistem İz Güncelleme Yaşları — #5 numaralı alt alan (MDS), izi güncellemek için kullanılan son Mode S raporunun yaşını sağlar</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-390.html">I011/390</a></td>
+                <td>
+                  <span data-i18n-en>Flight Plan Related Data — flight plan data correlates with Mode-S identity for track-to-plan association</span>
+                  <span data-i18n-tr>Uçuş Planı İlgili Veri — uçuş planı verisi, iz-plan ilişkilendirmesi için Mode-S kimliğiyle korelasyon kurar</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Important Notes</span>
+          <span data-i18n-tr>Önemli Notlar</span>
+        </h2>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Compound format:</strong> When decoding, always read the primary subfield first to determine which subfields follow. The subfields appear in strict numerical order — skip any "never sent" slots. If FX=0 in octet 1, only subfields #1–#7 can be present; octet 2 subfields (#8–#11) require FX=1.</span>
+            <span data-i18n-tr><strong>Bileşik biçim:</strong> Çözümlerken, hangi alt alanların devam ettiğini belirlemek için her zaman önce birincil alt alanı okuyun. Alt alanlar kesin sayısal sırayla görünür; "hiçbir zaman gönderilmez" yuvaları atlanır. 1. oktette FX=0 ise yalnızca #1–#7 numaralı alt alanlar bulunabilir; 2. oktet alt alanları (#8–#11) için FX=1 gereklidir.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>ICAO address usage:</strong> The 24-bit aircraft address in subfield #2 is the most reliable aircraft identifier since it is hardcoded into the transponder. Unlike callsigns (which can change between flights), the ICAO address remains constant for the lifetime of the aircraft. Use it as the primary key for aircraft tracking databases.</span>
+            <span data-i18n-tr><strong>ICAO adresi kullanımı:</strong> #2 numaralı alt alandaki 24 bit uçak adresi, transponder'a sabit olarak kodlandığından en güvenilir uçak tanımlayıcısıdır. Uçuşlar arasında değişebilen callsign'ların aksine ICAO adresi, uçağın tüm ömrü boyunca sabit kalır. Uçak takip veritabanlarında birincil anahtar olarak kullanın.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Flight status for A-SMGCS:</strong> The STAT field in subfield #4 is particularly valuable for A-SMGCS systems. STAT=1 (on ground) confirms the aircraft is on the airport surface, while STAT=0 (airborne) means it has not yet landed or has already taken off. Emergency statuses (6–10) should trigger immediate alerting.</span>
+            <span data-i18n-tr><strong>A-SMGCS için uçuş durumu:</strong> #4 numaralı alt alandaki STAT alanı, A-SMGCS sistemleri için özellikle değerlidir. STAT=1 (yerde) uçağın havalimanı yüzeyinde olduğunu doğrularken, STAT=0 (havada) henüz inmediğini veya halihazırda kalktığını gösterir. Acil durum durumları (6–10) anında alarm tetiklemelidir.</span>
+          </p>
+        </div>
+        <div class="note note--info">
+          <p>
+            <span data-i18n-en><strong>Mode S MB Data:</strong> Subfield #1 carries raw Mode S Comm B data including BDS register contents. Common BDS registers include BDS 4,0 (Selected Vertical Intent), BDS 5,0 (Track and Turn Report), and BDS 6,0 (Heading and Speed Report). The BDS1/BDS2 fields identify which register the 56-bit data belongs to.</span>
+            <span data-i18n-tr><strong>Mode S MB Verisi:</strong> #1 numaralı alt alan, BDS yazmaç içerikleri dahil olmak üzere ham Mode S Comm B verilerini taşır. Yaygın BDS yazmaçları arasında BDS 4,0 (Seçilen Dikey Niyet), BDS 5,0 (İz ve Dönüş Raporu) ve BDS 6,0 (Baş Açısı ve Hız Raporu) yer alır. BDS1/BDS2 alanları, 56 bitlik verinin hangi yazmaca ait olduğunu tanımlar.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020) temel alınmıştır. Sadece referans amacıyla.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

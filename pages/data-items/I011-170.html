@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/170 — Track Status</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimliği</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimliği</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimliği</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — İrtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik İrt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik İrt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Track Status</span>
+        <span data-i18n-tr>İz Durumu</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/170</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Track Status</span>
+          <span data-i18n-tr>İz Durumu</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Variable Length — 1+ Octets (FX-extendable)</span>
+          <span data-i18n-tr>Değişken Uzunluk — 1+ Oktet (FX-genişletilebilir)</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Status of a track reported by the A-SMGCS system. This data item conveys a comprehensive set of status flags describing the nature, quality, and origin of a fusion track. The flags cover sensor configuration, track confirmation status, altitude source, friend/foe classification, flight plan correlation, and sensor-specific aging information.</span>
+          <span data-i18n-tr>A-SMGCS (Gelişmiş Yüzey Hareketi Rehberlik ve Kontrol Sistemi) tarafından raporlanan bir track'in durumunu tanımlar. Bu veri öğesi, bir füzyon track'inin niteliğini, kalitesini ve kaynağını açıklayan kapsamlı bir durum bayrakları kümesi taşır. Bayraklar; sensör yapılandırması, track doğrulama durumu, irtifa kaynağı, dost/düşman sınıflandırması, uçuş planı ilişkilendirmesi ve sensöre özgü eskime bilgilerini kapsar.</span>
+        </p>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Key concept:</strong> I011/170 uses a variable-length FX-extension mechanism. The first octet is always present. Each octet's bit-1 (FX) indicates whether another octet follows. Up to 4 octets are defined in the specification, providing up to 25 individual status flags.</span>
+            <span data-i18n-tr><strong>Temel kavram:</strong> I011/170, değişken uzunluklu FX-genişletme mekanizması kullanır. Birinci oktet her zaman mevcuttur. Her oktetin 1. biti (FX), arkasından bir oktet daha gelip gelmediğini belirtir. Spesifikasyonda en fazla 4 oktet tanımlanmış olup toplamda 25 ayrı durum bayrağı sağlanmaktadır.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+
+        <!-- Octet 1 — Primary -->
+        <h3>
+          <span data-i18n-en>Octet 1 — Primary</span>
+          <span data-i18n-tr>Oktet 1 — Birincil</span>
+        </h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Bit</span><span data-i18n-tr>Bit</span></th>
+                <th><span data-i18n-en>Field</span><span data-i18n-tr>Alan</span></th>
+                <th><span data-i18n-en>Value</span><span data-i18n-tr>Değer</span></th>
+                <th><span data-i18n-en>Meaning</span><span data-i18n-tr>Anlam</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">8</td>
+                <td rowspan="2">MON</td>
+                <td>0</td>
+                <td><span data-i18n-en>Multisensor track</span><span data-i18n-tr>Çok sensörlü track</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Monosensor track</span><span data-i18n-tr>Tek sensörlü track</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">7</td>
+                <td rowspan="2">GBS</td>
+                <td>0</td>
+                <td><span data-i18n-en>Transponder Ground bit not set or unknown</span><span data-i18n-tr>Transponder yer biti ayarlanmamış veya bilinmiyor</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Transponder Ground bit set</span><span data-i18n-tr>Transponder yer biti ayarlı</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">6</td>
+                <td rowspan="2">MRH</td>
+                <td>0</td>
+                <td><span data-i18n-en>Barometric altitude (Mode C) more reliable</span><span data-i18n-tr>Barometrik irtifa (Mode C) daha güvenilir</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Geometric altitude more reliable</span><span data-i18n-tr>Geometrik irtifa daha güvenilir</span></td>
+              </tr>
+              <tr>
+                <td rowspan="8">5/4/3</td>
+                <td rowspan="8">SRC</td>
+                <td>000</td>
+                <td><span data-i18n-en>No source</span><span data-i18n-tr>Kaynak yok</span></td>
+              </tr>
+              <tr><td>001</td><td><span data-i18n-en>GPS</span><span data-i18n-tr>GPS</span></td></tr>
+              <tr><td>010</td><td><span data-i18n-en>3D radar</span><span data-i18n-tr>3B radar</span></td></tr>
+              <tr><td>011</td><td><span data-i18n-en>Triangulation</span><span data-i18n-tr>Üçgenleme</span></td></tr>
+              <tr><td>100</td><td><span data-i18n-en>Height from coverage</span><span data-i18n-tr>Kapsama alanından irtifa</span></td></tr>
+              <tr><td>101</td><td><span data-i18n-en>Speed look-up table</span><span data-i18n-tr>Hız arama tablosu</span></td></tr>
+              <tr><td>110</td><td><span data-i18n-en>Default height</span><span data-i18n-tr>Varsayılan yükseklik</span></td></tr>
+              <tr><td>111</td><td><span data-i18n-en>Multilateration</span><span data-i18n-tr>Çok-taraflı konumlama (MLAT)</span></td></tr>
+              <tr>
+                <td rowspan="2">2</td>
+                <td rowspan="2">CNF</td>
+                <td>0</td>
+                <td><span data-i18n-en>Confirmed track</span><span data-i18n-tr>Onaylanmış track</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Tentative track</span><span data-i18n-tr>Geçici (onaysız) track</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">1</td>
+                <td rowspan="2">FX</td>
+                <td>0</td>
+                <td><span data-i18n-en>End of data item</span><span data-i18n-tr>Veri öğesi sonu</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Extension into first extent</span><span data-i18n-tr>Birinci uzantıya geçiş</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Octet 2 — First Extension -->
+        <h3>
+          <span data-i18n-en>Octet 2 — First Extension</span>
+          <span data-i18n-tr>Oktet 2 — Birinci Uzantı</span>
+        </h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Bit</span><span data-i18n-tr>Bit</span></th>
+                <th><span data-i18n-en>Field</span><span data-i18n-tr>Alan</span></th>
+                <th><span data-i18n-en>Value</span><span data-i18n-tr>Değer</span></th>
+                <th><span data-i18n-en>Meaning</span><span data-i18n-tr>Anlam</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">8</td>
+                <td rowspan="2">SIM</td>
+                <td>0</td>
+                <td><span data-i18n-en>Actual track</span><span data-i18n-tr>Gerçek track</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Simulated track</span><span data-i18n-tr>Simüle edilmiş track</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">7</td>
+                <td rowspan="2">TSE</td>
+                <td>0</td>
+                <td><span data-i18n-en>Default value</span><span data-i18n-tr>Varsayılan değer</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Track service end (last message for this track)</span><span data-i18n-tr>Track hizmet sonu (bu track için son mesaj)</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">6</td>
+                <td rowspan="2">TSB</td>
+                <td>0</td>
+                <td><span data-i18n-en>Default value</span><span data-i18n-tr>Varsayılan değer</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Track service begin (first message for this track)</span><span data-i18n-tr>Track hizmet başlangıcı (bu track için ilk mesaj)</span></td>
+              </tr>
+              <tr>
+                <td rowspan="4">5/4</td>
+                <td rowspan="4">FRI/FOE</td>
+                <td>00</td>
+                <td><span data-i18n-en>No Mode 4 interrogation</span><span data-i18n-tr>Mode 4 sorgulaması yok</span></td>
+              </tr>
+              <tr><td>01</td><td><span data-i18n-en>Friendly target</span><span data-i18n-tr>Dost hedef</span></td></tr>
+              <tr><td>10</td><td><span data-i18n-en>Unknown target</span><span data-i18n-tr>Bilinmeyen hedef</span></td></tr>
+              <tr><td>11</td><td><span data-i18n-en>No reply</span><span data-i18n-tr>Yanıt yok</span></td></tr>
+              <tr>
+                <td rowspan="2">3</td>
+                <td rowspan="2">ME</td>
+                <td>0</td>
+                <td><span data-i18n-en>Default value</span><span data-i18n-tr>Varsayılan değer</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Military Emergency present in last report from capable sensor</span><span data-i18n-tr>Askeri acil durum, yetenekli sensörden alınan son raporda mevcut</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">2</td>
+                <td rowspan="2">MI</td>
+                <td>0</td>
+                <td><span data-i18n-en>Default value</span><span data-i18n-tr>Varsayılan değer</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Military Identification present in last report from capable sensor</span><span data-i18n-tr>Askeri kimlik tanımlama, yetenekli sensörden alınan son raporda mevcut</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">1</td>
+                <td rowspan="2">FX</td>
+                <td>0</td>
+                <td><span data-i18n-en>End of data item</span><span data-i18n-tr>Veri öğesi sonu</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Extension into second extent</span><span data-i18n-tr>İkinci uzantıya geçiş</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Octet 3 — Second Extension -->
+        <h3>
+          <span data-i18n-en>Octet 3 — Second Extension</span>
+          <span data-i18n-tr>Oktet 3 — İkinci Uzantı</span>
+        </h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Bit</span><span data-i18n-tr>Bit</span></th>
+                <th><span data-i18n-en>Field</span><span data-i18n-tr>Alan</span></th>
+                <th><span data-i18n-en>Value</span><span data-i18n-tr>Değer</span></th>
+                <th><span data-i18n-en>Meaning</span><span data-i18n-tr>Anlam</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">8</td>
+                <td rowspan="2">AMA</td>
+                <td>0</td>
+                <td><span data-i18n-en>Track not resulting from amalgamation process</span><span data-i18n-tr>Birleştirme sürecinden kaynaklanmayan track</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Track resulting from amalgamation process</span><span data-i18n-tr>Birleştirme sürecinden kaynaklanan track</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">7</td>
+                <td rowspan="2">SPI</td>
+                <td>0</td>
+                <td><span data-i18n-en>Default value</span><span data-i18n-tr>Varsayılan değer</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>SPI present in last report from capable sensor</span><span data-i18n-tr>SPI, yetenekli sensörden alınan son raporda mevcut</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">6</td>
+                <td rowspan="2">CST</td>
+                <td>0</td>
+                <td><span data-i18n-en>Default value</span><span data-i18n-tr>Varsayılan değer</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Age of last received track update is higher than system-dependent threshold (coasting)</span><span data-i18n-tr>Son alınan track güncellemesinin yaşı, sisteme bağlı eşiği aşıyor (kıyıda süzülme)</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">5</td>
+                <td rowspan="2">FPC</td>
+                <td>0</td>
+                <td><span data-i18n-en>Not flight-plan correlated</span><span data-i18n-tr>Uçuş planıyla ilişkilendirilmemiş</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Flight plan correlated</span><span data-i18n-tr>Uçuş planıyla ilişkilendirilmiş</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">4</td>
+                <td rowspan="2">AFF</td>
+                <td>0</td>
+                <td><span data-i18n-en>Default value</span><span data-i18n-tr>Varsayılan değer</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>ADS-B data inconsistent with other surveillance information</span><span data-i18n-tr>ADS-B verisi diğer gözetim bilgileriyle tutarsız</span></td>
+              </tr>
+              <tr>
+                <td>3/2</td>
+                <td>Spare</td>
+                <td>00</td>
+                <td><span data-i18n-en>Spare bits, set to zero</span><span data-i18n-tr>Yedek bitler, sıfıra ayarlı</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">1</td>
+                <td rowspan="2">FX</td>
+                <td>0</td>
+                <td><span data-i18n-en>End of data item</span><span data-i18n-tr>Veri öğesi sonu</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Extension into third extent</span><span data-i18n-tr>Üçüncü uzantıya geçiş</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Octet 4 — Third Extension -->
+        <h3>
+          <span data-i18n-en>Octet 4 — Third Extension</span>
+          <span data-i18n-tr>Oktet 4 — Üçüncü Uzantı</span>
+        </h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Bit</span><span data-i18n-tr>Bit</span></th>
+                <th><span data-i18n-en>Field</span><span data-i18n-tr>Alan</span></th>
+                <th><span data-i18n-en>Value</span><span data-i18n-tr>Değer</span></th>
+                <th><span data-i18n-en>Meaning</span><span data-i18n-tr>Anlam</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>8</td>
+                <td>Spare</td>
+                <td>0</td>
+                <td><span data-i18n-en>Spare bit, set to zero</span><span data-i18n-tr>Yedek bit, sıfıra ayarlı</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">7</td>
+                <td rowspan="2">PSR</td>
+                <td>0</td>
+                <td><span data-i18n-en>Default value</span><span data-i18n-tr>Varsayılan değer</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Age of last received PSR track update higher than system threshold</span><span data-i18n-tr>Son alınan PSR track güncellemesinin yaşı sistem eşiğini aşıyor</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">6</td>
+                <td rowspan="2">SSR</td>
+                <td>0</td>
+                <td><span data-i18n-en>Default value</span><span data-i18n-tr>Varsayılan değer</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Age of last received SSR track update higher than system threshold</span><span data-i18n-tr>Son alınan SSR track güncellemesinin yaşı sistem eşiğini aşıyor</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">5</td>
+                <td rowspan="2">MDS</td>
+                <td>0</td>
+                <td><span data-i18n-en>Default value</span><span data-i18n-tr>Varsayılan değer</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Age of last received Mode S track update higher than system threshold</span><span data-i18n-tr>Son alınan Mode-S track güncellemesinin yaşı sistem eşiğini aşıyor</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">4</td>
+                <td rowspan="2">ADS</td>
+                <td>0</td>
+                <td><span data-i18n-en>Default value</span><span data-i18n-tr>Varsayılan değer</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Age of last received ADS-B track update higher than system threshold</span><span data-i18n-tr>Son alınan ADS-B track güncellemesinin yaşı sistem eşiğini aşıyor</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">3</td>
+                <td rowspan="2">SUC</td>
+                <td>0</td>
+                <td><span data-i18n-en>Default value</span><span data-i18n-tr>Varsayılan değer</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Special Used Code (Mode A codes marking track with special interest)</span><span data-i18n-tr>Özel Kullanım Kodu (track'i özel ilgi ile işaretleyen Mode A kodları)</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">2</td>
+                <td rowspan="2">AAC</td>
+                <td>0</td>
+                <td><span data-i18n-en>Default value</span><span data-i18n-tr>Varsayılan değer</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Assigned Mode A Code Conflict (same code assigned to another track)</span><span data-i18n-tr>Atanmış Mode A Kodu Çakışması (aynı kod başka bir track'e de atanmış)</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">1</td>
+                <td rowspan="2">FX</td>
+                <td>0</td>
+                <td><span data-i18n-en>End of data item</span><span data-i18n-tr>Veri öğesi sonu</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Extension into next extent</span><span data-i18n-tr>Sonraki uzantıya geçiş</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram</span>
+          <span data-i18n-tr>Bit Diyagramı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 750 310" xmlns="http://www.w3.org/2000/svg" style="max-width: 700px; font-family: var(--font-family-mono);">
+            <!-- === Octet 1 === -->
+            <text x="30" y="15" font-size="12" fill="#718096" font-weight="600">Octet 1 — Primary</text>
+            <text x="66" y="35" text-anchor="middle" font-size="10" fill="#718096">8</text>
+            <text x="148" y="35" text-anchor="middle" font-size="10" fill="#718096">7</text>
+            <text x="230" y="35" text-anchor="middle" font-size="10" fill="#718096">6</text>
+            <text x="353" y="35" text-anchor="middle" font-size="10" fill="#718096">5/4/3</text>
+            <text x="518" y="35" text-anchor="middle" font-size="10" fill="#718096">2</text>
+            <text x="600" y="35" text-anchor="middle" font-size="10" fill="#718096">1</text>
+
+            <rect x="25" y="42" width="82" height="30" rx="3" fill="#4a90d9" stroke="#2b6cb0" stroke-width="1.5"/>
+            <text x="66" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">MON</text>
+
+            <rect x="107" y="42" width="82" height="30" rx="3" fill="#48bb78" stroke="#2f855a" stroke-width="1.5"/>
+            <text x="148" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">GBS</text>
+
+            <rect x="189" y="42" width="82" height="30" rx="3" fill="#ed8936" stroke="#c05621" stroke-width="1.5"/>
+            <text x="230" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">MRH</text>
+
+            <rect x="271" y="42" width="164" height="30" rx="3" fill="#9f7aea" stroke="#6b46c1" stroke-width="1.5"/>
+            <text x="353" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">SRC (3 bits)</text>
+
+            <rect x="435" y="42" width="82" height="30" rx="3" fill="#e53e3e" stroke="#c53030" stroke-width="1.5"/>
+            <text x="476" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">CNF</text>
+
+            <rect x="517" y="42" width="82" height="30" rx="3" fill="#a0aec0" stroke="#718096" stroke-width="1.5"/>
+            <text x="558" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">FX</text>
+
+            <!-- === Octet 2 === -->
+            <text x="30" y="100" font-size="12" fill="#718096" font-weight="600">Octet 2 — First Extension</text>
+            <text x="66" y="118" text-anchor="middle" font-size="10" fill="#718096">8</text>
+            <text x="148" y="118" text-anchor="middle" font-size="10" fill="#718096">7</text>
+            <text x="230" y="118" text-anchor="middle" font-size="10" fill="#718096">6</text>
+            <text x="312" y="118" text-anchor="middle" font-size="10" fill="#718096">5/4</text>
+            <text x="435" y="118" text-anchor="middle" font-size="10" fill="#718096">3</text>
+            <text x="518" y="118" text-anchor="middle" font-size="10" fill="#718096">2</text>
+            <text x="600" y="118" text-anchor="middle" font-size="10" fill="#718096">1</text>
+
+            <rect x="25" y="125" width="82" height="30" rx="3" fill="#4a90d9" stroke="#2b6cb0" stroke-width="1.5"/>
+            <text x="66" y="145" text-anchor="middle" fill="white" font-size="10" font-weight="700">SIM</text>
+
+            <rect x="107" y="125" width="82" height="30" rx="3" fill="#48bb78" stroke="#2f855a" stroke-width="1.5"/>
+            <text x="148" y="145" text-anchor="middle" fill="white" font-size="10" font-weight="700">TSE</text>
+
+            <rect x="189" y="125" width="82" height="30" rx="3" fill="#ed8936" stroke="#c05621" stroke-width="1.5"/>
+            <text x="230" y="145" text-anchor="middle" fill="white" font-size="10" font-weight="700">TSB</text>
+
+            <rect x="271" y="125" width="123" height="30" rx="3" fill="#9f7aea" stroke="#6b46c1" stroke-width="1.5"/>
+            <text x="332" y="145" text-anchor="middle" fill="white" font-size="10" font-weight="700">FRI/FOE</text>
+
+            <rect x="394" y="125" width="82" height="30" rx="3" fill="#e53e3e" stroke="#c53030" stroke-width="1.5"/>
+            <text x="435" y="145" text-anchor="middle" fill="white" font-size="10" font-weight="700">ME</text>
+
+            <rect x="476" y="125" width="82" height="30" rx="3" fill="#dd6b20" stroke="#c05621" stroke-width="1.5"/>
+            <text x="517" y="145" text-anchor="middle" fill="white" font-size="10" font-weight="700">MI</text>
+
+            <rect x="558" y="125" width="82" height="30" rx="3" fill="#a0aec0" stroke="#718096" stroke-width="1.5"/>
+            <text x="599" y="145" text-anchor="middle" fill="white" font-size="10" font-weight="700">FX</text>
+
+            <!-- === Octet 3 === -->
+            <text x="30" y="183" font-size="12" fill="#718096" font-weight="600">Octet 3 — Second Extension</text>
+            <text x="66" y="201" text-anchor="middle" font-size="10" fill="#718096">8</text>
+            <text x="148" y="201" text-anchor="middle" font-size="10" fill="#718096">7</text>
+            <text x="230" y="201" text-anchor="middle" font-size="10" fill="#718096">6</text>
+            <text x="312" y="201" text-anchor="middle" font-size="10" fill="#718096">5</text>
+            <text x="394" y="201" text-anchor="middle" font-size="10" fill="#718096">4</text>
+            <text x="496" y="201" text-anchor="middle" font-size="10" fill="#718096">3/2</text>
+            <text x="600" y="201" text-anchor="middle" font-size="10" fill="#718096">1</text>
+
+            <rect x="25" y="208" width="82" height="30" rx="3" fill="#4a90d9" stroke="#2b6cb0" stroke-width="1.5"/>
+            <text x="66" y="228" text-anchor="middle" fill="white" font-size="10" font-weight="700">AMA</text>
+
+            <rect x="107" y="208" width="82" height="30" rx="3" fill="#48bb78" stroke="#2f855a" stroke-width="1.5"/>
+            <text x="148" y="228" text-anchor="middle" fill="white" font-size="10" font-weight="700">SPI</text>
+
+            <rect x="189" y="208" width="82" height="30" rx="3" fill="#ed8936" stroke="#c05621" stroke-width="1.5"/>
+            <text x="230" y="228" text-anchor="middle" fill="white" font-size="10" font-weight="700">CST</text>
+
+            <rect x="271" y="208" width="82" height="30" rx="3" fill="#9f7aea" stroke="#6b46c1" stroke-width="1.5"/>
+            <text x="312" y="228" text-anchor="middle" fill="white" font-size="10" font-weight="700">FPC</text>
+
+            <rect x="353" y="208" width="82" height="30" rx="3" fill="#e53e3e" stroke="#c53030" stroke-width="1.5"/>
+            <text x="394" y="228" text-anchor="middle" fill="white" font-size="10" font-weight="700">AFF</text>
+
+            <rect x="435" y="208" width="123" height="30" rx="3" fill="#718096" stroke="#4a5568" stroke-width="1.5"/>
+            <text x="496" y="228" text-anchor="middle" fill="white" font-size="10" font-weight="700">Spare</text>
+
+            <rect x="558" y="208" width="82" height="30" rx="3" fill="#a0aec0" stroke="#718096" stroke-width="1.5"/>
+            <text x="599" y="228" text-anchor="middle" fill="white" font-size="10" font-weight="700">FX</text>
+
+            <!-- === Octet 4 === -->
+            <text x="30" y="266" font-size="12" fill="#718096" font-weight="600">Octet 4 — Third Extension</text>
+            <text x="66" y="284" text-anchor="middle" font-size="10" fill="#718096">8</text>
+            <text x="148" y="284" text-anchor="middle" font-size="10" fill="#718096">7</text>
+            <text x="230" y="284" text-anchor="middle" font-size="10" fill="#718096">6</text>
+            <text x="312" y="284" text-anchor="middle" font-size="10" fill="#718096">5</text>
+            <text x="394" y="284" text-anchor="middle" font-size="10" fill="#718096">4</text>
+            <text x="476" y="284" text-anchor="middle" font-size="10" fill="#718096">3</text>
+            <text x="518" y="284" text-anchor="middle" font-size="10" fill="#718096">2</text>
+            <text x="600" y="284" text-anchor="middle" font-size="10" fill="#718096">1</text>
+
+            <rect x="25" y="291" width="82" height="30" rx="3" fill="#718096" stroke="#4a5568" stroke-width="1.5"/>
+            <text x="66" y="311" text-anchor="middle" fill="white" font-size="10" font-weight="700">0</text>
+
+            <rect x="107" y="291" width="82" height="30" rx="3" fill="#4a90d9" stroke="#2b6cb0" stroke-width="1.5"/>
+            <text x="148" y="311" text-anchor="middle" fill="white" font-size="10" font-weight="700">PSR</text>
+
+            <rect x="189" y="291" width="82" height="30" rx="3" fill="#48bb78" stroke="#2f855a" stroke-width="1.5"/>
+            <text x="230" y="311" text-anchor="middle" fill="white" font-size="10" font-weight="700">SSR</text>
+
+            <rect x="271" y="291" width="82" height="30" rx="3" fill="#ed8936" stroke="#c05621" stroke-width="1.5"/>
+            <text x="312" y="311" text-anchor="middle" fill="white" font-size="10" font-weight="700">MDS</text>
+
+            <rect x="353" y="291" width="82" height="30" rx="3" fill="#9f7aea" stroke="#6b46c1" stroke-width="1.5"/>
+            <text x="394" y="311" text-anchor="middle" fill="white" font-size="10" font-weight="700">ADS</text>
+
+            <rect x="435" y="291" width="82" height="30" rx="3" fill="#e53e3e" stroke="#c53030" stroke-width="1.5"/>
+            <text x="476" y="311" text-anchor="middle" fill="white" font-size="10" font-weight="700">SUC</text>
+
+            <rect x="517" y="291" width="42" height="30" rx="3" fill="#dd6b20" stroke="#c05621" stroke-width="1.5"/>
+            <text x="538" y="311" text-anchor="middle" fill="white" font-size="9" font-weight="700">AAC</text>
+
+            <rect x="559" y="291" width="82" height="30" rx="3" fill="#a0aec0" stroke="#718096" stroke-width="1.5"/>
+            <text x="600" y="311" text-anchor="middle" fill="white" font-size="10" font-weight="700">FX</text>
+          </svg>
+          <div class="bit-diagram__label">I011/170 — Variable length: 1–4+ octets (FX-extendable)</div>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Property</span><span data-i18n-tr>Özellik</span></th>
+                <th><span data-i18n-en>Value</span><span data-i18n-tr>Değer</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>Format</span><span data-i18n-tr>Format</span></td>
+                <td><span data-i18n-en>Variable Length (FX-extendable)</span><span data-i18n-tr>Değişken Uzunluk (FX-genişletilebilir)</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Minimum Length</span><span data-i18n-tr>Minimum Uzunluk</span></td>
+                <td>1 octet</td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Maximum Defined Length</span><span data-i18n-tr>Tanımlı Maksimum Uzunluk</span></td>
+                <td><span data-i18n-en>4 octets (3 extensions defined in Ed. 1.3)</span><span data-i18n-tr>4 oktet (Ed. 1.3'te tanımlı 3 uzantı)</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Extension Mechanism</span><span data-i18n-tr>Genişletme Mekanizması</span></td>
+                <td><span data-i18n-en>Bit 1 (FX) of each octet: 0 = end, 1 = another octet follows</span><span data-i18n-tr>Her oktetin 1. biti (FX): 0 = son, 1 = arkasından başka bir oktet geliyor</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>SRC Field (bits 5/4/3)</span><span data-i18n-tr>SRC Alanı (bitler 5/4/3)</span></td>
+                <td><span data-i18n-en>Source of height for I011/092 Geometric Altitude</span><span data-i18n-tr>I011/092 Geometrik İrtifa için yükseklik kaynağı</span></td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>13 (FSPEC Byte 2, Bit 3)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Hex Örneği</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> A confirmed multisensor track on the ground at Istanbul Airport. The transponder ground bit is set, altitude source is GPS, the target is classified as friendly, and the track is flight-plan correlated.</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> İstanbul Havalimanı'nda yerde bulunan, onaylanmış çok sensörlü bir track. Transponder yer biti ayarlıdır, irtifa kaynağı GPS'tir, hedef dost olarak sınıflandırılmış ve track uçuş planıyla ilişkilendirilmiştir.</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — Build Octet 1 (Primary)</span>
+              <span data-i18n-tr>Adım 1 — Oktet 1'i Oluştur (Birincil)</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>MON=0 (multisensor), GBS=1 (ground bit set), MRH=0 (barometric more reliable), SRC=001 (GPS), CNF=0 (confirmed), FX=1 (extension follows)</span>
+              <span data-i18n-tr>MON=0 (çok sensörlü), GBS=1 (yer biti ayarlı), MRH=0 (barometrik daha güvenilir), SRC=001 (GPS), CNF=0 (onaylanmış), FX=1 (uzantı geliyor)</span>
+              <br><code>0 1 0 001 0 1</code> = <code>0100 0101</code> = <code>0x45</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Build Octet 2 (First Extension)</span>
+              <span data-i18n-tr>Adım 2 — Oktet 2'yi Oluştur (Birinci Uzantı)</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>SIM=0 (actual), TSE=0 (default), TSB=0 (default), FRI/FOE=01 (friendly), ME=0, MI=0, FX=1 (extension follows)</span>
+              <span data-i18n-tr>SIM=0 (gerçek), TSE=0 (varsayılan), TSB=0 (varsayılan), FRI/FOE=01 (dost), ME=0, MI=0, FX=1 (uzantı geliyor)</span>
+              <br><code>0 0 0 01 0 0 1</code> = <code>0000 1001</code> = <code>0x09</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Build Octet 3 (Second Extension)</span>
+              <span data-i18n-tr>Adım 3 — Oktet 3'ü Oluştur (İkinci Uzantı)</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>AMA=0, SPI=0, CST=0, FPC=1 (flight-plan correlated), AFF=0, spare=00, FX=0 (end)</span>
+              <span data-i18n-tr>AMA=0, SPI=0, CST=0, FPC=1 (uçuş planıyla ilişkilendirilmiş), AFF=0, yedek=00, FX=0 (son)</span>
+              <br><code>0 0 0 1 0 00 0</code> = <code>0001 0000</code> = <code>0x10</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 4 — Final Encoded Value</span>
+              <span data-i18n-tr>Adım 4 — Son Kodlanmış Değer</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <strong><span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span> &rarr; <code>0x45 09 10</code></strong> (3 octets)
+            </div>
+          </div>
+        </div>
+        <div class="note note--tip" style="margin-top: 1.5rem;">
+          <p>
+            <span data-i18n-en><strong>Decode verification:</strong> <code>0x45</code> = <code>01000101</code> &rarr; MON=0 (multi), GBS=1 (ground), MRH=0 (baro), SRC=001 (GPS), CNF=0 (confirmed), FX=1. <code>0x09</code> = <code>00001001</code> &rarr; SIM=0, TSE=0, TSB=0, FRI/FOE=01 (friendly), ME=0, MI=0, FX=1. <code>0x10</code> = <code>00010000</code> &rarr; AMA=0, SPI=0, CST=0, FPC=1 (flight-plan), AFF=0, spare=00, FX=0 (end). &#10003;</span>
+            <span data-i18n-tr><strong>Çözümleme doğrulaması:</strong> <code>0x45</code> = <code>01000101</code> &rarr; MON=0 (çok sensörlü), GBS=1 (yer biti ayarlı), MRH=0 (barometrik), SRC=001 (GPS), CNF=0 (onaylanmış), FX=1. <code>0x09</code> = <code>00001001</code> &rarr; SIM=0, TSE=0, TSB=0, FRI/FOE=01 (dost), ME=0, MI=0, FX=1. <code>0x10</code> = <code>00010000</code> &rarr; AMA=0, SPI=0, CST=0, FPC=1 (uçuş planı), AFF=0, yedek=00, FX=0 (son). &#10003;</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Validation Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Rule</span><span data-i18n-tr>Kural</span></th>
+                <th><span data-i18n-en>Description</span><span data-i18n-tr>Açıklama</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>FX chain</span><span data-i18n-tr>FX zinciri</span></td>
+                <td><span data-i18n-en>The FX bit (bit 1) of each octet must be parsed to determine if another octet follows. An FX=0 terminates the data item at that octet.</span><span data-i18n-tr>Her oktetin FX biti (bit 1), arkasından başka bir oktet gelip gelmediğini belirlemek için ayrıştırılmalıdır. FX=0 olması, veri öğesini o oktet ile sonlandırır.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Spare bits</span><span data-i18n-tr>Yedek bitler</span></td>
+                <td><span data-i18n-en>Spare bits (octet 3 bits 3/2; octet 4 bit 8) must be set to zero on encoding. Decoders should not assume specific values for spare bits.</span><span data-i18n-tr>Yedek bitler (oktet 3 bitler 3/2; oktet 4 bit 8) kodlamada sıfıra ayarlanmalıdır. Çözücüler, yedek bitler için belirli değerler varsaymamalıdır.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>SRC consistency</span><span data-i18n-tr>SRC tutarlılığı</span></td>
+                <td><span data-i18n-en>The SRC field indicates the height source for I011/092. If SRC=000 (no source), then I011/092 should not be present in the same record.</span><span data-i18n-tr>SRC alanı, I011/092 için yükseklik kaynağını belirtir. SRC=000 (kaynak yok) ise I011/092 aynı kayıtta bulunmamalıdır.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>CNF + TSB/TSE</span><span data-i18n-tr>CNF + TSB/TSE</span></td>
+                <td><span data-i18n-en>If CNF=1 (tentative), the track is not yet confirmed. TSB and TSE indicate the track service lifecycle. TSB and TSE should not both be set simultaneously.</span><span data-i18n-tr>CNF=1 (geçici) ise track henüz onaylanmamış demektir. TSB ve TSE, track hizmetinin yaşam döngüsünü belirtir. TSB ve TSE aynı anda ikisi birden ayarlanmamalıdır.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>CST flag</span><span data-i18n-tr>CST bayrağı</span></td>
+                <td><span data-i18n-en>When CST=1 (coasting), the track position is extrapolated. Consumers should treat coasting track data with lower confidence. This can also be derived from I011/290 System Track Update Ages.</span><span data-i18n-tr>CST=1 (kıyıda süzülme) olduğunda track konumu ekstrapolasyonla hesaplanmıştır. Alıcı sistemler, kıyıda süzülen track verilerini daha düşük güvenilirlikle değerlendirmelidir. Bu durum I011/290 Sistem Track Güncelleme Yaşları'ndan da türetilebilir.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Minimum 1 octet</span><span data-i18n-tr>En az 1 oktet</span></td>
+                <td><span data-i18n-en>At least the primary octet (octet 1) must always be present when this data item is included in the record.</span><span data-i18n-tr>Bu veri öğesi kayıtta yer aldığında en azından birincil oktet (oktet 1) her zaman mevcut olmalıdır.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlgili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Data Item</span><span data-i18n-tr>Veri Öğesi</span></th>
+                <th><span data-i18n-en>Relationship</span><span data-i18n-tr>İlişki</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-161.html">I011/161</a></td>
+                <td><span data-i18n-en>Track Number — the unique track ID whose status is described by this data item</span><span data-i18n-tr>Track Numarası — bu veri öğesinin durumunu tanımladığı tekil track kimliği</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-092.html">I011/092</a></td>
+                <td><span data-i18n-en>Geometric Altitude — the SRC field in I011/170 indicates the source of height used for this altitude</span><span data-i18n-tr>Geometrik İrtifa — I011/170'teki SRC alanı, bu irtifa için kullanılan yükseklik kaynağını belirtir</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-290.html">I011/290</a></td>
+                <td><span data-i18n-en>System Track Update Ages — provides detailed age information for each sensor type; coasting status (CST) can be derived from these ages</span><span data-i18n-tr>Sistem Track Güncelleme Yaşları — her sensör türü için ayrıntılı yaş bilgisi sağlar; kıyıda süzülme durumu (CST) bu yaşlardan türetilebilir</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-060.html">I011/060</a></td>
+                <td><span data-i18n-en>Mode-3/A Code — related to the SUC (Special Used Code) and AAC (Assigned Mode A Code Conflict) flags</span><span data-i18n-tr>Mode-3/A Kodu — SUC (Özel Kullanım Kodu) ve AAC (Atanmış Mode A Kodu Çakışması) bayraklarıyla ilişkilidir</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-390.html">I011/390</a></td>
+                <td><span data-i18n-en>Flight Plan Related Data — present when FPC=1 (flight-plan correlated) in the second extension</span><span data-i18n-tr>Uçuş Planı İlişkili Veriler — ikinci uzantıda FPC=1 (uçuş planıyla ilişkilendirilmiş) olduğunda mevcuttur</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-380.html">I011/380</a></td>
+                <td><span data-i18n-en>Mode-S / ADS-B Related Data — the AFF flag signals inconsistency between ADS-B and other surveillance data</span><span data-i18n-tr>Mode-S / ADS-B İlişkili Veriler — AFF bayrağı, ADS-B ile diğer gözetim verileri arasındaki tutarsızlığı bildirir</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Important Notes</span>
+          <span data-i18n-tr>Önemli Notlar</span>
+        </h2>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Coasting tracks:</strong> When the CST flag (octet 3, bit 6) is set to 1, the track is in "coasting" mode — meaning no fresh sensor data has been received within the system-dependent threshold. The reported position and velocity are extrapolated from the last known state. Display systems should visually distinguish coasting tracks (e.g., dashed outline) to alert controllers.</span>
+            <span data-i18n-tr><strong>Kıyıda süzülen track'ler:</strong> CST bayrağı (oktet 3, bit 6) 1 olarak ayarlandığında track "kıyıda süzülme" modundadır; bu, sisteme bağlı eşik süre içinde yeni sensör verisi alınamadığı anlamına gelir. Raporlanan konum ve hız, son bilinen durumdan ekstrapolasyonla hesaplanmıştır. Görüntüleme sistemleri, kontrolörleri uyarmak amacıyla kıyıda süzülen track'leri görsel olarak ayırt etmelidir (örneğin kesik çizgili kontur).</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>FX-extension parsing:</strong> When decoding I011/170, always check bit 1 (FX) of each octet before attempting to read the next octet. A decoder must not assume a fixed number of octets. The specification defines 4 octets (primary + 3 extensions), but future editions may add more. Decoders should gracefully skip unknown extensions by following the FX chain.</span>
+            <span data-i18n-tr><strong>FX-uzantısı ayrıştırma:</strong> I011/170 çözümlenirken, bir sonraki okteti okumaya çalışmadan önce her oktetin 1. biti (FX) mutlaka kontrol edilmelidir. Çözücü sabit bir oktet sayısı varsaymamalıdır. Spesifikasyon 4 oktet tanımlamaktadır (birincil + 3 uzantı); ancak gelecekteki sürümler daha fazla uzantı ekleyebilir. Çözücüler, FX zincirini takip ederek bilinmeyen uzantıları sorunsuz biçimde atlamalıdır.</span>
+          </p>
+        </div>
+        <div class="note note--info">
+          <p>
+            <span data-i18n-en><strong>Track lifecycle flags:</strong> The TSB (Track Service Begin) and TSE (Track Service End) flags in octet 2 are one-shot indicators. TSB=1 appears only in the first message for a new track; TSE=1 appears only in the last message before the track is dropped. All intermediate messages have both flags set to 0. This enables consumers to manage track initialization and cleanup without relying on timeouts.</span>
+            <span data-i18n-tr><strong>Track yaşam döngüsü bayrakları:</strong> Oktet 2'deki TSB (Track Hizmet Başlangıcı) ve TSE (Track Hizmet Sonu) bayrakları tek seferlik göstergelerdir. TSB=1 yalnızca yeni bir track için gönderilen ilk mesajda görünür; TSE=1 ise track düşürülmeden önceki son mesajda görünür. Tüm ara mesajlarda her iki bayrak da 0 olarak ayarlıdır. Bu durum, alıcı sistemlerin track başlatma ve temizleme işlemlerini zaman aşımına bağlı kalmadan yönetmesine olanak tanır.</span>
+          </p>
+        </div>
+        <div class="note note--info">
+          <p>
+            <span data-i18n-en><strong>Sensor aging (Octet 4):</strong> The third extension provides per-sensor-type aging flags (PSR, SSR, MDS, ADS). Each flag indicates whether the latest update from that specific sensor type has exceeded the system threshold. This gives a finer-grained view than the global CST flag in octet 3. For full age values in seconds, use I011/290 System Track Update Ages.</span>
+            <span data-i18n-tr><strong>Sensör eskimesi (Oktet 4):</strong> Üçüncü uzantı, sensör türüne göre eskime bayrakları sağlar (PSR, SSR, MDS, ADS). Her bayrak, ilgili sensör türünden gelen son güncellemenin sistem eşiğini aşıp aşmadığını belirtir. Bu, oktet 3'teki genel CST bayrağına kıyasla daha ayrıntılı bir görünüm sunar. Saniye cinsinden tam yaş değerleri için I011/290 Sistem Track Güncelleme Yaşları kullanılmalıdır.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Sürüm 1.3 (2020) esas alınmıştır. Yalnızca başvuru amaçlıdır.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/215 — Calculated Rate of Climb/Descent</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimliği</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimliği</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimliği</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — İrtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik İrt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik İrt.</span></a>
+      <a href="I011-215.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Data Items</span>
+        <span data-i18n-tr>Veri Öğeleri</span> &rsaquo;
+        <span>I011/215</span>
+      </div>
+      <div class="topbar__lang-toggle">
+        <button class="topbar__lang-btn topbar__lang-btn--active" data-lang-switch="en">EN</button>
+        <button class="topbar__lang-btn" data-lang-switch="tr">TR</button>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- ======== SECTION 1: HEADER ======== -->
+      <section class="content__header">
+        <h1>
+          <span class="content__item-id">I011/215</span>
+          <span data-i18n-en>Calculated Rate of Climb/Descent</span>
+          <span data-i18n-tr>Hesaplanmış Tırmanma/Alçalma Oranı</span>
+        </h1>
+        <div class="content__meta">
+          <span class="meta-tag meta-tag--fixed">
+            <span data-i18n-en>Fixed Length</span>
+            <span data-i18n-tr>Sabit Uzunluk</span>
+          </span>
+          <span class="meta-tag">2
+            <span data-i18n-en>Octets</span>
+            <span data-i18n-tr>Oktet</span>
+          </span>
+          <span class="meta-tag">
+            <span data-i18n-en>UAP Block 3 — Altitude</span>
+            <span data-i18n-tr>UAP Blok 3 — İrtifa</span>
+          </span>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 2: PURPOSE ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Data Item I011/215 conveys the calculated rate of climb or descent of a tracked target, expressed in feet per minute. This vertical rate is derived by the tracking system from successive altitude measurements and provides controllers with critical trend information about whether a target is climbing, descending, or maintaining level flight.</span>
+          <span data-i18n-tr>I011/215 veri öğesi, takip edilen bir hedefin hesaplanmış tırmanma veya alçalma oranını fit/dakika cinsinden iletir. Bu dikey oran, iz takip sistemi tarafından art arda gerçekleştirilen irtifa ölçümlerinden türetilir ve kontrolörlere hedefin tırmanıp tırmanmadığı, alçalıp alçalmadığı ya da sabit irtifada seyredip seyremettiği konusunda kritik trend bilgisi sağlar.</span>
+        </p>
+      </section>
+
+      <!-- ======== SECTION 3: BIT STRUCTURE DIAGRAM ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Bit Structure</span>
+          <span data-i18n-tr>Bit Yapısı</span>
+        </h2>
+
+        <svg viewBox="0 0 820 120" class="bit-diagram" role="img" aria-label="I011/215 bit structure diagram">
+          <!-- Octet 1 (MSB) -->
+          <text x="410" y="15" text-anchor="middle" class="bit-diagram__title">I011/215 — 2 Octets, Fixed Length</text>
+
+          <!-- Bit number labels -->
+          <text x="30" y="35" text-anchor="middle" class="bit-diagram__bit-num">16</text>
+          <text x="80" y="35" text-anchor="middle" class="bit-diagram__bit-num">15</text>
+          <text x="130" y="35" text-anchor="middle" class="bit-diagram__bit-num">14</text>
+          <text x="180" y="35" text-anchor="middle" class="bit-diagram__bit-num">13</text>
+          <text x="230" y="35" text-anchor="middle" class="bit-diagram__bit-num">12</text>
+          <text x="280" y="35" text-anchor="middle" class="bit-diagram__bit-num">11</text>
+          <text x="330" y="35" text-anchor="middle" class="bit-diagram__bit-num">10</text>
+          <text x="380" y="35" text-anchor="middle" class="bit-diagram__bit-num">9</text>
+          <text x="430" y="35" text-anchor="middle" class="bit-diagram__bit-num">8</text>
+          <text x="480" y="35" text-anchor="middle" class="bit-diagram__bit-num">7</text>
+          <text x="530" y="35" text-anchor="middle" class="bit-diagram__bit-num">6</text>
+          <text x="580" y="35" text-anchor="middle" class="bit-diagram__bit-num">5</text>
+          <text x="630" y="35" text-anchor="middle" class="bit-diagram__bit-num">4</text>
+          <text x="680" y="35" text-anchor="middle" class="bit-diagram__bit-num">3</text>
+          <text x="730" y="35" text-anchor="middle" class="bit-diagram__bit-num">2</text>
+          <text x="780" y="35" text-anchor="middle" class="bit-diagram__bit-num">1</text>
+
+          <!-- Single field spanning all 16 bits -->
+          <rect x="5" y="45" width="800" height="40" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="405" y="70" text-anchor="middle" class="bit-diagram__label">Rate of Climb/Descent (signed, two's complement)</text>
+
+          <!-- Octet labels -->
+          <text x="205" y="105" text-anchor="middle" class="bit-diagram__octet-label">Octet 1 (MSB)</text>
+          <text x="605" y="105" text-anchor="middle" class="bit-diagram__octet-label">Octet 2 (LSB)</text>
+        </svg>
+      </section>
+
+      <!-- ======== SECTION 4: FIELD DESCRIPTIONS ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Field Descriptions</span>
+          <span data-i18n-tr>Alan Açıklamaları</span>
+        </h2>
+        <div class="table-responsive">
+          <table class="fields-table">
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Field</span><span data-i18n-tr>Alan</span></th>
+                <th><span data-i18n-en>Bits</span><span data-i18n-tr>Bitler</span></th>
+                <th><span data-i18n-en>Size</span><span data-i18n-tr>Boyut</span></th>
+                <th><span data-i18n-en>Type</span><span data-i18n-tr>Tür</span></th>
+                <th><span data-i18n-en>Description</span><span data-i18n-tr>Açıklama</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>Rate of Climb/Descent</span><span data-i18n-tr>Tırmanma/Alçalma Oranı</span></td>
+                <td>16–1</td>
+                <td>16</td>
+                <td><span data-i18n-en>Signed (two's complement)</span><span data-i18n-tr>İşaretli (ikinin tümleyeni)</span></td>
+                <td><span data-i18n-en>Vertical rate in feet per minute. Positive values indicate climb, negative values indicate descent.</span><span data-i18n-tr>Fit/dakika cinsinden dikey oran. Pozitif değerler tırmanmayı, negatif değerler alçalmayı gösterir.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 5: VALUE ENCODING ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Value Encoding</span>
+          <span data-i18n-tr>Değer Kodlaması</span>
+        </h2>
+        <div class="encoding-box">
+          <div class="encoding-box__formula">
+            <span data-i18n-en>Rate of Climb/Descent</span>
+            <span data-i18n-tr>Tırmanma/Alçalma Oranı</span>
+            = raw_value &times; <strong>6.25</strong>
+            <span data-i18n-en>feet/minute</span>
+            <span data-i18n-tr>fit/dakika</span>
+          </div>
+          <div class="encoding-box__details">
+            <table class="encoding-table">
+              <tr>
+                <td><span data-i18n-en>LSB</span><span data-i18n-tr>En Düşük Anlamlı Bit</span></td>
+                <td><strong>6.25 ft/min</strong></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Signed</span><span data-i18n-tr>İşaretli</span></td>
+                <td>
+                  <span data-i18n-en>Yes — 16-bit two's complement</span>
+                  <span data-i18n-tr>Evet — 16 bitlik ikinin tümleyeni</span>
+                </td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Range</span><span data-i18n-tr>Aralık</span></td>
+                <td>
+                  <span data-i18n-en>&minus;204,800 ft/min to +204,793.75 ft/min</span>
+                  <span data-i18n-tr>&minus;204.800 fit/dak ile +204.793,75 fit/dak arası</span>
+                </td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Unit</span><span data-i18n-tr>Birim</span></td>
+                <td>
+                  <span data-i18n-en>Feet per minute (ft/min)</span>
+                  <span data-i18n-tr>Fit/dakika (fit/dak)</span>
+                </td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Resolution</span><span data-i18n-tr>Çözünürlük</span></td>
+                <td>
+                  <span data-i18n-en>6.25 ft/min ≈ 1.905 m/min ≈ 0.032 m/s</span>
+                  <span data-i18n-tr>6,25 fit/dak ≈ 1,905 m/dak ≈ 0,032 m/s</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 6: HEX EXAMPLE ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Step-by-Step Hex Example</span>
+          <span data-i18n-tr>Adım Adım Hex Örneği</span>
+        </h2>
+
+        <div class="hex-example">
+          <div class="hex-example__raw">
+            <span data-i18n-en>Raw data:</span>
+            <span data-i18n-tr>Ham veri:</span>
+            <code>01 40</code>
+          </div>
+
+          <div class="hex-example__steps">
+            <h3>
+              <span data-i18n-en>Decode Walkthrough</span>
+              <span data-i18n-tr>Çözümleme Adımları</span>
+            </h3>
+            <ol>
+              <li>
+                <span data-i18n-en><strong>Combine bytes:</strong> 0x01 0x40 → 0x0140</span>
+                <span data-i18n-tr><strong>Baytları birleştir:</strong> 0x01 0x40 → 0x0140</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Convert to decimal:</strong> 0x0140 = 320</span>
+                <span data-i18n-tr><strong>Ondalığa çevir:</strong> 0x0140 = 320</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Check sign:</strong> Bit 16 = 0 → positive value (climb)</span>
+                <span data-i18n-tr><strong>İşareti kontrol et:</strong> Bit 16 = 0 → pozitif değer (tırmanma)</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Apply LSB:</strong> 320 × 6.25 = <strong>2000 ft/min</strong></span>
+                <span data-i18n-tr><strong>LSB'yi uygula:</strong> 320 × 6,25 = <strong>2000 fit/dak</strong></span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Interpretation:</strong> The target is climbing at 2000 feet per minute — a typical commercial aircraft climb rate.</span>
+                <span data-i18n-tr><strong>Yorum:</strong> Hedef dakikada 2000 fit hızla tırmanmaktadır — ticari bir uçağın tipik tırmanma oranıdır.</span>
+              </li>
+            </ol>
+          </div>
+
+          <div class="hex-example__steps">
+            <h3>
+              <span data-i18n-en>Negative Value Example (Descent)</span>
+              <span data-i18n-tr>Negatif Değer Örneği (Alçalma)</span>
+            </h3>
+            <ol>
+              <li>
+                <span data-i18n-en><strong>Raw data:</strong> 0xFF 0x10 → 0xFF10</span>
+                <span data-i18n-tr><strong>Ham veri:</strong> 0xFF 0x10 → 0xFF10</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Check sign:</strong> Bit 16 = 1 → negative value (two's complement)</span>
+                <span data-i18n-tr><strong>İşareti kontrol et:</strong> Bit 16 = 1 → negatif değer (ikinin tümleyeni)</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Two's complement:</strong> 0xFF10 as signed 16-bit = &minus;240</span>
+                <span data-i18n-tr><strong>İkinin tümleyeni:</strong> 0xFF10, işaretli 16-bit olarak = &minus;240</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Apply LSB:</strong> &minus;240 × 6.25 = <strong>&minus;1500 ft/min</strong></span>
+                <span data-i18n-tr><strong>LSB'yi uygula:</strong> &minus;240 × 6,25 = <strong>&minus;1500 fit/dak</strong></span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Interpretation:</strong> The target is descending at 1500 feet per minute — a typical approach descent rate.</span>
+                <span data-i18n-tr><strong>Yorum:</strong> Hedef dakikada 1500 fit hızla alçalmaktadır — tipik bir yaklaşma alçalma oranıdır.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <h3>
+          <span data-i18n-en>Additional Reference Values</span>
+          <span data-i18n-tr>Ek Referans Değerleri</span>
+        </h3>
+        <div class="table-responsive">
+          <table class="fields-table">
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Hex</span><span data-i18n-tr>Hex</span></th>
+                <th><span data-i18n-en>Raw (decimal)</span><span data-i18n-tr>Ham (ondalık)</span></th>
+                <th><span data-i18n-en>Rate (ft/min)</span><span data-i18n-tr>Oran (fit/dak)</span></th>
+                <th><span data-i18n-en>Meaning</span><span data-i18n-tr>Anlam</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>0x0000</code></td>
+                <td>0</td>
+                <td>0</td>
+                <td><span data-i18n-en>Level flight — no vertical rate</span><span data-i18n-tr>Sabit irtifa — dikey oran yok</span></td>
+              </tr>
+              <tr>
+                <td><code>0x0050</code></td>
+                <td>80</td>
+                <td>+500</td>
+                <td><span data-i18n-en>Gentle climb (small aircraft / cruise adjustment)</span><span data-i18n-tr>Hafif tırmanma (küçük uçak / seyir düzeltmesi)</span></td>
+              </tr>
+              <tr>
+                <td><code>0x00A0</code></td>
+                <td>160</td>
+                <td>+1000</td>
+                <td><span data-i18n-en>Moderate climb</span><span data-i18n-tr>Orta şiddetli tırmanma</span></td>
+              </tr>
+              <tr>
+                <td><code>0x0140</code></td>
+                <td>320</td>
+                <td>+2000</td>
+                <td><span data-i18n-en>Typical commercial aircraft climb</span><span data-i18n-tr>Tipik ticari uçak tırmanması</span></td>
+              </tr>
+              <tr>
+                <td><code>0xFF10</code></td>
+                <td>&minus;240</td>
+                <td>&minus;1500</td>
+                <td><span data-i18n-en>Typical approach descent</span><span data-i18n-tr>Tipik yaklaşma alçalması</span></td>
+              </tr>
+              <tr>
+                <td><code>0xFE20</code></td>
+                <td>&minus;480</td>
+                <td>&minus;3000</td>
+                <td><span data-i18n-en>Steep descent (rapid altitude change)</span><span data-i18n-tr>Dik alçalma (hızlı irtifa değişimi)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 7: VALIDATION RULES ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <ul class="validation-list">
+          <li>
+            <span data-i18n-en><strong>Fixed length:</strong> This item is always exactly 2 octets (16 bits). No more, no less.</span>
+            <span data-i18n-tr><strong>Sabit uzunluk:</strong> Bu öğe her zaman tam olarak 2 oktet (16 bit) uzunluğundadır. Ne eksik ne fazla.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Signed range:</strong> The 16-bit two's complement range is &minus;32,768 to +32,767, corresponding to &minus;204,800 ft/min to +204,793.75 ft/min.</span>
+            <span data-i18n-tr><strong>İşaretli aralık:</strong> 16 bitlik ikinin tümleyeni aralığı &minus;32.768 ile +32.767 arasındadır; bu değerler &minus;204.800 fit/dak ile +204.793,75 fit/dak'a karşılık gelir.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Realistic values:</strong> In practice, vertical rates rarely exceed ±6000 ft/min for commercial aircraft. Values beyond ±10,000 ft/min should be flagged as suspicious unless the target is a military aircraft.</span>
+            <span data-i18n-tr><strong>Gerçekçi değerler:</strong> Uygulamada ticari uçaklar için dikey oran nadiren ±6000 fit/dak'ı aşar. Hedef askeri bir uçak değilse, ±10.000 fit/dak'ı aşan değerler şüpheli olarak işaretlenmelidir.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Zero value:</strong> A raw value of 0x0000 (0 ft/min) is valid and indicates level flight.</span>
+            <span data-i18n-tr><strong>Sıfır değeri:</strong> 0x0000 ham değeri (0 fit/dak) geçerlidir ve sabit irtifa uçuşunu gösterir.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Surface vehicles:</strong> For ground targets, this field should be 0x0000 or very close to zero. Non-zero values for surface vehicles may indicate a data quality issue.</span>
+            <span data-i18n-tr><strong>Yüzey araçları:</strong> Yer hedefleri için bu alan 0x0000 veya sıfıra çok yakın olmalıdır. Yüzey araçlarında sıfırdan farklı değerler veri kalitesi sorununa işaret edebilir.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Presence:</strong> This item is optional. Its presence in a message is indicated by the FSPEC bit at UAP Block 3, position 5.</span>
+            <span data-i18n-tr><strong>Varlık:</strong> Bu öğe isteğe bağlıdır. Bir mesajda bulunup bulunmadığı, UAP Blok 3'ün 5. konumundaki FSPEC biti ile belirlenir.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ======== SECTION 8: RELATED ITEMS ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Related Items</span>
+          <span data-i18n-tr>İlgili Öğeler</span>
+        </h2>
+        <ul class="related-list">
+          <li>
+            <a href="I011-090.html"><strong>I011/090</strong></a> —
+            <span data-i18n-en>Measured Flight Level: The Mode-C derived altitude from which vertical rate may be computed.</span>
+            <span data-i18n-tr>Ölçülen Uçuş Seviyesi: Mode-C'den türetilen ve dikey oranın hesaplanabileceği irtifa değeri.</span>
+          </li>
+          <li>
+            <a href="I011-092.html"><strong>I011/092</strong></a> —
+            <span data-i18n-en>Calculated Track Geometric Altitude: GNSS-based altitude whose changes over time yield the geometric climb/descent rate.</span>
+            <span data-i18n-tr>Hesaplanmış İz Geometrik İrtifası: GNSS tabanlı irtifa; zamanla değişimi, geometrik tırmanma/alçalma oranını verir.</span>
+          </li>
+          <li>
+            <a href="I011-093.html"><strong>I011/093</strong></a> —
+            <span data-i18n-en>Calculated Track Barometric Altitude: Barometric altitude whose derivative is an alternative source for vertical rate.</span>
+            <span data-i18n-tr>Hesaplanmış İz Barometrik İrtifası: Türevi dikey oran için alternatif bir kaynak oluşturan barometrik irtifa.</span>
+          </li>
+          <li>
+            <a href="I011-430.html"><strong>I011/430</strong></a> —
+            <span data-i18n-en>Phase of Flight: Indicates whether the target is in climb, cruise, or descent phase — directly correlated with vertical rate sign.</span>
+            <span data-i18n-tr>Uçuş Fazı: Hedefin tırmanma, seyir ya da alçalma fazında olup olmadığını gösterir; dikey oranın işaretiyle doğrudan ilişkilidir.</span>
+          </li>
+          <li>
+            <a href="I011-202.html"><strong>I011/202</strong></a> —
+            <span data-i18n-en>Calculated Track Velocity (Cartesian): Horizontal velocity components, complementing the vertical rate for full 3D motion picture.</span>
+            <span data-i18n-tr>Hesaplanmış İz Hızı (Kartezyen): Dikey oranı tamamlayarak tam bir 3B hareket tablosu oluşturan yatay hız bileşenleri.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ======== SECTION 9: IMPLEMENTATION NOTES ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Implementation Notes</span>
+          <span data-i18n-tr>Uygulama Notları</span>
+        </h2>
+        <ul class="notes-list">
+          <li>
+            <span data-i18n-en><strong>Sign convention:</strong> Positive values mean climb (altitude increasing), negative values mean descent (altitude decreasing). This follows the standard aviation sign convention.</span>
+            <span data-i18n-tr><strong>İşaret kuralı:</strong> Pozitif değerler tırmanmayı (irtifa artışı), negatif değerler alçalmayı (irtifa azalışı) gösterir. Bu, standart havacılık işaret kuralını izler.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Two's complement decoding:</strong> Read the 2-byte field as a signed 16-bit integer. In most programming languages, casting to a signed 16-bit type (e.g., <code>int16_t</code> in C, <code>Short</code> in Java) handles the sign automatically.</span>
+            <span data-i18n-tr><strong>İkinin tümleyeni çözümleme:</strong> 2 baytlık alanı işaretli 16 bit tam sayı olarak okuyun. Pek çok programlama dilinde işaretli 16 bit türüne dönüştürme (örn. C'de <code>int16_t</code>, Java'da <code>Short</code>) işareti otomatik olarak yönetir.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Unit conversion:</strong> To convert to meters per second, multiply the ft/min value by 0.00508 (1 ft/min = 0.00508 m/s). To convert to meters per minute, multiply by 0.3048.</span>
+            <span data-i18n-tr><strong>Birim dönüşümü:</strong> Metre/saniyeye çevirmek için fit/dak değerini 0,00508 ile çarpın (1 fit/dak = 0,00508 m/s). Metre/dakikaya çevirmek için 0,3048 ile çarpın.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Smoothing:</strong> The rate is calculated by the tracker, so it is already smoothed compared to raw altitude differences. However, additional smoothing may be applied in display systems to avoid flickering.</span>
+            <span data-i18n-tr><strong>Yumuşatma:</strong> Oran iz takip sistemi tarafından hesaplandığından, ham irtifa farklarına kıyasla zaten yumuşatılmış durumdadır. Bununla birlikte, titreme etkisini önlemek için görüntüleme sistemlerinde ek yumuşatma uygulanabilir.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Correlation with I011/430:</strong> The sign of the climb/descent rate should be consistent with the Phase of Flight. A target in "Climb" phase (I011/430) should have a positive rate, and vice versa. Inconsistencies may indicate a transition between phases.</span>
+            <span data-i18n-tr><strong>I011/430 ile ilişki:</strong> Tırmanma/alçalma oranının işareti, Uçuş Fazı ile tutarlı olmalıdır. "Tırmanma" fazındaki (I011/430) bir hedefin pozitif orana sahip olması beklenir; tersi de geçerlidir. Tutarsızlıklar, fazlar arası geçişe işaret edebilir.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Surface targets:</strong> A-SMGCS also tracks ground vehicles. For these targets, the vertical rate should be zero or near-zero. Consider ignoring this field entirely for targets classified as surface vehicles (see I011/170 Track Status).</span>
+            <span data-i18n-tr><strong>Yüzey hedefleri:</strong> A-SMGCS (Gelişmiş Yüzey Hareketi Rehberlik ve Kontrol Sistemi) yer araçlarını da takip eder. Bu hedefler için dikey oran sıfır veya sıfıra yakın olmalıdır. Yüzey aracı olarak sınıflandırılan hedeflerde bu alanı tamamen göz ardı etmeyi düşünebilirsiniz (bkz. I011/170 İz Durumu).</span>
+          </li>
+        </ul>
+      </section>
+
+    </div><!-- /.content -->
+  </main>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

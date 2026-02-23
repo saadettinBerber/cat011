@@ -90,10 +90,10 @@ CAT011/                               # Project root
 ## Progress Status
 
 - **Block 1 — Core**: 7/7 complete (I011-010, 000, 015, 140, 041, 042, 202)
-- **Block 2 — Identity**: 3/7 complete (I011-060, 210, 245) — pending: 380, 161, 170, 290
-- **Block 3 — Altitude**: 0/7 pending (I011-430, 090, 093, 092, 215, 270, 390)
+- **Block 2 — Identity**: 7/7 complete (I011-060, 210, 245, 380, 161, 170, 290)
+- **Block 3 — Altitude**: 6/7 complete (I011-430, 090, 093, 092, 215, 270), pending (390)
 - **Block 4 — Alerts**: 0/8 pending (I011-300, 310, 500, 600, 605, 610, SP, RE)
-- **Overall**: 10/29 data items (34%)
+- **Overall**: 20/29 data items (69%)
 
 ## Reference Specification
 

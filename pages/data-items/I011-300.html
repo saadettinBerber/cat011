@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/300 — Vehicle Fleet Identification</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimliği</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimliği</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimliği</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — Irtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik Irt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik Irt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Vehicle Fleet Identification</span>
+        <span data-i18n-tr>Araç Filosu Tanımlama</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/300</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Vehicle Fleet Identification</span>
+          <span data-i18n-tr>Araç Filosu Tanımlama</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Fixed Length — 1 Octet</span>
+          <span data-i18n-tr>Sabit Uzunluk — 1 Oktet</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Identification of the type of vehicle or ground equipment associated with a surface track. This data item classifies the tracked target into one of 17 predefined airport vehicle fleet categories, enabling controllers and safety systems to understand the operational role of each ground movement.</span>
+          <span data-i18n-tr>Bir yüzey track'iyle ilişkili araç veya yer ekipmanının türünün tanımlanması. Bu veri öğesi, izlenen hedefi önceden tanımlanmış 17 havalimanı araç filosu kategorisinden birine sınıflandırarak kontrolörlerin ve güvenlik sistemlerinin her yer hareketinin operasyonel rolünü anlamasını sağlar.</span>
+        </p>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Key concept:</strong> This item is used exclusively for ground vehicles and airport equipment — not for aircraft. When the A-SMGCS system detects a surface target that is not an aircraft (based on transponder data or manual classification), it assigns a fleet category using I011/300. This allows safety nets to apply different rules for different vehicle types (e.g., fire trucks may have priority access to runways during emergencies).</span>
+            <span data-i18n-tr><strong>Temel kavram:</strong> Bu öğe yalnızca yer araçları ve havalimanı ekipmanları için kullanılır; uçaklar için kullanılmaz. A-SMGCS (Gelişmiş Yüzey Hareketi Rehberlik ve Kontrol Sistemi), transponder verisine veya manuel sınıflandırmaya dayanarak uçak olmayan bir yüzey hedefi tespit ettiğinde I011/300 aracılığıyla bir filo kategorisi atar. Bu sayede güvenlik ağları farklı araç türlerine farklı kurallar uygulayabilir (örneğin, itfaiye araçları acil durumlarda piste öncelikli erişim hakkına sahip olabilir).</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Octet</span>
+                  <span data-i18n-tr>Oktet</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Field</span>
+                  <span data-i18n-tr>Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bits</span>
+                  <span data-i18n-tr>Bitler</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td>VFI</td>
+                <td>8 (bit 8–1)</td>
+                <td>
+                  <span data-i18n-en>Vehicle Fleet Identification, encoded as unsigned integer (0–16 defined)</span>
+                  <span data-i18n-tr>Araç Filosu Tanımlaması; işaretsiz tam sayı olarak kodlanır (0–16 tanımlıdır)</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram</span>
+          <span data-i18n-tr>Bit Diyagramı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 600 80" xmlns="http://www.w3.org/2000/svg" style="max-width: 500px; font-family: var(--font-family-mono);">
+            <text x="50" y="15" text-anchor="middle" font-size="11" fill="#718096">8</text>
+            <text x="115" y="15" text-anchor="middle" font-size="11" fill="#718096">7</text>
+            <text x="180" y="15" text-anchor="middle" font-size="11" fill="#718096">6</text>
+            <text x="245" y="15" text-anchor="middle" font-size="11" fill="#718096">5</text>
+            <text x="310" y="15" text-anchor="middle" font-size="11" fill="#718096">4</text>
+            <text x="375" y="15" text-anchor="middle" font-size="11" fill="#718096">3</text>
+            <text x="440" y="15" text-anchor="middle" font-size="11" fill="#718096">2</text>
+            <text x="505" y="15" text-anchor="middle" font-size="11" fill="#718096">1</text>
+            <rect x="20" y="25" width="520" height="40" rx="4" fill="#48bb78" stroke="#2f855a" stroke-width="2"/>
+            <text x="280" y="50" text-anchor="middle" fill="white" font-size="14" font-weight="700">VFI (0–16)</text>
+            <line x1="85" y1="25" x2="85" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="150" y1="25" x2="150" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="215" y1="25" x2="215" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="280" y1="25" x2="280" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="345" y1="25" x2="345" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="410" y1="25" x2="410" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <line x1="475" y1="25" x2="475" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+          </svg>
+          <div class="bit-diagram__label">I011/300 — 8-bit VFI field (1 octet)</div>
+        </div>
+      </section>
+
+      <!-- Value Encoding -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Value Encoding</span>
+          <span data-i18n-tr>Değer Kodlama</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Value</span>
+                  <span data-i18n-tr>Değer</span>
+                </th>
+                <th>Hex</th>
+                <th>
+                  <span data-i18n-en>Vehicle Fleet Type</span>
+                  <span data-i18n-tr>Araç Filosu Türü</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>0</td><td><code>0x00</code></td><td><span data-i18n-en>Flyco (follow me)</span><span data-i18n-tr>Flyco (takip et)</span></td></tr>
+              <tr><td>1</td><td><code>0x01</code></td><td><span data-i18n-en>ATC equipment maintenance</span><span data-i18n-tr>ATC Ekipman Bakımı</span></td></tr>
+              <tr><td>2</td><td><code>0x02</code></td><td><span data-i18n-en>Airport maintenance</span><span data-i18n-tr>Havalimanı Bakımı</span></td></tr>
+              <tr><td>3</td><td><code>0x03</code></td><td><span data-i18n-en>Fire</span><span data-i18n-tr>İtfaiye</span></td></tr>
+              <tr><td>4</td><td><code>0x04</code></td><td><span data-i18n-en>Bird scarer</span><span data-i18n-tr>Kuş Kovucu</span></td></tr>
+              <tr><td>5</td><td><code>0x05</code></td><td><span data-i18n-en>Snow plough</span><span data-i18n-tr>Kar Küreme Aracı</span></td></tr>
+              <tr><td>6</td><td><code>0x06</code></td><td><span data-i18n-en>Runway sweeper</span><span data-i18n-tr>Pist Süpürme Aracı</span></td></tr>
+              <tr><td>7</td><td><code>0x07</code></td><td><span data-i18n-en>Emergency</span><span data-i18n-tr>Acil Durum</span></td></tr>
+              <tr><td>8</td><td><code>0x08</code></td><td><span data-i18n-en>Police</span><span data-i18n-tr>Polis</span></td></tr>
+              <tr><td>9</td><td><code>0x09</code></td><td><span data-i18n-en>Bus</span><span data-i18n-tr>Otobüs</span></td></tr>
+              <tr><td>10</td><td><code>0x0A</code></td><td><span data-i18n-en>Tug (push/tow)</span><span data-i18n-tr>Çekici (itme/çekme)</span></td></tr>
+              <tr><td>11</td><td><code>0x0B</code></td><td><span data-i18n-en>Grass cutter</span><span data-i18n-tr>Çim Biçme Aracı</span></td></tr>
+              <tr><td>12</td><td><code>0x0C</code></td><td><span data-i18n-en>Fuel</span><span data-i18n-tr>Yakıt</span></td></tr>
+              <tr><td>13</td><td><code>0x0D</code></td><td><span data-i18n-en>Baggage</span><span data-i18n-tr>Bagaj</span></td></tr>
+              <tr><td>14</td><td><code>0x0E</code></td><td><span data-i18n-en>Catering</span><span data-i18n-tr>İkram (Catering)</span></td></tr>
+              <tr><td>15</td><td><code>0x0F</code></td><td><span data-i18n-en>Aircraft maintenance</span><span data-i18n-tr>Uçak Bakımı</span></td></tr>
+              <tr><td>16</td><td><code>0x10</code></td><td><span data-i18n-en>Unknown</span><span data-i18n-tr>Bilinmeyen</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Property</span>
+                  <span data-i18n-tr>Özellik</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Value</span>
+                  <span data-i18n-tr>Değer</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Format</span>
+                  <span data-i18n-tr>Biçim</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Fixed Length</span>
+                  <span data-i18n-tr>Sabit Uzunluk</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Length</span>
+                  <span data-i18n-tr>Uzunluk</span>
+                </td>
+                <td>1 octet (8 bits)</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Encoding</span>
+                  <span data-i18n-tr>Kodlama</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Unsigned integer, enumerated (0–16 defined)</span>
+                  <span data-i18n-tr>İşaretsiz tam sayı, numaralandırılmış (0–16 tanımlıdır)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Mandatory</span>
+                  <span data-i18n-tr>Zorunluluk</span>
+                </td>
+                <td>
+                  <span data-i18n-en>No — optional data item, only for ground vehicle tracks</span>
+                  <span data-i18n-tr>Hayır — isteğe bağlı veri öğesi; yalnızca yer araçlarına ait track'ler için kullanılır</span>
+                </td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>FRN 22 (FSPEC Byte 4, Bit 8)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Hex Örneği</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> A fire truck operating on the airport surface is tracked by the A-SMGCS system and classified as a Fire vehicle.</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> Havalimanı yüzeyinde faaliyet gösteren bir itfaiye aracı A-SMGCS sistemi tarafından izlenmekte ve İtfaiye aracı olarak sınıflandırılmaktadır.</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — Identify the fleet type</span>
+              <span data-i18n-tr>Adım 1 — Filo türünü belirle</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>Vehicle type = Fire &rarr; VFI value = 3</span>
+              <span data-i18n-tr>Araç türü = İtfaiye &rarr; VFI değeri = 3</span>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Convert to binary</span>
+              <span data-i18n-tr>Adım 2 — İkili sayıya dönüştür</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              3 &rarr; <code>0000 0011</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Convert to hex</span>
+              <span data-i18n-tr>Adım 3 — Hex'e dönüştür</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <code>0000 0011</code> &rarr; <code>0x03</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 4 — Final encoded value</span>
+              <span data-i18n-tr>Adım 4 — Nihai kodlanmış değer</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              I011/300 = <code>0x03</code> &rarr; Fire
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--info" style="margin-top: 1.5rem;">
+          <p>
+            <span data-i18n-en><strong>Second example:</strong> An aircraft tug (push/tow vehicle) is detected on the apron.</span>
+            <span data-i18n-tr><strong>İkinci örnek:</strong> Apron üzerinde bir uçak çekicisi (itme/çekme aracı) tespit edilmektedir.</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — Identify the fleet type</span>
+              <span data-i18n-tr>Adım 1 — Filo türünü belirle</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>Vehicle type = Tug (push/tow) &rarr; VFI value = 10</span>
+              <span data-i18n-tr>Araç türü = Çekici (itme/çekme) &rarr; VFI değeri = 10</span>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Convert to binary</span>
+              <span data-i18n-tr>Adım 2 — İkili sayıya dönüştür</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              10 &rarr; <code>0000 1010</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Final encoded value</span>
+              <span data-i18n-tr>Adım 3 — Nihai kodlanmış değer</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              I011/300 = <code>0x0A</code> &rarr; Tug (push/tow)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Validation Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Rule</span>
+                  <span data-i18n-tr>Kural</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Details</span>
+                  <span data-i18n-tr>Ayrıntılar</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Defined value range</span>
+                  <span data-i18n-tr>Tanımlı değer aralığı</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Values 0–16 are defined by the specification. Values 17–255 are currently undefined and should be treated as reserved.</span>
+                  <span data-i18n-tr>0–16 aralığındaki değerler spesifikasyon tarafından tanımlanmıştır. 17–255 aralığındaki değerler şu an tanımsız olup ayrılmış (reserved) olarak değerlendirilmelidir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Applicability</span>
+                  <span data-i18n-tr>Uygulanabilirlik</span>
+                </td>
+                <td>
+                  <span data-i18n-en>This item should only be present for ground vehicle tracks (not aircraft). If I011/170 Track Status indicates the target is an aircraft, this field should not be included.</span>
+                  <span data-i18n-tr>Bu öğe yalnızca yer araçlarına ait track'lerde bulunmalıdır; uçaklar için kullanılmaz. I011/170 İz Durumu hedefin bir uçak olduğunu gösteriyorsa bu alan mesaja dahil edilmemelidir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Unknown classification</span>
+                  <span data-i18n-tr>Bilinmeyen sınıflandırma</span>
+                </td>
+                <td>
+                  <span data-i18n-en>When the vehicle type cannot be determined, value 16 (Unknown) should be used rather than omitting the data item entirely.</span>
+                  <span data-i18n-tr>Araç türü belirlenemediğinde, veri öğesinin tamamen atlanması yerine 16 (Bilinmeyen) değeri kullanılmalıdır.</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlişkili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Data Item</span>
+                  <span data-i18n-tr>Veri Öğesi</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Relationship</span>
+                  <span data-i18n-tr>İlişki</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-170.html">I011/170</a></td>
+                <td>
+                  <span data-i18n-en>Track Status — indicates whether the target is an aircraft or ground vehicle; I011/300 provides specific fleet type for ground vehicles</span>
+                  <span data-i18n-tr>İz Durumu — hedefin uçak mı yoksa yer aracı mı olduğunu belirtir; I011/300 yer araçları için spesifik filo türünü sağlar</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-310.html">I011/310</a></td>
+                <td>
+                  <span data-i18n-en>Pre-programmed Message — complements fleet identification with operational status messages (e.g., "Towing", "Out of service")</span>
+                  <span data-i18n-tr>Ön Programlı Mesaj — filo tanımlamasını operasyonel durum mesajlarıyla tamamlar (örn. "Çekme işlemi yapılıyor", "Hizmet dışı")</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-245.html">I011/245</a></td>
+                <td>
+                  <span data-i18n-en>Target Identification — provides the callsign; together with I011/300, gives full identity context of a vehicle</span>
+                  <span data-i18n-tr>Hedef Tanımlama — callsign bilgisini sağlar; I011/300 ile birlikte bir aracın tam kimlik bağlamını oluşturur</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-161.html">I011/161</a></td>
+                <td>
+                  <span data-i18n-en>Track Number — unique system track identifier for the vehicle being classified</span>
+                  <span data-i18n-tr>İz Numarası — sınıflandırılan araca ait benzersiz sistem track tanımlayıcısı</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Implementation Notes</span>
+          <span data-i18n-tr>Uygulama Notları</span>
+        </h2>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip:</strong> The "Flyco" category (value 0) refers to "Follow Me" vehicles — the cars with flashing lights that guide aircraft to their parking stands. Despite being a common airport vehicle, the term "Flyco" (Flight Coordination) is not universally known. Decoders displaying this value should consider showing "Follow Me / Flyco" for clarity.</span>
+            <span data-i18n-tr><strong>İpucu:</strong> "Flyco" kategorisi (değer 0), uçakları park pozisyonlarına yönlendiren flaşörlü araçları — yani "Beni Takip Et" araçlarını — ifade eder. Yaygın bir havalimanı aracı olmasına karşın "Flyco" (Uçuş Koordinasyonu) terimi her yerde bilinmemektedir. Bu değeri görüntüleyen dekoderlar, netlik sağlamak amacıyla "Follow Me / Flyco" ifadesini birlikte göstermeyi tercih etmelidir.</span>
+          </p>
+        </div>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Note:</strong> Values 17 through 255 are not defined in Edition 1.3 of the specification. Decoders should handle these gracefully — either display "Reserved" or fall back to "Unknown". Do not reject the entire message if an unrecognized VFI value is received, as future editions may extend the enumeration.</span>
+            <span data-i18n-tr><strong>Not:</strong> 17 ile 255 arasındaki değerler spesifikasyonun 1.3 Sürümünde tanımlanmamıştır. Dekoderlar bu değerleri sorunsuz biçimde ele almalı; ya "Ayrılmış" (Reserved) ya da "Bilinmeyen" (Unknown) olarak görüntülemelidir. Tanınmayan bir VFI değeri alındığında tüm mesaj reddedilmemelidir; zira gelecekteki sürümler numaralandırmayı genişletebilir.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip:</strong> In A-SMGCS deployments, the fleet classification is typically assigned during vehicle registration (when the vehicle is equipped with a transponder or driver ID card). The classification remains constant for the lifetime of the track. If you see a VFI value changing during a track, it may indicate a track swap or system error.</span>
+            <span data-i18n-tr><strong>İpucu:</strong> A-SMGCS konuşlandırmalarında filo sınıflandırması genellikle araç kaydı sırasında atanır (araç bir transponder veya sürücü kimlik kartıyla donatıldığında). Sınıflandırma, track'in ömrü boyunca sabit kalır. Bir track süresince VFI değerinin değiştiğini görürseniz bu, bir track takası veya sistem hatası olduğuna işaret edebilir.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Sürüm 1.3 (2020) esas alınmıştır. Yalnızca referans amaçlıdır.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

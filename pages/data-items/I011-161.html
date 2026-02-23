@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/161 — Track Number</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimliği</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimliği</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimliği</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — İrtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik İrt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik İrt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Track Number</span>
+        <span data-i18n-tr>İz Numarası</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/161</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Track Number</span>
+          <span data-i18n-tr>İz Numarası</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Fixed Length — 2 Octets</span>
+          <span data-i18n-tr>Sabit Uzunluk — 2 Oktet</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Identification of a fusion track by a unique track number. The A-SMGCS system assigns a single numeric identifier to each tracked object (aircraft or vehicle) on the airport surface. This number remains constant throughout the lifetime of the track and is the primary key used to correlate successive updates of the same target.</span>
+          <span data-i18n-tr>Bir füzyon izinin benzersiz bir iz numarasıyla tanımlanması. A-SMGCS (Gelişmiş Yüzey Hareketi Rehberlik ve Kontrol Sistemi) sistemi, havalimanı yüzeyindeki her izlenen nesneye (uçak veya araç) tek bir sayısal tanımlayıcı atar. Bu numara, iz süresince sabit kalır ve aynı hedefin ardışık güncellemelerini ilişkilendirmek için kullanılan birincil anahtardır.</span>
+        </p>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Key concept:</strong> The fusion track number is assigned by the A-SMGCS tracker after combining data from multiple sensors (SMR, MLAT, ADS-B, SSR). It uniquely identifies a track within the system and is recycled only after a track is terminated and a configurable guard period has elapsed.</span>
+            <span data-i18n-tr><strong>Temel kavram:</strong> Füzyon iz numarası, A-SMGCS takip sistemi tarafından birden fazla sensörden (SMR, MLAT, ADS-B, SSR) gelen veriler birleştirildikten sonra atanır. Sistem içinde bir izi benzersiz biçimde tanımlar; yalnızca iz sonlandırıldıktan ve yapılandırılabilir bir bekleme süresi geçtikten sonra yeniden kullanılabilir.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Octet</span>
+                  <span data-i18n-tr>Oktet</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Field</span>
+                  <span data-i18n-tr>Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bits</span>
+                  <span data-i18n-tr>Bitler</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2"><strong>1</strong></td>
+                <td>Spare</td>
+                <td>16</td>
+                <td>
+                  <span data-i18n-en>Spare bit, set to zero</span>
+                  <span data-i18n-tr>Yedek bit, sıfıra ayarlanır</span>
+                </td>
+              </tr>
+              <tr>
+                <td rowspan="1">FTN (MSB)</td>
+                <td>15–9</td>
+                <td rowspan="1">
+                  <span data-i18n-en>Fusion Track Number — upper 7 bits</span>
+                  <span data-i18n-tr>Füzyon İz Numarası — üst 7 bit</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td>FTN (LSB)</td>
+                <td>8–1</td>
+                <td>
+                  <span data-i18n-en>Fusion Track Number — lower 8 bits</span>
+                  <span data-i18n-tr>Füzyon İz Numarası — alt 8 bit</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram</span>
+          <span data-i18n-tr>Bit Diyagramı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 750 110" xmlns="http://www.w3.org/2000/svg" style="max-width: 700px; font-family: var(--font-family-mono);">
+            <!-- Bit numbers -->
+            <text x="30" y="15" font-size="12" fill="#718096" font-weight="600">Octet 1</text>
+            <text x="395" y="15" font-size="12" fill="#718096" font-weight="600">Octet 2</text>
+
+            <text x="66" y="35" text-anchor="middle" font-size="10" fill="#718096">16</text>
+            <text x="108" y="35" text-anchor="middle" font-size="10" fill="#718096">15</text>
+            <text x="150" y="35" text-anchor="middle" font-size="10" fill="#718096">14</text>
+            <text x="192" y="35" text-anchor="middle" font-size="10" fill="#718096">13</text>
+            <text x="234" y="35" text-anchor="middle" font-size="10" fill="#718096">12</text>
+            <text x="276" y="35" text-anchor="middle" font-size="10" fill="#718096">11</text>
+            <text x="318" y="35" text-anchor="middle" font-size="10" fill="#718096">10</text>
+            <text x="360" y="35" text-anchor="middle" font-size="10" fill="#718096">9</text>
+            <text x="402" y="35" text-anchor="middle" font-size="10" fill="#718096">8</text>
+            <text x="444" y="35" text-anchor="middle" font-size="10" fill="#718096">7</text>
+            <text x="486" y="35" text-anchor="middle" font-size="10" fill="#718096">6</text>
+            <text x="528" y="35" text-anchor="middle" font-size="10" fill="#718096">5</text>
+            <text x="570" y="35" text-anchor="middle" font-size="10" fill="#718096">4</text>
+            <text x="612" y="35" text-anchor="middle" font-size="10" fill="#718096">3</text>
+            <text x="654" y="35" text-anchor="middle" font-size="10" fill="#718096">2</text>
+            <text x="696" y="35" text-anchor="middle" font-size="10" fill="#718096">1</text>
+
+            <!-- Spare (bit 16) -->
+            <rect x="42" y="42" width="42" height="35" rx="4" fill="#a0aec0" stroke="#718096" stroke-width="2"/>
+            <text x="63" y="64" text-anchor="middle" fill="white" font-size="11" font-weight="700">0</text>
+
+            <!-- Fusion Track Number (bits 15-1) -->
+            <rect x="84" y="42" width="630" height="35" rx="4" fill="#4a90d9" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="399" y="64" text-anchor="middle" fill="white" font-size="13" font-weight="700">FUSION TRACK NUMBER (0 ... 4095)</text>
+
+            <!-- Legend -->
+            <text x="370" y="100" text-anchor="middle" font-size="10" fill="#4a5568">15 bits — unsigned integer, range 0–4095</text>
+          </svg>
+          <div class="bit-diagram__label">I011/161 — 2 octets: Spare (1 bit) + Fusion Track Number (15 bits)</div>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Property</span>
+                  <span data-i18n-tr>Özellik</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Value</span>
+                  <span data-i18n-tr>Değer</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Format</span>
+                  <span data-i18n-tr>Biçim</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Fixed Length</span>
+                  <span data-i18n-tr>Sabit Uzunluk</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Length</span>
+                  <span data-i18n-tr>Uzunluk</span>
+                </td>
+                <td>2 octets (16 bits)</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Encoding</span>
+                  <span data-i18n-tr>Kodlama</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Unsigned integer</span>
+                  <span data-i18n-tr>İşaretsiz tam sayı</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Range</span>
+                  <span data-i18n-tr>Aralık</span>
+                </td>
+                <td>0–4095</td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Resolution</span>
+                  <span data-i18n-tr>Çözünürlük</span>
+                </td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>12 (FSPEC Byte 2, Bit 4)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Onaltılık Örnek</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> Encode track number 1847 — a fusion track assigned to an aircraft taxiing at Istanbul Airport.</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> İstanbul Havalimanı'nda taksi yapan bir uçağa atanmış füzyon izi olan 1847 numaralı iz numarasını kodlayın.</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — Convert track number to binary</span>
+              <span data-i18n-tr>Adım 1 — İz numarasını ikiliye dönüştürün</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              1847 = <code>0000 0111 0011 0111</code> (16 bits)
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Verify spare bit is zero</span>
+              <span data-i18n-tr>Adım 2 — Yedek bitin sıfır olduğunu doğrulayın</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>Bit 16 (spare) = 0 &#10003; &ensp; Bits 15–1 = track number 1847</span>
+              <span data-i18n-tr>Bit 16 (yedek) = 0 &#10003; &ensp; Bit 15–1 = iz numarası 1847</span>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Split into octets</span>
+              <span data-i18n-tr>Adım 3 — Oktetlere bölün</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              Octet 1: <code>00000111</code> = <code>0x07</code> &ensp;
+              Octet 2: <code>00110111</code> = <code>0x37</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 4 — Final Encoded Value</span>
+              <span data-i18n-tr>Adım 4 — Son Kodlanmış Değer</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <strong>Track Number 1847 &rarr; <code>0x07 37</code></strong>
+            </div>
+          </div>
+        </div>
+        <div class="note note--tip" style="margin-top: 1.5rem;">
+          <p>
+            <span data-i18n-en><strong>Decode verification:</strong> <code>0x07 37</code> = <code>0000 0111 0011 0111</code>. Bit 16 = 0 (spare &#10003;). Bits 15–1 = <code>000011100110111</code> = 1847. &#10003;</span>
+            <span data-i18n-tr><strong>Çözümleme doğrulaması:</strong> <code>0x07 37</code> = <code>0000 0111 0011 0111</code>. Bit 16 = 0 (yedek &#10003;). Bit 15–1 = <code>000011100110111</code> = 1847. &#10003;</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Validation Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Rule</span>
+                  <span data-i18n-tr>Kural</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span data-i18n-en>Spare bit</span>
+                  <span data-i18n-tr>Yedek bit</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Bit 16 must be zero. A non-zero value indicates a format error.</span>
+                  <span data-i18n-tr>Bit 16 sıfır olmalıdır. Sıfır olmayan bir değer biçim hatası gösterir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Value range</span>
+                  <span data-i18n-tr>Değer aralığı</span>
+                </td>
+                <td>
+                  <span data-i18n-en>The track number must be in the range 0–4095. Values above 4095 exceed the specified range and should be flagged.</span>
+                  <span data-i18n-tr>İz numarası 0–4095 aralığında olmalıdır. 4095'i aşan değerler belirtilen aralığın dışındadır ve işaretlenmelidir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Uniqueness</span>
+                  <span data-i18n-tr>Benzersizlik</span>
+                </td>
+                <td>
+                  <span data-i18n-en>Within a single A-SMGCS system (same SAC/SIC), each active track must have a unique track number. Duplicate track numbers in simultaneous messages from the same source indicate a system error.</span>
+                  <span data-i18n-tr>Tek bir A-SMGCS sistemi içinde (aynı SAC/SIC), her aktif ize benzersiz bir iz numarası atanmalıdır. Aynı kaynaktan eş zamanlı mesajlarda yinelenen iz numaraları sistem hatası gösterir.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span data-i18n-en>Track number zero</span>
+                  <span data-i18n-tr>Sıfır iz numarası</span>
+                </td>
+                <td>
+                  <span data-i18n-en>A track number of 0 is technically valid but may be treated as "unassigned" by some implementations. Check system-specific conventions.</span>
+                  <span data-i18n-tr>0 iz numarası teknik olarak geçerlidir; ancak bazı uygulamalar bunu "atanmamış" olarak değerlendirebilir. Sisteme özgü kurallara başvurun.</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlişkili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Data Item</span>
+                  <span data-i18n-tr>Veri Öğesi</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Relationship</span>
+                  <span data-i18n-tr>İlişki</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-010.html">I011/010</a></td>
+                <td>
+                  <span data-i18n-en>Data Source Identifier — the SAC/SIC pair together with the track number uniquely identifies a track across the network</span>
+                  <span data-i18n-tr>Veri Kaynağı Tanımlayıcısı — SAC/SIC çifti, iz numarasıyla birlikte bir izi ağ genelinde benzersiz biçimde tanımlar</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-170.html">I011/170</a></td>
+                <td>
+                  <span data-i18n-en>Track Status — provides status flags (confirmed/tentative, sensor type) for the track identified by this number</span>
+                  <span data-i18n-tr>İz Durumu — bu numara ile tanımlanan iz için durum işaretlerini (onaylanmış/geçici, sensör tipi) sağlar</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-245.html">I011/245</a></td>
+                <td>
+                  <span data-i18n-en>Target Identification — the callsign associated with this track number provides the human-readable label</span>
+                  <span data-i18n-tr>Hedef Tanımlama — bu iz numarasıyla ilişkilendirilen callsign, insan tarafından okunabilir etiketi sağlar</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-380.html">I011/380</a></td>
+                <td>
+                  <span data-i18n-en>Mode-S / ADS-B Related Data — the 24-bit ICAO address provides a permanent identifier complementing the system-assigned track number</span>
+                  <span data-i18n-tr>Mode-S / ADS-B İlgili Veri — 24 bit ICAO adresi, sistem tarafından atanan iz numarasını tamamlayan kalıcı bir tanımlayıcı sağlar</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="I011-605.html">I011/605</a></td>
+                <td>
+                  <span data-i18n-en>Tracks in Alert — references track numbers of targets involved in alert situations</span>
+                  <span data-i18n-tr>Alarmlı İzler — alarm durumlarına dahil olan hedeflerin iz numaralarına başvurur</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Important Notes</span>
+          <span data-i18n-tr>Önemli Notlar</span>
+        </h2>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Track number recycling:</strong> When a track is terminated (target lost), the A-SMGCS may reuse its track number for a new target after a guard period. Consumers should not assume a track number permanently identifies an aircraft — always use the combination of SAC/SIC (I011/010) and track number to identify a track, and check track status (I011/170) for continuity.</span>
+            <span data-i18n-tr><strong>İz numarası geri dönüşümü:</strong> Bir iz sonlandırıldığında (hedef kaybolduğunda), A-SMGCS bir bekleme süresinin ardından bu iz numarasını yeni bir hedef için yeniden kullanabilir. Alıcılar, bir iz numarasının kalıcı olarak bir uçağı tanımladığını varsaymamalıdır — bir izi tanımlamak için her zaman SAC/SIC (I011/010) ve iz numarasının birleşimini kullanın; süreklilik için iz durumunu (I011/170) kontrol edin.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Fusion vs. sensor tracks:</strong> The track number in I011/161 is a <em>fusion</em> track number — the output of the A-SMGCS multi-sensor tracker. It is distinct from individual sensor track numbers (which appear in CAT010 or CAT020 messages). A single fusion track may correlate data from multiple sensor tracks.</span>
+            <span data-i18n-tr><strong>Füzyon izi ile sensör izi:</strong> I011/161'deki iz numarası, A-SMGCS çok sensörlü takip sisteminin çıktısı olan bir <em>füzyon</em> iz numarasıdır. CAT010 veya CAT020 mesajlarında yer alan tek tek sensör iz numaralarından farklıdır. Tek bir füzyon izi, birden fazla sensör izinden gelen verileri ilişkilendirebilir.</span>
+          </p>
+        </div>
+        <div class="note note--info">
+          <p>
+            <span data-i18n-en><strong>Range limitation:</strong> With a maximum value of 4095, the system can simultaneously track up to 4096 targets (0–4095). For large airports like Istanbul (IST), this is typically sufficient as the surface target count rarely exceeds a few hundred at any given time.</span>
+            <span data-i18n-tr><strong>Aralık sınırlaması:</strong> 4095 maksimum değeriyle sistem aynı anda en fazla 4096 hedefi (0–4095) izleyebilir. İstanbul (IST) gibi büyük havalimanlarında yüzey hedef sayısı herhangi bir anda nadiren birkaç yüzü geçtiğinden bu genellikle yeterlidir.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020) temel alınmıştır. Sadece referans amacıyla.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

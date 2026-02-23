@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/390 — Flight Plan Related Data</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimliği</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimliği</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimliği</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — İrtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik İrt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik İrt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Data Items</span>
+        <span data-i18n-tr>Veri Öğeleri</span> &rsaquo;
+        <span>I011/390</span>
+      </div>
+      <div class="topbar__lang-toggle">
+        <button class="topbar__lang-btn topbar__lang-btn--active" data-lang-switch="en">EN</button>
+        <button class="topbar__lang-btn" data-lang-switch="tr">TR</button>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- ======== SECTION 1: HEADER ======== -->
+      <section class="content__header">
+        <h1>
+          <span class="content__item-id">I011/390</span>
+          <span data-i18n-en>Flight Plan Related Data</span>
+          <span data-i18n-tr>Uçuş Planı İlişkili Verisi</span>
+        </h1>
+        <div class="content__meta">
+          <span class="meta-tag meta-tag--compound">
+            <span data-i18n-en>Compound</span>
+            <span data-i18n-tr>Bileşik</span>
+          </span>
+          <span class="meta-tag">
+            <span data-i18n-en>2+ Octets (variable)</span>
+            <span data-i18n-tr>2+ Oktet (değişken)</span>
+          </span>
+          <span class="meta-tag">
+            <span data-i18n-en>Up to 14 Subfields</span>
+            <span data-i18n-tr>En Fazla 14 Alt Alan</span>
+          </span>
+          <span class="meta-tag">
+            <span data-i18n-en>UAP Block 3 — Altitude</span>
+            <span data-i18n-tr>UAP Blok 3 — İrtifa</span>
+          </span>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 2: PURPOSE ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Data Item I011/390 carries all flight plan related information associated with a tracked target. It is a compound data item with a 2-octet primary subfield (with FX extension) that acts as a bitmask indicating which of up to 14 subfields are present. This item links surveillance data to flight plan data from the FPPS (Flight Plan Processing System), enabling controllers to see callsign, aircraft type, departure/destination airports, cleared flight level, and other operational details alongside the radar track.</span>
+          <span data-i18n-tr>I011/390 veri öğesi, izlenen bir hedefe ait tüm uçuş planı bilgilerini taşır. FX uzantılı 2 oktetlik birincil alt alanı olan bileşik bir veri öğesidir; bu birincil alt alan, 14'e kadar alt alanın hangilerinin mevcut olduğunu gösteren bir bit maskesi işlevi görür. Öğe, gözetleme verisini FPPS'den (Uçuş Planı İşleme Sistemi) gelen uçuş planı verisiyle ilişkilendirir; böylece kontrolörler callsign, uçak tipi, kalkış/varış havalimanları, müsaade edilen uçuş seviyesi ve diğer operasyonel ayrıntıları radar iziyle birlikte görebilir.</span>
+        </p>
+      </section>
+
+      <!-- ======== SECTION 3: BIT STRUCTURE DIAGRAM ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Bit Structure</span>
+          <span data-i18n-tr>Bit Yapısı</span>
+        </h2>
+
+        <h3>
+          <span data-i18n-en>Primary Subfield (2 Octets with FX)</span>
+          <span data-i18n-tr>Birincil Alt Alan (FX Uzantılı 2 Oktet)</span>
+        </h3>
+
+        <svg viewBox="0 0 820 165" class="bit-diagram" role="img" aria-label="I011/390 primary subfield bit structure">
+          <text x="410" y="15" text-anchor="middle" class="bit-diagram__title">I011/390 — Primary Subfield</text>
+
+          <!-- Octet 1 -->
+          <text x="410" y="38" text-anchor="middle" class="bit-diagram__subtitle">Octet 1</text>
+          <text x="55" y="55" text-anchor="middle" class="bit-diagram__bit-num">16</text>
+          <text x="155" y="55" text-anchor="middle" class="bit-diagram__bit-num">15</text>
+          <text x="255" y="55" text-anchor="middle" class="bit-diagram__bit-num">14</text>
+          <text x="355" y="55" text-anchor="middle" class="bit-diagram__bit-num">13</text>
+          <text x="455" y="55" text-anchor="middle" class="bit-diagram__bit-num">12</text>
+          <text x="555" y="55" text-anchor="middle" class="bit-diagram__bit-num">11</text>
+          <text x="655" y="55" text-anchor="middle" class="bit-diagram__bit-num">10</text>
+          <text x="765" y="55" text-anchor="middle" class="bit-diagram__bit-num">9</text>
+
+          <rect x="5" y="62" width="100" height="32" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="55" y="82" text-anchor="middle" class="bit-diagram__label">TAG</text>
+          <rect x="105" y="62" width="100" height="32" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="155" y="82" text-anchor="middle" class="bit-diagram__label">CSN</text>
+          <rect x="205" y="62" width="100" height="32" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="255" y="82" text-anchor="middle" class="bit-diagram__label">IFI</text>
+          <rect x="305" y="62" width="100" height="32" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="355" y="82" text-anchor="middle" class="bit-diagram__label">FCT</text>
+          <rect x="405" y="62" width="100" height="32" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="455" y="82" text-anchor="middle" class="bit-diagram__label">TAC</text>
+          <rect x="505" y="62" width="100" height="32" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="555" y="82" text-anchor="middle" class="bit-diagram__label">WTC</text>
+          <rect x="605" y="62" width="100" height="32" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="655" y="82" text-anchor="middle" class="bit-diagram__label">DEP</text>
+          <rect x="715" y="62" width="100" height="32" class="bit-diagram__cell bit-diagram__cell--fx" />
+          <text x="765" y="82" text-anchor="middle" class="bit-diagram__label">FX</text>
+
+          <!-- Octet 2 -->
+          <text x="410" y="115" text-anchor="middle" class="bit-diagram__subtitle">Octet 2 (if FX=1)</text>
+          <text x="55" y="132" text-anchor="middle" class="bit-diagram__bit-num">8</text>
+          <text x="155" y="132" text-anchor="middle" class="bit-diagram__bit-num">7</text>
+          <text x="255" y="132" text-anchor="middle" class="bit-diagram__bit-num">6</text>
+          <text x="355" y="132" text-anchor="middle" class="bit-diagram__bit-num">5</text>
+          <text x="455" y="132" text-anchor="middle" class="bit-diagram__bit-num">4</text>
+          <text x="555" y="132" text-anchor="middle" class="bit-diagram__bit-num">3</text>
+          <text x="655" y="132" text-anchor="middle" class="bit-diagram__bit-num">2</text>
+          <text x="765" y="132" text-anchor="middle" class="bit-diagram__bit-num">1</text>
+
+          <rect x="5" y="139" width="100" height="32" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="55" y="159" text-anchor="middle" class="bit-diagram__label">DST</text>
+          <rect x="105" y="139" width="100" height="32" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="155" y="159" text-anchor="middle" class="bit-diagram__label">RDS</text>
+          <rect x="205" y="139" width="100" height="32" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="255" y="159" text-anchor="middle" class="bit-diagram__label">CFL</text>
+          <rect x="305" y="139" width="100" height="32" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="355" y="159" text-anchor="middle" class="bit-diagram__label">CTL</text>
+          <rect x="405" y="139" width="100" height="32" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="455" y="159" text-anchor="middle" class="bit-diagram__label">TOD</text>
+          <rect x="505" y="139" width="100" height="32" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="555" y="159" text-anchor="middle" class="bit-diagram__label">AST</text>
+          <rect x="605" y="139" width="100" height="32" class="bit-diagram__cell bit-diagram__cell--data" />
+          <text x="655" y="159" text-anchor="middle" class="bit-diagram__label">STS</text>
+          <rect x="715" y="139" width="100" height="32" class="bit-diagram__cell bit-diagram__cell--fx" />
+          <text x="765" y="159" text-anchor="middle" class="bit-diagram__label">FX</text>
+        </svg>
+      </section>
+
+      <!-- ======== SECTION 4: FIELD DESCRIPTIONS ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Subfield Descriptions</span>
+          <span data-i18n-tr>Alt Alan Açıklamaları</span>
+        </h2>
+        <div class="table-responsive">
+          <table class="fields-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th><span data-i18n-en>Bit</span><span data-i18n-tr>Bit</span></th>
+                <th><span data-i18n-en>Name</span><span data-i18n-tr>Ad</span></th>
+                <th><span data-i18n-en>Size</span><span data-i18n-tr>Boyut</span></th>
+                <th><span data-i18n-en>Description</span><span data-i18n-tr>Açıklama</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>16 (TAG)</td>
+                <td><span data-i18n-en>FPPS Identification Tag</span><span data-i18n-tr>FPPS Tanımlama Etiketi</span></td>
+                <td>2</td>
+                <td><span data-i18n-en>SAC (8 bits) + SIC (8 bits) — identifies the Flight Plan Processing System.</span><span data-i18n-tr>SAC (8 bit) + SIC (8 bit) — Uçuş Planı İşleme Sistemini tanımlar.</span></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>15 (CSN)</td>
+                <td><span data-i18n-en>Callsign</span><span data-i18n-tr>Çağrı İşareti</span></td>
+                <td>7</td>
+                <td><span data-i18n-en>7 ASCII characters, left-adjusted, padded with spaces. E.g. "THY123 ".</span><span data-i18n-tr>Sola dayalı, boşlukla doldurulmuş 7 ASCII karakter. Örn. "THY123 ".</span></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>14 (IFI)</td>
+                <td>IFPS_FLIGHT_ID</td>
+                <td>4</td>
+                <td><span data-i18n-en>TYP (2 bits): plan number type. NBR (27 bits): flight number 0–99,999,999. 3 spare bits.</span><span data-i18n-tr>TYP (2 bit): plan numarası türü. NBR (27 bit): uçuş numarası 0–99.999.999. 3 yedek bit.</span></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>13 (FCT)</td>
+                <td><span data-i18n-en>Flight Category</span><span data-i18n-tr>Uçuş Kategorisi</span></td>
+                <td>1</td>
+                <td><span data-i18n-en>GAT/OAT (2 bits), Flight Rules FR1/FR2 (2 bits), RVSM (2 bits), High Priority HPR (1 bit), 1 spare bit.</span><span data-i18n-tr>GAT/OAT (2 bit), Uçuş Kuralları FR1/FR2 (2 bit), RVSM (2 bit), Yüksek Öncelik HPR (1 bit), 1 yedek bit.</span></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>12 (TAC)</td>
+                <td><span data-i18n-en>Type of Aircraft</span><span data-i18n-tr>Uçak Tipi</span></td>
+                <td>4</td>
+                <td><span data-i18n-en>4 ASCII characters per ICAO Doc 4444 (e.g. "B738", "A320").</span><span data-i18n-tr>ICAO Doc 4444'e göre 4 ASCII karakter (örn. "B738", "A320").</span></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>11 (WTC)</td>
+                <td><span data-i18n-en>Wake Turbulence Category</span><span data-i18n-tr>Kuyruk Türbülansı Kategorisi</span></td>
+                <td>1</td>
+                <td><span data-i18n-en>1 ASCII character: L = Light, M = Medium, H = Heavy, J = Super.</span><span data-i18n-tr>1 ASCII karakter: L = Hafif, M = Orta, H = Ağır, J = Süper.</span></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>10 (DEP)</td>
+                <td><span data-i18n-en>Departure Airport</span><span data-i18n-tr>Kalkış Havalimanı</span></td>
+                <td>4</td>
+                <td><span data-i18n-en>4-character ICAO location indicator (e.g. "LTFM", "EGLL").</span><span data-i18n-tr>4 karakterli ICAO yer göstergesi (örn. "LTFM", "EGLL").</span></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>8 (DST)</td>
+                <td><span data-i18n-en>Destination Airport</span><span data-i18n-tr>Varış Havalimanı</span></td>
+                <td>4</td>
+                <td><span data-i18n-en>4-character ICAO location indicator (e.g. "LTAC", "LFPG").</span><span data-i18n-tr>4 karakterli ICAO yer göstergesi (örn. "LTAC", "LFPG").</span></td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>7 (RDS)</td>
+                <td><span data-i18n-en>Runway Designation</span><span data-i18n-tr>Pist Tanımı</span></td>
+                <td>3</td>
+                <td><span data-i18n-en>NU1 (8 bits) + NU2 (8 bits) + LTR (8 bits) — runway number and letter per ICAO Annex 14.</span><span data-i18n-tr>NU1 (8 bit) + NU2 (8 bit) + LTR (8 bit) — ICAO Ek 14'e göre pist numarası ve harfi.</span></td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>6 (CFL)</td>
+                <td><span data-i18n-en>Current Cleared Flight Level</span><span data-i18n-tr>Güncel Müsaade Edilen Uçuş Seviyesi</span></td>
+                <td>2</td>
+                <td><span data-i18n-en>16-bit unsigned, LSB = 1/4 FL. The flight level cleared by ATC.</span><span data-i18n-tr>16 bit işaretsiz, LSB = 1/4 FL. ATC tarafından müsaade edilen uçuş seviyesi.</span></td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>5 (CTL)</td>
+                <td><span data-i18n-en>Current Control Position</span><span data-i18n-tr>Güncel Kontrol Pozisyonu</span></td>
+                <td>2</td>
+                <td><span data-i18n-en>Centre (8 bits) + Position (8 bits) — ATC sector identification.</span><span data-i18n-tr>Merkez (8 bit) + Pozisyon (8 bit) — ATC sektör tanımlaması.</span></td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>4 (TOD)</td>
+                <td><span data-i18n-en>Time of Departure</span><span data-i18n-tr>Kalkış Zamanı</span></td>
+                <td>Rep &times; 4 + 1</td>
+                <td><span data-i18n-en>Repetitive: REP (1 octet) + entries of 4 octets each (TYP, DAY, HOR, MIN, SEC, AVS). Up to 14 time types.</span><span data-i18n-tr>Tekrarlı: REP (1 oktet) + her biri 4 oktetlik kayıtlar (TYP, DAY, HOR, MIN, SEC, AVS). En fazla 14 zaman türü.</span></td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>3 (AST)</td>
+                <td><span data-i18n-en>Aircraft Stand</span><span data-i18n-tr>Uçak Park Pozisyonu</span></td>
+                <td>6</td>
+                <td><span data-i18n-en>6 ASCII characters, left-adjusted. Gate or stand designation (e.g. "A12   ").</span><span data-i18n-tr>Sola dayalı 6 ASCII karakter. Kapı veya park yeri tanımı (örn. "A12   ").</span></td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>2 (STS)</td>
+                <td><span data-i18n-en>Stand Status</span><span data-i18n-tr>Park Pozisyonu Durumu</span></td>
+                <td>1</td>
+                <td><span data-i18n-en>EMP (2 bits): Empty/Occupied/Unknown. AVL (2 bits): Available/Not available/Unknown. 4 spare bits.</span><span data-i18n-tr>EMP (2 bit): Boş/Dolu/Bilinmiyor. AVL (2 bit): Müsait/Müsait Değil/Bilinmiyor. 4 yedek bit.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 5: VALUE ENCODING ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Value Encoding — Key Subfields</span>
+          <span data-i18n-tr>Değer Kodlaması — Temel Alt Alanlar</span>
+        </h2>
+
+        <h3>
+          <span data-i18n-en>Subfield #4 — Flight Category (FCT)</span>
+          <span data-i18n-tr>Alt Alan #4 — Uçuş Kategorisi (FCT)</span>
+        </h3>
+        <div class="table-responsive">
+          <table class="fields-table">
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Bits</span><span data-i18n-tr>Bitler</span></th>
+                <th><span data-i18n-en>Field</span><span data-i18n-tr>Alan</span></th>
+                <th><span data-i18n-en>Values</span><span data-i18n-tr>Değerler</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>8–7</td>
+                <td>GAT/OAT</td>
+                <td><span data-i18n-en>00 = Unknown, 01 = General Air Traffic, 10 = Operational Air Traffic, 11 = N/A</span><span data-i18n-tr>00 = Bilinmiyor, 01 = Genel Hava Trafiği, 10 = Operasyonel Hava Trafiği, 11 = Geçersiz</span></td>
+              </tr>
+              <tr>
+                <td>6–5</td>
+                <td>FR1/FR2</td>
+                <td><span data-i18n-en>00 = IFR, 01 = VFR, 10 = N/A, 11 = Controlled VFR</span><span data-i18n-tr>00 = IFR, 01 = VFR, 10 = Geçersiz, 11 = Kontrollü VFR</span></td>
+              </tr>
+              <tr>
+                <td>4–3</td>
+                <td>RVSM</td>
+                <td><span data-i18n-en>00 = Unknown, 01 = Approved, 10 = Exempt, 11 = Not Approved</span><span data-i18n-tr>00 = Bilinmiyor, 01 = Onaylı, 10 = Muaf, 11 = Onaylı Değil</span></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>HPR</td>
+                <td><span data-i18n-en>0 = Normal Priority, 1 = High Priority</span><span data-i18n-tr>0 = Normal Öncelik, 1 = Yüksek Öncelik</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>
+          <span data-i18n-en>Subfield #6 — Wake Turbulence Category (WTC)</span>
+          <span data-i18n-tr>Alt Alan #6 — Kuyruk Türbülansı Kategorisi (WTC)</span>
+        </h3>
+        <div class="table-responsive">
+          <table class="fields-table">
+            <thead>
+              <tr>
+                <th>ASCII</th>
+                <th><span data-i18n-en>Category</span><span data-i18n-tr>Kategori</span></th>
+                <th><span data-i18n-en>Example Aircraft</span><span data-i18n-tr>Örnek Uçak</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>L (0x4C)</td><td><span data-i18n-en>Light (&le; 7,000 kg)</span><span data-i18n-tr>Hafif (&le; 7.000 kg)</span></td><td>Cessna 172, PA-28</td></tr>
+              <tr><td>M (0x4D)</td><td><span data-i18n-en>Medium (7,000–136,000 kg)</span><span data-i18n-tr>Orta (7.000–136.000 kg)</span></td><td>B737, A320, E190</td></tr>
+              <tr><td>H (0x48)</td><td><span data-i18n-en>Heavy (&gt; 136,000 kg)</span><span data-i18n-tr>Ağır (&gt; 136.000 kg)</span></td><td>B777, A340, B747</td></tr>
+              <tr><td>J (0x4A)</td><td><span data-i18n-en>Super</span><span data-i18n-tr>Süper</span></td><td>A380</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>
+          <span data-i18n-en>Subfield #10 — Current Cleared Flight Level (CFL)</span>
+          <span data-i18n-tr>Alt Alan #10 — Güncel Müsaade Edilen Uçuş Seviyesi (CFL)</span>
+        </h3>
+        <div class="encoding-box">
+          <div class="encoding-box__formula">
+            CFL = raw_value &times; <strong>1/4 FL</strong> = raw_value &times; <strong>25 feet</strong>
+          </div>
+        </div>
+
+        <h3>
+          <span data-i18n-en>Subfield #14 — Stand Status (STS)</span>
+          <span data-i18n-tr>Alt Alan #14 — Park Pozisyonu Durumu (STS)</span>
+        </h3>
+        <div class="table-responsive">
+          <table class="fields-table">
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Bits</span><span data-i18n-tr>Bitler</span></th>
+                <th><span data-i18n-en>Field</span><span data-i18n-tr>Alan</span></th>
+                <th><span data-i18n-en>Values</span><span data-i18n-tr>Değerler</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>8–7</td>
+                <td>EMP</td>
+                <td><span data-i18n-en>00 = Empty, 01 = Occupied, 10 = Unknown</span><span data-i18n-tr>00 = Boş, 01 = Dolu, 10 = Bilinmiyor</span></td>
+              </tr>
+              <tr>
+                <td>6–5</td>
+                <td>AVL</td>
+                <td><span data-i18n-en>00 = Available, 01 = Not available, 10 = Unknown</span><span data-i18n-tr>00 = Müsait, 01 = Müsait Değil, 10 = Bilinmiyor</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 6: HEX EXAMPLE ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Step-by-Step Hex Example</span>
+          <span data-i18n-tr>Adım Adım Hex Örneği</span>
+        </h2>
+
+        <div class="hex-example">
+          <div class="hex-example__raw">
+            <span data-i18n-en>Raw data:</span>
+            <span data-i18n-tr>Ham veri:</span>
+            <code>DF 80 00 01 54 48 59 31 32 33 20 44 42 37 33 38 4D 4C 54 46 4D 4C 54 41 43</code>
+          </div>
+
+          <div class="hex-example__steps">
+            <h3>
+              <span data-i18n-en>Decode Walkthrough</span>
+              <span data-i18n-tr>Çözümleme Adımları</span>
+            </h3>
+            <ol>
+              <li>
+                <span data-i18n-en><strong>Primary subfield:</strong> 0xDF 0x80 = <code>1101 1111 1000 0000</code></span>
+                <span data-i18n-tr><strong>Birincil alt alan:</strong> 0xDF 0x80 = <code>1101 1111 1000 0000</code></span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Decode bitmask (Octet 1):</strong> TAG=1, CSN=1, IFI=0, FCT=1, TAC=1, WTC=1, DEP=1, FX=1 &rarr; 7 subfields present in octet 1, extension follows</span>
+                <span data-i18n-tr><strong>Bit maskesi çözümle (Oktet 1):</strong> TAG=1, CSN=1, IFI=0, FCT=1, TAC=1, WTC=1, DEP=1, FX=1 &rarr; 1. oktette 7 alt alan mevcut, uzantı devam ediyor</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Decode bitmask (Octet 2):</strong> DST=1, RDS=0, CFL=0, CTL=0, TOD=0, AST=0, STS=0, FX=0 &rarr; 1 subfield present, no further extension</span>
+                <span data-i18n-tr><strong>Bit maskesi çözümle (Oktet 2):</strong> DST=1, RDS=0, CFL=0, CTL=0, TOD=0, AST=0, STS=0, FX=0 &rarr; 1 alt alan mevcut, başka uzantı yok</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Subfield #1 — TAG (2 octets):</strong> 0x00 0x01 &rarr; SAC = 0, SIC = 1</span>
+                <span data-i18n-tr><strong>Alt Alan #1 — TAG (2 oktet):</strong> 0x00 0x01 &rarr; SAC = 0, SIC = 1</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Subfield #2 — CSN (7 octets):</strong> 0x54 0x48 0x59 0x31 0x32 0x33 0x20 &rarr; ASCII: <strong>"THY123 "</strong> (Turkish Airlines flight 123)</span>
+                <span data-i18n-tr><strong>Alt Alan #2 — CSN (7 oktet):</strong> 0x54 0x48 0x59 0x31 0x32 0x33 0x20 &rarr; ASCII: <strong>"THY123 "</strong> (Türk Hava Yolları 123 sefer sayılı uçuş)</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Subfield #4 — FCT (1 octet):</strong> 0x44 = <code>0100 0100</code> &rarr; GAT/OAT = 01 (General Air Traffic), FR1/FR2 = 00 (IFR), RVSM = 01 (Approved), HPR = 0 (Normal)</span>
+                <span data-i18n-tr><strong>Alt Alan #4 — FCT (1 oktet):</strong> 0x44 = <code>0100 0100</code> &rarr; GAT/OAT = 01 (Genel Hava Trafiği), FR1/FR2 = 00 (IFR), RVSM = 01 (Onaylı), HPR = 0 (Normal)</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Subfield #5 — TAC (4 octets):</strong> 0x42 0x37 0x33 0x38 &rarr; ASCII: <strong>"B738"</strong> (Boeing 737-800)</span>
+                <span data-i18n-tr><strong>Alt Alan #5 — TAC (4 oktet):</strong> 0x42 0x37 0x33 0x38 &rarr; ASCII: <strong>"B738"</strong> (Boeing 737-800)</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Subfield #6 — WTC (1 octet):</strong> 0x4D &rarr; ASCII: <strong>"M"</strong> (Medium wake turbulence)</span>
+                <span data-i18n-tr><strong>Alt Alan #6 — WTC (1 oktet):</strong> 0x4D &rarr; ASCII: <strong>"M"</strong> (Orta kuyruk türbülansı)</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Subfield #7 — DEP (4 octets):</strong> 0x4C 0x54 0x46 0x4D &rarr; ASCII: <strong>"LTFM"</strong> (Istanbul Airport)</span>
+                <span data-i18n-tr><strong>Alt Alan #7 — DEP (4 oktet):</strong> 0x4C 0x54 0x46 0x4D &rarr; ASCII: <strong>"LTFM"</strong> (İstanbul Havalimanı)</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Subfield #8 — DST (4 octets):</strong> 0x4C 0x54 0x41 0x43 &rarr; ASCII: <strong>"LTAC"</strong> (Ankara Esenbo&#x011F;a Airport)</span>
+                <span data-i18n-tr><strong>Alt Alan #8 — DST (4 oktet):</strong> 0x4C 0x54 0x41 0x43 &rarr; ASCII: <strong>"LTAC"</strong> (Ankara Esenboğa Havalimanı)</span>
+              </li>
+              <li>
+                <span data-i18n-en><strong>Summary:</strong> THY123, Boeing 737-800, Medium WTC, General Air Traffic, IFR, RVSM Approved, routing Istanbul (LTFM) &rarr; Ankara (LTAC).</span>
+                <span data-i18n-tr><strong>Özet:</strong> THY123, Boeing 737-800, Orta WTC, Genel Hava Trafiği, IFR, RVSM Onaylı, güzergah İstanbul (LTFM) &rarr; Ankara (LTAC).</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== SECTION 7: VALIDATION RULES ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <ul class="validation-list">
+          <li>
+            <span data-i18n-en><strong>Compound structure:</strong> The primary subfield is always present (minimum 2 octets). Each bit in the primary subfield indicates the presence of a specific subfield. Subfields appear in the order of their bit positions.</span>
+            <span data-i18n-tr><strong>Bileşik yapı:</strong> Birincil alt alan her zaman mevcuttur (en az 2 oktet). Birincil alt alandaki her bit, belirli bir alt alanın varlığını gösterir. Alt alanlar, bit pozisyonlarının sırasına göre yer alır.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>FX extension:</strong> Bit 9 (FX) in octet 1 determines if octet 2 is present. Bit 1 (FX) in octet 2 should be 0 (no further extensions defined in Edition 1.3).</span>
+            <span data-i18n-tr><strong>FX uzantısı:</strong> 1. oktetteki Bit 9 (FX), 2. oktetin mevcut olup olmadığını belirler. 2. oktetteki Bit 1 (FX) 0 olmalıdır (Sürüm 1.3'te başka uzantı tanımlanmamıştır).</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>ASCII fields:</strong> Callsign (CSN), Type of Aircraft (TAC), Wake Turbulence (WTC), airports (DEP, DST), Runway (RDS), and Aircraft Stand (AST) all use uppercase ASCII characters. Non-ASCII bytes are invalid.</span>
+            <span data-i18n-tr><strong>ASCII alanları:</strong> Callsign (CSN), Uçak Tipi (TAC), Kuyruk Türbülansı (WTC), havalimanları (DEP, DST), Pist (RDS) ve Uçak Park Pozisyonu (AST) alanlarının tamamı büyük harf ASCII karakterleri kullanır. ASCII dışı baytlar geçersizdir.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>ICAO airport codes:</strong> DEP and DST must be valid 4-character ICAO location indicators. Refer to the ICAO Location Indicators book (Doc 7910).</span>
+            <span data-i18n-tr><strong>ICAO havalimanı kodları:</strong> DEP ve DST, geçerli 4 karakterli ICAO yer göstergesi olmalıdır. ICAO Yer Göstergeleri kitabına (Doc 7910) başvurunuz.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>CFL range:</strong> Current Cleared Flight Level uses LSB = 1/4 FL. Common values: FL 0 to FL 600 (raw 0 to 2400). Values above FL 600 are unrealistic.</span>
+            <span data-i18n-tr><strong>CFL aralığı:</strong> Güncel Müsaade Edilen Uçuş Seviyesi, LSB = 1/4 FL kullanır. Tipik değerler: FL 0 ile FL 600 arası (ham 0–2400). FL 600'ü aşan değerler gerçekçi değildir.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Presence:</strong> This item is optional and primarily appears in Message Type 1 (Target Report with Flight Plan Data). It is the main vehicle for flight plan attachment.</span>
+            <span data-i18n-tr><strong>Varlık:</strong> Bu öğe isteğe bağlıdır ve öncelikle Mesaj Tipi 1'de (Uçuş Planı Verisini İçeren Hedef Raporu) yer alır. Uçuş planı iliştirmenin ana taşıyıcısıdır.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ======== SECTION 8: RELATED ITEMS ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Related Items</span>
+          <span data-i18n-tr>İlgili Öğeler</span>
+        </h2>
+        <ul class="related-list">
+          <li>
+            <a href="I011-245.html"><strong>I011/245</strong></a> —
+            <span data-i18n-en>Target Identification: Contains the Mode-S downlinked callsign. Should match the CSN subfield of I011/390 when both are present.</span>
+            <span data-i18n-tr>Hedef Tanımlaması: Mode-S aşağı bağlantı callsign değerini içerir. Her ikisi de mevcutsa I011/390'ın CSN alt alanıyla eşleşmelidir.</span>
+          </li>
+          <li>
+            <a href="I011-380.html"><strong>I011/380</strong></a> —
+            <span data-i18n-en>Mode-S / ADS-B Related Data: The Aircraft Derived Aircraft Type (subfield #8) complements the TAC subfield here.</span>
+            <span data-i18n-tr>Mode-S / ADS-B İlişkili Verisi: Uçaktan Türetilen Uçak Tipi (alt alan #8), buradaki TAC alt alanını tamamlar.</span>
+          </li>
+          <li>
+            <a href="I011-000.html"><strong>I011/000</strong></a> —
+            <span data-i18n-en>Message Type: Message types 2–6 relate to flight plan operations (attach, detach, insert, suppress, modify) that directly affect this item.</span>
+            <span data-i18n-tr>Mesaj Tipi: 2–6 arası mesaj tipleri, bu öğeyi doğrudan etkileyen uçuş planı işlemleriyle (iliştirme, ayırma, ekleme, bastırma, değiştirme) ilgilidir.</span>
+          </li>
+          <li>
+            <a href="I011-430.html"><strong>I011/430</strong></a> —
+            <span data-i18n-en>Phase of Flight: The flight phase should be consistent with the flight plan context (e.g., "taxiing for departure" when DEP matches the local airport).</span>
+            <span data-i18n-tr>Uçuş Fazı: Uçuş fazı, uçuş planı bağlamıyla tutarlı olmalıdır (örn. DEP yerel havalimanıyla eşleştiğinde "kalkış için taksi").</span>
+          </li>
+          <li>
+            <a href="I011-090.html"><strong>I011/090</strong></a> —
+            <span data-i18n-en>Measured Flight Level: The current measured FL can be compared with the CFL subfield to assess altitude conformance.</span>
+            <span data-i18n-tr>Ölçülen Uçuş Seviyesi: Güncel ölçülen FL değeri, irtifa uyumluluğunu değerlendirmek amacıyla CFL alt alanıyla karşılaştırılabilir.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ======== SECTION 9: IMPLEMENTATION NOTES ======== -->
+      <section class="content__section">
+        <h2>
+          <span data-i18n-en>Implementation Notes</span>
+          <span data-i18n-tr>Uygulama Notları</span>
+        </h2>
+        <ul class="notes-list">
+          <li>
+            <span data-i18n-en><strong>Parsing strategy:</strong> Read the 2-byte primary subfield first, check each bit to know which subfields follow. Then read subfields in order, using the known size of each. Skip IFI=0, meaning subfield #3 is not present — jump directly from subfield #2 to #4.</span>
+            <span data-i18n-tr><strong>Ayrıştırma stratejisi:</strong> Önce 2 baytlık birincil alt alanı okuyun; hangi alt alanların takip edeceğini anlamak için her biti kontrol edin. Ardından alt alanları sırayla okuyun; her birinin bilinen boyutunu kullanın. IFI=0 ise alt alan #3 mevcut değildir; alt alan #2'den doğrudan #4'e atlayın.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Subfield ordering:</strong> Subfields always appear in bit order (TAG first if present, then CSN, IFI, etc.). A parser must track which bits are set and read the correct number of bytes for each present subfield.</span>
+            <span data-i18n-tr><strong>Alt alan sıralaması:</strong> Alt alanlar her zaman bit sırasına göre yer alır (mevcutsa önce TAG, ardından CSN, IFI vb.). Ayrıştırıcı, hangi bitlerin ayarlı olduğunu izlemeli ve mevcut her alt alan için doğru bayt sayısını okumalıdır.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>TOD subfield (repetitive):</strong> Time of Departure is the most complex subfield. It starts with a 1-byte REP factor, followed by REP &times; 4 bytes. Each 4-byte entry encodes a time type (TYP), day (DAY), hours (HOR), minutes (MIN), seconds (SEC), and seconds-available flag (AVS).</span>
+            <span data-i18n-tr><strong>TOD alt alanı (tekrarlı):</strong> Kalkış Zamanı, en karmaşık alt alandır. 1 baytlık REP faktörüyle başlar; ardından REP &times; 4 bayt gelir. Her 4 baytlık kayıt; zaman türü (TYP), gün (DAY), saat (HOR), dakika (MIN), saniye (SEC) ve saniye-mevcut bayrağını (AVS) kodlar.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Callsign matching:</strong> The CSN (callsign) from the flight plan should match the Target Identification (I011/245) from Mode-S. Mismatches may indicate a wrong flight plan association or a callsign change.</span>
+            <span data-i18n-tr><strong>Callsign eşleştirme:</strong> Uçuş planındaki CSN (callsign) değeri, Mode-S'ten gelen Hedef Tanımlaması (I011/245) ile eşleşmelidir. Uyuşmazlıklar, yanlış uçuş planı ilişkilendirmesine veya callsign değişikliğine işaret edebilir.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Message type context:</strong> This item can appear in all 7 message types, but its meaning differs. In type 1, it is informational. In types 2–6, it is the subject of the flight plan operation (attach, detach, insert, suppress, modify).</span>
+            <span data-i18n-tr><strong>Mesaj tipi bağlamı:</strong> Bu öğe 7 mesaj tipinin tamamında yer alabilir; ancak anlamı farklılık gösterir. Tip 1'de bilgi amaçlıdır. Tip 2–6'da, uçuş planı işleminin (iliştirme, ayırma, ekleme, bastırma, değiştirme) konusunu oluşturur.</span>
+          </li>
+          <li>
+            <span data-i18n-en><strong>Largest data item:</strong> I011/390 is the largest and most variable data item in CAT011. With all 14 subfields present, it can exceed 50 bytes. Ensure your buffer allocation accounts for the maximum possible size.</span>
+            <span data-i18n-tr><strong>En büyük veri öğesi:</strong> I011/390, CAT011 içindeki en büyük ve en değişken veri öğesidir. 14 alt alanın tamamı mevcutken 50 baytı aşabilir. Tampon bellek tahsisinizin azami olası boyutu karşıladığından emin olun.</span>
+          </li>
+        </ul>
+      </section>
+
+    </div><!-- /.content -->
+  </main>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+</body>
+</html>
