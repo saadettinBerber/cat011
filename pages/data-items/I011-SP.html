@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/SP — Special Purpose Field</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimliği</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimliği</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimliği</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — Irtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik Irt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik Irt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Special Purpose Field</span>
+        <span data-i18n-tr>Özel Amaç Alanı</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/SP</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Special Purpose Field</span>
+          <span data-i18n-tr>Özel Amaç Alanı</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Variable Length — 1 + LEN octets</span>
+          <span data-i18n-tr>Değişken Uzunluk — 1 + LEN oktet</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Provision of a user-defined data field that allows specific implementations to include proprietary or site-specific information within a standard CAT011 message without violating the ASTERIX encoding rules. The content and interpretation of this field are entirely defined by bilateral agreement between the data supplier and the data consumer — EUROCONTROL does not standardise its content.</span>
+          <span data-i18n-tr>Belirli uygulamaların ASTERIX kodlama kurallarını ihlal etmeksizin standart bir CAT011 mesajına tescilli veya sahaya özgü bilgi eklemesine olanak tanıyan kullanıcı tanımlı veri alanının sağlanması. Bu alanın içeriği ve yorumu tamamen veri sağlayıcı ile veri tüketicisi arasındaki ikili anlaşmayla tanımlanır — EUROCONTROL içeriğini standartlaştırmaz.</span>
+        </p>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Key concept:</strong> I011/SP is a general-purpose "escape hatch" in the ASTERIX standard. It is used when an airport or system integrator needs to transmit data that does not fit any standardised data item. The first byte is a <strong>length indicator (LEN)</strong> that specifies the number of user-defined data bytes that follow. The structure is thus self-delimiting: any parser can skip over the SP field even if it cannot interpret its content.</span>
+            <span data-i18n-tr><strong>Temel kavram:</strong> I011/SP, ASTERIX standardındaki genel amaçlı bir "kaçış kapısıdır". Bir havalimanı veya sistem entegratörünün standart bir veri öğesine uymayan verileri iletmesi gerektiğinde kullanılır. İlk bayt, arkasından gelen kullanıcı tanımlı veri baytlarının sayısını belirten <strong>uzunluk göstergesi (LEN)</strong>'dir. Bu yapı kendi kendini sınırlandırdığından herhangi bir ayrıştırıcı, içeriği yorumlayamasa bile SP alanını atlayabilir.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Octet</span><span data-i18n-tr>Oktet</span></th>
+                <th><span data-i18n-en>Field</span><span data-i18n-tr>Alan</span></th>
+                <th><span data-i18n-en>Description</span><span data-i18n-tr>Açıklama</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td>LEN</td>
+                <td><span data-i18n-en>Length indicator — number of user data octets that follow (1–255). The LEN byte itself is not counted.</span><span data-i18n-tr>Uzunluk göstergesi — arkasından gelen kullanıcı veri oktetlerinin sayısı (1–255). LEN baytının kendisi sayılmaz.</span></td>
+              </tr>
+              <tr>
+                <td><strong>2 … (1+LEN)</strong></td>
+                <td>DATA</td>
+                <td><span data-i18n-en>User-defined data — LEN octets of proprietary content. The meaning is defined by bilateral agreement between data supplier and consumer.</span><span data-i18n-tr>Kullanıcı tanımlı veri — LEN oktet tescilli içerik. Anlamı veri sağlayıcı ve tüketicisi arasındaki ikili anlaşmayla tanımlanır.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure Diagram</span>
+          <span data-i18n-tr>Yapı Diyagramı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 600 60" xmlns="http://www.w3.org/2000/svg" style="max-width:560px; font-family:var(--font-family-mono);">
+            <!-- LEN -->
+            <rect x="20"  y="5" width="100" height="40" rx="4" fill="#4299e1" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="70"  y="30" text-anchor="middle" fill="white" font-size="13" font-weight="700">LEN</text>
+            <!-- DATA -->
+            <rect x="130" y="5" width="420" height="40" rx="4" fill="#9f7aea" stroke="#6b46c1" stroke-width="2"/>
+            <text x="340" y="30" text-anchor="middle" fill="white" font-size="13" font-weight="700">User-defined DATA (LEN octets)</text>
+            <text x="70"  y="52" text-anchor="middle" font-size="9" fill="#718096">1 octet</text>
+            <text x="340" y="52" text-anchor="middle" font-size="9" fill="#718096"><tspan data-i18n-en>LEN octets (variable)</tspan><tspan data-i18n-tr>LEN oktet (değişken)</tspan></text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Property</span><span data-i18n-tr>Özellik</span></th>
+                <th><span data-i18n-en>Value</span><span data-i18n-tr>Değer</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>Format</span><span data-i18n-tr>Biçim</span></td>
+                <td><span data-i18n-en>Variable Length — length indicator + data octets</span><span data-i18n-tr>Değişken Uzunluk — uzunluk göstergesi + veri oktetleri</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Minimum length</span><span data-i18n-tr>Minimum uzunluk</span></td>
+                <td><span data-i18n-en>2 octets (LEN=1 + 1 data byte)</span><span data-i18n-tr>2 oktet (LEN=1 + 1 veri baytı)</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Maximum length</span><span data-i18n-tr>Maksimum uzunluk</span></td>
+                <td><span data-i18n-en>256 octets (LEN=255 + 255 data bytes)</span><span data-i18n-tr>256 oktet (LEN=255 + 255 veri baytı)</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Content definition</span><span data-i18n-tr>İçerik tanımı</span></td>
+                <td><span data-i18n-en>Bilateral agreement only — not standardised by EUROCONTROL</span><span data-i18n-tr>Yalnızca ikili anlaşma — EUROCONTROL tarafından standartlaştırılmamış</span></td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>FRN 34 (FSPEC Byte 5, Bit 1 — SP marker)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Hex Örneği</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> An airport integrator transmits 3 bytes of proprietary gate assignment data (<code>0xAA 0x01 0x00</code>) embedded in the SP field. LEN=3.</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> Bir havalimanı entegratörü SP alanına gömülü 3 baytlık tescilli kapı atama verisi (<code>0xAA 0x01 0x00</code>) iletiyor. LEN=3.</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — LEN byte</span>
+              <span data-i18n-tr>Adım 1 — LEN baytı</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>3 data bytes follow → LEN = 3 → <code>0x03</code></span>
+              <span data-i18n-tr>3 veri baytı geliyor → LEN = 3 → <code>0x03</code></span>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Data bytes</span>
+              <span data-i18n-tr>Adım 2 — Veri baytları</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>Proprietary gate data: <code>0xAA</code> <code>0x01</code> <code>0x00</code> (meaning defined by bilateral agreement)</span>
+              <span data-i18n-tr>Tescilli kapı verisi: <code>0xAA</code> <code>0x01</code> <code>0x00</code> (anlamı ikili anlaşmayla tanımlanır)</span>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Full I011/SP byte sequence</span>
+              <span data-i18n-tr>Adım 3 — Tam I011/SP bayt dizisi</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <code>0x03</code> (LEN) &nbsp; <code>0xAA</code> <code>0x01</code> <code>0x00</code> (data)
+              <br><span data-i18n-en>Total: 4 octets (1 + LEN)</span><span data-i18n-tr>Toplam: 4 oktet (1 + LEN)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Validation Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Rule</span><span data-i18n-tr>Kural</span></th>
+                <th><span data-i18n-en>Details</span><span data-i18n-tr>Ayrıntılar</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>LEN &gt; 0</span><span data-i18n-tr>LEN &gt; 0</span></td>
+                <td><span data-i18n-en>LEN=0 is not valid. If the SP field is present, it must contain at least one data byte.</span><span data-i18n-tr>LEN=0 geçerli değildir. SP alanı mevcutsa en az bir veri baytı içermelidir.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Generic decoder skip</span><span data-i18n-tr>Genel decoder atlama</span></td>
+                <td><span data-i18n-en>Decoders that do not have a specific agreement for the SP content MUST skip over it silently using the LEN byte, rather than raising an error. Never reject a message solely because it contains an unrecognised SP field.</span><span data-i18n-tr>SP içeriğine ilişkin belirli bir anlaşması olmayan dekoderlar, hata üretmek yerine LEN baytını kullanarak sessizce atlamalıdır. Yalnızca tanınmayan bir SP alanı içerdiği için mesajı hiçbir zaman reddetmeyin.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlişkili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Data Item</span><span data-i18n-tr>Veri Öğesi</span></th>
+                <th><span data-i18n-en>Relationship</span><span data-i18n-tr>İlişki</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-RE.html">I011/RE</a></td>
+                <td><span data-i18n-en>Reserved Expansion Field — similar variable-length structure; RE is reserved for future EUROCONTROL standardisation whereas SP is for bilateral user agreements</span><span data-i18n-tr>Ayrılmış Genişleme Alanı — benzer değişken uzunluklu yapı; RE gelecekteki EUROCONTROL standartlaştırması için ayrılmışken SP ikili kullanıcı anlaşmaları içindir</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Implementation Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Implementation Notes</span>
+          <span data-i18n-tr>Uygulama Notları</span>
+        </h2>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip — common uses:</strong> In deployed A-SMGCS systems, I011/SP is sometimes used for: airport-specific runway designator data, local gate assignment strings, proprietary sensor fusion quality metrics, or debug information from tracker vendors. If you are integrating with an A-SMGCS system from a specific vendor, request their SP field documentation as part of the ICD (Interface Control Document).</span>
+            <span data-i18n-tr><strong>İpucu — yaygın kullanımlar:</strong> A-SMGCS sistemlerinde I011/SP zaman zaman şunlar için kullanılır: havalimanına özgü pist tanımlayıcı verileri, yerel kapı atama dizeleri, tescilli sensör füzyon kalite metrikleri veya tracker satıcılarından gelen hata ayıklama bilgileri. Belirli bir satıcıdan A-SMGCS sistemiyle entegrasyon yapıyorsanız, ICD'nin (Arayüz Kontrol Belgesi) bir parçası olarak SP alanı belgelerini talep edin.</span>
+          </p>
+        </div>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Interoperability warning:</strong> Use of I011/SP creates a proprietary dependency between the transmitter and receiver. Any third-party system that needs to process the SP content requires access to the bilateral documentation. Prefer standardised data items over SP wherever possible to maintain full ASTERIX interoperability.</span>
+            <span data-i18n-tr><strong>Birlikte çalışabilirlik uyarısı:</strong> I011/SP kullanımı verici ile alıcı arasında tescilli bir bağımlılık oluşturur. SP içeriğini işlemesi gereken herhangi bir üçüncü taraf sistemin ikili belgelere erişimi olması gerekir. Tam ASTERIX birlikte çalışabilirliğini korumak için mümkün olan her yerde SP yerine standartlaştırılmış veri öğelerini tercih edin.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Sürüm 1.3 (2020) esas alınmıştır. Yalnızca referans amaçlıdır.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

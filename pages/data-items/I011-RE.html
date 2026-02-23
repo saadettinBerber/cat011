@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/RE — Reserved Expansion Field</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimliği</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimliği</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimliği</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — Irtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik Irt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik Irt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Reserved Expansion Field</span>
+        <span data-i18n-tr>Ayrılmış Genişleme Alanı</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/RE</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Reserved Expansion Field</span>
+          <span data-i18n-tr>Ayrılmış Genişleme Alanı</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Variable Length — 1 + LEN octets</span>
+          <span data-i18n-tr>Değişken Uzunluk — 1 + LEN oktet</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Reservation of a variable-length expansion area within the CAT011 message for future standardisation by EUROCONTROL. This field acts as a forward-compatibility mechanism: it allows future editions of the ASTERIX CAT011 specification to introduce new standardised data items without breaking parsers that implement the current Edition 1.3. The internal structure of the RE field may be defined as a compound item in future specification revisions.</span>
+          <span data-i18n-tr>EUROCONTROL tarafından gelecekteki standartlaştırma için CAT011 mesajı içinde değişken uzunluklu bir genişleme alanının rezervasyonu. Bu alan, ileriye dönük uyumluluk mekanizması olarak işlev görür: Mevcut Sürüm 1.3'ü uygulayan ayrıştırıcıları bozmaksızın ASTERIX CAT011 spesifikasyonunun gelecekteki sürümlerinin yeni standartlaştırılmış veri öğeleri sunmasına olanak tanır. RE alanının iç yapısı, gelecekteki spesifikasyon revizyonlarında bileşik bir öğe olarak tanımlanabilir.</span>
+        </p>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Important:</strong> In ASTERIX CAT011 Edition 1.3, the RE field content is <strong>not standardised</strong>. Its internal structure is undefined. Unlike I011/SP (which is intended for bilateral user agreements), I011/RE is exclusively reserved for future EUROCONTROL use. Implementers must not define or use the content of I011/RE in Edition 1.3 systems — doing so would create a non-standard dependency that may conflict with future official definitions.</span>
+            <span data-i18n-tr><strong>Önemli:</strong> ASTERIX CAT011 Sürüm 1.3'te RE alanı içeriği <strong>standartlaştırılmamıştır</strong>. İç yapısı tanımsızdır. İkili kullanıcı anlaşmaları için tasarlanmış I011/SP'den farklı olarak I011/RE, yalnızca gelecekteki EUROCONTROL kullanımı için ayrılmıştır. Uygulayıcılar, Sürüm 1.3 sistemlerinde I011/RE içeriğini tanımlamamalı veya kullanmamalıdır; aksi takdirde gelecekteki resmi tanımlarla çakışabilecek standart dışı bir bağımlılık oluşturulmuş olur.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure (Edition 1.3)</span>
+          <span data-i18n-tr>Yapı (Sürüm 1.3)</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Octet</span><span data-i18n-tr>Oktet</span></th>
+                <th><span data-i18n-en>Field</span><span data-i18n-tr>Alan</span></th>
+                <th><span data-i18n-en>Description</span><span data-i18n-tr>Açıklama</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td>LEN</td>
+                <td><span data-i18n-en>Length indicator — number of data octets that follow (1–255). The LEN byte itself is not counted.</span><span data-i18n-tr>Uzunluk göstergesi — arkasından gelen veri oktetlerinin sayısı (1–255). LEN baytının kendisi sayılmaz.</span></td>
+              </tr>
+              <tr>
+                <td><strong>2 … (1+LEN)</strong></td>
+                <td>DATA</td>
+                <td><span data-i18n-en>Reserved expansion data — LEN octets. Content is undefined in Edition 1.3 and reserved for future EUROCONTROL standardisation.</span><span data-i18n-tr>Ayrılmış genişleme verisi — LEN oktet. İçerik Sürüm 1.3'te tanımsız olup gelecekteki EUROCONTROL standartlaştırması için ayrılmıştır.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure Diagram</span>
+          <span data-i18n-tr>Yapı Diyagramı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 600 60" xmlns="http://www.w3.org/2000/svg" style="max-width:560px; font-family:var(--font-family-mono);">
+            <rect x="20"  y="5" width="100" height="40" rx="4" fill="#4299e1" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="70"  y="30" text-anchor="middle" fill="white" font-size="13" font-weight="700">LEN</text>
+            <rect x="130" y="5" width="420" height="40" rx="4" fill="#cbd5e0" stroke="#718096" stroke-width="2" stroke-dasharray="6,3"/>
+            <text x="340" y="26" text-anchor="middle" fill="#4a5568" font-size="12" font-weight="700">Reserved Expansion Data</text>
+            <text x="340" y="42" text-anchor="middle" fill="#718096" font-size="10">(undefined in Ed. 1.3)</text>
+            <text x="70"  y="52" text-anchor="middle" font-size="9" fill="#718096">1 octet</text>
+            <text x="340" y="52" text-anchor="middle" font-size="9" fill="#718096"><tspan data-i18n-en>LEN octets (variable)</tspan><tspan data-i18n-tr>LEN oktet (değişken)</tspan></text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Property</span><span data-i18n-tr>Özellik</span></th>
+                <th><span data-i18n-en>Value</span><span data-i18n-tr>Değer</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>Format</span><span data-i18n-tr>Biçim</span></td>
+                <td><span data-i18n-en>Variable Length — length indicator + reserved data bytes</span><span data-i18n-tr>Değişken Uzunluk — uzunluk göstergesi + ayrılmış veri baytları</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Content definition</span><span data-i18n-tr>İçerik tanımı</span></td>
+                <td><span data-i18n-en>Undefined in Edition 1.3 — reserved for future EUROCONTROL use only</span><span data-i18n-tr>Sürüm 1.3'te tanımsız — yalnızca gelecekteki EUROCONTROL kullanımı için ayrılmış</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Transmission in Ed. 1.3</span><span data-i18n-tr>Sürüm 1.3'te iletim</span></td>
+                <td><span data-i18n-en>Should NOT be transmitted — the RE field bit in the UAP FSPEC should be set to 0 in all Edition 1.3 messages</span><span data-i18n-tr>İLETİLMEMELİDİR — UAP FSPEC'teki RE alanı biti tüm Sürüm 1.3 mesajlarında 0 olarak ayarlanmalıdır</span></td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>FRN 35 (FSPEC Byte 6, Bit 8 — RE marker)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Example -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Receiver Handling</span>
+          <span data-i18n-tr>Alıcı İşleme</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>If I011/RE is received in an Edition 1.3 system:</strong> Since the RE field content is undefined, the receiver must silently skip over it using the LEN byte. For example, if the receiver reads <code>0x02 0x00 0x00</code>, it interprets LEN=2 and skips the following 2 bytes, then continues parsing the next ASTERIX data block. The message must NOT be rejected.</span>
+            <span data-i18n-tr><strong>Sürüm 1.3 sisteminde I011/RE alınırsa:</strong> RE alanı içeriği tanımsız olduğundan alıcı, LEN baytını kullanarak sessizce atlamalıdır. Örneğin, alıcı <code>0x02 0x00 0x00</code> okursa LEN=2 olarak yorumlar ve ardından gelen 2 baytı atlar, ardından bir sonraki ASTERIX veri bloğunu ayrıştırmaya devam eder. Mesaj REDDEDİLMEMELİDİR.</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Decoder skip algorithm for unknown RE content</span>
+              <span data-i18n-tr>Bilinmeyen RE içeriği için decoder atlama algoritması</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <code>LEN = read_byte()</code>
+              <br><code>skip_bytes(LEN)</code>
+              <br><span data-i18n-en>// Continue with next data item — do not raise an error</span>
+              <span data-i18n-tr>// Sonraki veri öğesiyle devam et — hata üretme</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparison: SP vs RE -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>SP versus RE — Key Differences</span>
+          <span data-i18n-tr>SP ile RE Karşılaştırması — Temel Farklılıklar</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Aspect</span><span data-i18n-tr>Konu</span></th>
+                <th>I011/SP</th>
+                <th>I011/RE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>Who defines the content?</span><span data-i18n-tr>İçeriği kim tanımlar?</span></td>
+                <td><span data-i18n-en>Data supplier + consumer (bilateral)</span><span data-i18n-tr>Veri sağlayıcı + tüketici (ikili)</span></td>
+                <td><span data-i18n-en>EUROCONTROL only (future editions)</span><span data-i18n-tr>Yalnızca EUROCONTROL (gelecek sürümler)</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Transmission in Ed. 1.3</span><span data-i18n-tr>Sürüm 1.3'te iletim</span></td>
+                <td><span data-i18n-en>Permitted with bilateral agreement</span><span data-i18n-tr>İkili anlaşmayla izinli</span></td>
+                <td><span data-i18n-en>Should NOT be transmitted</span><span data-i18n-tr>İletilmemelidir</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Receiver behaviour (unknown content)</span><span data-i18n-tr>Alıcı davranışı (bilinmeyen içerik)</span></td>
+                <td><span data-i18n-en>Skip silently using LEN</span><span data-i18n-tr>LEN kullanarak sessizce atla</span></td>
+                <td><span data-i18n-en>Skip silently using LEN</span><span data-i18n-tr>LEN kullanarak sessizce atla</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Future compatibility</span><span data-i18n-tr>Gelecek uyumluluğu</span></td>
+                <td><span data-i18n-en>Content defined per implementation</span><span data-i18n-tr>İçerik uygulamaya göre tanımlanır</span></td>
+                <td><span data-i18n-en>Will be standardised in a future edition</span><span data-i18n-tr>Gelecekteki bir sürümde standartlaştırılacak</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Validation Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Rule</span><span data-i18n-tr>Kural</span></th>
+                <th><span data-i18n-en>Details</span><span data-i18n-tr>Ayrıntılar</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>Never reject on RE presence</span><span data-i18n-tr>RE varlığına göre reddetme</span></td>
+                <td><span data-i18n-en>A well-implemented decoder must skip I011/RE cleanly and continue processing the remainder of the ASTERIX block. Rejecting a message because RE is present would break forward compatibility with future EUROCONTROL editions.</span><span data-i18n-tr>İyi bir decoder I011/RE'yi temiz biçimde atlamalı ve ASTERIX bloğunun geri kalanını işlemeye devam etmelidir. RE mevcut olduğu için mesajı reddetmek, gelecekteki EUROCONTROL sürümleriyle ileriye dönük uyumluluğu bozar.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Do not populate in Ed. 1.3</span><span data-i18n-tr>Sürüm 1.3'te doldurmayın</span></td>
+                <td><span data-i18n-en>Transmitters implementing Edition 1.3 must not set the RE FSPEC bit. If a future edition defines RE content and older receivers receive messages with RE, the LEN-based skip ensures they remain compatible.</span><span data-i18n-tr>Sürüm 1.3 uygulayan vericiler RE FSPEC bitini ayarlamamalıdır. Gelecekteki bir sürüm RE içeriğini tanımlarsa ve eski alıcılar RE içeren mesajlar alırsa, LEN tabanlı atlama uyumluluklarını korumalarını sağlar.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Implementation Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Implementation Notes</span>
+          <span data-i18n-tr>Uygulama Notları</span>
+        </h2>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip — version-aware parsing:</strong> When building a long-lived ASTERIX decoder, design it to handle both SP and RE with the same generic LEN-based skip logic. Log a warning (not an error) if RE is encountered in an Edition 1.3 data stream — this may indicate the transmitter is already implementing a newer specification revision. Monitor EUROCONTROL's ASTERIX website for updates to Edition 1.3 that may define RE content.</span>
+            <span data-i18n-tr><strong>İpucu — sürüm farkındalıklı ayrıştırma:</strong> Uzun ömürlü bir ASTERIX decoder oluştururken hem SP hem de RE'yi aynı genel LEN tabanlı atlama mantığıyla işleyecek şekilde tasarlayın. Sürüm 1.3 veri akışında RE ile karşılaşıldığında hata değil uyarı kaydedin — bu, verici zaten daha yeni bir spesifikasyon revizyonu uyguluyor olabilir. RE içeriğini tanımlayabilecek Sürüm 1.3 güncellemeleri için EUROCONTROL'ün ASTERIX web sitesini izleyin.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Design pattern:</strong> The existence of both SP and RE fields demonstrates a key ASTERIX design principle: <em>extensibility without breaking changes</em>. SP handles present-day proprietary needs; RE preserves space for future standardised extensions. Every ASTERIX category follows this same pattern, ensuring that parsers written for one edition can always skip safely over fields they do not understand.</span>
+            <span data-i18n-tr><strong>Tasarım kalıbı:</strong> Hem SP hem de RE alanlarının varlığı temel bir ASTERIX tasarım ilkesini gösterir: <em>kırıcı değişiklikler olmaksızın genişletilebilirlik</em>. SP günümüzdeki tescilli ihtiyaçları karşılar; RE gelecekteki standartlaştırılmış uzantılar için alan korur. Her ASTERIX kategorisi aynı kalıbı izler ve bir sürüm için yazılmış ayrıştırıcıların anlamadıkları alanları her zaman güvenli biçimde atlayabilmesini sağlar.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Sürüm 1.3 (2020) esas alınmıştır. Yalnızca referans amaçlıdır.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

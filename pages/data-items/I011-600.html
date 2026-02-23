@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/600 — Alert Messages</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimliği</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimliği</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimliği</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — Irtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik Irt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik Irt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Alert Messages</span>
+        <span data-i18n-tr>Alarm Mesajları</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/600</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Alert Messages</span>
+          <span data-i18n-tr>Alarm Mesajları</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Fixed Length — 2 Octets</span>
+          <span data-i18n-tr>Sabit Uzunluk — 2 Oktet</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Transmission of alert messages generated by the A-SMGCS safety net. This data item is present only in Alert/Status Messages (Message Type 9) and conveys the type and severity level of a detected safety-critical event on the airport surface — such as a runway incursion or a conflict between two tracks.</span>
+          <span data-i18n-tr>A-SMGCS güvenlik ağı tarafından üretilen alarm mesajlarının iletimi. Bu veri öğesi yalnızca Alarm/Durum Mesajlarında (Mesaj Tipi 9) bulunur ve havalimanı yüzeyinde tespit edilen güvenlik açısından kritik bir olayın (pist ihlali veya iki track arasındaki çakışma gibi) türünü ve önem düzeyini iletir.</span>
+        </p>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Important:</strong> I011/600 defines the nature of the alert; the tracks involved in the alert are listed separately in <a href="I011-605.html">I011/605 (Tracks in Alert)</a>. Together, these two items form a complete alert event: I011/600 says "what happened" and I011/605 says "who is involved".</span>
+            <span data-i18n-tr><strong>Önemli:</strong> I011/600 alarm niteliğini tanımlar; alarma dahil olan track'ler ayrıca <a href="I011-605.html">I011/605 (Alarmlı İzler)</a> içinde listelenir. Bu iki öğe birlikte tam bir alarm olayı oluşturur: I011/600 "ne oldu" derken I011/605 "kimler dahil" bilgisini verir.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span data-i18n-en>Octet</span>
+                  <span data-i18n-tr>Oktet</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Bits</span>
+                  <span data-i18n-tr>Bitler</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Field</span>
+                  <span data-i18n-tr>Alan</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td>8–6</td>
+                <td>—</td>
+                <td>
+                  <span data-i18n-en>Spare (set to 0)</span>
+                  <span data-i18n-tr>Boş (0 olarak ayarlanır)</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>1</strong></td>
+                <td>5–1</td>
+                <td>ATN</td>
+                <td>
+                  <span data-i18n-en>Alert Type Number — identifies the type of safety net alert (5 bits, 0–31 range)</span>
+                  <span data-i18n-tr>Alarm Tipi Numarası — güvenlik ağı alarm türünü tanımlar (5 bit, 0–31 aralığı)</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td>8–5</td>
+                <td>SCA</td>
+                <td>
+                  <span data-i18n-en>Safety Condition Alert — severity or status of the alert (4 bits)</span>
+                  <span data-i18n-tr>Güvenlik Koşulu Alarmı — alarmın önem derecesi veya durumu (4 bit)</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td>4–1</td>
+                <td>—</td>
+                <td>
+                  <span data-i18n-en>Spare (set to 0)</span>
+                  <span data-i18n-tr>Boş (0 olarak ayarlanır)</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram</span>
+          <span data-i18n-tr>Bit Diyagramı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 600 110" xmlns="http://www.w3.org/2000/svg" style="max-width:560px; font-family:var(--font-family-mono);">
+            <!-- Labels -->
+            <text x="10" y="40" font-size="10" fill="#718096"><tspan data-i18n-en>Oct 1</tspan><tspan data-i18n-tr>Okt 1</tspan></text>
+            <text x="10" y="85" font-size="10" fill="#718096"><tspan data-i18n-en>Oct 2</tspan><tspan data-i18n-tr>Okt 2</tspan></text>
+            <!-- Bit numbers row 1 -->
+            <text x="90"  y="15" text-anchor="middle" font-size="10" fill="#718096">8</text>
+            <text x="155" y="15" text-anchor="middle" font-size="10" fill="#718096">7</text>
+            <text x="220" y="15" text-anchor="middle" font-size="10" fill="#718096">6</text>
+            <text x="285" y="15" text-anchor="middle" font-size="10" fill="#718096">5</text>
+            <text x="350" y="15" text-anchor="middle" font-size="10" fill="#718096">4</text>
+            <text x="415" y="15" text-anchor="middle" font-size="10" fill="#718096">3</text>
+            <text x="480" y="15" text-anchor="middle" font-size="10" fill="#718096">2</text>
+            <text x="545" y="15" text-anchor="middle" font-size="10" fill="#718096">1</text>
+            <!-- Octet 1: spare(3) + ATN(5) -->
+            <rect x="60"  y="22" width="195" height="30" rx="4" fill="#cbd5e0" stroke="#718096" stroke-width="2"/>
+            <text x="158" y="42" text-anchor="middle" fill="#4a5568" font-size="11" font-weight="700">spare</text>
+            <line x1="125" y1="22" x2="125" y2="52" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+            <line x1="190" y1="22" x2="190" y2="52" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+            <rect x="255" y="22" width="325" height="30" rx="4" fill="#fc8181" stroke="#c53030" stroke-width="2"/>
+            <text x="417" y="42" text-anchor="middle" fill="white" font-size="13" font-weight="700">ATN (0–31)</text>
+            <line x1="320" y1="22" x2="320" y2="52" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <line x1="385" y1="22" x2="385" y2="52" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <line x1="450" y1="22" x2="450" y2="52" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <line x1="515" y1="22" x2="515" y2="52" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <!-- Octet 2: SCA(4) + spare(4) -->
+            <rect x="60"  y="60" width="325" height="30" rx="4" fill="#f6ad55" stroke="#c05621" stroke-width="2"/>
+            <text x="222" y="80" text-anchor="middle" fill="white" font-size="13" font-weight="700">SCA (0–15)</text>
+            <line x1="125" y1="60" x2="125" y2="90" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <line x1="190" y1="60" x2="190" y2="90" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <line x1="255" y1="60" x2="255" y2="90" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <rect x="385" y="60" width="195" height="30" rx="4" fill="#cbd5e0" stroke="#718096" stroke-width="2"/>
+            <text x="482" y="80" text-anchor="middle" fill="#4a5568" font-size="11" font-weight="700">spare</text>
+            <line x1="450" y1="60" x2="450" y2="90" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+            <line x1="515" y1="60" x2="515" y2="90" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+          </svg>
+          <div class="bit-diagram__label">I011/600 — 2 octets: ATN (5-bit type) + SCA (4-bit severity)</div>
+        </div>
+      </section>
+
+      <!-- Value Encoding -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Value Encoding</span>
+          <span data-i18n-tr>Değer Kodlama</span>
+        </h2>
+
+        <p style="font-weight:600; margin-bottom:0.5rem;">
+          <span data-i18n-en>ATN — Alert Type Number</span>
+          <span data-i18n-tr>ATN — Alarm Tipi Numarası</span>
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>ATN</th>
+                <th>
+                  <span data-i18n-en>Alert Type</span>
+                  <span data-i18n-tr>Alarm Türü</span>
+                </th>
+                <th>
+                  <span data-i18n-en>Description</span>
+                  <span data-i18n-tr>Açıklama</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>—</td>
+                <td>
+                  <span data-i18n-en>Not defined / Unknown</span>
+                  <span data-i18n-tr>Tanımsız / Bilinmeyen</span>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>RIMCA</td>
+                <td>
+                  <span data-i18n-en>Runway Incursion Monitoring and Conflict Alert — a target has entered or is about to enter a runway without authorisation</span>
+                  <span data-i18n-tr>Pist İhlali İzleme ve Çakışma Alarmı — bir hedef yetkisiz olarak piste girmiş veya girmek üzere</span>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>CLAM</td>
+                <td>
+                  <span data-i18n-en>Conflict Level Alert Message — two or more tracks are on a conflicting path on a taxiway or apron</span>
+                  <span data-i18n-tr>Çakışma Düzeyi Alarm Mesajı — iki veya daha fazla track, bir taksi yolu veya apronda çakışan bir rotada</span>
+                </td>
+              </tr>
+              <tr>
+                <td>3–31</td>
+                <td>—</td>
+                <td>
+                  <span data-i18n-en>Reserved — not defined in Edition 1.3</span>
+                  <span data-i18n-tr>Ayrılmış — Sürüm 1.3'te tanımlanmamış</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600; margin: 1.2rem 0 0.5rem;">
+          <span data-i18n-en>SCA — Safety Condition Alert</span>
+          <span data-i18n-tr>SCA — Güvenlik Koşulu Alarmı</span>
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>SCA</th>
+                <th>
+                  <span data-i18n-en>Condition</span>
+                  <span data-i18n-tr>Durum</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>0</td><td><span data-i18n-en>Unknown</span><span data-i18n-tr>Bilinmeyen</span></td></tr>
+              <tr><td>1</td><td><span data-i18n-en>Alert ended (cleared)</span><span data-i18n-tr>Alarm sona erdi (temizlendi)</span></td></tr>
+              <tr><td>2</td><td><span data-i18n-en>Alert started (new)</span><span data-i18n-tr>Alarm başladı (yeni)</span></td></tr>
+              <tr><td>3</td><td><span data-i18n-en>Alert ongoing (update)</span><span data-i18n-tr>Alarm devam ediyor (güncelleme)</span></td></tr>
+              <tr><td>4–15</td><td><span data-i18n-en>Reserved</span><span data-i18n-tr>Ayrılmış</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Property</span><span data-i18n-tr>Özellik</span></th>
+                <th><span data-i18n-en>Value</span><span data-i18n-tr>Değer</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>Format</span><span data-i18n-tr>Biçim</span></td>
+                <td><span data-i18n-en>Fixed Length</span><span data-i18n-tr>Sabit Uzunluk</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Length</span><span data-i18n-tr>Uzunluk</span></td>
+                <td>2 octets (16 bits)</td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Message context</span><span data-i18n-tr>Mesaj bağlamı</span></td>
+                <td><span data-i18n-en>Present ONLY in Message Type 9 (Alert/Status Message); absent in all other message types</span><span data-i18n-tr>Yalnızca Mesaj Tipi 9'da (Alarm/Durum Mesajı) mevcut; diğer tüm mesaj tiplerinde yoktur</span></td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>FRN 29 (FSPEC Byte 5, Bit 6)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Hex Örneği</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> A new RIMCA alert is detected — a vehicle has entered Runway 28L without clearance. This is a new alert (SCA=2). The A-SMGCS safety net generates an Alert/Status Message containing I011/600.</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> Yeni bir RIMCA alarmı tespit edildi — bir araç izin almaksızın Pist 28L'ye girdi. Bu yeni bir alarmdır (SCA=2). A-SMGCS güvenlik ağı, I011/600 içeren bir Alarm/Durum Mesajı üretir.</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — Encode Octet 1</span>
+              <span data-i18n-tr>Adım 1 — Oktet 1'i kodla</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>Spare(000) + ATN=1 (RIMCA, 00001) &rarr; <code>000_00001</code> = <code>0x01</code></span>
+              <span data-i18n-tr>Boş(000) + ATN=1 (RIMCA, 00001) &rarr; <code>000_00001</code> = <code>0x01</code></span>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Encode Octet 2</span>
+              <span data-i18n-tr>Adım 2 — Oktet 2'yi kodla</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>SCA=2 (new alert, 0010) + spare(0000) &rarr; <code>0010_0000</code> = <code>0x20</code></span>
+              <span data-i18n-tr>SCA=2 (yeni alarm, 0010) + boş(0000) &rarr; <code>0010_0000</code> = <code>0x20</code></span>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Final encoded bytes</span>
+              <span data-i18n-tr>Adım 3 — Nihai kodlanmış baytlar</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              I011/600 = <code>0x01</code> <code>0x20</code> &rarr;
+              <span data-i18n-en>RIMCA alert (ATN=1), New alert (SCA=2) ✓</span>
+              <span data-i18n-tr>RIMCA alarmı (ATN=1), Yeni alarm (SCA=2) ✓</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Validation Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Rule</span><span data-i18n-tr>Kural</span></th>
+                <th><span data-i18n-en>Details</span><span data-i18n-tr>Ayrıntılar</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>Message type constraint</span><span data-i18n-tr>Mesaj tipi kısıtlaması</span></td>
+                <td><span data-i18n-en>I011/600 MUST be absent in any message where I011/000 (Message Type) is not 9. Decoders that receive I011/600 in non-alert messages should flag this as a formatting error.</span><span data-i18n-tr>I011/000 (Mesaj Tipi) değeri 9 olmayan herhangi bir mesajda I011/600 BULUNMAMALIDIR. Alarm olmayan mesajlarda I011/600 alan dekoderlar bunu biçimlendirme hatası olarak işaretlemelidir.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>I011/605 pairing</span><span data-i18n-tr>I011/605 eşleşmesi</span></td>
+                <td><span data-i18n-en>I011/600 should always be accompanied by I011/605 (Tracks in Alert) to identify which tracks are involved. An I011/600 without I011/605 is ambiguous.</span><span data-i18n-tr>I011/600, hangi track'lerin dahil olduğunu belirtmek için her zaman I011/605 (Alarmlı İzler) ile birlikte olmalıdır. I011/605 olmadan I011/600 belirsiz kalır.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Spare bits</span><span data-i18n-tr>Boş bitler</span></td>
+                <td><span data-i18n-en>All spare bits must be set to 0 by the transmitter. Receivers must accept messages where spare bits are non-zero, for forward compatibility.</span><span data-i18n-tr>Tüm boş bitler verici tarafından 0 olarak ayarlanmalıdır. Alıcılar, ileriye dönük uyumluluk için boş bitlerin sıfır olmadığı mesajları kabul etmelidir.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlişkili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Data Item</span><span data-i18n-tr>Veri Öğesi</span></th>
+                <th><span data-i18n-en>Relationship</span><span data-i18n-tr>İlişki</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-000.html">I011/000</a></td>
+                <td><span data-i18n-en>Message Type — must be 9 (Alert/Status) for I011/600 to be valid</span><span data-i18n-tr>Mesaj Tipi — I011/600'ün geçerli olması için 9 (Alarm/Durum) olmalıdır</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-605.html">I011/605</a></td>
+                <td><span data-i18n-en>Tracks in Alert — lists the track numbers of all targets involved in the alert described by I011/600</span><span data-i18n-tr>Alarmlı İzler — I011/600 tarafından tanımlanan alarma dahil olan tüm hedeflerin track numaralarını listeler</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-610.html">I011/610</a></td>
+                <td><span data-i18n-en>Holdbar Status — alerts may trigger holdbar activation; I011/610 conveys the resulting holdbar state</span><span data-i18n-tr>Holdbar Durumu — alarmlar holdbar aktivasyonunu tetikleyebilir; I011/610 ortaya çıkan holdbar durumunu iletir</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-170.html">I011/170</a></td>
+                <td><span data-i18n-en>Track Status — provides context on whether the alerted targets are aircraft or ground vehicles</span><span data-i18n-tr>İz Durumu — alarma dahil olan hedeflerin uçak mı yoksa yer aracı mı olduğu konusunda bağlam sağlar</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Implementation Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Implementation Notes</span>
+          <span data-i18n-tr>Uygulama Notları</span>
+        </h2>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Alert lifecycle — SCA transitions:</strong> An alert has a defined lifecycle. The A-SMGCS system sends SCA=2 (new) when an alert is first detected, SCA=3 (update) on each subsequent update while the condition persists, and SCA=1 (cleared) when the alert condition is resolved. Receivers must track alert state using the unique combination of ATN + the track numbers in I011/605.</span>
+            <span data-i18n-tr><strong>Alarm yaşam döngüsü — SCA geçişleri:</strong> Bir alarmın tanımlı bir yaşam döngüsü vardır. A-SMGCS sistemi, alarm ilk tespit edildiğinde SCA=2 (yeni), durum devam ederken her sonraki güncellemede SCA=3 (güncelleme) ve alarm durumu çözüldüğünde SCA=1 (temizlendi) gönderir. Alıcılar, alarm durumunu ATN ile I011/605'teki track numaralarının benzersiz kombinasyonu kullanarak takip etmelidir.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip — display priority:</strong> RIMCA alerts (ATN=1) represent the highest safety risk and should be displayed with the highest visual priority on ATC workstations — typically a flashing red symbol on the runway in question. CLAM alerts (ATN=2) typically use amber colour coding. Any alert with SCA=1 (cleared) should be immediately suppressed from the active alert display.</span>
+            <span data-i18n-tr><strong>İpucu — görüntüleme önceliği:</strong> RIMCA alarmaları (ATN=1) en yüksek güvenlik riskini temsil eder ve ATC iş istasyonlarında en yüksek görsel öncelikle görüntülenmelidir — tipik olarak ilgili pistte yanıp sönen kırmızı sembol şeklinde. CLAM alarmaları (ATN=2) genellikle amber renk kodlaması kullanır. SCA=1 (temizlendi) olan herhangi bir alarm, aktif alarm ekranından derhal kaldırılmalıdır.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Sürüm 1.3 (2020) esas alınmıştır. Yalnızca referans amaçlıdır.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

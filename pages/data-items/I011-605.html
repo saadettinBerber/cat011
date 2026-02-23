@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/605 — Tracks in Alert</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimliği</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimliği</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimliği</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — Irtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik Irt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik Irt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Tracks in Alert</span>
+        <span data-i18n-tr>Alarmlı İzler</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/605</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Tracks in Alert</span>
+          <span data-i18n-tr>Alarmlı İzler</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Repetitive — Variable Length (1 + REP × 2 octets)</span>
+          <span data-i18n-tr>Tekrarlı — Değişken Uzunluk (1 + REP × 2 oktet)</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Identification of the tracks that are involved in the alert condition described by <a href="I011-600.html">I011/600 (Alert Messages)</a>. This repetitive item lists the system track numbers of all targets that contributed to, or are directly affected by, the safety net alert — such as the aircraft and vehicle involved in a runway incursion, or the two conflicting taxiing targets in a CLAM alert.</span>
+          <span data-i18n-tr><a href="I011-600.html">I011/600 (Alarm Mesajları)</a> tarafından tanımlanan alarm durumuna dahil olan track'lerin belirlenmesi. Bu tekrarlı öğe, güvenlik ağı alarmına katkıda bulunan veya doğrudan etkilenen tüm hedeflerin sistem track numaralarını listeler; pist ihlaline dahil olan uçak ve araç veya CLAM alarmındaki iki çakışan taksi hedefi gibi.</span>
+        </p>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Key concept:</strong> I011/605 is a <strong>Repetitive</strong> item. The first byte is a <strong>REP (repetition factor)</strong> that indicates how many track entries follow. Each entry is 2 octets containing a 12-bit track number (matching the format of <a href="I011-161.html">I011/161</a>). For a typical runway incursion with one intruder and one victim aircraft, REP=2 and two track number entries follow.</span>
+            <span data-i18n-tr><strong>Temel kavram:</strong> I011/605 bir <strong>Tekrarlı</strong> öğedir. İlk bayt, kaç adet track girişi takip edeceğini belirten <strong>REP (tekrar faktörü)</strong>'dür. Her giriş, 12-bit track numarası içeren 2 oktet olup <a href="I011-161.html">I011/161</a> biçimiyle eşleşir. Bir ihlalci ve bir kurban uçağı içeren tipik bir pist ihlali senaryosunda REP=2 ve ardından iki track numarası girişi gelir.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Octet</span><span data-i18n-tr>Oktet</span></th>
+                <th><span data-i18n-en>Bits</span><span data-i18n-tr>Bitler</span></th>
+                <th><span data-i18n-en>Field</span><span data-i18n-tr>Alan</span></th>
+                <th><span data-i18n-en>Description</span><span data-i18n-tr>Açıklama</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td>8–1</td>
+                <td>REP</td>
+                <td><span data-i18n-en>Repetition factor — number of track entries that follow (1–255)</span><span data-i18n-tr>Tekrar faktörü — arkasından gelen track girişlerinin sayısı (1–255)</span></td>
+              </tr>
+              <tr>
+                <td><strong>2+2n</strong></td>
+                <td>8–5</td>
+                <td>TRK</td>
+                <td><span data-i18n-en>Track Number, bits 12–9 (MSB portion of 12-bit track number)</span><span data-i18n-tr>Track Numarası, bit 12–9 (12-bit track numarasının MSB kısmı)</span></td>
+              </tr>
+              <tr>
+                <td><strong>2+2n</strong></td>
+                <td>4–1</td>
+                <td>—</td>
+                <td><span data-i18n-en>Spare (set to 0)</span><span data-i18n-tr>Boş (0 olarak ayarlanır)</span></td>
+              </tr>
+              <tr>
+                <td><strong>3+2n</strong></td>
+                <td>8–1</td>
+                <td>TRK</td>
+                <td><span data-i18n-en>Track Number, bits 8–1 (LSB portion of 12-bit track number)</span><span data-i18n-tr>Track Numarası, bit 8–1 (12-bit track numarasının LSB kısmı)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:0.8rem; font-size:0.9rem; color:var(--color-text-secondary);">
+          <span data-i18n-en>n = 0, 1, 2, … (REP−1) &nbsp;|&nbsp; Total item length = 1 + (REP × 2) octets</span>
+          <span data-i18n-tr>n = 0, 1, 2, … (REP−1) &nbsp;|&nbsp; Toplam öğe uzunluğu = 1 + (REP × 2) oktet</span>
+        </p>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram — Single Track Entry</span>
+          <span data-i18n-tr>Bit Diyagramı — Tek Track Girişi</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 600 130" xmlns="http://www.w3.org/2000/svg" style="max-width:560px; font-family:var(--font-family-mono);">
+            <text x="10" y="38" font-size="10" fill="#718096">REP</text>
+            <text x="10" y="83" font-size="10" fill="#718096"><tspan data-i18n-en>Oct 1</tspan><tspan data-i18n-tr>Okt 1</tspan></text>
+            <text x="10" y="120" font-size="10" fill="#718096"><tspan data-i18n-en>Oct 2</tspan><tspan data-i18n-tr>Okt 2</tspan></text>
+
+            <!-- Bit labels -->
+            <text x="90"  y="15" text-anchor="middle" font-size="10" fill="#718096">8</text>
+            <text x="155" y="15" text-anchor="middle" font-size="10" fill="#718096">7</text>
+            <text x="220" y="15" text-anchor="middle" font-size="10" fill="#718096">6</text>
+            <text x="285" y="15" text-anchor="middle" font-size="10" fill="#718096">5</text>
+            <text x="350" y="15" text-anchor="middle" font-size="10" fill="#718096">4</text>
+            <text x="415" y="15" text-anchor="middle" font-size="10" fill="#718096">3</text>
+            <text x="480" y="15" text-anchor="middle" font-size="10" fill="#718096">2</text>
+            <text x="545" y="15" text-anchor="middle" font-size="10" fill="#718096">1</text>
+
+            <!-- REP row -->
+            <rect x="60" y="22" width="520" height="28" rx="4" fill="#4299e1" stroke="#2b6cb0" stroke-width="2"/>
+            <text x="320" y="40" text-anchor="middle" fill="white" font-size="12" font-weight="700">REP (number of track entries)</text>
+
+            <!-- TRK MSB + spare (octet 1 of entry) -->
+            <rect x="60"  y="60" width="325" height="28" rx="4" fill="#48bb78" stroke="#2f855a" stroke-width="2"/>
+            <text x="222" y="78" text-anchor="middle" fill="white" font-size="12" font-weight="700">TRK bits 12–9</text>
+            <line x1="125" y1="60" x2="125" y2="88" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <line x1="190" y1="60" x2="190" y2="88" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <line x1="255" y1="60" x2="255" y2="88" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <rect x="385" y="60" width="195" height="28" rx="4" fill="#cbd5e0" stroke="#718096" stroke-width="2"/>
+            <text x="482" y="78" text-anchor="middle" fill="#4a5568" font-size="11" font-weight="700">spare</text>
+            <line x1="450" y1="60" x2="450" y2="88" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+            <line x1="515" y1="60" x2="515" y2="88" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+
+            <!-- TRK LSB (octet 2 of entry) -->
+            <rect x="60"  y="98" width="520" height="28" rx="4" fill="#48bb78" stroke="#2f855a" stroke-width="2"/>
+            <text x="320" y="116" text-anchor="middle" fill="white" font-size="12" font-weight="700">TRK bits 8–1</text>
+            <line x1="125" y1="98" x2="125" y2="126" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <line x1="190" y1="98" x2="190" y2="126" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <line x1="255" y1="98" x2="255" y2="126" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <line x1="320" y1="98" x2="320" y2="126" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <line x1="385" y1="98" x2="385" y2="126" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <line x1="450" y1="98" x2="450" y2="126" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <line x1="515" y1="98" x2="515" y2="126" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+          </svg>
+          <div class="bit-diagram__label">
+            <span data-i18n-en>REP byte + repeating 2-octet entries (12-bit track number + 4 spare bits per entry)</span>
+            <span data-i18n-tr>REP baytı + tekrarlayan 2-oktet girişleri (giriş başına 12-bit track numarası + 4 boş bit)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Property</span><span data-i18n-tr>Özellik</span></th>
+                <th><span data-i18n-en>Value</span><span data-i18n-tr>Değer</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>Format</span><span data-i18n-tr>Biçim</span></td>
+                <td><span data-i18n-en>Repetitive — REP byte + (REP × 2) data octets</span><span data-i18n-tr>Tekrarlı — REP baytı + (REP × 2) veri oktet</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Track number encoding</span><span data-i18n-tr>Track numarası kodlaması</span></td>
+                <td><span data-i18n-en>12-bit unsigned integer placed in bits 16–5 of the 2-octet entry (bits 4–1 are spare)</span><span data-i18n-tr>12-bit işaretsiz tam sayı, 2-oktet girişin bit 16–5'ine yerleştirilir (bit 4–1 boştur)</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Track number formula</span><span data-i18n-tr>Track numarası formülü</span></td>
+                <td><code>raw_word = TRK_number &lt;&lt; 4</code> &nbsp; (<span data-i18n-en>left-shift by 4 bits</span><span data-i18n-tr>4 bit sola kaydırma</span>)</td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Track number range</span><span data-i18n-tr>Track numarası aralığı</span></td>
+                <td>0–4095 (<span data-i18n-en>12 bits</span><span data-i18n-tr>12 bit</span>)</td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>FRN 30 (FSPEC Byte 5, Bit 5)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Example</span>
+          <span data-i18n-tr>Hex Örneği</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario:</strong> A RIMCA alert involves two tracks — an aircraft (Track #42) that has entered a runway without clearance, and a departing aircraft (Track #75) already on the runway. REP=2.</span>
+            <span data-i18n-tr><strong>Senaryo:</strong> Bir RIMCA alarmı iki track'i kapsar — izin almaksızın piste giren bir uçak (Track #42) ve pistte bulunan kalkış yapan bir uçak (Track #75). REP=2.</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 1 — REP byte</span>
+              <span data-i18n-tr>Adım 1 — REP baytı</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>2 tracks → REP = 2 → <code>0x02</code></span>
+              <span data-i18n-tr>2 track → REP = 2 → <code>0x02</code></span>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 2 — Encode Track #42</span>
+              <span data-i18n-tr>Adım 2 — Track #42'yi kodla</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              42 (decimal) = <code>0x02A</code> (12-bit) &rarr; left-shift 4: <code>0x02A0</code>
+              <br>Octets: <code>0x02</code> <code>0xA0</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 3 — Encode Track #75</span>
+              <span data-i18n-tr>Adım 3 — Track #75'i kodla</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              75 (decimal) = <code>0x04B</code> (12-bit) &rarr; left-shift 4: <code>0x04B0</code>
+              <br>Octets: <code>0x04</code> <code>0xB0</code>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 4 — Full I011/605 byte sequence</span>
+              <span data-i18n-tr>Adım 4 — Tam I011/605 bayt dizisi</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <code>0x02</code> (REP) &nbsp; <code>0x02</code> <code>0xA0</code> (Track#42) &nbsp; <code>0x04</code> <code>0xB0</code> (Track#75)
+              <br><span data-i18n-en>Total: 5 octets</span><span data-i18n-tr>Toplam: 5 oktet</span>
+            </div>
+          </div>
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>Step 5 — Decode verification</span>
+              <span data-i18n-tr>Adım 5 — Doğrulama</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              <span data-i18n-en>0x02A0 &gt;&gt; 4 = 0x02A = 42 ✓ &nbsp;|&nbsp; 0x04B0 &gt;&gt; 4 = 0x04B = 75 ✓</span>
+              <span data-i18n-tr>0x02A0 &gt;&gt; 4 = 0x02A = 42 ✓ &nbsp;|&nbsp; 0x04B0 &gt;&gt; 4 = 0x04B = 75 ✓</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Validation Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Rule</span><span data-i18n-tr>Kural</span></th>
+                <th><span data-i18n-en>Details</span><span data-i18n-tr>Ayrıntılar</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>REP &gt; 0</span><span data-i18n-tr>REP &gt; 0</span></td>
+                <td><span data-i18n-en>REP=0 is meaningless (an alert with no involved tracks). Decoders should treat REP=0 as a formatting error.</span><span data-i18n-tr>REP=0 anlamsızdır (dahil olan track'siz bir alarm). Dekoderlar REP=0'ı biçimlendirme hatası olarak değerlendirmelidir.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Track number cross-reference</span><span data-i18n-tr>Track numarası çapraz referansı</span></td>
+                <td><span data-i18n-en>Track numbers in I011/605 must match I011/161 track numbers from recent Update messages. If a track number from I011/605 is not found in the current track database, the track may have been lost.</span><span data-i18n-tr>I011/605'teki track numaraları, son Güncelleme mesajlarındaki I011/161 track numaralarıyla eşleşmelidir. I011/605'ten bir track numarası mevcut track veritabanında bulunamazsa o track kaybolmuş olabilir.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Duplicate track numbers</span><span data-i18n-tr>Yinelenen track numaraları</span></td>
+                <td><span data-i18n-en>A given track number should appear at most once in the I011/605 repetition list for a single alert message. Duplicates indicate a system error.</span><span data-i18n-tr>Belirli bir track numarası, tek bir alarm mesajının I011/605 tekrar listesinde en fazla bir kez görünmelidir. Yinelemeler sistem hatası olduğunu gösterir.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlişkili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Data Item</span><span data-i18n-tr>Veri Öğesi</span></th>
+                <th><span data-i18n-en>Relationship</span><span data-i18n-tr>İlişki</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-600.html">I011/600</a></td>
+                <td><span data-i18n-en>Alert Messages — always accompanies I011/605; defines the type and severity of the alert that involves the listed tracks</span><span data-i18n-tr>Alarm Mesajları — her zaman I011/605 ile birlikte bulunur; listelenen track'lerin dahil olduğu alarmın türünü ve önem derecesini tanımlar</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-161.html">I011/161</a></td>
+                <td><span data-i18n-en>Track Number — I011/605 uses the same 12-bit track number format as I011/161; receivers must cross-reference these to retrieve full track data</span><span data-i18n-tr>Track Numarası — I011/605, I011/161 ile aynı 12-bit track numarası formatını kullanır; alıcılar tam track verilerini almak için bunları çapraz referanslamalıdır</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Implementation Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Implementation Notes</span>
+          <span data-i18n-tr>Uygulama Notları</span>
+        </h2>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip — right-shift decoding:</strong> To extract a 12-bit track number from a 2-octet entry, read the 16-bit big-endian word and right-shift by 4 bits: <code>TRK = (octet1 &lt;&lt; 8 | octet2) &gt;&gt; 4</code>. This removes the 4 spare bits. Always mask the result to 12 bits: <code>TRK &amp;= 0x0FFF</code>.</span>
+            <span data-i18n-tr><strong>İpucu — sağa kaydırarak çözme:</strong> 2-oktet bir girişten 12-bit track numarasını çıkarmak için 16-bit büyük-endian sözcüğü okuyun ve 4 bit sağa kaydırın: <code>TRK = (oktet1 &lt;&lt; 8 | oktet2) &gt;&gt; 4</code>. Bu işlem 4 boş biti kaldırır. Sonucu her zaman 12 bit ile maskeleyin: <code>TRK &amp;= 0x0FFF</code>.</span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip — alert state tracking:</strong> When building an alert display, maintain an internal alert table keyed by (ATN + sorted track number list). When you receive I011/600 SCA=1 (cleared) with I011/605, remove the matching alert entry. When SCA=2 (new) arrives, add the entry and immediately highlight all listed tracks on the situation display.</span>
+            <span data-i18n-tr><strong>İpucu — alarm durumu takibi:</strong> Bir alarm ekranı oluştururken (ATN + sıralanmış track numarası listesi) anahtarıyla dahili bir alarm tablosu tutun. I011/600 SCA=1 (temizlendi) ve I011/605 aldığınızda eşleşen alarm girişini kaldırın. SCA=2 (yeni) geldiğinde girişi ekleyin ve durum ekranındaki tüm listelenen track'leri derhal vurgulayın.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Sürüm 1.3 (2020) esas alınmıştır. Yalnızca referans amaçlıdır.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

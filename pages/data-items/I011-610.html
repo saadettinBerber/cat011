@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I011/610 — Holdbar Status</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">CAT011</div>
+      <div class="sidebar__subtitle">ASTERIX Documentation</div>
+    </div>
+    <nav class="sidebar__nav">
+      <div class="sidebar__section-title">
+        <span data-i18n-en>Overview</span>
+        <span data-i18n-tr>Genel</span>
+      </div>
+      <a href="../../index.html" class="sidebar__link">
+        <span data-i18n-en>Home</span>
+        <span data-i18n-tr>Ana Sayfa</span>
+      </a>
+      <a href="../overview.html" class="sidebar__link">
+        <span data-i18n-en>What is CAT011?</span>
+        <span data-i18n-tr>CAT011 Nedir?</span>
+      </a>
+      <a href="../message-types.html" class="sidebar__link">
+        <span data-i18n-en>Message Types</span>
+        <span data-i18n-tr>Mesaj Tipleri</span>
+      </a>
+      <a href="../uap.html" class="sidebar__link">
+        <span data-i18n-en>UAP Structure</span>
+        <span data-i18n-tr>UAP Yapısı</span>
+      </a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 1 — Core</span>
+        <span data-i18n-tr>Blok 1 — Temel</span>
+      </div>
+      <a href="I011-010.html" class="sidebar__link"><span class="sidebar__link-id">I011/010</span> <span data-i18n-en>Data Source ID</span><span data-i18n-tr>Veri Kaynağı Kimliği</span></a>
+      <a href="I011-000.html" class="sidebar__link"><span class="sidebar__link-id">I011/000</span> <span data-i18n-en>Message Type</span><span data-i18n-tr>Mesaj Tipi</span></a>
+      <a href="I011-015.html" class="sidebar__link"><span class="sidebar__link-id">I011/015</span> <span data-i18n-en>Service ID</span><span data-i18n-tr>Servis Kimliği</span></a>
+      <a href="I011-140.html" class="sidebar__link"><span class="sidebar__link-id">I011/140</span> <span data-i18n-en>Time of Track</span><span data-i18n-tr>İz Zamanı</span></a>
+      <a href="I011-041.html" class="sidebar__link"><span class="sidebar__link-id">I011/041</span> <span data-i18n-en>Position WGS-84</span><span data-i18n-tr>Konum WGS-84</span></a>
+      <a href="I011-042.html" class="sidebar__link"><span class="sidebar__link-id">I011/042</span> <span data-i18n-en>Cartesian Position</span><span data-i18n-tr>Kartezyen Konum</span></a>
+      <a href="I011-202.html" class="sidebar__link"><span class="sidebar__link-id">I011/202</span> <span data-i18n-en>Cartesian Velocity</span><span data-i18n-tr>Kartezyen Hız</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 2 — Identity</span>
+        <span data-i18n-tr>Blok 2 — Kimlik</span>
+      </div>
+      <a href="I011-210.html" class="sidebar__link"><span class="sidebar__link-id">I011/210</span> <span data-i18n-en>Acceleration</span><span data-i18n-tr>İvme</span></a>
+      <a href="I011-060.html" class="sidebar__link"><span class="sidebar__link-id">I011/060</span> <span data-i18n-en>Mode-3/A Code</span><span data-i18n-tr>Mode-3/A Kodu</span></a>
+      <a href="I011-245.html" class="sidebar__link"><span class="sidebar__link-id">I011/245</span> <span data-i18n-en>Target ID</span><span data-i18n-tr>Hedef Kimliği</span></a>
+      <a href="I011-380.html" class="sidebar__link"><span class="sidebar__link-id">I011/380</span> <span data-i18n-en>Mode-S / ADS-B</span><span data-i18n-tr>Mode-S / ADS-B</span></a>
+      <a href="I011-161.html" class="sidebar__link"><span class="sidebar__link-id">I011/161</span> <span data-i18n-en>Track Number</span><span data-i18n-tr>İz Numarası</span></a>
+      <a href="I011-170.html" class="sidebar__link"><span class="sidebar__link-id">I011/170</span> <span data-i18n-en>Track Status</span><span data-i18n-tr>İz Durumu</span></a>
+      <a href="I011-290.html" class="sidebar__link"><span class="sidebar__link-id">I011/290</span> <span data-i18n-en>Update Ages</span><span data-i18n-tr>Güncelleme Yaşları</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 3 — Altitude</span>
+        <span data-i18n-tr>Blok 3 — Irtifa</span>
+      </div>
+      <a href="I011-430.html" class="sidebar__link"><span class="sidebar__link-id">I011/430</span> <span data-i18n-en>Phase of Flight</span><span data-i18n-tr>Uçuş Fazı</span></a>
+      <a href="I011-090.html" class="sidebar__link"><span class="sidebar__link-id">I011/090</span> <span data-i18n-en>Measured FL</span><span data-i18n-tr>Ölçülen FL</span></a>
+      <a href="I011-093.html" class="sidebar__link"><span class="sidebar__link-id">I011/093</span> <span data-i18n-en>Barometric Alt</span><span data-i18n-tr>Barometrik Irt.</span></a>
+      <a href="I011-092.html" class="sidebar__link"><span class="sidebar__link-id">I011/092</span> <span data-i18n-en>Geometric Alt</span><span data-i18n-tr>Geometrik Irt.</span></a>
+      <a href="I011-215.html" class="sidebar__link"><span class="sidebar__link-id">I011/215</span> <span data-i18n-en>Climb/Descent Rate</span><span data-i18n-tr>Tırmanma/Alçalma</span></a>
+      <a href="I011-270.html" class="sidebar__link"><span class="sidebar__link-id">I011/270</span> <span data-i18n-en>Target Size</span><span data-i18n-tr>Hedef Boyutu</span></a>
+      <a href="I011-390.html" class="sidebar__link"><span class="sidebar__link-id">I011/390</span> <span data-i18n-en>Flight Plan Data</span><span data-i18n-tr>Uçuş Planı Verisi</span></a>
+
+      <div class="sidebar__section-title" data-collapsible>
+        <span data-i18n-en>Block 4 — Alerts</span>
+        <span data-i18n-tr>Blok 4 — Alarmlar</span>
+      </div>
+      <a href="I011-300.html" class="sidebar__link"><span class="sidebar__link-id">I011/300</span> <span data-i18n-en>Vehicle Fleet ID</span><span data-i18n-tr>Araç Filo Kimlik</span></a>
+      <a href="I011-310.html" class="sidebar__link"><span class="sidebar__link-id">I011/310</span> <span data-i18n-en>Pre-programmed Msg</span><span data-i18n-tr>Ön-Programlı Mesaj</span></a>
+      <a href="I011-500.html" class="sidebar__link"><span class="sidebar__link-id">I011/500</span> <span data-i18n-en>Est. Accuracies</span><span data-i18n-tr>Tah. Doğruluklar</span></a>
+      <a href="I011-600.html" class="sidebar__link"><span class="sidebar__link-id">I011/600</span> <span data-i18n-en>Alert Messages</span><span data-i18n-tr>Alarm Mesajları</span></a>
+      <a href="I011-605.html" class="sidebar__link"><span class="sidebar__link-id">I011/605</span> <span data-i18n-en>Tracks in Alert</span><span data-i18n-tr>Alarmlı İzler</span></a>
+      <a href="I011-610.html" class="sidebar__link sidebar__link--active"><span class="sidebar__link-id">I011/610</span> <span data-i18n-en>Holdbar Status</span><span data-i18n-tr>Holdbar Durumu</span></a>
+      <a href="I011-SP.html" class="sidebar__link"><span class="sidebar__link-id">I011/SP</span> <span data-i18n-en>Special Purpose</span><span data-i18n-tr>Özel Amaç</span></a>
+      <a href="I011-RE.html" class="sidebar__link"><span class="sidebar__link-id">I011/RE</span> <span data-i18n-en>Reserved Expansion</span><span data-i18n-tr>Ayrılmış Genişleme</span></a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="topbar__breadcrumb">
+        <a href="../../index.html">ASTERIX</a> &rsaquo; <a href="../../index.html">CAT011</a> &rsaquo;
+        <span data-i18n-en>Holdbar Status</span>
+        <span data-i18n-tr>Holdbar Durumu</span>
+      </div>
+      <div class="topbar__controls">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang-btn="en">EN</button>
+          <button class="lang-toggle__btn" data-lang-btn="tr">TR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header__id">I011/610</div>
+        <h1 class="page-header__title">
+          <span data-i18n-en>Holdbar Status</span>
+          <span data-i18n-tr>Holdbar Durumu</span>
+        </h1>
+        <span class="page-header__format">
+          <span data-i18n-en>Fixed Length — 1 Octet</span>
+          <span data-i18n-tr>Sabit Uzunluk — 1 Oktet</span>
+        </span>
+      </div>
+
+      <!-- Purpose -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Purpose</span>
+          <span data-i18n-tr>Amaç</span>
+        </h2>
+        <p>
+          <span data-i18n-en>Indication of the status of a stop bar (holdbar) group at a taxiway-runway intersection. Stop bars are rows of red lights embedded in the taxiway surface that prevent aircraft and vehicles from entering a runway without authorisation. This data item reports whether a specific group of stop bar lights is illuminated (closed — red) or extinguished (open — cleared for crossing).</span>
+          <span data-i18n-tr>Taksi yolu-pist kavşağındaki bir stop bar (holdbar) grubunun durumunun belirtilmesi. Stop barlar, uçak ve araçların yetkisiz olarak piste girmesini engellemek amacıyla taksi yolu yüzeyine yerleştirilmiş kırmızı ışıklardan oluşan sıralar olup bu veri öğesi, belirli bir stop bar ışık grubunun yanıyor mu (kapalı — kırmızı) yoksa sönmüş mü (açık — geçiş için temizlenmiş) olduğunu raporlar.</span>
+        </p>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Key concept:</strong> A holdbar group (HOG) is a logical group of stop bar lights at a single intersection. HOG identifies which intersection we are referring to (0–15), and STA (Status) tells us whether that group is currently blocking (lit) or permitting (unlit) entry. The A-SMGCS system can automatically command holdbar lighting as part of its runway incursion prevention function.</span>
+            <span data-i18n-tr><strong>Temel kavram:</strong> Holdbar grubu (HOG), tek bir kavşaktaki stop bar ışıklarının mantıksal bir grubudur. HOG, hangi kavşaktan bahsettiğimizi tanımlar (0–15); STA (Durum) ise o grubun şu anda girişi engelleyip engellemediğini (yanıyor) veya izin verip vermediğini (sönmüş) gösterir. A-SMGCS sistemi, pist ihlali önleme işlevinin bir parçası olarak stop bar aydınlatmasını otomatik olarak yönetebilir.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Structure -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Structure</span>
+          <span data-i18n-tr>Yapı</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Octet</span><span data-i18n-tr>Oktet</span></th>
+                <th><span data-i18n-en>Bits</span><span data-i18n-tr>Bitler</span></th>
+                <th><span data-i18n-en>Field</span><span data-i18n-tr>Alan</span></th>
+                <th><span data-i18n-en>Description</span><span data-i18n-tr>Açıklama</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td>8–5</td>
+                <td>HOG</td>
+                <td><span data-i18n-en>Holdbar Group identification — 4-bit unsigned integer (0–15), identifies the stop bar group at a specific taxiway-runway intersection</span><span data-i18n-tr>Holdbar Grubu tanımlaması — 4-bit işaretsiz tam sayı (0–15), belirli bir taksi yolu-pist kavşağındaki stop bar grubunu tanımlar</span></td>
+              </tr>
+              <tr>
+                <td><strong>1</strong></td>
+                <td>4–2</td>
+                <td>—</td>
+                <td><span data-i18n-en>Spare (set to 0)</span><span data-i18n-tr>Boş (0 olarak ayarlanır)</span></td>
+              </tr>
+              <tr>
+                <td><strong>1</strong></td>
+                <td>1</td>
+                <td>STA</td>
+                <td><span data-i18n-en>Status — 0: Bars closed (illuminated red, runway entry blocked), 1: Bars open (extinguished, crossing permitted)</span><span data-i18n-tr>Durum — 0: Barlar kapalı (kırmızı aydınlatılmış, piste giriş engellendi), 1: Barlar açık (sönmüş, geçiş izinli)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bit Diagram -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Bit Diagram</span>
+          <span data-i18n-tr>Bit Diyagramı</span>
+        </h2>
+        <div class="bit-diagram">
+          <svg viewBox="0 0 600 80" xmlns="http://www.w3.org/2000/svg" style="max-width:500px; font-family:var(--font-family-mono);">
+            <text x="50"  y="15" text-anchor="middle" font-size="11" fill="#718096">8</text>
+            <text x="115" y="15" text-anchor="middle" font-size="11" fill="#718096">7</text>
+            <text x="180" y="15" text-anchor="middle" font-size="11" fill="#718096">6</text>
+            <text x="245" y="15" text-anchor="middle" font-size="11" fill="#718096">5</text>
+            <text x="310" y="15" text-anchor="middle" font-size="11" fill="#718096">4</text>
+            <text x="375" y="15" text-anchor="middle" font-size="11" fill="#718096">3</text>
+            <text x="440" y="15" text-anchor="middle" font-size="11" fill="#718096">2</text>
+            <text x="505" y="15" text-anchor="middle" font-size="11" fill="#718096">1</text>
+
+            <!-- HOG (bits 8-5) -->
+            <rect x="20"  y="25" width="260" height="40" rx="4" fill="#f6ad55" stroke="#c05621" stroke-width="2"/>
+            <text x="150" y="50" text-anchor="middle" fill="white" font-size="14" font-weight="700">HOG (0–15)</text>
+            <line x1="85"  y1="25" x2="85"  y2="65" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <line x1="150" y1="25" x2="150" y2="65" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <line x1="215" y1="25" x2="215" y2="65" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+
+            <!-- spare (bits 4-2) -->
+            <rect x="280" y="25" width="195" height="40" rx="4" fill="#cbd5e0" stroke="#718096" stroke-width="2"/>
+            <text x="377" y="50" text-anchor="middle" fill="#4a5568" font-size="12" font-weight="700">spare</text>
+            <line x1="345" y1="25" x2="345" y2="65" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+            <line x1="410" y1="25" x2="410" y2="65" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+
+            <!-- STA (bit 1) -->
+            <rect x="475" y="25" width="65" height="40" rx="4" fill="#fc8181" stroke="#c53030" stroke-width="2"/>
+            <text x="507" y="50" text-anchor="middle" fill="white" font-size="12" font-weight="700">STA</text>
+          </svg>
+          <div class="bit-diagram__label">I011/610 — HOG (bits 8–5) + spare (bits 4–2) + STA (bit 1)</div>
+        </div>
+      </section>
+
+      <!-- Value Encoding -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Value Encoding</span>
+          <span data-i18n-tr>Değer Kodlama</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>STA</span><span data-i18n-tr>STA</span></th>
+                <th><span data-i18n-en>Meaning</span><span data-i18n-tr>Anlam</span></th>
+                <th><span data-i18n-en>Visual indication</span><span data-i18n-tr>Görsel gösterge</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td><span data-i18n-en>Bars CLOSED — stop bar lit red, entry blocked</span><span data-i18n-tr>Barlar KAPALI — stop bar kırmızı aydınlatılmış, giriş engellendi</span></td>
+                <td><span style="color:#e53e3e; font-weight:700;">&#9632;</span> RED</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><span data-i18n-en>Bars OPEN — stop bar extinguished, crossing permitted</span><span data-i18n-tr>Barlar AÇIK — stop bar sönmüş, geçiş izinli</span></td>
+                <td><span style="color:#48bb78; font-weight:700;">&#9632;</span> GREEN</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note note--tip" style="margin-top:1rem;">
+          <p>
+            <span data-i18n-en><strong>HOG assignment:</strong> The mapping of HOG values (0–15) to physical stop bar locations is an airport-specific configuration parameter. An HOG of 5 at one airport may correspond to the Alpha taxiway intersection with Runway 28L; at another airport it refers to a completely different location. Decoders must use airport-specific lookup tables to display meaningful location information.</span>
+            <span data-i18n-tr><strong>HOG ataması:</strong> HOG değerlerinin (0–15) fiziksel stop bar konumlarına eşlenmesi havalimanına özgü bir yapılandırma parametresidir. Bir havalimanında 5 değerindeki HOG, Alpha taksi yolunun Pist 28L ile kavşağına karşılık gelirken başka bir havalimanında tamamen farklı bir konuma işaret edebilir. Dekoderlar anlamlı konum bilgisi görüntülemek için havalimanına özgü arama tabloları kullanmalıdır.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Encoding Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Encoding Rules</span>
+          <span data-i18n-tr>Kodlama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Property</span><span data-i18n-tr>Özellik</span></th>
+                <th><span data-i18n-en>Value</span><span data-i18n-tr>Değer</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>Format</span><span data-i18n-tr>Biçim</span></td>
+                <td><span data-i18n-en>Fixed Length</span><span data-i18n-tr>Sabit Uzunluk</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Length</span><span data-i18n-tr>Uzunluk</span></td>
+                <td>1 octet (8 bits)</td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>HOG encoding</span><span data-i18n-tr>HOG kodlaması</span></td>
+                <td><span data-i18n-en>4-bit unsigned integer in bits 8–5 (MSB first). Value 0 = first defined holdbar group; 15 = maximum (16 groups total).</span><span data-i18n-tr>Bit 8–5'te 4-bit işaretsiz tam sayı (MSB önce). Değer 0 = ilk tanımlı holdbar grubu; 15 = maksimum (toplam 16 grup).</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>STA encoding</span><span data-i18n-tr>STA kodlaması</span></td>
+                <td><span data-i18n-en>1-bit flag in bit 1 (LSB): 0 = closed (bars lit), 1 = open (bars unlit)</span><span data-i18n-tr>Bit 1'de (LSB) 1-bit bayrak: 0 = kapalı (barlar yanıyor), 1 = açık (barlar sönmüş)</span></td>
+              </tr>
+              <tr>
+                <td>UAP Position</td>
+                <td>FRN 31 (FSPEC Byte 5, Bit 4)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hex Walkthrough -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Hex Examples</span>
+          <span data-i18n-tr>Hex Örnekleri</span>
+        </h2>
+        <div class="card card--info">
+          <p>
+            <span data-i18n-en><strong>Scenario 1:</strong> Stop bar group 5 is illuminated (closed) — blocking the taxiway. Encoded: <code>0x50</code>.</span>
+            <span data-i18n-tr><strong>Senaryo 1:</strong> Stop bar grubu 5 aydınlatılmış (kapalı) — taksi yolunu engelliyor. Kodlanmış: <code>0x50</code>.</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>HOG=5, STA=0 — compose byte</span>
+              <span data-i18n-tr>HOG=5, STA=0 — baytı oluştur</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              HOG=5 = <code>0101</code> (bits 8–5) &nbsp;|&nbsp; spare = <code>000</code> (bits 4–2) &nbsp;|&nbsp; STA=0 (bit 1)
+              <br><code>0101_0000</code> = <code>0x50</code> &rarr; <span data-i18n-en>Group 5, bars CLOSED (RED) ✓</span><span data-i18n-tr>Grup 5, barlar KAPALI (KIRMIZI) ✓</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--info" style="margin-top:1.5rem;">
+          <p>
+            <span data-i18n-en><strong>Scenario 2:</strong> The same stop bar group 5 is cleared after a controller grants crossing permission. Encoded: <code>0x51</code>.</span>
+            <span data-i18n-tr><strong>Senaryo 2:</strong> Bir kontrolörün geçiş izni vermesinin ardından aynı stop bar grubu 5 temizleniyor. Kodlanmış: <code>0x51</code>.</span>
+          </p>
+        </div>
+        <div class="hex-walkthrough">
+          <div class="hex-walkthrough__step">
+            <div class="hex-walkthrough__label">
+              <span data-i18n-en>HOG=5, STA=1 — compose byte</span>
+              <span data-i18n-tr>HOG=5, STA=1 — baytı oluştur</span>
+            </div>
+            <div class="hex-walkthrough__detail">
+              HOG=5 = <code>0101</code> (bits 8–5) &nbsp;|&nbsp; spare = <code>000</code> (bits 4–2) &nbsp;|&nbsp; STA=1 (bit 1)
+              <br><code>0101_0001</code> = <code>0x51</code> &rarr; <span data-i18n-en>Group 5, bars OPEN (GREEN — crossing cleared) ✓</span><span data-i18n-tr>Grup 5, barlar AÇIK (YEŞİL — geçiş temizlendi) ✓</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Validation Rules -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Validation Rules</span>
+          <span data-i18n-tr>Doğrulama Kuralları</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Rule</span><span data-i18n-tr>Kural</span></th>
+                <th><span data-i18n-en>Details</span><span data-i18n-tr>Ayrıntılar</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-i18n-en>HOG validity</span><span data-i18n-tr>HOG geçerliliği</span></td>
+                <td><span data-i18n-en>Not all HOG values 0–15 may be active at a given airport. Receivers should maintain a list of configured HOG values and flag unexpected HOG values as unknown rather than raising an error.</span><span data-i18n-tr>Belirli bir havalimanında 0–15 arasındaki tüm HOG değerleri aktif olmayabilir. Alıcılar yapılandırılmış HOG değerlerinin listesini tutmalı ve beklenmedik HOG değerlerini hata olarak değil bilinmeyen olarak işaretlemelidir.</span></td>
+              </tr>
+              <tr>
+                <td><span data-i18n-en>Initial state</span><span data-i18n-tr>Başlangıç durumu</span></td>
+                <td><span data-i18n-en>At system startup, assume all holdbar groups are closed (STA=0) until a confirmed STA=1 message is received. This fail-safe posture prevents false "bars open" indications during initialisation.</span><span data-i18n-tr>Sistem başlangıcında, onaylanmış bir STA=1 mesajı alınana kadar tüm holdbar gruplarının kapalı olduğunu (STA=0) varsayın. Bu güvenli duruş, başlatma sırasında yanlış "barlar açık" göstergelerini önler.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Related Items -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Related Data Items</span>
+          <span data-i18n-tr>İlişkili Veri Öğeleri</span>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th><span data-i18n-en>Data Item</span><span data-i18n-tr>Veri Öğesi</span></th>
+                <th><span data-i18n-en>Relationship</span><span data-i18n-tr>İlişki</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="I011-600.html">I011/600</a></td>
+                <td><span data-i18n-en>Alert Messages — a RIMCA alert (ATN=1) may automatically trigger holdbar activation; I011/610 reports the resulting state change</span><span data-i18n-tr>Alarm Mesajları — RIMCA alarmı (ATN=1) holdbar aktivasyonunu otomatik olarak tetikleyebilir; I011/610 ortaya çıkan durum değişikliğini raporlar</span></td>
+              </tr>
+              <tr>
+                <td><a href="I011-041.html">I011/041</a></td>
+                <td><span data-i18n-en>WGS-84 Position — the geographic position of the stop bar can be inferred by correlating HOG values with the airport chart; position data from I011/041 helps verify which aircraft are at which intersection</span><span data-i18n-tr>WGS-84 Konum — stop barın coğrafi konumu, HOG değerleri ile havalimanı haritası ilişkilendirilerek çıkarılabilir; I011/041'den alınan konum verileri hangi uçağın hangi kavşakta olduğunu doğrulamaya yardımcı olur</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Implementation Notes -->
+      <section class="section">
+        <h2 class="section__title">
+          <span data-i18n-en>Implementation Notes</span>
+          <span data-i18n-tr>Uygulama Notları</span>
+        </h2>
+        <div class="note note--tip">
+          <p>
+            <span data-i18n-en><strong>Tip — decoding the byte:</strong> Extract HOG with <code>(byte &gt;&gt; 4) &amp; 0x0F</code> and STA with <code>byte &amp; 0x01</code>. Ignore bits 4–2 (spare). For example, byte <code>0x51</code>: HOG = <code>(0x51 &gt;&gt; 4) &amp; 0xF</code> = 5, STA = <code>0x51 &amp; 1</code> = 1 (open).</span>
+            <span data-i18n-tr><strong>İpucu — baytı çözme:</strong> HOG'u <code>(bayt &gt;&gt; 4) &amp; 0x0F</code> ile, STA'yı <code>bayt &amp; 0x01</code> ile çıkarın. Bit 4–2'yi (boş) yoksayın. Örneğin <code>0x51</code> baytı: HOG = <code>(0x51 &gt;&gt; 4) &amp; 0xF</code> = 5, STA = <code>0x51 &amp; 1</code> = 1 (açık).</span>
+          </p>
+        </div>
+        <div class="note note--warning">
+          <p>
+            <span data-i18n-en><strong>Safety note:</strong> Stop bar status from ASTERIX CAT011 is for <em>situational awareness and display purposes only</em>. The actual runway clearance decision must always be made by a licensed controller. Never build a system that uses I011/610 as the sole authoritative source for runway entry permission.</span>
+            <span data-i18n-tr><strong>Güvenlik notu:</strong> ASTERIX CAT011'den alınan stop bar durumu yalnızca <em>durum farkındalığı ve görüntüleme amaçlıdır</em>. Gerçek pist izin kararı her zaman lisanslı bir kontrolör tarafından alınmalıdır. I011/610'u piste giriş izni için tek yetkili kaynak olarak kullanan bir sistem asla inşa etmeyin.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>Based on EUROCONTROL ASTERIX CAT011 Edition 1.3 (2020). For reference purposes only.</span>
+        <span data-i18n-tr>EUROCONTROL ASTERIX CAT011 Sürüm 1.3 (2020) esas alınmıştır. Yalnızca referans amaçlıdır.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>
